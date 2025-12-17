@@ -72,11 +72,45 @@ class AdvisorAgent:
                  raise ClientError("Quota exceeded", code=429)
             yield f"**Error**: {str(e)}"
 
-    def validate_api_key(self) -> bool:
+    def generate_poster(self, advice_text: str):
+        """
+        Generates a visual poster summarizing the investment advice using Imagen 3.
+        """
         try:
-            # Verify key by fetching the specific model we intend to use
-            self.client.models.get(model=self.model_name)
-            return True
+            # Step 1: Create a visual prompt
+            prompt_request = f"""
+            Based on the following investment advice, create a detailed **text-to-image prompt** for an infographic poster.
+            
+            **Advice Summary**:
+            {advice_text[:2000]}... (truncated)
+
+            **Visual Style**: Minimalist, clean, high-tech fintech aesthetic. Dark mode colors.
+            **Content**: A central pie chart or flow chart showing the allocation.
+            **Text**: Minimal text, just big numbers (e.g., "60% Equity").
+            
+            **Output**: Just the prompt string, nothing else.
+            """
+            
+            # Use a separate non-streaming call for the prompt generation
+            response = self.client.models.generate_content(
+                model=self.model_name,
+                contents=prompt_request
+            )
+            visual_prompt = response.text
+            print(f"Visual Prompt: {visual_prompt}")
+
+            # Step 2: Generate Image using Imagen 3
+            # Note: Imagen 3 model ID is 'imagen-3.0-generate-001'
+            image_response = self.client.models.generate_image(
+                model='imagen-3.0-generate-001',
+                prompt=visual_prompt,
+                config=types.GenerateImageConfig(
+                    number_of_images=1,
+                )
+            )
+            
+            return image_response.generated_images[0].image
+            
         except Exception as e:
-            print(f"API Validation Failed: {e}")
-            return False
+            print(f"Poster Generation Failed: {e}")
+            return None

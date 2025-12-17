@@ -126,11 +126,32 @@ if prompt := st.chat_input("I have $20/day, what's a good strategy?"):
                 
                 response_placeholder.markdown(full_response)
                 
-                # Add to history
+                # Add assistant response to chat history
                 st.session_state.messages.append({"role": "assistant", "content": full_response})
+
+                # Option to generate poster if response is long enough (likely advice)
+                if len(full_response) > 500:
+                    st.session_state.last_advice = full_response
+                    st.rerun() # Rerun to show the button below
+
             except Exception as e:
                 st.error(f"Error generating response: {e}")
     else:
         with st.chat_message("assistant"):
             st.warning("Please enter your Google API Key in the sidebar to start.")
 
+    if "last_advice" in st.session_state:
+        st.markdown("---")
+        if st.button("🎨 Generate Visual Summary Poster"):
+            with st.spinner("Designing your investment poster (this may take 10-20s)..."):
+                if st.session_state.agent:
+                    try:
+                        image_data = st.session_state.agent.generate_poster(st.session_state.last_advice)
+                        if image_data:
+                            st.image(image_data, caption="Your Personal Investment Strategy", use_container_width=True)
+                            # Clean up to avoid re-generating on accidental click
+                            # st.session_state.last_advice = None 
+                        else:
+                            st.error("Could not generate poster. Check if your API key supports Imagen 3.")
+                    except Exception as e:
+                        st.error(f"Error generating poster: {e}")
