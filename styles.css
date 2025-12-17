@@ -1,0 +1,86 @@
+/* Main container setup for dark mode and clean typography */
+.stApp {
+    background-color: #0e1117;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Customizing the header */
+header[data-testid="stHeader"] {
+    background-color: rgba(14, 17, 23, 0.9);
+    backdrop-filter: blur(10px);
+}
+
+/* Chat message containers */
+[data-testid="stChatMessage"] {
+    background-color: #1e2329;
+    border-radius: 12px;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    border: 1px solid #2d333b;
+    color: #e6edf3;
+}
+
+/* User message specific styling (optional: distinguish user/ai) */
+[data-testid="stChatMessage"][data-testid*="user"] {
+    background-color: #2b313a;
+}
+
+/* Sidebar styling */
+[data-testid="stSidebar"] {
+    background-color: #161b22;
+    border-right: 1px solid #30363d;
+}
+
+/* Input box styling */
+.stTextInput > div > div > input {
+    background-color: #0d1117;
+    color: #c9d1d9;
+    border: 1px solid #30363d;
+    border-radius: 8px;
+}
+
+/* Buttons (Primary) */
+.stButton > button {
+    background-color: #238636;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+
+.stButton > button:hover {
+    background-color: #2ea043;
+}
+
+/* Scrollbar customization */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0e1117; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: #30363d; 
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #484f58; 
+}
+
+/* Markdown headers in reports */
+h1, h2, h3 {
+    color: #58a6ff !important;
+    font-weight: 600;
+}
+
+/* Info box / Success box styling overrides */
+[data-testid="stNotification"] {
+    background-color: #161b22;
+    border: 1px solid #30363d;
+    color: #c9d1d9;
+}
