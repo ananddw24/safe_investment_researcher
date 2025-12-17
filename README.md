@@ -4,7 +4,13 @@ A professional, AI-powered investment advisor designed to provide **safe, strate
 
 Built with **Streamlit** and **Google's Gemini 2.5 AI**, this application offers real-time market grounding, country-specific localization, and free-tier optimized performance.
 
-![UI Screenshot](https://via.placeholder.com/800x400?text=Investment+Advisor+UI+Placeholder)
+### 📸 Project Screenshots
+
+**1. Macro Economic Analysis & Strategy**
+![Macro Context](docs/images/example_macro.png)
+
+**2. Deep Dive: Central Bank Reports (RBI)**
+![RBI Analysis](docs/images/example_rbi.png)
 
 ## 🌟 Key Features
 
