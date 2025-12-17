@@ -72,6 +72,15 @@ class AdvisorAgent:
                  raise ClientError("Quota exceeded", code=429)
             yield f"**Error**: {str(e)}"
 
+    def validate_api_key(self) -> bool:
+        try:
+            # Verify key by fetching the specific model we intend to use
+            self.client.models.get(model=self.model_name)
+            return True
+        except Exception as e:
+            print(f"API Validation Failed: {e}")
+            return False
+
     def generate_poster(self, advice_text: str):
         """
         Generates a visual poster summarizing the investment advice using Imagen 3.
