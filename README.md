@@ -6,11 +6,11 @@ Built with **Streamlit** and **Google's Gemini 2.5 AI**, this application offers
 
 ### 📸 Project Screenshots
 
-**1. Macro Economic Analysis & Strategy**
-![Macro Context](docs/images/example_macro.png)
+**1. Real-Time Macro Economic Context (Search Grounding)**
+![Macro Context](docs/images/macro_context_example.png)
 
-**2. Deep Dive: Central Bank Reports (RBI)**
-![RBI Analysis](docs/images/example_rbi.png)
+**2. Strategic Allocation & Historical Performance**
+![Allocation Breakdown](docs/images/allocation_breakdown_example.png)
 
 ## 🌟 Key Features
 
