@@ -63,14 +63,8 @@ See also [docs/disclaimer.md](docs/disclaimer.md).
 
 ## Status
 
-**v0.3.0** — United States + Kenya household vehicles and resources (after India
-in v0.2.0).
+**v0.4.0** — Top 10 GDP countries have household vehicle pages (India deep set;
+US+Kenya; short pages for CN/DE/JP/GB/FR/IT/BR/CA).
 
-The GitHub repository may remain **private** until the owner flips visibility in
-Settings. GitHub Pages (Actions) becomes available at
-<https://ananddw24.github.io/safe_investment_researcher/> once the repo is public
-(or private Pages is enabled) and **Settings → Pages → Source: GitHub Actions** is
-selected.
-
-Next: **v0.4.0** remaining Top 10 GDP countries (see
-[release plan](docs/about/release-plan.md)).
+The GitHub repository may remain **private** until the owner flips visibility.
+Next: **v0.5.0** Africa cluster (see [release plan](docs/about/release-plan.md)).

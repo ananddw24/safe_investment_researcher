@@ -1,0 +1,13 @@
+id: fr-service-public
+title: service-public.fr
+url: https://www.service-public.fr/
+country: fr
+language: fr
+topics:
+  - savings
+  - financial-literacy
+audience:
+  - general
+  - low-income
+source_type: government-portal
+last_checked: "2026-10-17"

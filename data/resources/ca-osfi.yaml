@@ -1,0 +1,12 @@
+id: ca-osfi
+title: OSFI
+url: https://www.osfi-bsif.gc.ca/en
+country: ca
+language: en
+topics:
+  - regulation
+  - pensions
+audience:
+  - general
+source_type: government-portal
+last_checked: "2026-10-17"

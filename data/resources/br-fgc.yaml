@@ -1,0 +1,12 @@
+id: br-fgc
+title: FGC
+url: https://www.fgc.org.br/
+country: br
+language: pt
+topics:
+  - banking
+  - savings
+audience:
+  - general
+source_type: government-portal
+last_checked: "2026-10-17"

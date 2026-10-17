@@ -1,0 +1,12 @@
+id: jp-boj
+title: Bank of Japan
+url: https://www.boj.or.jp/en/
+country: jp
+language: en
+topics:
+  - banking
+  - financial-literacy
+audience:
+  - general
+source_type: central-bank
+last_checked: "2026-10-17"

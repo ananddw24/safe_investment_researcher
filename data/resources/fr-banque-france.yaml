@@ -1,0 +1,13 @@
+id: fr-banque-france
+title: Banque de France
+url: https://www.banque-france.fr/en
+country: fr
+language: en
+topics:
+  - banking
+  - financial-literacy
+audience:
+  - general
+  - low-income
+source_type: central-bank
+last_checked: "2026-10-17"
