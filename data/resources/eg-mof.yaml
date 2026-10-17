@@ -1,0 +1,13 @@
+id: eg-mof
+title: Ministry of Finance Egypt
+url: https://www.mof.gov.eg/
+country: eg
+language: en
+topics:
+  - savings
+  - inflation
+  - regulation
+audience:
+  - general
+source_type: ministry
+last_checked: "2026-10-17"

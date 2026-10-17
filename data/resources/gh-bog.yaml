@@ -1,0 +1,16 @@
+id: gh-bog
+title: Bank of Ghana
+url: https://www.bog.gov.gh/
+country: gh
+language: en
+topics:
+  - banking
+  - mobile-money
+  - financial-literacy
+  - regulation
+audience:
+  - general
+  - low-income
+  - rural
+source_type: central-bank
+last_checked: "2026-10-17"

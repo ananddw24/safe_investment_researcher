@@ -1,0 +1,14 @@
+id: ng-cbn
+title: Central Bank of Nigeria
+url: https://www.cbn.gov.ng/
+country: ng
+language: en
+topics:
+  - banking
+  - mobile-money
+  - regulation
+audience:
+  - general
+  - low-income
+source_type: central-bank
+last_checked: "2026-10-17"

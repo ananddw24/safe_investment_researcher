@@ -23,6 +23,8 @@ products, or giving personalized advice.
    [emergency savings](guides/emergency-savings.md).
 3. Explore country vehicles: [India](vehicles/in/index.md),
    [United States](vehicles/us/index.md), [Kenya](vehicles/ke/index.md),
+   [Nigeria](vehicles/ng/index.md), [South Africa](vehicles/za/index.md),
+   [Ghana](vehicles/gh/index.md), [Egypt](vehicles/eg/index.md),
    [China](vehicles/cn/index.md), [Germany](vehicles/de/index.md),
    [Japan](vehicles/jp/index.md), [United Kingdom](vehicles/gb/index.md),
    [France](vehicles/fr/index.md), [Italy](vehicles/it/index.md),
@@ -44,9 +46,8 @@ products, or giving personalized advice.
 
 ## Status
 
-**v0.4.0** completes short vehicle pages for the remaining Top 10 GDP countries
-(China, Germany, Japan, UK, France, Italy, Brazil, Canada), after India (v0.2.0)
-and United States + Kenya (v0.3.0).
+**v0.5.0** adds Africa cluster household vehicle pages for Nigeria, South Africa,
+Ghana, and Egypt (Kenya was shipped in v0.3.0 and is linked, not rewritten).
 
 The GitHub repository may still be **private** until the owner flips visibility.
 See the [release plan](about/release-plan.md).

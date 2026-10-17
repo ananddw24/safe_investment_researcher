@@ -1,0 +1,14 @@
+id: eg-cbe
+title: Central Bank of Egypt
+url: https://www.cbe.org.eg/en/
+country: eg
+language: en
+topics:
+  - banking
+  - savings
+  - regulation
+audience:
+  - general
+  - low-income
+source_type: central-bank
+last_checked: "2026-10-17"

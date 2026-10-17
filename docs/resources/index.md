@@ -25,7 +25,7 @@ sources.
   [template](https://github.com/ananddw24/safe_investment_researcher/blob/main/data/resources/_template.yaml)
 - See [CONTRIBUTING](https://github.com/ananddw24/safe_investment_researcher/blob/main/CONTRIBUTING.md)
 
-A generated on-page table may arrive in a later release. Records shipping in
-v0.2.0–v0.3.0 include India regulators (RBI, SEBI, PFRDA), NCFE, India Post, DFS,
-DICGC, and selected global literacy portals (CFPB, FDIC, World Bank Findex, and
-others that validated in our link pass).
+A generated on-page table may arrive in a later release. Records through
+v0.5.0 include India, US, Kenya, Top 10, and Africa cluster regulators
+(CBN/SEC/DMO/PenCom, SARB/FSCA/Treasury/SARS, BoG/SEC Ghana/MoFEP/SSNIT,
+CBE/FRA/MoF Egypt) plus selected global literacy portals.

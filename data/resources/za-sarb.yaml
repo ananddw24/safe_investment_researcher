@@ -1,0 +1,14 @@
+id: za-sarb
+title: South African Reserve Bank
+url: https://www.resbank.co.za/
+country: za
+language: en
+topics:
+  - banking
+  - financial-literacy
+  - regulation
+audience:
+  - general
+  - low-income
+source_type: central-bank
+last_checked: "2026-10-17"
