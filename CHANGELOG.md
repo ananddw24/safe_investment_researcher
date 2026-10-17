@@ -7,6 +7,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.4.0] - 2026-10-17
+
+### Added
+
+- Short household vehicle pages for remaining Top 10 GDP countries: China,
+  Germany, Japan, United Kingdom, France, Italy, Brazil, Canada (6 vehicles each)
+- Verified regulator/government resource YAML for those countries
+- Homepage and nav links for all Top 10 country sections
+
+### Changed
+
+- Release plan marks v0.4.0 shipped
+
 ## [0.3.0] - 2026-10-17
 
 ### Added
@@ -57,7 +70,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - **Scaffold only** at 0.1.0. Content seeding begins with 0.2.0 (India).
 
-[Unreleased]: https://github.com/ananddw24/safe_investment_researcher/compare/v0.3.0...HEAD
+[Unreleased]: https://github.com/ananddw24/safe_investment_researcher/compare/v0.4.0...HEAD
+[0.4.0]: https://github.com/ananddw24/safe_investment_researcher/releases/tag/v0.4.0
 [0.3.0]: https://github.com/ananddw24/safe_investment_researcher/releases/tag/v0.3.0
 [0.2.0]: https://github.com/ananddw24/safe_investment_researcher/releases/tag/v0.2.0
 [0.1.0]: https://github.com/ananddw24/safe_investment_researcher/releases/tag/v0.1.0

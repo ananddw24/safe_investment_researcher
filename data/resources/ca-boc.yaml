@@ -1,0 +1,12 @@
+id: ca-boc
+title: Bank of Canada
+url: https://www.bankofcanada.ca/
+country: ca
+language: en
+topics:
+  - banking
+  - financial-literacy
+audience:
+  - general
+source_type: central-bank
+last_checked: "2026-10-17"

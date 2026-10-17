@@ -1,0 +1,14 @@
+id: cn-pboc
+title: People’s Bank of China
+url: https://www.pbc.gov.cn/
+country: cn
+language: zh
+topics:
+  - banking
+  - regulation
+  - financial-literacy
+audience:
+  - general
+  - low-income
+source_type: central-bank
+last_checked: "2026-10-17"

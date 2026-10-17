@@ -1,0 +1,14 @@
+id: br-bcb
+title: Banco Central do Brasil
+url: https://www.bcb.gov.br/en
+country: br
+language: en
+topics:
+  - banking
+  - mobile-money
+  - financial-literacy
+audience:
+  - general
+  - low-income
+source_type: central-bank
+last_checked: "2026-10-17"

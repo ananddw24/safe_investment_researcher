@@ -20,10 +20,19 @@ organized by ISO country code.
 
 | Country | Status |
 | --- | --- |
-| [India (`in`)](in/index.md) | Published household set (v0.2.0) |
-| [United States (`us`)](us/index.md) | Published household set (v0.3.0) |
-| [Kenya (`ke`)](ke/index.md) | Published household set (v0.3.0) |
+| [India (`in`)](in/index.md) | Published (v0.2.0) |
+| [United States (`us`)](us/index.md) | Published (v0.3.0) |
+| [Kenya (`ke`)](ke/index.md) | Published (v0.3.0) |
+| [China (`cn`)](cn/index.md) | Short pages (v0.4.0) |
+| [Germany (`de`)](de/index.md) | Short pages (v0.4.0) |
+| [Japan (`jp`)](jp/index.md) | Short pages (v0.4.0) |
+| [United Kingdom (`gb`)](gb/index.md) | Short pages (v0.4.0) |
+| [France (`fr`)](fr/index.md) | Short pages (v0.4.0) |
+| [Italy (`it`)](it/index.md) | Short pages (v0.4.0) |
+| [Brazil (`br`)](br/index.md) | Short pages (v0.4.0) |
+| [Canada (`ca`)](ca/index.md) | Short pages (v0.4.0) |
 
-Remaining Top 10 countries follow in **v0.4.0** ([release plan](../about/release-plan.md)).
+Africa cluster countries beyond Kenya follow in **v0.5.0**
+([release plan](../about/release-plan.md)).
 
 Template: [`_template.md`](_template.md).

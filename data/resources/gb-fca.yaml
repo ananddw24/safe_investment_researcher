@@ -1,0 +1,14 @@
+id: gb-fca
+title: Financial Conduct Authority (UK)
+url: https://www.fca.org.uk/
+country: gb
+language: en
+topics:
+  - regulation
+  - investing-basics
+  - scams
+audience:
+  - general
+  - low-income
+source_type: securities-regulator
+last_checked: "2026-10-17"

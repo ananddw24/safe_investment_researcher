@@ -1,0 +1,12 @@
+id: it-bancaditalia
+title: Banca d'Italia
+url: https://www.bancaditalia.it/homepage/index.html?com.dotmarketing.htmlpage.language=1
+country: it
+language: en
+topics:
+  - banking
+  - financial-literacy
+audience:
+  - general
+source_type: central-bank
+last_checked: "2026-10-17"

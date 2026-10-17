@@ -1,0 +1,12 @@
+id: de-bundesbank
+title: Deutsche Bundesbank
+url: https://www.bundesbank.de/en
+country: de
+language: en
+topics:
+  - banking
+  - financial-literacy
+audience:
+  - general
+source_type: central-bank
+last_checked: "2026-10-17"

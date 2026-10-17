@@ -1,0 +1,13 @@
+id: de-bafin
+title: BaFin
+url: https://www.bafin.de/EN/
+country: de
+language: en
+topics:
+  - regulation
+  - investing-basics
+  - financial-literacy
+audience:
+  - general
+source_type: securities-regulator
+last_checked: "2026-10-17"
