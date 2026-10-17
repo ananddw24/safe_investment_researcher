@@ -18,14 +18,14 @@ semantic versioning. Force-push is forbidden on `main` and on published tags.
 
 ## Sequence
 
-| Release | Scope |
-| --- | --- |
-| **v0.1.0** | Scaffold only (site shell, schemas, CI, community health) — shipped |
-| **v0.2.0** | India household vehicles + core literacy guides + one pathway + verified resources |
-| **v0.3.0** | United States + Kenya vehicle pages and resources |
-| **v0.4.0** | Remaining Top 10 GDP countries as short vehicle pages |
-| **v0.5.0** | Africa cluster: Nigeria, South Africa, Ghana, Egypt |
-| **v1.0.0** | Stable contribution model, public Pages live, OpenSSF hygiene |
+| Release | Scope | Status |
+| --- | --- | --- |
+| **v0.1.0** | Scaffold only (site shell, schemas, CI, community health) | Shipped |
+| **v0.2.0** | India household vehicles + core literacy guides + one pathway + verified resources | Shipped |
+| **v0.3.0** | United States + Kenya vehicle pages and resources | Shipped (this release) |
+| **v0.4.0** | Remaining Top 10 GDP countries as short vehicle pages | Planned |
+| **v0.5.0** | Africa cluster: Nigeria, South Africa, Ghana, Egypt | Planned |
+| **v1.0.0** | Stable contribution model, public Pages live, OpenSSF hygiene | Planned |
 
 ## Rules for every release
 
@@ -37,5 +37,5 @@ semantic versioning. Force-push is forbidden on `main` and on published tags.
 
 ## Current focus
 
-**v0.2.0** is the first country seed (India). Later milestones are listed so
-contributors know what *not* to bulk-add in this release.
+**v0.3.0** ships United States and Kenya. Do not bulk-add remaining Top 10 countries
+in this release — that is **v0.4.0**.

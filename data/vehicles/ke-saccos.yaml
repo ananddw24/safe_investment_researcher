@@ -1,0 +1,17 @@
+id: ke-saccos
+name: SACCOs
+country: ke
+category: cooperative
+liquidity: medium
+suitability_notes: >
+  Cooperative savings and credit; verify SASRA status where applicable.
+risk_notes: >
+  Governance failures and coercive credit practices can harm members.
+literacy_angle: >
+  Emphasizes bylaws, audits, and regulatory status before large deposits.
+source_types:
+  - government-portal
+official_url: https://www.sasra.go.ke/
+docs_path: vehicles/ke/saccos.md
+status: published
+last_reviewed: "2026-10-17"

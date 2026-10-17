@@ -1,0 +1,18 @@
+id: us-401k-ira
+name: 401(k) and IRA concepts
+country: us
+category: pension
+liquidity: low
+suitability_notes: >
+  Long-term retirement wrappers; tax rules are complex. Literacy not product pick.
+risk_notes: >
+  Market losses, fees, and early-withdrawal taxes/penalties can be severe.
+literacy_angle: >
+  Separates account wrappers from investments held inside them.
+source_types:
+  - ministry
+  - government-portal
+official_url: https://www.irs.gov/retirement-plans
+docs_path: vehicles/us/retirement-401k-ira.md
+status: published
+last_reviewed: "2026-10-17"

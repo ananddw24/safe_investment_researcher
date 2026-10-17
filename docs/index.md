@@ -21,7 +21,10 @@ products, or giving personalized advice.
 1. Read the full [Educational disclaimer](disclaimer.md).
 2. Browse [Guides](guides/index.md) — begin with
    [emergency savings](guides/emergency-savings.md).
-3. Explore [India vehicles](vehicles/in/index.md) for household product *types*.
+3. Explore country vehicles:
+   [India](vehicles/in/index.md),
+   [United States](vehicles/us/index.md),
+   [Kenya](vehicles/ke/index.md).
 4. Follow the [woman-led household pathway](pathways/woman-led-household.md) for a
    suggested reading order.
 5. Check [Resources](resources/index.md) for curated official links.
@@ -39,7 +42,9 @@ products, or giving personalized advice.
 
 ## Status
 
-**v0.2.0** focuses on India plus core literacy guides. The GitHub repository may
-still be **private** until the owner flips visibility; GitHub Pages goes live when
-the repo is public (or private Pages is available) and Actions is selected as the
-Pages source.
+**v0.3.0** adds United States and Kenya household vehicle pages and resources on
+top of the India seed (v0.2.0).
+
+The GitHub repository may still be **private** until the owner flips visibility;
+GitHub Pages goes live when the repo is public (or private Pages is available) and
+Actions is selected as the Pages source. See the [release plan](about/release-plan.md).
