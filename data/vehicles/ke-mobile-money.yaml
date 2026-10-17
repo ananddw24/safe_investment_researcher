@@ -1,0 +1,17 @@
+id: ke-mobile-money
+name: Mobile money savings and lock products
+country: ke
+category: mobile-money-savings
+liquidity: high
+suitability_notes: >
+  Inclusion cornerstone for payments and small balances; fee and fraud literacy.
+risk_notes: >
+  SIM-swap fraud and confusion with insured bank deposits are common harms.
+literacy_angle: >
+  Teaches PIN safety, tariffs, and payments-system versus deposit distinctions.
+source_types:
+  - central-bank
+official_url: https://www.centralbank.go.ke/financial-education/
+docs_path: vehicles/ke/mobile-money-savings.md
+status: published
+last_reviewed: "2026-10-17"

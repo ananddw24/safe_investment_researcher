@@ -68,6 +68,22 @@ nav:
           - India Post schemes: vehicles/in/postal-schemes.md
           - Gold SGB vs physical: vehicles/in/gold-sgb-physical.md
           - SHG / microfinance: vehicles/in/shg-microfinance.md
+      - United States:
+          - vehicles/us/index.md
+          - FDIC savings / MMDA: vehicles/us/fdic-savings.md
+          - 401(k) and IRA concepts: vehicles/us/retirement-401k-ira.md
+          - TreasuryDirect: vehicles/us/treasurydirect.md
+          - Index funds / ETFs literacy: vehicles/us/index-funds-etfs.md
+          - Credit union savings: vehicles/us/credit-union-savings.md
+          - 529 / Coverdell: vehicles/us/education-529-coverdell.md
+      - Kenya:
+          - vehicles/ke/index.md
+          - Mobile money savings: vehicles/ke/mobile-money-savings.md
+          - Bank / MFI deposits: vehicles/ke/bank-mfi-deposits.md
+          - Money market funds: vehicles/ke/money-market-funds.md
+          - Treasury bills / bonds: vehicles/ke/treasury-bills-bonds.md
+          - SACCOs: vehicles/ke/saccos.md
+          - NSSF / pensions: vehicles/ke/nssf-pensions.md
   - Pathways:
       - pathways/index.md
       - Woman-led household: pathways/woman-led-household.md

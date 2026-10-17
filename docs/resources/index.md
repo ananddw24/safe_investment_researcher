@@ -26,6 +26,6 @@ sources.
 - See [CONTRIBUTING](https://github.com/ananddw24/safe_investment_researcher/blob/main/CONTRIBUTING.md)
 
 A generated on-page table may arrive in a later release. Records shipping in
-v0.2.0 include India regulators (RBI, SEBI, PFRDA), NCFE, India Post, DFS,
+v0.2.0–v0.3.0 include India regulators (RBI, SEBI, PFRDA), NCFE, India Post, DFS,
 DICGC, and selected global literacy portals (CFPB, FDIC, World Bank Findex, and
 others that validated in our link pass).

@@ -1,0 +1,19 @@
+id: us-fdic-savings
+name: FDIC-insured savings / MMDA
+country: us
+category: bank-deposit
+liquidity: high
+suitability_notes: >
+  Emergency cash foundation; understand FDIC limits and fees. Not a recommendation.
+risk_notes: >
+  Fees, fraud, and confusion with non-deposit money market funds can harm small
+  savers. Coverage limits depend on ownership categories.
+literacy_angle: >
+  Teaches deposit insurance literacy and fee reading before market products.
+source_types:
+  - central-bank
+  - government-portal
+official_url: https://www.fdic.gov/resources/deposit-insurance/
+docs_path: vehicles/us/fdic-savings.md
+status: published
+last_reviewed: "2026-10-17"

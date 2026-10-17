@@ -1,0 +1,12 @@
+id: us-dol
+title: U.S. Department of Labor
+url: https://www.dol.gov/
+country: us
+language: en
+topics:
+  - pensions
+  - financial-literacy
+audience:
+  - general
+source_type: ministry
+last_checked: "2026-10-17"
