@@ -1,0 +1,3 @@
+# Catalog pointer — keep valid YAML. Individual resources live as sibling files
+# or under examples/ until country folders are introduced.
+resources: []

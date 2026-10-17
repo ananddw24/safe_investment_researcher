@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+title: FinancialLibrary
+message: If you use this educational hub, please cite it.
+type: software
+authors:
+  - family-names: Dwivedi
+    given-names: Anand
+    alias: ananddw24
+repository-code: "https://github.com/ananddw24/safe_investment_researcher"
+url: "https://ananddw24.github.io/safe_investment_researcher/"
+license: "MIT AND CC-BY-4.0"
+version: 0.1.0
+date-released: "2026-10-17"
+abstract: >
+  Open educational hub that helps low-income households and women understand
+  money basics, regulated savings and investment types by country, and trusted
+  public resources — without opening accounts, selling products, or giving
+  personalized advice.
+keywords:
+  - financial-literacy
+  - education
+  - open-source
+  - mkdocs

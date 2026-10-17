@@ -1,0 +1,15 @@
+# Copy to data/resources/<id>.yaml and fill required fields.
+id: xx-example-resource
+title: Example resource title
+url: https://example.gov/financial-education
+country: xx  # ISO 3166-1 alpha-2, or global / africa, etc.
+# region: optional
+language: en
+topics:
+  - financial-literacy
+audience:
+  - general
+source_type: government-portal
+last_checked: "2026-10-17"
+# notes: optional
+# license_hint: optional

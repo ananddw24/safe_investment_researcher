@@ -1,0 +1,20 @@
+# Copy to data/vehicles/<id>.yaml (or country folder later)
+id: xx-example-vehicle
+name: Example regulated vehicle
+country: xx
+category: government-scheme
+liquidity: medium
+suitability_notes: >
+  Educational description only — not a recommendation.
+risk_notes: >
+  Rules, limits, and returns change over time. Always read current official terms
+  before acting. This note is literacy framing only.
+literacy_angle: >
+  Useful for teaching how regulated household schemes typically differ from
+  unregulated products that promise guaranteed high returns.
+source_types:
+  - government-portal
+# official_url: https://example.gov/
+# docs_path: vehicles/xx/index.md
+status: stub
+last_reviewed: "2026-10-17"

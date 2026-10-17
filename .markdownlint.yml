@@ -1,0 +1,10 @@
+# Soft line length; keep headings present; no hard tabs
+default: true
+MD013:
+  line_length: 120
+  code_blocks: false
+  tables: false
+MD041: true
+MD010: true
+MD033: false
+MD024: false

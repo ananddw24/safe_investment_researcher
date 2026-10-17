@@ -1,0 +1,67 @@
+site_name: FinancialLibrary
+site_description: Open educational hub for household financial literacy (not advice)
+site_url: https://ananddw24.github.io/safe_investment_researcher/
+repo_url: https://github.com/ananddw24/safe_investment_researcher
+repo_name: ananddw24/safe_investment_researcher
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: teal
+      accent: amber
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: teal
+      accent: amber
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.suggest
+    - content.code.copy
+
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - tables
+  - toc:
+      permalink: true
+  - attr_list
+
+nav:
+  - Home: index.md
+  - Disclaimer: disclaimer.md
+  - About:
+      - about/index.md
+      - Audience: about/audience.md
+      - Licenses: about/licenses.md
+  - Guides:
+      - guides/index.md
+      - Template: guides/_template.md
+  - Vehicles:
+      - vehicles/index.md
+      - Template: vehicles/_template.md
+      - India (stub): vehicles/in/index.md
+  - Pathways:
+      - pathways/index.md
+      - Template: pathways/_template.md
+  - Resources: resources/index.md
+  - Contributing: contributing.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/ananddw24/safe_investment_researcher

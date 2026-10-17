@@ -1,0 +1,14 @@
+id: in-rbi-financial-literacy
+title: Reserve Bank of India — Financial Education
+url: https://www.rbi.org.in/FinancialEducation/
+country: in
+language: en
+topics:
+  - financial-literacy
+  - banking
+audience:
+  - general
+  - low-income
+source_type: central-bank
+last_checked: "2026-10-17"
+notes: Official RBI financial education landing; verify URL on Light-day link pass.
