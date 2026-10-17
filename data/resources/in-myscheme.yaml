@@ -1,0 +1,14 @@
+id: in-myscheme
+title: myScheme — government schemes discovery
+url: https://www.myscheme.gov.in/
+country: in
+language: en
+topics:
+  - financial-literacy
+audience:
+  - general
+  - women
+  - low-income
+source_type: government-portal
+last_checked: "2026-10-17"
+notes: Aggregator — verify primary scheme notifications before acting.

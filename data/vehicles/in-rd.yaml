@@ -1,0 +1,17 @@
+id: in-rd
+name: Recurring Deposit (RD)
+country: in
+category: bank-deposit
+liquidity: medium
+suitability_notes: >
+  Monthly habit deposits toward a dated goal after emergency cash exists.
+risk_notes: >
+  Missed installments and early closure can reduce interest or add penalties.
+literacy_angle: >
+  Teaches commitment devices and matching tenure to known expenses.
+source_types:
+  - central-bank
+official_url: https://www.rbi.org.in/FinancialEducation/
+docs_path: vehicles/in/recurring-deposit.md
+status: published
+last_reviewed: "2026-10-17"

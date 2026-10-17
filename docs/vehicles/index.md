@@ -1,7 +1,8 @@
 ---
 title: Vehicles
 description: Regulated savings and investment types by country
-status: stub
+status: published
+last_reviewed: "2026-10-17"
 ---
 
 # Vehicles
@@ -12,13 +13,15 @@ status: stub
     Rules differ by country; verify with official sources in your jurisdiction.
 
 
-Vehicles are accessible savings/investment *types* available to ordinary
-households (not HNWI products), organized by ISO 3166-1 alpha-2 country code.
+Vehicles are accessible savings/investment *types* for ordinary households,
+organized by ISO country code.
 
 ## Countries
 
 | Country | Status |
 | --- | --- |
-| [India (`in`)](in/index.md) | Stub landing (structure only) |
+| [India (`in`)](in/index.md) | Published household set (v0.2.0) |
 
-Use [`_template.md`](_template.md) for new vehicle pages.
+United States and Kenya follow in **v0.3.0** ([release plan](../about/release-plan.md)).
+
+Template: [`_template.md`](_template.md).

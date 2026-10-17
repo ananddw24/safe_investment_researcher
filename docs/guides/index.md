@@ -1,7 +1,8 @@
 ---
 title: Guides
-description: Literacy guides (coming soon)
-status: stub
+description: Plain-language financial literacy guides
+status: published
+last_reviewed: "2026-10-17"
 ---
 
 # Guides
@@ -12,7 +13,10 @@ status: stub
     Rules differ by country; verify with official sources in your jurisdiction.
 
 
-Literacy guides will cover budgeting, emergency funds, inflation, banking
-basics, scams, women’s financial autonomy, remittances, and related topics.
+| Guide | Topics |
+| --- | --- |
+| [Emergency savings](emergency-savings.md) | Cash buffer before lock-ins |
+| [Inflation and capital preservation](inflation-capital-preservation.md) | Purchasing power literacy |
+| [Spotting unregulated schemes](spotting-unregulated-schemes.md) | Scam and “guaranteed return” red flags |
 
-**Coming soon** in `v0.2.0+`. Use [`_template.md`](_template.md) when drafting.
+Templates for new guides: [`_template.md`](_template.md).

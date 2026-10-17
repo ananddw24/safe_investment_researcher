@@ -1,0 +1,14 @@
+id: gl-worldbank-findex
+title: World Bank — Global Findex
+url: https://www.worldbank.org/en/publication/globalfindex
+country: global
+language: en
+topics:
+  - financial-literacy
+  - banking
+audience:
+  - general
+  - low-income
+  - women
+source_type: multilateral
+last_checked: "2026-10-17"

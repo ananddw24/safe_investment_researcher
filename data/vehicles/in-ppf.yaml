@@ -1,0 +1,19 @@
+id: in-ppf
+name: Public Provident Fund (PPF)
+country: in
+category: government-scheme
+liquidity: locked-term
+suitability_notes: >
+  Long-horizon small-savings scheme; contribution limits apply. Not a recommendation.
+risk_notes: >
+  Lock-in and contribution rules change by notification; unsuitable for emergency
+  cash. Always read current official terms.
+literacy_angle: >
+  Useful for teaching goal-based saving and differences versus bank deposits.
+source_types:
+  - ministry
+  - government-portal
+official_url: https://financialservices.gov.in/
+docs_path: vehicles/in/ppf.md
+status: published
+last_reviewed: "2026-10-17"

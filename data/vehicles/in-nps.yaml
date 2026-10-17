@@ -1,0 +1,18 @@
+id: in-nps
+name: National Pension System (NPS)
+country: in
+category: pension
+liquidity: low
+suitability_notes: >
+  Voluntary regulated retirement framework; market-linked components exist.
+risk_notes: >
+  Unit values can fall; exit and tax rules are complex and change. Verify with PFRDA.
+literacy_angle: >
+  Introduces retirement horizon and pension vocabulary without product picks.
+source_types:
+  - pension-regulator
+  - government-portal
+official_url: https://www.pfrda.org.in/
+docs_path: vehicles/in/nps.md
+status: published
+last_reviewed: "2026-10-17"

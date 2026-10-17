@@ -1,0 +1,19 @@
+id: in-ssy
+name: Sukanya Samriddhi Yojana (SSY)
+country: in
+category: government-scheme
+liquidity: locked-term
+suitability_notes: >
+  Girl-child focused small-savings scheme with eligibility and deposit windows.
+risk_notes: >
+  Documentation and eligibility mistakes are costly; long lock-in is unsuitable for
+  near-term emergencies.
+literacy_angle: >
+  Teaches purpose-labeled saving and reading eligibility before informal tips.
+source_types:
+  - ministry
+  - government-portal
+official_url: https://www.myscheme.gov.in/
+docs_path: vehicles/in/sukanya-samriddhi.md
+status: published
+last_reviewed: "2026-10-17"

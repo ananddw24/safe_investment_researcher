@@ -1,7 +1,7 @@
 ---
-title: India — vehicles (stub)
+title: India — household savings and investment types
 country: in
-status: stub
+status: published
 last_reviewed: "2026-10-17"
 ---
 
@@ -13,39 +13,34 @@ last_reviewed: "2026-10-17"
     Rules differ by country; verify with official sources in your jurisdiction.
 
 
-Structure-only landing for India. Full vehicle pages are planned for
-`v0.2.0`. Headings below are placeholders — not recommendations.
+These pages explain **regulated or widely supervised** savings and investment
+*types* that many Indian households encounter. They are for literacy — not
+product picks. Start with emergency cash in a safe, accessible account before
+long lock-in products.
 
-## Planned vehicle pages
+## Vehicle pages
 
-### Bank deposits (savings / FD / RD)
+| Vehicle | Focus |
+| --- | --- |
+| [Bank savings account](bank-savings.md) | Foundation account, DBT, UPI safety |
+| [Recurring Deposit (RD)](recurring-deposit.md) | Small monthly habit saving |
+| [Fixed Deposit (FD)](fixed-deposit.md) | Parking known surplus for a term |
+| [Public Provident Fund (PPF)](ppf.md) | Long-horizon government small savings |
+| [Sukanya Samriddhi Yojana (SSY)](sukanya-samriddhi.md) | Girl-child focused small savings |
+| [National Pension System (NPS)](nps.md) | Voluntary retirement savings literacy |
+| [SIP / ELSS mutual funds](sip-elss.md) | Regulated market participation basics |
+| [India Post savings schemes](postal-schemes.md) | Postal network access |
+| [Gold: SGB vs physical](gold-sgb-physical.md) | Cultural store of value, tradeoffs |
+| [SHG / microfinance literacy](shg-microfinance.md) | Group savings vs borrowing risks |
 
-<!-- TODO -->
+## How to use this section
 
-### Public Provident Fund (PPF)
+1. Read the [emergency savings guide](../../guides/emergency-savings.md).
+2. Skim [spotting unregulated schemes](../../guides/spotting-unregulated-schemes.md).
+3. Open only the vehicle pages that match a goal you already understand.
+4. Verify current rules on official portals (RBI, SEBI, PFRDA, India Post, DFS).
 
-<!-- TODO -->
+## Related
 
-### Sukanya Samriddhi Yojana (SSY)
-
-<!-- TODO -->
-
-### National Pension System (NPS)
-
-<!-- TODO -->
-
-### Postal / small savings
-
-<!-- TODO -->
-
-### Regulated mutual funds (SIP / ELSS literacy)
-
-<!-- TODO -->
-
-### Gold-related regulated options (literacy framing)
-
-<!-- TODO -->
-
-### SHG / MFI literacy context
-
-<!-- TODO -->
+- [Woman-led household pathway](../../pathways/woman-led-household.md)
+- [Resources database](../../resources/index.md)

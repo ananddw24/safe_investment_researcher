@@ -7,6 +7,25 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.2.0] - 2026-10-17
+
+### Added
+
+- India household vehicle pages (bank savings, RD, FD, PPF, SSY, NPS, SIP/ELSS
+  literacy, postal schemes, gold SGB vs physical, SHG/microfinance literacy)
+- Guides: emergency savings; inflation and capital preservation; spotting
+  unregulated “guaranteed return” schemes
+- Pathway: woman-led household (links only to pages shipped in this release)
+- Homepage and section indexes rewritten as a public educational hub
+- Verified resource YAML records (India regulators + selected global literacy
+  portals) and matching vehicle YAML stubs
+- Release plan page (`docs/about/release-plan.md`)
+
+### Changed
+
+- README status notes private visibility / Pages expectations until owner flips
+  the repository to public (or enables private Pages)
+
 ## [0.1.0] - 2026-10-17
 
 ### Added
@@ -21,8 +40,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Notes
 
-- **Scaffold only.** No country deep-dive prose or bulk resource seed in this release.
-- Next milestone: `v0.2.0` first country seed (India).
+- **Scaffold only** at 0.1.0. Content seeding begins with 0.2.0 (India).
 
-[Unreleased]: https://github.com/ananddw24/safe_investment_researcher/compare/v0.1.0...HEAD
+[Unreleased]: https://github.com/ananddw24/safe_investment_researcher/compare/v0.2.0...HEAD
+[0.2.0]: https://github.com/ananddw24/safe_investment_researcher/releases/tag/v0.2.0
 [0.1.0]: https://github.com/ananddw24/safe_investment_researcher/releases/tag/v0.1.0

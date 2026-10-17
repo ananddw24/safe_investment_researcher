@@ -1,0 +1,13 @@
+id: in-sebi-investor-portal
+title: SEBI Investor Portal
+url: https://investor.sebi.gov.in/
+country: in
+language: en
+topics:
+  - investing-basics
+  - financial-literacy
+  - scams
+audience:
+  - general
+source_type: securities-regulator
+last_checked: "2026-10-17"

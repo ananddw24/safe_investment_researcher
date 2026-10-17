@@ -16,16 +16,30 @@ products, or giving personalized advice.
     Rules differ by country; verify with official sources in your jurisdiction.
 
 
-## Explore
+## Start here
 
-| Section | What you will find |
+1. Read the full [Educational disclaimer](disclaimer.md).
+2. Browse [Guides](guides/index.md) — begin with
+   [emergency savings](guides/emergency-savings.md).
+3. Explore [India vehicles](vehicles/in/index.md) for household product *types*.
+4. Follow the [woman-led household pathway](pathways/woman-led-household.md) for a
+   suggested reading order.
+5. Check [Resources](resources/index.md) for curated official links.
+
+## What you will find
+
+| Section | Purpose |
 | --- | --- |
-| [Guides](guides/index.md) | Plain-language literacy explainers |
-| [Vehicles](vehicles/index.md) | Regulated savings and investment *types* by country |
-| [Resources](resources/index.md) | Curated public links (YAML database) |
-| [Pathways](pathways/index.md) | Ordered reading paths for common situations |
-| [Disclaimer](disclaimer.md) | Full educational disclaimer |
+| [Guides](guides/index.md) | Literacy explainers |
+| [Vehicles](vehicles/index.md) | Country-by-country product *types* |
+| [Pathways](pathways/index.md) | Ordered reading paths |
+| [Resources](resources/index.md) | Curated YAML link database |
+| [Release plan](about/release-plan.md) | What each version ships |
+| [About](about/index.md) | Audience and licenses |
 
 ## Status
 
-`v0.1.0` is **scaffold only**. Country content begins with India in `v0.2.0`.
+**v0.2.0** focuses on India plus core literacy guides. The GitHub repository may
+still be **private** until the owner flips visibility; GitHub Pages goes live when
+the repo is public (or private Pages is available) and Actions is selected as the
+Pages source.
