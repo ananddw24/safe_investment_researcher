@@ -4,7 +4,11 @@ MD013:
   line_length: 120
   code_blocks: false
   tables: false
-MD041: true
+MD041:
+  front_matter_title: ""
+MD025:
+  front_matter_title: ""
 MD010: true
 MD033: false
 MD024: false
+MD012: false
