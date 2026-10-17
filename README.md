@@ -6,11 +6,15 @@
 [![License: CC BY 4.0](https://img.shields.io/badge/license%20(content)-CC%20BY%204.0-lightgrey.svg)](LICENSE-CONTENT)
 [![Pages](https://img.shields.io/badge/docs-GitHub%20Pages-222222.svg)](https://ananddw24.github.io/safe_investment_researcher/)
 
-**FinancialLibrary** is an open educational hub that helps low-income households and women understand money basics, regulated savings and investment *types* by country, and trusted public resources — without opening accounts, selling products, or giving personalized advice. Everything is educational only; always verify with official sources in your jurisdiction.
+**FinancialLibrary** is an open educational hub that helps low-income households and women
+understand money basics, regulated savings and investment *types* by country, and trusted
+public resources — without opening accounts, selling products, or giving personalized advice.
+Everything is educational only; always verify with official sources in your jurisdiction.
 
-
-> **Repository name:** This project currently lives at [`ananddw24/safe_investment_researcher`](https://github.com/ananddw24/safe_investment_researcher). You can rename it to `financial-library` later in GitHub **Settings → General → Repository name** (do not rely on API rename if it returns 403). Product name remains **FinancialLibrary**.
-
+> **Repository name:** This project currently lives at
+> [`ananddw24/safe_investment_researcher`](https://github.com/ananddw24/safe_investment_researcher).
+> You can rename it to `financial-library` later in GitHub **Settings → General → Repository name**
+> (do not rely on API rename if it returns 403). Product name remains **FinancialLibrary**.
 
 ## What this is / is not
 
