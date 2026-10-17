@@ -38,3 +38,5 @@ channels and verify on official CBK, CMA, SASRA, Treasury, and NSSF materials.
 ## Related
 
 - [United States vehicles](../us/index.md) · [India vehicles](../in/index.md)
+- Africa cluster peers: [Nigeria](../ng/index.md) · [South Africa](../za/index.md) ·
+  [Ghana](../gh/index.md) · [Egypt](../eg/index.md)

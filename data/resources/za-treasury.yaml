@@ -1,0 +1,12 @@
+id: za-treasury
+title: National Treasury South Africa
+url: https://www.treasury.gov.za/
+country: za
+language: en
+topics:
+  - savings
+  - regulation
+audience:
+  - general
+source_type: treasury
+last_checked: "2026-10-17"

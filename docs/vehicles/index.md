@@ -23,6 +23,10 @@ organized by ISO country code.
 | [India (`in`)](in/index.md) | Published (v0.2.0) |
 | [United States (`us`)](us/index.md) | Published (v0.3.0) |
 | [Kenya (`ke`)](ke/index.md) | Published (v0.3.0) |
+| [Nigeria (`ng`)](ng/index.md) | Short pages (v0.5.0) |
+| [South Africa (`za`)](za/index.md) | Short pages (v0.5.0) |
+| [Ghana (`gh`)](gh/index.md) | Short pages (v0.5.0) |
+| [Egypt (`eg`)](eg/index.md) | Short pages (v0.5.0) |
 | [China (`cn`)](cn/index.md) | Short pages (v0.4.0) |
 | [Germany (`de`)](de/index.md) | Short pages (v0.4.0) |
 | [Japan (`jp`)](jp/index.md) | Short pages (v0.4.0) |
@@ -32,7 +36,7 @@ organized by ISO country code.
 | [Brazil (`br`)](br/index.md) | Short pages (v0.4.0) |
 | [Canada (`ca`)](ca/index.md) | Short pages (v0.4.0) |
 
-Africa cluster countries beyond Kenya follow in **v0.5.0**
-([release plan](../about/release-plan.md)).
+Africa cluster: Kenya (v0.3.0) plus Nigeria, South Africa, Ghana, and Egypt
+(v0.5.0). See the [release plan](../about/release-plan.md).
 
 Template: [`_template.md`](_template.md).

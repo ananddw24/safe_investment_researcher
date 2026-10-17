@@ -84,6 +84,38 @@ nav:
           - Treasury bills / bonds: vehicles/ke/treasury-bills-bonds.md
           - SACCOs: vehicles/ke/saccos.md
           - NSSF / pensions: vehicles/ke/nssf-pensions.md
+      - Nigeria:
+          - vehicles/ng/index.md
+          - Bank savings / fixed deposits: vehicles/ng/bank-deposits.md
+          - SEC-registered funds: vehicles/ng/sec-funds.md
+          - Treasury bills / FGN bonds: vehicles/ng/treasury-debt.md
+          - Contributory Pension System: vehicles/ng/pension-cps.md
+          - Cooperatives / thrift societies: vehicles/ng/cooperatives.md
+          - Mobile money / fintech wallets: vehicles/ng/mobile-money.md
+      - South Africa:
+          - vehicles/za/index.md
+          - Bank savings / fixed deposits: vehicles/za/bank-deposits.md
+          - Tax-Free Savings Account: vehicles/za/tfsa.md
+          - Unit trusts / CIS: vehicles/za/unit-trusts.md
+          - RSA Retail Savings Bonds: vehicles/za/rsa-retail-bonds.md
+          - Stokvels: vehicles/za/stokvels.md
+          - Retirement / pensions: vehicles/za/retirement-pensions.md
+      - Ghana:
+          - vehicles/gh/index.md
+          - Bank / rural bank deposits: vehicles/gh/bank-deposits.md
+          - Mobile money wallets: vehicles/gh/mobile-money.md
+          - Treasury bills: vehicles/gh/treasury-bills.md
+          - SEC-licensed funds: vehicles/gh/sec-funds.md
+          - Susu / cooperatives: vehicles/gh/susu-cooperatives.md
+          - SSNIT pension: vehicles/gh/ssnit.md
+      - Egypt:
+          - vehicles/eg/index.md
+          - Bank savings / CDs: vehicles/eg/bank-deposits.md
+          - Postal savings: vehicles/eg/postal-savings.md
+          - Treasury bills / bonds: vehicles/eg/treasury-debt.md
+          - Money market / fixed-income funds: vehicles/eg/funds.md
+          - Pension / social insurance: vehicles/eg/pensions.md
+          - Microfinance / NGO savings: vehicles/eg/microfinance.md
       - China:
           - vehicles/cn/index.md
           - Bank deposits: vehicles/cn/bank-deposits.md

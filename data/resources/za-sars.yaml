@@ -1,0 +1,14 @@
+id: za-sars
+title: South African Revenue Service
+url: https://www.sars.gov.za/
+country: za
+language: en
+topics:
+  - savings
+  - pensions
+  - financial-literacy
+audience:
+  - general
+source_type: government-portal
+last_checked: "2026-10-17"
+notes: Tax wrapper literacy (e.g. TFSA concepts) — not tax advice.

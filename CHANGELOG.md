@@ -7,6 +7,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.5.0] - 2026-10-17
+
+### Added
+
+- Africa cluster household vehicle pages for Nigeria, South Africa, Ghana, and
+  Egypt (6 vehicles each), with inflation/FX and unregulated-scheme framing
+- Verified regulator/government resource YAML for those countries
+- Homepage and nav links for Nigeria, South Africa, Ghana, and Egypt
+- Kenya index links to Africa cluster peers (Kenya content not rewritten)
+
+### Changed
+
+- Release plan marks v0.5.0 shipped
+
 ## [0.4.0] - 2026-10-17
 
 ### Added
@@ -70,7 +84,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - **Scaffold only** at 0.1.0. Content seeding begins with 0.2.0 (India).
 
-[Unreleased]: https://github.com/ananddw24/safe_investment_researcher/compare/v0.4.0...HEAD
+[Unreleased]: https://github.com/ananddw24/safe_investment_researcher/compare/v0.5.0...HEAD
+[0.5.0]: https://github.com/ananddw24/safe_investment_researcher/releases/tag/v0.5.0
 [0.4.0]: https://github.com/ananddw24/safe_investment_researcher/releases/tag/v0.4.0
 [0.3.0]: https://github.com/ananddw24/safe_investment_researcher/releases/tag/v0.3.0
 [0.2.0]: https://github.com/ananddw24/safe_investment_researcher/releases/tag/v0.2.0
