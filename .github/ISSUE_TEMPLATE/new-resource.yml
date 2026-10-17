@@ -1,0 +1,68 @@
+name: New resource
+description: Suggest a curated public resource YAML entry
+title: "[resource]: "
+labels: ["good first issue", "resource"]
+body:
+  - type: input
+    id: title
+    attributes:
+      label: title
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: url
+    validations:
+      required: true
+  - type: input
+    id: country
+    attributes:
+      label: country / region
+      description: ISO 3166-1 alpha-2, or global / africa, etc.
+    validations:
+      required: true
+  - type: input
+    id: language
+    attributes:
+      label: language
+      placeholder: en
+    validations:
+      required: true
+  - type: textarea
+    id: topics
+    attributes:
+      label: topics[]
+      description: One per line from the schema enum
+    validations:
+      required: true
+  - type: textarea
+    id: audience
+    attributes:
+      label: audience[]
+      description: low-income, women, gig, rural, urban, general
+    validations:
+      required: true
+  - type: dropdown
+    id: source_type
+    attributes:
+      label: source_type
+      options:
+        - central-bank
+        - securities-regulator
+        - treasury
+        - ministry
+        - government-portal
+        - ngo
+        - multilateral
+        - university
+        - other-public
+    validations:
+      required: true
+  - type: input
+    id: last_checked
+    attributes:
+      label: last_checked
+      placeholder: YYYY-MM-DD
+    validations:
+      required: true

@@ -1,0 +1,46 @@
+name: Content correction
+description: Fix an incorrect educational claim
+title: "[content]: "
+labels: ["content"]
+body:
+  - type: input
+    id: path
+    attributes:
+      label: Page path
+      placeholder: docs/vehicles/in/index.md
+    validations:
+      required: true
+  - type: textarea
+    id: incorrect
+    attributes:
+      label: Incorrect claim
+    validations:
+      required: true
+  - type: textarea
+    id: correction
+    attributes:
+      label: Suggested correction
+    validations:
+      required: true
+  - type: input
+    id: source_url
+    attributes:
+      label: Source URL
+    validations:
+      required: true
+  - type: dropdown
+    id: source_type
+    attributes:
+      label: source_type
+      options:
+        - central-bank
+        - securities-regulator
+        - treasury
+        - ministry
+        - government-portal
+        - ngo
+        - multilateral
+        - university
+        - other-public
+    validations:
+      required: true

@@ -1,88 +1,62 @@
-# 💰 Safe Investment Researcher & Advisor Bot
+# FinancialLibrary
 
-A professional, AI-powered investment advisor designed to provide **safe, strategic, and actionable financial advice** for daily micro-investors ($10 - $50/day). 
+[![Docs](https://github.com/ananddw24/safe_investment_researcher/actions/workflows/ci-docs.yml/badge.svg)](https://github.com/ananddw24/safe_investment_researcher/actions/workflows/ci-docs.yml)
+[![Data](https://github.com/ananddw24/safe_investment_researcher/actions/workflows/ci-data.yml/badge.svg)](https://github.com/ananddw24/safe_investment_researcher/actions/workflows/ci-data.yml)
+[![License: MIT](https://img.shields.io/badge/license%20(code)-MIT-blue.svg)](LICENSE)
+[![License: CC BY 4.0](https://img.shields.io/badge/license%20(content)-CC%20BY%204.0-lightgrey.svg)](LICENSE-CONTENT)
+[![Pages](https://img.shields.io/badge/docs-GitHub%20Pages-222222.svg)](https://ananddw24.github.io/safe_investment_researcher/)
 
-Built with **Streamlit** and **Google's Gemini 2.5 AI**, this application offers real-time market grounding, country-specific localization, and free-tier optimized performance.
+**FinancialLibrary** is an open educational hub that helps low-income households and women understand money basics, regulated savings and investment *types* by country, and trusted public resources — without opening accounts, selling products, or giving personalized advice. Everything is educational only; always verify with official sources in your jurisdiction.
 
-### 📸 Project Screenshots
 
-**1. Real-Time Macro Economic Context (Search Grounding)**
-![Macro Context](docs/images/macro_context_example.png)
+> **Repository name:** This project currently lives at [`ananddw24/safe_investment_researcher`](https://github.com/ananddw24/safe_investment_researcher). You can rename it to `financial-library` later in GitHub **Settings → General → Repository name** (do not rely on API rename if it returns 403). Product name remains **FinancialLibrary**.
 
-**2. Strategic Allocation & Historical Performance**
-![Allocation Breakdown](docs/images/allocation_breakdown_example.png)
 
-## 🌟 Key Features
+## What this is / is not
 
-### 🌍 Global Localization
-- **Country-Specific Advice**: Tailors recommendations based on your selected region (e.g., **401k/IRA** for US, **ISA** for UK, **TFSA** for Canada).
-- **Local Assets**: Suggests tickers and platforms available in your jurisdiction (e.g., VOO vs VUSA).
+| Is | Is not |
+| --- | --- |
+| Static MkDocs docs site + curated YAML resource DB | Brokerage, robo-advisor, or account-opening funnel |
+| Guides, Vehicles (by country), Resources, Pathways | Personalized “you should buy X” recommendations |
+| Cite-first educational material for NGOs & educators | KYC, user financial data, or commercial lead gen |
+| Fork-friendly MIT (code) + CC BY 4.0 (content) | Unregulated product promotion or “guaranteed returns” content |
 
-### 🧠 Real-Time Search Grounding
-- **No Hallucinations**: Strictly forbids simulation. Uses **Google Search** to fetch *live* data.
-- **Macro Analysis**: Analyzes current **Central Bank** minutes (Fed, ECB, BOE) and **Inflation (CPI)** reports to justify advice.
-- **Verification**: Cross-references budget constraints with actual platform fees.
+## Quick start
 
-### ⚡️ Free Tier Optimized
-- **Model Selector**: Choose between **Gemini 2.5 Flash** (Balanced) and **Flash-Lite** (Fastest/Cheapest).
-- **Smart Rate Limiting**: Intelligent retry logic (via `tenacity`) handles API quotas gracefully, preventing crashes on "Resource Exhausted" errors.
-
-### 🎨 Premium Experience
-- **Rich Aesthetics**: Dark-mode UI with glassmorphism effects and responsiveness.
-- **Downloadable Reports**: Export your strategic investment plan as a Markdown report.
-
----
-
-## 🚀 Quick Start
-
-### Prerequisites
-- Python 3.10+
-- A [Google AI Studio API Key](https://aistudio.google.com/)
-
-### Installation
-
-1.  **Clone the repository**:
-    ```bash
-    git clone https://github.com/ananddw24/safe_investment_researcher.git
-    cd safe_investment_researcher
-    ```
-
-2.  **Run the automated setup script**:
-    ```bash
-    ./start.sh
-    ```
-    *This script creates a virtual environment, installs dependencies, and launches the app.*
-
-3.  **Access the App**:
-    Open your browser to `http://localhost:8505`
-
----
-
-## 🛠️ Technology Stack
-
-- **Frontend/Backend**: [Streamlit](https://streamlit.io/) (Python)
-- **AI Model**: Google Gemini 2.5 Flash / Flash-Lite via `google-genai` SDK
-- **Reliability**: `tenacity` for retry logic
-- **Search**: Google Search Tool (Grounding)
-
-## 📂 Project Structure
-
-```
-.
-├── advisor_agent.py    # Core AI Logic (Prompting, Search Integration, Retries)
-├── app.py              # Streamlit UI & State Management
-├── styles.css          # Custom CSS for Premium Look
-├── start.sh            # One-click startup script
-├── requirements.txt    # Python dependencies
-└── docs/               # Development artifacts and plans
+```bash
+python -m venv .venv
+source .venv/bin/activate   # Windows: .venv\\Scripts\\activate
+pip install -r requirements.txt
+mkdocs serve
 ```
 
-## 📝 Documentation
-Detailed development logs and plans are available in the `docs/` directory:
-- [Implementation Plan](docs/implementation_plan.md)
-- [Walkthrough & Verification](docs/walkthrough.md)
-- [Task Log](docs/task.md)
+Or: `make serve` · build: `make build` · validate data: `make validate`
 
----
+Docs site (after Pages is enabled): <https://ananddw24.github.io/safe_investment_researcher/>
 
-**Disclaimer**: *This tool provides information for educational purposes only and does not constitute financial advice. Always consult with a qualified financial professional before making investment decisions.*
+## Taxonomy map
+
+| Type | Path | Purpose |
+| --- | --- | --- |
+| Guides | `docs/guides/` | Plain-language literacy explainers |
+| Vehicles | `docs/vehicles/<iso>/` | Regulated savings/investment *types* by country |
+| Resources | `data/resources/` | Curated outbound links (YAML + schema) |
+| Pathways | `docs/pathways/` | Ordered reading paths (no advice engine) |
+
+See also [docs/disclaimer.md](docs/disclaimer.md).
+
+## How to add a resource
+
+1. Copy [`data/resources/_template.yaml`](data/resources/_template.yaml) to a new file.
+2. Fill required fields (`id`, `title`, `url`, `country`, `language`, `topics`, `audience`, `source_type`, `last_checked`).
+3. Run `python scripts/validate_data.py`.
+4. Open a PR (see [CONTRIBUTING.md](CONTRIBUTING.md)).
+
+## License
+
+- **Code, scripts, schemas, workflows:** [MIT](LICENSE)
+- **Educational prose and curated metadata:** [CC BY 4.0](LICENSE-CONTENT)
+
+## Status
+
+`v0.1.0` is **scaffold only**. Content seeding begins with `v0.2.0` (India).

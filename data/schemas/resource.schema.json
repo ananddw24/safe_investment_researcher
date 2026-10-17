@@ -1,0 +1,109 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://financial-library.local/schemas/resource.schema.json",
+  "title": "FinancialLibraryResource",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "title",
+    "url",
+    "country",
+    "language",
+    "topics",
+    "audience",
+    "source_type",
+    "last_checked"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z]{2,3}-[a-z0-9-]+$",
+      "description": "Stable slug: country/region prefix + kebab name"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 200
+    },
+    "url": {
+      "type": "string",
+      "format": "uri"
+    },
+    "country": {
+      "type": "string",
+      "description": "ISO 3166-1 alpha-2, or 'global', or region code e.g. 'africa'"
+    },
+    "region": {
+      "type": "string"
+    },
+    "language": {
+      "type": "string",
+      "pattern": "^[a-z]{2}(-[A-Z]{2})?$"
+    },
+    "topics": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "enum": [
+          "budgeting",
+          "emergency-fund",
+          "banking",
+          "savings",
+          "pensions",
+          "investing-basics",
+          "inflation",
+          "scams",
+          "women",
+          "remittances",
+          "debt",
+          "mobile-money",
+          "insurance",
+          "financial-literacy",
+          "regulation"
+        ]
+      }
+    },
+    "audience": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "enum": [
+          "low-income",
+          "women",
+          "gig",
+          "rural",
+          "urban",
+          "general"
+        ]
+      }
+    },
+    "source_type": {
+      "type": "string",
+      "enum": [
+        "central-bank",
+        "securities-regulator",
+        "treasury",
+        "ministry",
+        "government-portal",
+        "ngo",
+        "multilateral",
+        "university",
+        "other-public"
+      ]
+    },
+    "last_checked": {
+      "type": "string",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+    },
+    "notes": {
+      "type": "string",
+      "maxLength": 500
+    },
+    "license_hint": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,11 @@
+# Link checker — soft-fail in CI until v0.2.0 allowlist is stable
+verbose = "info"
+max_retries = 3
+timeout = 20
+accept = ["200", "429"]
+exclude_path = ["LICENSE", "LICENSE-CONTENT"]
+exclude = [
+  '^https://github\.com/.*/settings',
+  '^https://.*\.local',
+]
+scheme = ["https", "http"]

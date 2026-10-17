@@ -1,0 +1,16 @@
+---
+description: FinancialLibrary educational hub conventions
+globs:
+  - "**/*"
+alwaysApply: true
+---
+
+# FinancialLibrary rules
+
+- Educational only: never personalized financial advice or product sales language.
+- Preserve disclaimer admonitions on Guides, Vehicles, and Pathways pages.
+- YAML resources/vehicles must satisfy `data/schemas/*.schema.json`.
+- Prefer ISO 3166-1 alpha-2 country codes; do not invent cross-border products.
+- Run `python scripts/validate_data.py` and `mkdocs build --strict` before merge claims.
+- Dual license: MIT (code) + CC BY 4.0 (content). Do not add proprietary blobs.
+- Do not copy Streamlit / brokerage stacks into this repo.

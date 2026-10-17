@@ -1,0 +1,39 @@
+name: New vehicle / country
+description: Propose a country vehicle page or stub
+title: "[vehicle]: "
+labels: ["vehicle"]
+body:
+  - type: input
+    id: country
+    attributes:
+      label: ISO country code
+      placeholder: in
+    validations:
+      required: true
+  - type: input
+    id: vehicle_name
+    attributes:
+      label: Vehicle name
+    validations:
+      required: true
+  - type: dropdown
+    id: source_type
+    attributes:
+      label: Official source type
+      options:
+        - central-bank
+        - securities-regulator
+        - treasury
+        - ministry
+        - government-portal
+        - postal
+        - pension-regulator
+    validations:
+      required: true
+  - type: textarea
+    id: suitability
+    attributes:
+      label: Suitability notes draft
+      description: Educational framing only — not a recommendation
+    validations:
+      required: true

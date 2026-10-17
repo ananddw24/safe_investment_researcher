@@ -1,0 +1,17 @@
+[project]
+name = "financial-library"
+version = "0.1.0"
+description = "Open educational hub for household financial literacy (not advice)"
+readme = "README.md"
+requires-python = ">=3.12"
+license = { text = "MIT" }
+authors = [{ name = "Anand Dwivedi", email = "anand.dw24@gmail.com" }]
+keywords = ["financial-literacy", "education", "mkdocs"]
+
+[project.urls]
+Homepage = "https://github.com/ananddw24/safe_investment_researcher"
+Documentation = "https://ananddw24.github.io/safe_investment_researcher/"
+Repository = "https://github.com/ananddw24/safe_investment_researcher"
+
+[tool.financial-library]
+# requirements.txt remains canonical for CI installs
