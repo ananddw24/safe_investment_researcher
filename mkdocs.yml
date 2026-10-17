@@ -48,16 +48,29 @@ nav:
       - about/index.md
       - Audience: about/audience.md
       - Licenses: about/licenses.md
+      - Release plan: about/release-plan.md
   - Guides:
       - guides/index.md
-      - Template: guides/_template.md
+      - Emergency savings: guides/emergency-savings.md
+      - Inflation and capital preservation: guides/inflation-capital-preservation.md
+      - Spotting unregulated schemes: guides/spotting-unregulated-schemes.md
   - Vehicles:
       - vehicles/index.md
-      - Template: vehicles/_template.md
-      - India (stub): vehicles/in/index.md
+      - India:
+          - vehicles/in/index.md
+          - Bank savings: vehicles/in/bank-savings.md
+          - Recurring Deposit: vehicles/in/recurring-deposit.md
+          - Fixed Deposit: vehicles/in/fixed-deposit.md
+          - PPF: vehicles/in/ppf.md
+          - Sukanya Samriddhi: vehicles/in/sukanya-samriddhi.md
+          - NPS: vehicles/in/nps.md
+          - SIP / ELSS literacy: vehicles/in/sip-elss.md
+          - India Post schemes: vehicles/in/postal-schemes.md
+          - Gold SGB vs physical: vehicles/in/gold-sgb-physical.md
+          - SHG / microfinance: vehicles/in/shg-microfinance.md
   - Pathways:
       - pathways/index.md
-      - Template: pathways/_template.md
+      - Woman-led household: pathways/woman-led-household.md
   - Resources: resources/index.md
   - Contributing: contributing.md
 

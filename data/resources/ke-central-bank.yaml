@@ -1,0 +1,14 @@
+id: ke-central-bank
+title: Central Bank of Kenya
+url: https://www.centralbank.go.ke/
+country: ke
+language: en
+topics:
+  - banking
+  - mobile-money
+  - regulation
+audience:
+  - general
+  - low-income
+source_type: central-bank
+last_checked: "2026-10-17"

@@ -1,0 +1,14 @@
+id: us-cfpb
+title: Consumer Financial Protection Bureau
+url: https://www.consumerfinance.gov/
+country: us
+language: en
+topics:
+  - financial-literacy
+  - banking
+  - debt
+audience:
+  - general
+  - low-income
+source_type: government-portal
+last_checked: "2026-10-17"

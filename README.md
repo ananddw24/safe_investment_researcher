@@ -63,4 +63,14 @@ See also [docs/disclaimer.md](docs/disclaimer.md).
 
 ## Status
 
-`v0.1.0` is **scaffold only**. Content seeding begins with `v0.2.0` (India).
+**v0.2.0** — India household vehicles, core literacy guides, one pathway, and
+verified resource records.
+
+The GitHub repository may remain **private** until the owner flips visibility in
+Settings (this App may not be able to change visibility). GitHub Pages (Actions)
+becomes available at
+<https://ananddw24.github.io/safe_investment_researcher/> once the repo is public
+(or private Pages is enabled) and **Settings → Pages → Source: GitHub Actions** is
+selected.
+
+Next: **v0.3.0** United States + Kenya (see [release plan](docs/about/release-plan.md)).

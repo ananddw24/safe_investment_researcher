@@ -1,7 +1,8 @@
 ---
 title: Resources
 description: Curated YAML resource database
-status: stub
+status: published
+last_reviewed: "2026-10-17"
 ---
 
 # Resources
@@ -12,11 +13,19 @@ status: stub
     Rules differ by country; verify with official sources in your jurisdiction.
 
 
-External public resources are stored as YAML under `data/resources/` and
-validated against `data/schemas/resource.schema.json`.
+External public resources live as YAML under `data/resources/` and must pass
+`scripts/validate_data.py`. Prefer government, regulator, NGO, and multilateral
+sources.
 
-A generated table may appear here in a later release. For now:
+## How to browse
 
-- Template: [`data/resources/_template.yaml`](https://github.com/ananddw24/safe_investment_researcher/blob/main/data/resources/_template.yaml)
-- Example: [`data/resources/examples/in-rbi-financial-literacy.yaml`](https://github.com/ananddw24/safe_investment_researcher/blob/main/data/resources/examples/in-rbi-financial-literacy.yaml)
-- How to add: [CONTRIBUTING.md](https://github.com/ananddw24/safe_investment_researcher/blob/main/CONTRIBUTING.md)
+- Browse files in the repository under
+  [`data/resources/`](https://github.com/ananddw24/safe_investment_researcher/tree/main/data/resources)
+- Add new records with the
+  [template](https://github.com/ananddw24/safe_investment_researcher/blob/main/data/resources/_template.yaml)
+- See [CONTRIBUTING](https://github.com/ananddw24/safe_investment_researcher/blob/main/CONTRIBUTING.md)
+
+A generated on-page table may arrive in a later release. Records shipping in
+v0.2.0 include India regulators (RBI, SEBI, PFRDA), NCFE, India Post, DFS,
+DICGC, and selected global literacy portals (CFPB, FDIC, World Bank Findex, and
+others that validated in our link pass).

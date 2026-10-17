@@ -11,10 +11,11 @@ description: About FinancialLibrary
     Rules differ by country; verify with official sources in your jurisdiction.
 
 
-FinancialLibrary is an open educational hub for low-income households and
-women. It explains money basics, regulated savings/investment *types* by
-country, and points to trusted public resources.
+FinancialLibrary is an open educational hub for low-income households and women.
+It explains money basics, regulated savings/investment *types* by country, and
+points to trusted public resources.
 
 - [Audience](audience.md)
 - [Licenses](licenses.md)
+- [Release plan](release-plan.md)
 - [Disclaimer](../disclaimer.md)

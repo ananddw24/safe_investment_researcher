@@ -1,0 +1,17 @@
+id: in-fd
+name: Fixed Deposit (FD)
+country: in
+category: bank-deposit
+liquidity: low
+suitability_notes: >
+  Term deposit for known surplus that will not be needed during the tenure.
+risk_notes: >
+  Early break penalties and reinvestment risk; check deposit insurance literacy.
+literacy_angle: >
+  Illustrates time versus access tradeoffs versus inflation.
+source_types:
+  - central-bank
+official_url: https://www.dicgc.org.in/
+docs_path: vehicles/in/fixed-deposit.md
+status: published
+last_reviewed: "2026-10-17"

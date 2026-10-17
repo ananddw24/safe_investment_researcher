@@ -1,0 +1,19 @@
+id: in-bank-savings
+name: Bank savings account
+country: in
+category: bank-deposit
+liquidity: high
+suitability_notes: >
+  Foundation account for DBT, wages, and UPI. Educational description only.
+risk_notes: >
+  Fees, fraud, and OTP scams can erase small balances. Read the bank schedule of
+  charges and practice basic digital safety.
+literacy_angle: >
+  Teaches formal account access, nominees, and separating emergency cash from
+  long lock-in products.
+source_types:
+  - central-bank
+official_url: https://www.rbi.org.in/FinancialEducation/
+docs_path: vehicles/in/bank-savings.md
+status: published
+last_reviewed: "2026-10-17"

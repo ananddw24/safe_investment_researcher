@@ -1,0 +1,14 @@
+id: in-india-post
+title: India Post
+url: https://www.indiapost.gov.in/
+country: in
+language: en
+topics:
+  - savings
+  - banking
+audience:
+  - general
+  - rural
+  - low-income
+source_type: government-portal
+last_checked: "2026-10-17"

@@ -1,7 +1,8 @@
 ---
 title: Pathways
-description: Ordered reading paths (coming soon)
-status: stub
+description: Ordered reading paths (not advice engines)
+status: published
+last_reviewed: "2026-10-17"
 ---
 
 # Pathways
@@ -12,7 +13,10 @@ status: stub
     Rules differ by country; verify with official sources in your jurisdiction.
 
 
-Pathways sequence existing Guides, Vehicles, and Resources. They are **not**
-advice engines and never invent products.
+Pathways only sequence pages that already exist. They never invent products.
 
-**Coming soon** in Month 1. Use [`_template.md`](_template.md) when drafting.
+| Pathway | Persona |
+| --- | --- |
+| [Woman-led household](woman-led-household.md) | Women / caregivers managing household money |
+
+Template: [`_template.md`](_template.md).
