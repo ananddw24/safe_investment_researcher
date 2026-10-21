@@ -19,11 +19,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Weekly maintenance workflow (`.github/workflows/weekly-maintenance.yml`):
   validates data, rebuilds the index, and files a maintenance issue when
   records go stale
+- Python quality tooling: `ruff` lint configuration in `pyproject.toml`
+  (`make lint`) and a `pytest` suite under `tests/` (`make test`) covering
+  the knowledge-base scripts' date/freshness logic and schema validation
+  of conforming and non-conforming records
+- Dependabot now also watches `scripts/requirements-dev.txt`
 
 ### Fixed
 
 - Version drift: `pyproject.toml` and the README status section now agree
   with the changelog (v0.5.0)
+- Lint findings in the scripts: `datetime.UTC` alias, sorted imports in
+  `extract_resource_urls.py`, and wrapped over-length lines in
+  `staleness_report.py` (no behavior changes)
 - Remaining version drift from the open-source readiness audit:
   `CITATION.cff` now reports 0.5.0, `SECURITY.md` supported versions cover
   the 0.5.x release line, and `GOVERNANCE.md` no longer carries v0.1 labels

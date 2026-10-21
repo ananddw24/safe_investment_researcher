@@ -141,7 +141,7 @@ def main() -> int:
     index = {
         "kb": "FinancialLibrary",
         "kb_version": 1,
-        "generated_at": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"),
+        "generated_at": dt.datetime.now(dt.UTC).isoformat(timespec="seconds"),
         "generator": "scripts/build_kb_index.py",
         "notes": (
             "Educational only, not financial advice. Freshness buckets: "

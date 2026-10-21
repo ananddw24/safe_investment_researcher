@@ -99,7 +99,12 @@ def render_markdown(rows: list[dict], today: dt.date) -> str:
     ]
     attention = [r for r in rows if r["bucket"] in {"stale", "unknown"}]
     if attention:
-        lines += ["### Records needing re-verification", "", "| Record | Kind | Country | Last verified | Age (days) |", "| --- | --- | --- | --- | --- |"]
+        lines += [
+            "### Records needing re-verification",
+            "",
+            "| Record | Kind | Country | Last verified | Age (days) |",
+            "| --- | --- | --- | --- | --- |",
+        ]
         for r in sorted(attention, key=lambda r: (r["age_days"] is None, -(r["age_days"] or 0))):
             lines.append(
                 f"| `{r['id']}` | {r['kind']} | {r['country'] or '—'} | "
@@ -123,7 +128,10 @@ def main() -> int:
     counts = {b: sum(1 for r in rows if r["bucket"] == b) for b in ("fresh", "aging", "stale", "unknown")}
 
     print(f"Knowledge-base staleness — {today.isoformat()}")
-    print(f"  records: {len(rows)}  fresh: {counts['fresh']}  aging: {counts['aging']}  stale: {counts['stale']}  unknown: {counts['unknown']}")
+    print(
+        f"  records: {len(rows)}  fresh: {counts['fresh']}  aging: {counts['aging']}  "
+        f"stale: {counts['stale']}  unknown: {counts['unknown']}"
+    )
     for r in sorted((r for r in rows if r["bucket"] in {"stale", "unknown"}), key=lambda r: -(r["age_days"] or 0)):
         print(f"  [{r['bucket']}] {r['id']} ({r['kind']}, {r['file']}) last verified {r['last_verified'] or 'never'}")
 
