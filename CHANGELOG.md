@@ -7,6 +7,25 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- Knowledge-base layer for agent consumers: `llms.txt` entry point,
+  `docs/knowledge-base.md` agent guide (consumption paths, freshness
+  semantics, citation rules), and `data/kb-index.json`, a consolidated
+  machine-readable index of all resource and vehicle records
+- `scripts/build_kb_index.py` (index builder) and
+  `scripts/staleness_report.py` (last_checked aging report with
+  fresh / aging / stale buckets); `make kb` runs both
+- Weekly maintenance workflow (`.github/workflows/weekly-maintenance.yml`):
+  validates data, rebuilds the index, and files a maintenance issue when
+  records go stale
+
+### Fixed
+
+- Version drift: `pyproject.toml` and the README status section now agree
+  with the changelog (v0.5.0)
+
+
 ## [0.5.0] - 2026-10-17
 
 ### Added
