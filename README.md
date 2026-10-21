@@ -2,6 +2,8 @@
 
 [![Docs](https://github.com/ananddw24/safe_investment_researcher/actions/workflows/ci-docs.yml/badge.svg)](https://github.com/ananddw24/safe_investment_researcher/actions/workflows/ci-docs.yml)
 [![Data](https://github.com/ananddw24/safe_investment_researcher/actions/workflows/ci-data.yml/badge.svg)](https://github.com/ananddw24/safe_investment_researcher/actions/workflows/ci-data.yml)
+[![Links](https://github.com/ananddw24/safe_investment_researcher/actions/workflows/ci-links.yml/badge.svg)](https://github.com/ananddw24/safe_investment_researcher/actions/workflows/ci-links.yml)
+[![Markdown](https://github.com/ananddw24/safe_investment_researcher/actions/workflows/ci-markdown.yml/badge.svg)](https://github.com/ananddw24/safe_investment_researcher/actions/workflows/ci-markdown.yml)
 [![License: MIT](https://img.shields.io/badge/license%20(code)-MIT-blue.svg)](LICENSE)
 [![License: CC BY 4.0](https://img.shields.io/badge/license%20(content)-CC%20BY%204.0-lightgrey.svg)](LICENSE-CONTENT)
 [![Pages](https://img.shields.io/badge/docs-GitHub%20Pages-222222.svg)](https://ananddw24.github.io/safe_investment_researcher/)

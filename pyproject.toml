@@ -4,7 +4,15 @@ version = "0.5.0"
 description = "Open educational hub for household financial literacy (not advice)"
 readme = "README.md"
 requires-python = ">=3.12"
-license = { text = "MIT" }
+license = "MIT"
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Education",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Education",
+  "Topic :: Office/Business :: Financial",
+]
 authors = [{ name = "Anand Dwivedi", email = "anand.dw24@gmail.com" }]
 keywords = ["financial-literacy", "education", "mkdocs"]
 

@@ -24,6 +24,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Version drift: `pyproject.toml` and the README status section now agree
   with the changelog (v0.5.0)
+- Remaining version drift from the open-source readiness audit:
+  `CITATION.cff` now reports 0.5.0, `SECURITY.md` supported versions cover
+  the 0.5.x release line, and `GOVERNANCE.md` no longer carries v0.1 labels
+
+### Changed
+
+- README gains badges for the link-check and markdown-lint workflows
+- `pyproject.toml` uses the SPDX license string and adds package classifiers
 
 
 ## [0.5.0] - 2026-10-17
