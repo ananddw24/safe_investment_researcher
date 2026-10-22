@@ -5,6 +5,11 @@ repo_url: https://github.com/ananddw24/safe_investment_researcher
 repo_name: ananddw24/safe_investment_researcher
 edit_uri: edit/main/docs/
 
+exclude_docs: |
+  guides/_template.md
+  pathways/_template.md
+  vehicles/_template.md
+
 theme:
   name: material
   palette:

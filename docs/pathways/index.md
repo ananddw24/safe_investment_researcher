@@ -20,4 +20,3 @@ recommend amounts.
 | [New reader](new-reader.md) | First visit; country-neutral basics |
 | [Woman-led household](woman-led-household.md) | Women / caregivers managing household money (India-heavy examples) |
 
-Template: [`_template.md`](_template.md).

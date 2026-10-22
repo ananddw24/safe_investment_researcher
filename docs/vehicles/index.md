@@ -54,4 +54,3 @@ matches where you already save (often **bank deposits** or **mobile money**).
 Africa cluster: Kenya (v0.3.0) plus Nigeria, South Africa, Ghana, and Egypt
 (v0.5.0). See the [release plan](../about/release-plan.md).
 
-Template for new pages: [`_template.md`](_template.md).
