@@ -45,7 +45,7 @@ Recommended first reads:
 | [Vehicles](vehicles/index.md) | Country-by-country product *types* |
 | [Pathways](pathways/index.md) | Ordered reading paths |
 | [Resources](resources/index.md) | Curated official links ([catalog](resources/catalog.md)) |
-| [About](about/index.md) | Audience, licenses, release plan |
+| [About](about/index.md) | Audience, licenses, release history |
 | [Knowledge base](knowledge-base.md) | For agents and developers consuming YAML + index |
 
 ## Status

@@ -52,5 +52,5 @@ matches where you already save (often **bank deposits** or **mobile money**).
 | [Canada (`ca`)](ca/index.md) | Deep pages (v0.6.0) |
 
 Africa cluster: Kenya (v0.3.0) plus Nigeria, South Africa, Ghana, and Egypt
-(v0.5.0). See the [release plan](../about/release-plan.md).
+(v0.5.0). See the [release history](../about/release-plan.md).
 
