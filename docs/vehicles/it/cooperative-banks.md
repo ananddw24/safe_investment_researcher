@@ -1,13 +1,13 @@
 ---
-title: "Cooperative credit banks (Italy)"
+title: "Cooperative and popular banks (Italy)"
 country: it
 vehicle_id: "it-cooperative-banks"
 category: "cooperative"
 status: published
-last_reviewed: "2026-10-17"
+last_reviewed: "2026-10-22"
 ---
 
-# Cooperative credit banks (Italy)
+# Cooperative and popular banks (Italy)
 
 !!! warning "Educational only"
     This page is for financial literacy. It is **not** personalized advice,
@@ -17,26 +17,38 @@ last_reviewed: "2026-10-17"
 
 ## What it is
 
-Cooperative credit banks provide local access to deposits and payments.
+**Banche di credito cooperativo (BCC)** and **banche popolari** (where still present
+in consolidated form) serve local communities with deposits and lending. They are
+**authorized credit institutions**, not informal **gruppi rotativi** — but products
+sold inside still split into deposits vs investments.
 
 ## Who it is typically designed for
 
-Households preferring local cooperative networks.
+Local households and small businesses wanting relationship banking. Membership/cooperative
+share requirements may apply — read statutes.
 
 ## Liquidity and commitments
 
-Product-specific.
+- Deposit products follow bank terms; FITD protection applies within limits.
+- **Participation shares** are not the same as insured deposits — distinguish clearly.
 
 ## Risks
 
-Fees; governance literacy.
+- Treating cooperative goodwill as a substitute for reading contracts.
+- **Cross-selling** fondi comuni during loan meetings.
 
 ## Literacy angle
 
-Confirm deposit guarantee literacy via FITD materials.
+Confirm **ABI** register and Banca d’Italia authorization. Ask whether each product is
+**FITD-protected** deposit or market investment.
 
 ## Official source types
 
-Banca d’Italia; FITD.
+- Banca d’Italia banking registers
+- FITD
 
-Links: [Banca d’Italia](https://www.bancaditalia.it/homepage/index.html?com.dotmarketing.htmlpage.language=1), [FITD](https://www.fitd.it/).
+Links: [Banca d’Italia](https://www.bancaditalia.it/), [FITD](https://www.fitd.it/).
+
+## Related
+
+- [Conto deposito](conto-deposito.md) · [Postal savings](postal-savings.md)

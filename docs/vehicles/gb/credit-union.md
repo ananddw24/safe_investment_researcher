@@ -4,7 +4,7 @@ country: gb
 vehicle_id: "gb-credit-union"
 category: "cooperative"
 status: published
-last_reviewed: "2026-10-17"
+last_reviewed: "2026-10-22"
 ---
 
 # Credit union savings (UK)
@@ -17,26 +17,41 @@ last_reviewed: "2026-10-17"
 
 ## What it is
 
-Credit unions offer community savings and sometimes loans under UK regulation.
+**Credit unions** are member-owned cooperatives offering savings and sometimes loans
+to a **common bond** (area, employer, or association). They are regulated in the UK
+and can be an alternative to high-cost lenders when used responsibly — but savings
+and loan products still have **rules and risks**.
 
 ## Who it is typically designed for
 
-Members seeking community finance alternatives.
+People who qualify for membership and want community-based finance. Some unions pay
+a **dividend** on savings rather than a advertised AER — read the annual statement.
 
 ## Liquidity and commitments
 
-Product-specific; membership rules apply.
+- Withdrawal rules vary; some accounts require notice for large sums.
+- **Loan-linked savings** schemes may restrict access until loan is repaid — read terms.
 
 ## Risks
 
-Confusing share accounts with other protections; fees.
+- Borrowing beyond ability to repay because “the union knows me.”
+- Confusing **share accounts** with FSCS-protected bank deposits — verify protection
+  type on FSCS and FCA materials.
+- Unregistered clubs mimicking credit union branding.
 
 ## Literacy angle
 
-Verify authorized status via FCA materials.
+Confirm the firm appears on the **FCA Financial Services Register** before depositing.
+Use [Citizens Advice](https://www.citizensadvice.org.uk/) for debt-and-savings triage literacy.
 
 ## Official source types
 
-FCA; FSCS context.
+- FCA register and credit union guidance
+- FSCS protection information
 
-Links: [FCA](https://www.fca.org.uk/), [FSCS](https://www.fscs.org.uk/), [Citizens Advice](https://www.citizensadvice.org.uk/).
+Links: [FCA](https://www.fca.org.uk/), [FSCS](https://www.fscs.org.uk/),
+[Citizens Advice](https://www.citizensadvice.org.uk/).
+
+## Related
+
+- [Easy-access savings](easy-access-savings.md) · [Resource catalog — UK](../../resources/catalog.md#gb)

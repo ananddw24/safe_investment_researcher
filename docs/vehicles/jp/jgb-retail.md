@@ -4,7 +4,7 @@ country: jp
 vehicle_id: "jp-jgb"
 category: "government-scheme"
 status: published
-last_reviewed: "2026-10-17"
+last_reviewed: "2026-10-22"
 ---
 
 # Retail government bonds / JGBs (Japan)
@@ -17,26 +17,41 @@ last_reviewed: "2026-10-17"
 
 ## What it is
 
-Retail programs for Japanese government bonds teach preservation framing and holding rules.
+The Ministry of Finance offers **retail-oriented Japanese government bond (JGB)**
+programs (famously including fixed-rate and floating-rate retail bonds in Japanese
+marketing) so households can lend to the government under published coupons and
+holding rules. Program names and features evolve — read the current MOF investor page.
 
 ## Who it is typically designed for
 
-Savers following official retail channels after emergency cash exists.
+Savers who understand holding periods and can purchase through **authorized banks
+or Japan Post** channels after emergency liquidity is covered elsewhere.
 
 ## Liquidity and commitments
 
-Depends on the specific retail program.
+- **Early redemption** may be allowed on specific retail issues under MOF rules, sometimes
+  with adjustments — not the same as ordinary deposit access.
+- Secondary-market sales by households are less common; plan around **holding to terms**
+  in official materials.
 
 ## Risks
 
-Interest-rate and inflation literacy; scam impersonation.
+- **Inflation and rate changes** affecting real returns.
+- Fraudulent websites mimicking MOF bond sales.
+- Confusing **JGB mutual funds** with direct retail bond purchases.
 
 ## Literacy angle
 
-Use Ministry of Finance materials for program facts.
+Verify every purchase against [MOF](https://www.mof.go.jp/) retail bond announcements
+and your bank’s official application — never wire money to individuals promising
+“MOF insider allocations.”
 
 ## Official source types
 
-Ministry of Finance.
+- Ministry of Finance retail JGB publications
 
 Links: [MOF EN](https://www.mof.go.jp/english/), [MOF](https://www.mof.go.jp/).
+
+## Related
+
+- [Bank deposits](bank-postal-deposits.md) · [Resource catalog — Japan](../../resources/catalog.md#jp)

@@ -1,13 +1,13 @@
 ---
-title: "Digital bank / PIX-linked savings habits (Brazil)"
+title: "PIX and payment-account savings habits (Brazil)"
 country: br
 vehicle_id: "br-pix-habits"
-category: "mobile-money-savings"
+category: "bank-deposit"
 status: published
-last_reviewed: "2026-10-17"
+last_reviewed: "2026-10-22"
 ---
 
-# Digital bank / PIX-linked savings habits (Brazil)
+# PIX and payment-account savings habits (Brazil)
 
 !!! warning "Educational only"
     This page is for financial literacy. It is **not** personalized advice,
@@ -17,26 +17,42 @@ last_reviewed: "2026-10-17"
 
 ## What it is
 
-PIX and digital bank rails improve payments inclusion; literacy covers habits, fees, and fraud — not “yield hacks.”
+**Pix** is Brazil’s instant payment system (BCB) linking **payment accounts** at
+authorized institutions. Many fintech **contas digitais** pay modest yields on idle
+balances or route to separate savings buckets — mechanics differ by provider and are
+**not standardized like poupança law**.
+
+This page is **behavioral literacy**: using Pix safely while separating spend vs save jars.
 
 ## Who it is typically designed for
 
-Households adopting digital payments, including low-income users.
+Anyone receiving wages or benefits via Pix — including gig workers. Low-income users
+face **social engineering** fraud at high rates.
 
 ## Liquidity and commitments
 
-Payment balances are for transactions; separate emergency savings intentionally.
+- Pix balances are typically **instant-access** — good for bills, risky for “forced saving”
+  unless you use separate accounts or automatic sweeps you understand.
 
 ## Risks
 
-Social-engineering fraud; confusing payment apps with investments.
+- **Pix reversal scams**, fake buyer overpayment, and kidnapped QR codes.
+- Leaving entire emergency fund in a single hot payment account linked to social media sales.
+- Confusing fintech “yield” marketing with FGC coverage — read product type.
 
 ## Literacy angle
 
-Follow BCB payments and consumer education.
+BCB Pix security campaigns recommend known contacts, amount checks, and separate accounts.
+Build [poupança](poupanca.md) or insured products for reserves after understanding FGC.
 
 ## Official source types
 
-BCB.
+- BCB Pix and open finance education
+- FGC for eligible deposit products
 
-Links: [BCB EN](https://www.bcb.gov.br/en), [BCB](https://www.bcb.gov.br/), [gov.br](https://www.gov.br/).
+Links: [BCB Pix](https://www.bcb.gov.br/estabilidadefinanceira/pix),
+[BCB](https://www.bcb.gov.br/), [FGC](https://www.fgc.org.br/).
+
+## Related
+
+- [Poupança](poupanca.md) · [Spotting unregulated schemes](../../guides/spotting-unregulated-schemes.md)

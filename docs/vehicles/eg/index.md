@@ -29,6 +29,12 @@ picks. Prefer emergency savings in regulated channels; treat unregulated
 | [Pension / social insurance basics](pensions.md) | Worker coverage literacy |
 | [Microfinance / NGO savings groups](microfinance.md) | Women inclusion with debt caution |
 
+
+## Official links
+
+Curated regulator and government URLs for this country are in the
+[resource catalog](../../resources/catalog.md#eg).
+
 ## Related
 
 - [Kenya vehicles](../ke/index.md) · [Ghana](../gh/index.md) · [Vehicles home](../index.md)

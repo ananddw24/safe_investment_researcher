@@ -2,7 +2,7 @@
 title: "Italy — household savings and investment types"
 country: it
 status: published
-last_reviewed: "2026-10-17"
+last_reviewed: "2026-10-22"
 ---
 
 # Italy — household savings and investment types
@@ -12,20 +12,30 @@ last_reviewed: "2026-10-17"
     an offer to sell, or a recommendation to buy, sell, or hold any product.
     Rules differ by country; verify with official sources in your jurisdiction.
 
+Educational pages on regulated types — not product picks. Secure flexible deposits
+and FITD literacy before funds, BTP, or pension commitments.
 
-Short educational pages on household savings and investment *types*. Not product
-picks. Prefer emergency cash in safe, accessible forms before long lock-ins.
+## Suggested reading order
+
+1. [Emergency savings guide](../../guides/emergency-savings.md)
+2. [Conto deposito / bank savings](conto-deposito.md)
+3. [Postal savings](postal-savings.md) if you use Poste channels
+4. Long-term vehicles when horizon matches
 
 ## Vehicle pages
 
 | Vehicle | Focus |
 | --- | --- |
-| [Conto deposito / bank savings](conto-deposito.md) | Deposit guarantee literacy |
-| [Postal savings (Poste Italiane)](postal-savings.md) | High household familiarity |
-| [BTP / retail government bonds](btp-retail.md) | Rate and inflation awareness |
-| [Fondi comuni / PIR basics](fondi-pir.md) | Market risk literacy |
-| [Fondi pensione concepts](fondi-pensione.md) | Long-term pensions |
-| [Cooperative credit banks](cooperative-banks.md) | Local access |
+| [Conto deposito / bank savings](conto-deposito.md) | Deposits and FITD |
+| [Postal savings](postal-savings.md) | Poste network products |
+| [BTP / government bonds](btp-retail.md) | Sovereign retail debt |
+| [Mutual funds / PIR](fondi-pir.md) | Regulated funds |
+| [Pension funds](fondi-pensione.md) | Second pillar |
+| [Cooperative banks](cooperative-banks.md) | Local BCC channel |
+
+## Official links
+
+[Resource catalog — Italy](../../resources/catalog.md#it)
 
 ## Related
 

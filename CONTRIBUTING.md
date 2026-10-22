@@ -24,10 +24,10 @@ preferred good-first-issue shape.
 1. Fork the repo and create a branch (`add-resource-<id>`, `fix-docs-…`).
 2. Make a focused change (prefer small PRs).
 3. Run locally:
-   - `python scripts/validate_data.py` (if you touched `data/`)
-   - `python scripts/check_ids.py` (if you added IDs)
-   - `mkdocs build --strict` (if you touched docs)
-   - `ruff check scripts tests` and `python -m pytest` (if you touched Python)
+   - `make validate` (if you touched `data/`)
+   - `make catalog` (if you added or changed resource YAML)
+   - `mkdocs build --strict` or `make build` (if you touched docs)
+   - `make lint` and `make test` (if you touched Python)
 4. Open a PR and complete the PR checklist template.
 5. Maintainers use lazy consensus; breaking taxonomy changes need an issue +
    7-day notice (see [GOVERNANCE.md](GOVERNANCE.md)).

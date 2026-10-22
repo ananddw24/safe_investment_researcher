@@ -1,13 +1,13 @@
 ---
-title: "CDB and bank deposits (Brazil)"
+title: "CDB and bank deposit products (Brazil)"
 country: br
 vehicle_id: "br-cdb"
 category: "bank-deposit"
 status: published
-last_reviewed: "2026-10-17"
+last_reviewed: "2026-10-22"
 ---
 
-# CDB and bank deposits (Brazil)
+# CDB and bank deposit products (Brazil)
 
 !!! warning "Educational only"
     This page is for financial literacy. It is **not** personalized advice,
@@ -17,26 +17,40 @@ last_reviewed: "2026-10-17"
 
 ## What it is
 
-CDBs and related bank deposits involve issuer credit risk literacy and FGC guarantee basics.
+**CDB** (Certificado de Depósito Bancário) is a **bank-issued debt security** sold to
+retail investors through banks and brokers, often with **fixed or floating** returns and
+**maturity dates**. Other retail bank products (RDB, LCI/LCA when eligible) share
+patterns: read whether principal is **FGC-insured** within limits and whether early
+exit is allowed.
 
 ## Who it is typically designed for
 
-Savers comparing bank products after emergency cash exists.
+Savers who can lock money until maturity and who understand **credit risk** of the
+issuing institution within FGC rules.
 
 ## Liquidity and commitments
 
-Term deposits may limit early exit.
+- Many CDBs **cannot** be broken before maturity except on secondary markets with discounts.
+- **Liquidity at par** is not guaranteed — poor fit for emergency cash.
 
 ## Risks
 
-Issuer risk above guarantee limits; confusing CDBs with funds.
+- **Issuer default** beyond FGC coverage amounts.
+- Chasing highest **percentual do CDI** without reading maturity and tax withholding literacy.
+- Confusing CDB with **poupança** access patterns.
 
 ## Literacy angle
 
-Read FGC coverage materials and bank disclosures.
+Read FGC and CVM/BCB materials on **guarantee limits** and verify issuer registration.
+Fund emergencies via [poupança](poupanca.md) or liquid accounts first.
 
 ## Official source types
 
-BCB; FGC.
+- BCB and FGC
+- CVM investor education for brokerage distribution
 
-Links: [FGC](https://www.fgc.org.br/), [BCB EN](https://www.bcb.gov.br/en).
+Links: [BCB](https://www.bcb.gov.br/), [FGC](https://www.fgc.org.br/), [CVM](https://www.gov.br/cvm/).
+
+## Related
+
+- [Poupança](poupanca.md) · [Fixed-income funds](renda-fixa-funds.md)

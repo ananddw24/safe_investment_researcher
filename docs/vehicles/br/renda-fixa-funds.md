@@ -1,13 +1,13 @@
 ---
-title: "Regulated fixed-income funds (Brazil)"
+title: "Fixed-income funds (renda fixa) literacy"
 country: br
 vehicle_id: "br-renda-fixa"
 category: "regulated-fund"
 status: published
-last_reviewed: "2026-10-17"
+last_reviewed: "2026-10-22"
 ---
 
-# Regulated fixed-income funds (Brazil)
+# Fixed-income funds (renda fixa) literacy
 
 !!! warning "Educational only"
     This page is for financial literacy. It is **not** personalized advice,
@@ -17,26 +17,40 @@ last_reviewed: "2026-10-17"
 
 ## What it is
 
-Regulated fixed-income (renda fixa) funds are CVM-supervised investments; fees and risk still apply.
+**Fundos de renda fixa** are **CVM-regulated mutual funds** investing mainly in debt
+instruments. They are marketed as “lower volatility” than equity funds but **can lose
+value** and charge **taxes and come-cotas** on some classes per official tax rules.
+
+They are **not** FGC-insured deposits.
 
 ## Who it is typically designed for
 
-People with emergency cash who will read fund fact sheets.
+Investors with emergency cash elsewhere who read **lâminas** (fact sheets) and tolerate
+NAV fluctuation and redemption settlement delays (often D+1 or more).
 
 ## Liquidity and commitments
 
-Fund-specific redemption rules.
+- Redemption per fund regulation; not guaranteed instant like Pix cash.
+- Some funds impose **grace periods** or high minimums.
 
 ## Risks
 
-Market/credit risk inside the fund; fee drag.
+- **Credit risk** in underlying bonds (including high-yield sleeves).
+- Mislabeling as “fixed income = fixed capital.”
+- High **administration fees** vs direct Tesouro or CDB.
 
 ## Literacy angle
 
-Use CVM investor materials.
+Use CVM **Fundos.NET** data and compare tax treatment literacy on Receita Federal
+materials before broker pitches.
 
 ## Official source types
 
-CVM; BCB.
+- CVM fund education
+- BCB macro context
 
-Links: [CVM](https://www.gov.br/cvm/pt-br), [BCB EN](https://www.bcb.gov.br/en).
+Links: [CVM](https://www.gov.br/cvm/), [BCB](https://www.bcb.gov.br/).
+
+## Related
+
+- [CDB deposits](cdb-deposits.md) · [Tesouro Direto](tesouro-direto.md)

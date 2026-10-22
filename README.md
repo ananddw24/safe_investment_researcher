@@ -13,10 +13,9 @@ understand money basics, regulated savings and investment *types* by country, an
 public resources — without opening accounts, selling products, or giving personalized advice.
 Everything is educational only; always verify with official sources in your jurisdiction.
 
-> **Repository name:** This project currently lives at
-> [`ananddw24/safe_investment_researcher`](https://github.com/ananddw24/safe_investment_researcher).
-> You can rename it to `financial-library` later in GitHub **Settings → General → Repository name**
-> (do not rely on API rename if it returns 403). Product name remains **FinancialLibrary**.
+**Read online:** [GitHub Pages docs](https://ananddw24.github.io/safe_investment_researcher/) ·
+**New here?** Start with [Using this library](docs/about/using-this-library.md) and the
+[New reader pathway](docs/pathways/new-reader.md).
 
 ## What this is / is not
 
@@ -38,7 +37,7 @@ mkdocs serve
 
 Or: `make serve` · build: `make build` · validate data: `make validate`
 
-Docs site (after Pages is enabled): <https://ananddw24.github.io/safe_investment_researcher/>
+Docs site: <https://ananddw24.github.io/safe_investment_researcher/>
 
 ## Taxonomy map
 
@@ -46,7 +45,7 @@ Docs site (after Pages is enabled): <https://ananddw24.github.io/safe_investment
 | --- | --- | --- |
 | Guides | `docs/guides/` | Plain-language literacy explainers |
 | Vehicles | `docs/vehicles/<iso>/` | Regulated savings/investment *types* by country |
-| Resources | `data/resources/` | Curated outbound links (YAML + schema) |
+| Resources | `data/resources/` + [catalog](docs/resources/catalog.md) | Curated outbound links (YAML + generated tables) |
 | Pathways | `docs/pathways/` | Ordered reading paths (no advice engine) |
 
 See also [docs/disclaimer.md](docs/disclaimer.md).
@@ -55,7 +54,7 @@ See also [docs/disclaimer.md](docs/disclaimer.md).
 
 1. Copy [`data/resources/_template.yaml`](data/resources/_template.yaml) to a new file.
 2. Fill required fields (`id`, `title`, `url`, `country`, `language`, `topics`, `audience`, `source_type`, `last_checked`).
-3. Run `python scripts/validate_data.py`.
+3. Run `make validate` and `make catalog`.
 4. Open a PR (see [CONTRIBUTING.md](CONTRIBUTING.md)).
 
 ## Knowledge base (for agents)
@@ -83,10 +82,9 @@ agents and tools can consume directly:
 
 ## Status
 
-**v0.5.0** — Top 10 GDP countries plus the Africa cluster (Nigeria, South
-Africa, Ghana, Egypt; Kenya from v0.3.0) have household vehicle pages, backed
-by 80+ curated regulator/government resource records.
+**v0.6.0** — Deep household vehicle pages for all Top 10 GDP economies; Africa
+cluster pages remain shorter orientation sketches. 80+ curated regulator/government
+resource records with generated [browse tables](docs/resources/catalog.md).
 
-The GitHub repository may remain **private** until the owner flips visibility.
-Next: knowledge-base hardening and weekly maintenance (see
+Next: deepen Africa cluster pages; then **v1.0.0** (see
 [release plan](docs/about/release-plan.md)).

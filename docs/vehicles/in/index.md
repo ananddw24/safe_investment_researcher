@@ -40,7 +40,13 @@ long lock-in products.
 3. Open only the vehicle pages that match a goal you already understand.
 4. Verify current rules on official portals (RBI, SEBI, PFRDA, India Post, DFS).
 
+
+## Official links
+
+Curated regulator and government URLs for this country are in the
+[resource catalog](../../resources/catalog.md#in).
+
 ## Related
 
 - [Woman-led household pathway](../../pathways/woman-led-household.md)
-- [Resources database](../../resources/index.md)
+- [Resource catalog](../../resources/catalog.md#in)

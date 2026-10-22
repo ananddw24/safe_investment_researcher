@@ -4,7 +4,7 @@ country: br
 vehicle_id: "br-tesouro-direto"
 category: "government-scheme"
 status: published
-last_reviewed: "2026-10-17"
+last_reviewed: "2026-10-22"
 ---
 
 # Tesouro Direto (Brazil)
@@ -17,26 +17,40 @@ last_reviewed: "2026-10-17"
 
 ## What it is
 
-Tesouro Direto offers retail access to federal bonds (e.g. Selic, IPCA+, Prefixado labels in public materials) — strong education fit.
+**Tesouro Direto** is the official **retail program** for buying federal government
+bonds (Tesouro Selic, IPCA+, Prefixado, etc.) through authorized intermediaries
+listed on the program site. Bonds can **mark-to-market** — selling before maturity
+may gain or lose versus purchase price.
 
 ## Who it is typically designed for
 
-Savers who understand market/price movements and holding periods after emergency cash exists.
+Savers who completed emergency liquidity planning and want **sovereign exposure**
+with understood horizon. **Tesouro Selic** is often taught as the liquidity teaching
+example, but confirm current rules on official pages.
 
 ## Liquidity and commitments
 
-Secondary market prices can move; read official product pages.
+- **Secondary sales** possible on platform hours with price risk.
+- Some titles suit long goals (education, retirement) — match horizon honestly.
 
 ## Risks
 
-Interest-rate and inflation effects; fake “Tesouro” apps.
+- **Mark-to-market losses** if rates rise and you sell early.
+- Fake “Tesouro Direto WhatsApp brokers.”
+- Ignoring **taxes** on gains — use official Receita guidance literacy.
 
 ## Literacy angle
 
-Use Tesouro Nacional / Tesouro Direto official sites.
+Only use intermediaries listed at [Tesouro Direto](https://www.tesourodireto.com.br/).
+Read Ministry of Finance/ Nacional program FAQs before transferring.
 
 ## Official source types
 
-Tesouro Nacional; BCB.
+- Tesouro Nacional / Tesouro Direto portal
+- BCB macro education
 
-Links: [Tesouro Direto](https://www.tesourodireto.com.br/), [Tesouro Nacional](https://www.gov.br/tesouronacional/pt-br), [BCB EN](https://www.bcb.gov.br/en).
+Links: [Tesouro Direto](https://www.tesourodireto.com.br/), [BCB](https://www.bcb.gov.br/).
+
+## Related
+
+- [CDB deposits](cdb-deposits.md) · [Inflation guide](../../guides/inflation-capital-preservation.md)

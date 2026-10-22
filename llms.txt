@@ -10,6 +10,8 @@
 - [Knowledge base guide for agents](https://github.com/ananddw24/safe_investment_researcher/blob/main/docs/knowledge-base.md): how to query this base, freshness semantics, and citation rules
 - [Machine-readable index (JSON)](https://github.com/ananddw24/safe_investment_researcher/blob/main/data/kb-index.json): one consolidated index of every resource and vehicle record, regenerated weekly
 - [Documentation site](https://ananddw24.github.io/safe_investment_researcher/): human-readable guides, vehicle pages, and pathways
+- [Resource catalog (generated tables)](https://github.com/ananddw24/safe_investment_researcher/blob/main/docs/resources/catalog.md): all curated official links by country
+- [Using this library (human readers)](https://github.com/ananddw24/safe_investment_researcher/blob/main/docs/about/using-this-library.md)
 
 ## Data (source of truth)
 

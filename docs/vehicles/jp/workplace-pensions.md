@@ -4,7 +4,7 @@ country: jp
 vehicle_id: "jp-workplace-pension"
 category: "pension"
 status: published
-last_reviewed: "2026-10-17"
+last_reviewed: "2026-10-22"
 ---
 
 # Workplace pensions overview (Japan)
@@ -17,26 +17,45 @@ last_reviewed: "2026-10-17"
 
 ## What it is
 
-Workplace pensions are employer-dependent retirement arrangements under Japanese rules.
+Employer-sponsored retirement arrangements in Japan include **defined-benefit
+corporate pensions** (legacy, closed to new entrants in many firms) and **defined-
+contribution (DC)** plans where employers and/or employees contribute to individual
+accounts with investment menus. **Coverage is employer-dependent** — part-time and
+contract workers may be excluded unless rules and employer policy include them.
+
+Public **kosei nenkin / kokumin nenkin** layers sit beneath workplace plans; this
+page focuses on **employer channel literacy**.
 
 ## Who it is typically designed for
 
-Employees whose employers offer a plan; coverage is not universal.
+Full-time employees whose firms sponsor a plan. New hires should collect the **summary
+plan description (shōshi)** and fee disclosure rather than relying on hallway rumors.
 
 ## Liquidity and commitments
 
-Low; scheme-specific.
+- **Low** access before retirement except statutory exceptions.
+- **Default investment courses** (auto-glide paths) may not match your risk literacy —
+  you can often change menus within plan rules.
 
 ## Risks
 
-Assuming coverage that does not exist; informal “pension” clubs.
+- Assuming you are enrolled when you are not (especially after job changes).
+- Leaving small **orphaned DC accounts** at old employers without updating addresses.
+- Informal investment clubs marketed as “company pension alternatives.”
 
 ## Literacy angle
 
-Ask HR for official plan documents; verify with regulator materials.
+On joining or leaving a job, ask HR for **official DC/DB documents** and compare with
+JFSA pension education. Keep [liquid deposits](bank-postal-deposits.md) for shocks;
+do not borrow to maximize DC contributions.
 
 ## Official source types
 
-JFSA; official pension portals.
+- JFSA employer pension and DC guidance
+- Ministry of Health, Labour and Welfare pension publications
 
 Links: [JFSA EN](https://www.fsa.go.jp/en/), [MOF EN](https://www.mof.go.jp/english/).
+
+## Related
+
+- [iDeCo concepts](ideco.md) · [NISA concepts](nisa.md)

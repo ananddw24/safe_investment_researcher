@@ -1,13 +1,13 @@
 ---
-title: "PEL and CEL housing savings concepts (France)"
+title: "PEL and CEL (France)"
 country: fr
 vehicle_id: "fr-pel-cel"
-category: "government-scheme"
+category: "bank-deposit"
 status: published
-last_reviewed: "2026-10-17"
+last_reviewed: "2026-10-22"
 ---
 
-# PEL and CEL housing savings concepts (France)
+# PEL and CEL (France)
 
 !!! warning "Educational only"
     This page is for financial literacy. It is **not** personalized advice,
@@ -17,26 +17,40 @@ last_reviewed: "2026-10-17"
 
 ## What it is
 
-PEL/CEL are purpose-restricted housing savings concepts with detailed official rules.
+**CEL** (Compte Épargne Logement) and **PEL** (Plan Épargne Logement) are **housing-
+oriented savings contracts** at banks with rules on duration, taxation, and optional
+mortgage advantages described in official consumer guides. They are **not** generic
+emergency jars — early closure can forfeit benefits.
 
 ## Who it is typically designed for
 
-Households exploring housing-related saving frameworks — literacy first.
+Households planning **home purchase or renovation** on a multi-year horizon after
+liquid emergency cash exists elsewhere.
 
 ## Liquidity and commitments
 
-Purpose and timing restrictions apply.
+- **Longer commitments** than Livret A; breaking rules triggers tax and bonus loss
+  per contract generation — read your opening year’s terms.
+- Credit linkage features depend on bank and regulatory era — verify currently.
 
 ## Risks
 
-Complex terms; mismatch with actual housing plans.
+- Locking rent money because of historical “good rate” stories.
+- Confusing PEL with **assurance-vie** or securities.
 
 ## Literacy angle
 
-Read service-public.fr guides before committing.
+Use Banque de France and service-public **épargne logement** pages before signing at
+a branch. Ask for **conditions générales** in writing.
 
 ## Official source types
 
-service-public.fr; Banque de France.
+- Banque de France housing savings explainers
+- service-public.fr
 
-Links: [service-public.fr](https://www.service-public.fr/), [Banque de France EN](https://www.banque-france.fr/en).
+Links: [Banque de France EN](https://www.banque-france.fr/en),
+[service-public.fr](https://www.service-public.fr/).
+
+## Related
+
+- [Livret A and LDDS](livret-a-ldds.md) · [Assurance-vie basics](assurance-vie.md)

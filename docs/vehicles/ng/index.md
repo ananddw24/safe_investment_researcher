@@ -29,6 +29,12 @@ regulated channels and treat “guaranteed high returns” as a red flag
 | [Cooperatives / thrift societies](cooperatives.md) | Governance risk literacy |
 | [Mobile money / fintech wallets](mobile-money.md) | Float vs deposit distinction |
 
+
+## Official links
+
+Curated regulator and government URLs for this country are in the
+[resource catalog](../../resources/catalog.md#ng).
+
 ## Related
 
 - [Kenya vehicles](../ke/index.md) · [Africa cluster peers](../za/index.md) · [Vehicles home](../index.md)

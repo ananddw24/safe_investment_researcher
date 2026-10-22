@@ -7,7 +7,30 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.6.0] - 2026-10-22
+
 ### Added
+
+- Deep household vehicle prose for remaining Top 10 GDP economies: China, Germany,
+  Japan, United Kingdom, France, Italy, Brazil, and Canada (48 vehicle pages
+  expanded with access, fee, fraud, and official-source literacy)
+
+### Changed
+
+- Vehicles index and release plan mark v0.6.0; Africa cluster remains short pages
+
+## [Unreleased]
+
+### Added
+
+- Reader onboarding: [Using this library](docs/about/using-this-library.md),
+  [For educators and NGOs](docs/about/for-educators-and-ngos.md), and
+  [New reader pathway](docs/pathways/new-reader.md)
+- Generated [resource catalog](docs/resources/catalog.md) (`scripts/generate_resources_catalog.py`,
+  `make catalog`) with CI freshness check
+- Official-link sections on all country vehicle index pages pointing at the catalog
+
+### Added (knowledge base)
 
 - Knowledge-base layer for agent consumers: `llms.txt` entry point,
   `docs/knowledge-base.md` agent guide (consumption paths, freshness
@@ -17,8 +40,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   `scripts/staleness_report.py` (last_checked aging report with
   fresh / aging / stale buckets); `make kb` runs both
 - Weekly maintenance workflow (`.github/workflows/weekly-maintenance.yml`):
-  validates data, rebuilds the index, and files a maintenance issue when
-  records go stale
+  validates data, rebuilds the index and resource catalog, and files a
+  maintenance issue when records go stale
 - Python quality tooling: `ruff` lint configuration in `pyproject.toml`
   (`make lint`) and a `pytest` suite under `tests/` (`make test`) covering
   the knowledge-base scripts' date/freshness logic and schema validation

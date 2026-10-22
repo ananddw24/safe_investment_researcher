@@ -46,6 +46,8 @@ nav:
   - Disclaimer: disclaimer.md
   - About:
       - about/index.md
+      - Using this library: about/using-this-library.md
+      - For educators and NGOs: about/for-educators-and-ngos.md
       - Audience: about/audience.md
       - Licenses: about/licenses.md
       - Release plan: about/release-plan.md
@@ -182,8 +184,11 @@ nav:
           - Pensions / CPP: vehicles/ca/pensions-cpp.md
   - Pathways:
       - pathways/index.md
+      - New reader: pathways/new-reader.md
       - Woman-led household: pathways/woman-led-household.md
-  - Resources: resources/index.md
+  - Resources:
+      - resources/index.md
+      - Catalog: resources/catalog.md
   - Knowledge base: knowledge-base.md
   - Contributing: contributing.md
 

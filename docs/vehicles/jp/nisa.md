@@ -4,7 +4,7 @@ country: jp
 vehicle_id: "jp-nisa"
 category: "regulated-fund"
 status: published
-last_reviewed: "2026-10-17"
+last_reviewed: "2026-10-22"
 ---
 
 # NISA concepts (Japan)
@@ -17,26 +17,47 @@ last_reviewed: "2026-10-17"
 
 ## What it is
 
-NISA is a tax-advantaged investment account framework with contribution limits and risk — literacy not product pick.
+**NISA** (Nippon Individual Savings Account) is a **tax-advantaged investment account
+framework** for listed stocks, investment trusts, and other eligible products within
+annual contribution limits and program rules set by government policy. Account types
+and limits have changed over reforms — always read current JFSA and National Tax
+Agency guidance, not outdated blog posts.
+
+NISA is **not** a bank deposit and does not guarantee principal.
 
 ## Who it is typically designed for
 
-People with emergency savings who can tolerate market swings.
+Households with stable emergency cash who accept **market volatility** and will hold
+long horizons. Low-income savers should be cautious about contributing money they
+may need for rent or medical bills within a few years.
 
 ## Liquidity and commitments
 
-Investments can lose value; contribution rules are published by JFSA.
+- You can generally **sell** holdings, but proceeds may take settlement days and
+  may be worth **less than contributed**.
+- **Contribution room** is annual and program-specific; unused room may not carry
+  forward depending on account type — verify current rules.
 
 ## Risks
 
-Market loss; misunderstanding annual limits.
+- **Market losses**, including sudden drawdowns in equity-heavy allocations.
+- **Currency and sector concentration** in popular funds.
+- Sales practices emphasizing tax benefits without stress-testing loss scenarios.
 
 ## Literacy angle
 
-Read JFSA NISA pages for current rules.
+Read JFSA’s NISA overview pages before opening. Pair with
+[emergency savings](../../guides/emergency-savings.md) and understand difference from
+[iDeCo](ideco.md) (pension lock-up).
 
 ## Official source types
 
-JFSA NISA policy pages.
+- JFSA NISA policy and consumer pages
+- National Tax Agency publications (via official links from JFSA)
 
-Links: [JFSA NISA](https://www.fsa.go.jp/policy/nisa2/), [JFSA EN](https://www.fsa.go.jp/en/).
+Links: [JFSA NISA](https://www.fsa.go.jp/policy/nisa2/),
+[JFSA EN](https://www.fsa.go.jp/en/).
+
+## Related
+
+- [iDeCo concepts](ideco.md) · [Workplace pensions](workplace-pensions.md)

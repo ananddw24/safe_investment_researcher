@@ -35,7 +35,13 @@ products.
 2. Skim [Spotting unregulated schemes](../../guides/spotting-unregulated-schemes.md).
 3. Verify current rules on FDIC, CFPB, IRS, NCUA, TreasuryDirect, and Investor.gov.
 
+
+## Official links
+
+Curated regulator and government URLs for this country are in the
+[resource catalog](../../resources/catalog.md#us).
+
 ## Related
 
 - [Kenya vehicles](../ke/index.md) · [India vehicles](../in/index.md) ·
-  [Resources](../../resources/index.md)
+  [Resource catalog](../../resources/catalog.md#us)

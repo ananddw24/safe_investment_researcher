@@ -1,13 +1,13 @@
 ---
-title: "French sovereign bonds basics"
+title: "OAT / retail sovereign bond literacy (France)"
 country: fr
-vehicle_id: "fr-sovereign-bonds"
+vehicle_id: "fr-oat"
 category: "government-scheme"
 status: published
-last_reviewed: "2026-10-17"
+last_reviewed: "2026-10-22"
 ---
 
-# French sovereign bonds basics
+# OAT / retail sovereign bond literacy (France)
 
 !!! warning "Educational only"
     This page is for financial literacy. It is **not** personalized advice,
@@ -17,26 +17,40 @@ last_reviewed: "2026-10-17"
 
 ## What it is
 
-French sovereign bonds via intermediaries are a debt-education topic (Agence France Trésor context).
+**OAT** (Obligations Assimilables du Trésor) are French government bonds. Households
+may access government debt literacy through **retail programs** and bank distribution
+when offered, as well as indirectly via funds. Coupon, maturity, and price **move with
+market rates** if sold before maturity.
 
 ## Who it is typically designed for
 
-Savers learning government debt mechanics after emergency cash exists.
+Savers learning bond mechanics after liquid emergency cash is secured. Not a substitute
+for payment accounts.
 
 ## Liquidity and commitments
 
-Depends on instrument and intermediary access.
+- **Secondary market** prices fluctuate — you may receive less than face value if rates rise.
+- Retail programs may have **subscription calendars** — follow Trésor public announcements.
 
 ## Risks
 
-Interest-rate and inflation effects; scam impersonation.
+- Inflation eroding real returns on fixed coupons.
+- Social-media “OAT guaranteed 8%” scams unrelated to Agence France Trésor.
 
 ## Literacy angle
 
-Prefer Banque de France / official public materials; AFT URLs omitted when unreachable.
+Use official Trésor and Banque de France educational materials for definitions.
+Distinguish direct bonds from **OPCVM** bond funds.
 
 ## Official source types
 
-Banque de France; service-public.fr.
+- Agence France Trésor (debt management)
+- Banque de France
 
-Links: [Banque de France EN](https://www.banque-france.fr/en), [service-public.fr](https://www.service-public.fr/).
+Links: [Banque de France EN](https://www.banque-france.fr/en),
+[service-public.fr](https://www.service-public.fr/).
+
+## Related
+
+- [Assurance-vie basics](assurance-vie.md) ·
+  [Inflation guide](../../guides/inflation-capital-preservation.md)

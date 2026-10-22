@@ -1,13 +1,13 @@
 ---
-title: "Fondi comuni / PIR basics (Italy)"
+title: "Mutual funds and PIR literacy (Italy)"
 country: it
 vehicle_id: "it-fondi-pir"
 category: "regulated-fund"
 status: published
-last_reviewed: "2026-10-17"
+last_reviewed: "2026-10-22"
 ---
 
-# Fondi comuni / PIR basics (Italy)
+# Mutual funds and PIR literacy (Italy)
 
 !!! warning "Educational only"
     This page is for financial literacy. It is **not** personalized advice,
@@ -17,26 +17,41 @@ last_reviewed: "2026-10-17"
 
 ## What it is
 
-Mutual funds and PIR concepts are market investments with specific tax/eligibility rules — literacy not product push.
+**OICVM / fondi comuni** pool savers’ money into regulated funds with **KIID/KID**
+disclosures. **PIR** (Piani Individuali di Risparmio) were tax-advantaged wrappers
+with strict composition and holding rules — eligibility and tax benefits depend on
+current law; verify on Agenzia delle Entrate and Consob pages, not old forum posts.
+
+Funds are **not deposits** — NAV can fall.
 
 ## Who it is typically designed for
 
-People with emergency cash who accept market risk.
+Households with multi-year horizons and emergency cash already banked. PIR-specific
+rules require literacy about **minimum holding** and asset mix constraints.
 
 ## Liquidity and commitments
 
-Fund rules and PIR constraints apply.
+- Redemption on fund rules (typically T+ settlement).
+- PIR may impose **tax clawbacks** if you break composition or horizon rules.
 
 ## Risks
 
-Market loss; complex eligibility.
+- **Market loss**, especially equity funds sold as “alternatives to deposits.”
+- **Commissioni** (entry/exit) reducing returns.
+- Non-authorized platforms selling fake “PIR crypto.”
 
 ## Literacy angle
 
-Use Consob investor education.
+Read Consob **Educazione finanziaria** and compare KIID before signing at banks or
+SIFPs.
 
 ## Official source types
 
-Consob.
+- Consob fund supervision and education
+- Bank of Italy consumer protection context
 
-Links: [Consob](https://www.consob.it/web/consob-and-its-activities), [Banca d’Italia](https://www.bancaditalia.it/homepage/index.html?com.dotmarketing.htmlpage.language=1).
+Links: [Consob](https://www.consob.it/), [Banca d’Italia](https://www.bancaditalia.it/).
+
+## Related
+
+- [BTP retail](btp-retail.md) · [Pension funds](fondi-pensione.md)
