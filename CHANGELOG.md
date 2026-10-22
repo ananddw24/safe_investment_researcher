@@ -24,6 +24,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   the knowledge-base scripts' date/freshness logic and schema validation
   of conforming and non-conforming records
 - Dependabot now also watches `scripts/requirements-dev.txt`
+- `RELEASING.md`: the release checklist (version bumps across
+  pyproject/CITATION/README/SECURITY, changelog, tag, verification)
 
 ### Fixed
 
