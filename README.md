@@ -13,9 +13,12 @@ understand money basics, regulated savings and investment *types* by country, an
 public resources — without opening accounts, selling products, or giving personalized advice.
 Everything is educational only; always verify with official sources in your jurisdiction.
 
-**Read online:** [GitHub Pages docs](https://ananddw24.github.io/safe_investment_researcher/) ·
-**New here?** Start with [Using this library](docs/about/using-this-library.md) and the
-[New reader pathway](docs/pathways/new-reader.md).
+**New here?** Start with [Using this library](docs/about/using-this-library.md),
+the [New reader pathway](docs/pathways/new-reader.md), or the
+[Woman-led household pathway](docs/pathways/woman-led-household.md).
+Browse the docs in this repo or run `mkdocs serve`. GitHub Pages is expected at
+[ananddw24.github.io/safe_investment_researcher](https://ananddw24.github.io/safe_investment_researcher/)
+once the owner enables it (v1.0.0 checklist).
 
 ## What this is / is not
 
@@ -36,8 +39,6 @@ mkdocs serve
 ```
 
 Or: `make serve` · build: `make build` · validate data: `make validate`
-
-Docs site: <https://ananddw24.github.io/safe_investment_researcher/>
 
 ## Taxonomy map
 
@@ -82,9 +83,10 @@ agents and tools can consume directly:
 
 ## Status
 
-**v0.6.0** — Deep household vehicle pages for all Top 10 GDP economies; Africa
-cluster pages remain shorter orientation sketches. 80+ curated regulator/government
-resource records with generated [browse tables](docs/resources/catalog.md).
+**v0.6.0** — Docs hub: homepage country map and Start here paths; reader
+onboarding and deep Top 10 vehicle prose from PR #11; Africa cluster pages
+remain shorter orientation sketches. 80+ curated regulator/government resource
+records with generated [browse tables](docs/resources/catalog.md).
 
-Next: deepen Africa cluster pages; then **v1.0.0** (see
+Next: **v1.0.0** when the site is public on GitHub Pages (see
 [release plan](docs/about/release-plan.md)).

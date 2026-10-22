@@ -2,7 +2,7 @@
 title: Release plan
 description: Semver roadmap for FinancialLibrary content milestones
 status: published
-last_reviewed: "2026-10-17"
+last_reviewed: "2026-10-22"
 ---
 
 # Release plan
@@ -21,12 +21,23 @@ semantic versioning. Force-push is forbidden on `main` and on published tags.
 | Release | Scope | Status |
 | --- | --- | --- |
 | **v0.1.0** | Scaffold only | Shipped |
-| **v0.2.0** | India household vehicles + guides + pathway + resources | Shipped |
+| **v0.2.0** | India household vehicles + 3 literacy guides + woman-led pathway + resources | Shipped |
 | **v0.3.0** | United States + Kenya vehicle pages and resources | Shipped |
 | **v0.4.0** | Remaining Top 10 GDP countries as short vehicle pages | Shipped |
-| **v0.5.0** | Africa cluster: Nigeria, South Africa, Ghana, Egypt | Shipped |
-| **v0.6.0** | Deep household vehicle pages for remaining Top 10 GDP economies (CN, DE, JP, GB, FR, IT, BR, CA) | Shipped (this release) |
-| **v1.0.0** | Stable contribution model, public Pages live, OpenSSF hygiene | Planned |
+| **v0.5.0** | Africa cluster: Nigeria, South Africa, Ghana, Egypt (Kenya linked) | Shipped |
+| **v0.6.0** | Docs hub: coverage map, Start here paths; consolidates PR #11 reader pages + deep Top 10 prose | Shipped (this release) |
+| **v1.0.0** | Stable contribution model, **public Pages live**, OpenSSF hygiene | Planned — waits on a public site |
+
+## What each content release already shipped
+
+- **v0.2.0** — India vehicles; guides (emergency savings, inflation, unregulated
+  schemes); woman-led household pathway; verified India resources
+- **v0.3.0** — United States and Kenya vehicles + resources
+- **v0.4.0** — China, Germany, Japan, UK, France, Italy, Brazil, Canada (short)
+- **v0.5.0** — Nigeria, South Africa, Ghana, Egypt (short); Kenya not rewritten
+- **PR #11** (merged before the v0.6.0 tag) — reader onboarding (*Using this
+  library*, educators/NGOs page, new-reader pathway), generated resource
+  catalog, knowledge-base index, and deep prose for CN/DE/JP/GB/FR/IT/BR/CA
 
 ## Rules for every release
 
@@ -38,7 +49,6 @@ semantic versioning. Force-push is forbidden on `main` and on published tags.
 
 ## Current focus
 
-**v0.6.0** deepens Top 10 GDP vehicle prose for China, Germany, Japan, United
-Kingdom, France, Italy, Brazil, and Canada (India, US, Kenya were already deep).
-Africa cluster short pages remain for a future release. Do **not** start **v1.0.0**
-in this release.
+**v0.6.0** makes shipped coverage easy to find for first-time readers. It does
+**not** add new country research. **v1.0.0** remains planned until the
+repository is public and GitHub Pages is enabled by the owner.

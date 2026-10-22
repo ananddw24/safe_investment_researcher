@@ -4,7 +4,8 @@
 
 | Version | Supported |
 | --- | --- |
-| `0.5.x` (latest release) | Yes |
+| `0.6.x` (latest release) | Yes |
+| `0.5.x` | Security fixes only |
 | `< 0.5.0` | No |
 
 ## Reporting a vulnerability
