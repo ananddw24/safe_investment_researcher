@@ -1,11 +1,9 @@
 ---
-title: Release plan
-description: Semver roadmap for FinancialLibrary content milestones
-status: published
-last_reviewed: "2026-10-17"
+title: Release history
+description: What each FinancialLibrary version added
 ---
 
-# Release plan
+# Release history
 
 !!! warning "Educational only"
     This page is for financial literacy. It is **not** personalized advice,
@@ -13,30 +11,13 @@ last_reviewed: "2026-10-17"
     Rules differ by country; verify with official sources in your jurisdiction.
 
 
-This project ships educational content in small, reviewable releases. Tags use
-semantic versioning. Force-push is forbidden on `main` and on published tags.
+FinancialLibrary grows in small, versioned releases. This page records
+what each version added — it is a history, not a roadmap.
 
-## Sequence
-
-| Release | Scope | Status |
-| --- | --- | --- |
-| **v0.1.0** | Scaffold only | Shipped |
-| **v0.2.0** | India household vehicles + guides + pathway + resources | Shipped |
-| **v0.3.0** | United States + Kenya vehicle pages and resources | Shipped |
-| **v0.4.0** | Remaining Top 10 GDP countries as short vehicle pages | Shipped |
-| **v0.5.0** | Africa cluster: Nigeria, South Africa, Ghana, Egypt | Shipped (this release) |
-| **v1.0.0** | Stable contribution model, public Pages live, OpenSSF hygiene | Planned |
-
-## Rules for every release
-
-- Educational only — no personalized advice or product sales language
-- Disclaimer on Guides, Vehicles, and Pathways
-- Prefer government / regulator / NGO / multilateral sources
-- Cite `source_type` and keep `last_checked` current for YAML resources
-- Schema validation and `mkdocs build --strict` must pass before merge
-
-## Current focus
-
-**v0.5.0** ships Africa cluster household pages for Nigeria, South Africa, Ghana,
-and Egypt (Kenya already shipped in v0.3.0 — linked, not rewritten). Do **not**
-start **v1.0.0** in this release.
+| Release | What it added |
+| --- | --- |
+| **v0.1.0** | Site scaffold, data schemas, and project guardrails |
+| **v0.2.0** | India vehicle pages, the first guides, the woman-led household pathway, and resource records |
+| **v0.3.0** | United States and Kenya vehicle pages and resource records |
+| **v0.4.0** | Introductory vehicle pages for China, Germany, Japan, the United Kingdom, France, Italy, Brazil, and Canada |
+| **v0.5.0** | Introductory vehicle pages for Nigeria, South Africa, Ghana, and Egypt, with their resource records |

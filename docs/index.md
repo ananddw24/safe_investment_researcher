@@ -18,17 +18,21 @@ products, or giving personalized advice.
 
 ## Start here
 
-1. Read the full [Educational disclaimer](disclaimer.md).
-2. Browse [Guides](guides/index.md) — begin with
+1. Know the ground rule: everything here is educational, never advice —
+   the [Educational disclaimer](disclaimer.md) takes one minute.
+2. Browse the [Guides](guides/index.md) — begin with
    [emergency savings](guides/emergency-savings.md).
-3. Explore country vehicles: [India](vehicles/in/index.md),
-   [United States](vehicles/us/index.md), [Kenya](vehicles/ke/index.md),
-   [Nigeria](vehicles/ng/index.md), [South Africa](vehicles/za/index.md),
-   [Ghana](vehicles/gh/index.md), [Egypt](vehicles/eg/index.md),
-   [China](vehicles/cn/index.md), [Germany](vehicles/de/index.md),
-   [Japan](vehicles/jp/index.md), [United Kingdom](vehicles/gb/index.md),
-   [France](vehicles/fr/index.md), [Italy](vehicles/it/index.md),
-   [Brazil](vehicles/br/index.md), [Canada](vehicles/ca/index.md).
+3. Pick your country — vehicle pages explain savings and investment
+   *types*, country by country.
+   Fuller guide sets: [India](vehicles/in/index.md),
+   [United States](vehicles/us/index.md), [Kenya](vehicles/ke/index.md).
+   Introductory overviews: [Nigeria](vehicles/ng/index.md),
+   [South Africa](vehicles/za/index.md), [Ghana](vehicles/gh/index.md),
+   [Egypt](vehicles/eg/index.md), [China](vehicles/cn/index.md),
+   [Germany](vehicles/de/index.md), [Japan](vehicles/jp/index.md),
+   [United Kingdom](vehicles/gb/index.md), [France](vehicles/fr/index.md),
+   [Italy](vehicles/it/index.md), [Brazil](vehicles/br/index.md),
+   [Canada](vehicles/ca/index.md).
 4. Follow the [woman-led household pathway](pathways/woman-led-household.md) for a
    suggested reading order.
 5. Check [Resources](resources/index.md) for curated official links.
@@ -41,13 +45,15 @@ products, or giving personalized advice.
 | [Vehicles](vehicles/index.md) | Country-by-country product *types* |
 | [Pathways](pathways/index.md) | Ordered reading paths |
 | [Resources](resources/index.md) | Curated YAML link database |
-| [Release plan](about/release-plan.md) | What each version ships |
-| [About](about/index.md) | Audience and licenses |
+| [About](about/index.md) | Audience, licenses, and release history |
 
-## Status
+## What's here today
 
-**v0.5.0** adds Africa cluster household vehicle pages for Nigeria, South Africa,
-Ghana, and Egypt (Kenya was shipped in v0.3.0 and is linked, not rewritten).
-
-The GitHub repository may still be **private** until the owner flips visibility.
-See the [release plan](about/release-plan.md).
+Guides and vehicle pages for 15 countries, a reading pathway for
+woman-led households, and 80 curated resource records from regulators,
+government portals, deposit insurers, and other public sources (as of
+October 2026). The fuller guide sets (India, the United States, Kenya)
+walk through each vehicle type in depth; the other twelve countries have
+introductory overviews that explain what each type is, its main risks,
+and where to verify it. What changed in each version is recorded in the
+[release history](about/release-plan.md).

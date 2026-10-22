@@ -48,7 +48,7 @@ nav:
       - about/index.md
       - Audience: about/audience.md
       - Licenses: about/licenses.md
-      - Release plan: about/release-plan.md
+      - Release history: about/release-plan.md
   - Guides:
       - guides/index.md
       - Emergency savings: guides/emergency-savings.md
