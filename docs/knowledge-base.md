@@ -18,6 +18,7 @@ to cite it.
 | Vehicle records | `data/vehicles/*.yaml` | Machine-readable records for regulated savings/investment types by country. |
 | Schemas | `data/schemas/*.schema.json` | The contract every record must satisfy (JSON Schema, draft 2020-12). |
 | Prose | `docs/guides/`, `docs/vehicles/<iso>/`, `docs/pathways/` | Human-readable explainers and per-country vehicle pages. |
+| Resource catalog | `docs/resources/catalog.md` | Generated tables of all resource links by country (for human readers). |
 
 The YAML records are the source of truth. The index and the website are
 derived views.

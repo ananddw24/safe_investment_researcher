@@ -27,6 +27,12 @@ picks. Prefer emergency cash in safe, accessible forms before long lock-ins.
 | [JGBs retail programs](jgb-retail.md) | Government bond education |
 | [Workplace pensions overview](workplace-pensions.md) | Employer-dependent |
 
+
+## Official links
+
+Curated regulator and government URLs for this country are in the
+[resource catalog](../../resources/catalog.md#jp).
+
 ## Related
 
 - [Vehicles home](../index.md) · [Guides](../../guides/index.md)

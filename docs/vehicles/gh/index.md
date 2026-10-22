@@ -29,6 +29,12 @@ picks. Prefer emergency savings in regulated channels; treat unregulated
 | [Susu / cooperative collectors](susu-cooperatives.md) | High trust, high risk literacy |
 | [SSNIT pension concepts](ssnit.md) | Formal worker lens |
 
+
+## Official links
+
+Curated regulator and government URLs for this country are in the
+[resource catalog](../../resources/catalog.md#gh).
+
 ## Related
 
 - [Kenya vehicles](../ke/index.md) · [Nigeria](../ng/index.md) · [Vehicles home](../index.md)

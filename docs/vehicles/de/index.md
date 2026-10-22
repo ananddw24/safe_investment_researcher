@@ -27,6 +27,12 @@ picks. Prefer emergency cash in safe, accessible forms before long lock-ins.
 | [Bunds / federal securities](bunds.md) | Government debt education |
 | [Sparkasse / cooperative savings](sparkasse-cooperative.md) | Local banking access |
 
+
+## Official links
+
+Curated regulator and government URLs for this country are in the
+[resource catalog](../../resources/catalog.md#de).
+
 ## Related
 
 - [Vehicles home](../index.md)

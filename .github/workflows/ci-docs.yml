@@ -4,14 +4,20 @@ on:
   push:
     paths:
       - "docs/**"
+      - "data/resources/**"
+      - "scripts/generate_resources_catalog.py"
       - "mkdocs.yml"
       - "requirements.txt"
+      - "scripts/requirements-dev.txt"
       - ".github/workflows/ci-docs.yml"
   pull_request:
     paths:
       - "docs/**"
+      - "data/resources/**"
+      - "scripts/generate_resources_catalog.py"
       - "mkdocs.yml"
       - "requirements.txt"
+      - "scripts/requirements-dev.txt"
       - ".github/workflows/ci-docs.yml"
 
 permissions:
@@ -31,7 +37,12 @@ jobs:
           cache: pip
 
       - name: Install docs deps
-        run: pip install -r requirements.txt
+        run: |
+          pip install -r requirements.txt
+          pip install -r scripts/requirements-dev.txt
+
+      - name: Check resource catalog is up to date
+        run: python scripts/generate_resources_catalog.py --check
 
       - name: Build MkDocs (strict)
         run: mkdocs build --strict

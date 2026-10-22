@@ -35,6 +35,12 @@ channels and verify on official CBK, CMA, SASRA, Treasury, and NSSF materials.
 2. Read [Spotting unregulated schemes](../../guides/spotting-unregulated-schemes.md).
 3. Confirm licensing on official regulator sites before trusting an app or agent.
 
+
+## Official links
+
+Curated regulator and government URLs for this country are in the
+[resource catalog](../../resources/catalog.md#ke).
+
 ## Related
 
 - [United States vehicles](../us/index.md) · [India vehicles](../in/index.md)

@@ -1,0 +1,1820 @@
+{
+  "kb": "FinancialLibrary",
+  "kb_version": 1,
+  "generated_at": "2026-10-22T02:39:03+00:00",
+  "generator": "scripts/build_kb_index.py",
+  "notes": "Educational only, not financial advice. Freshness buckets: fresh <= 90 days since verification, aging 91-180, stale > 180, unknown = no verification date. Source of truth is the YAML records; this index is a derived view.",
+  "counts": {
+    "resources": 81,
+    "vehicles": 10,
+    "resource_countries": 16,
+    "vehicle_yaml_countries": 3,
+    "vehicle_docs_countries": 15
+  },
+  "freshness": {
+    "resources": {
+      "fresh": 81,
+      "aging": 0,
+      "stale": 0,
+      "unknown": 0
+    },
+    "vehicles": {
+      "fresh": 10,
+      "aging": 0,
+      "stale": 0,
+      "unknown": 0
+    }
+  },
+  "coverage": {
+    "vehicle_docs_pages_by_country": {
+      "br": 6,
+      "ca": 6,
+      "cn": 6,
+      "de": 6,
+      "eg": 6,
+      "fr": 6,
+      "gb": 6,
+      "gh": 6,
+      "in": 10,
+      "it": 6,
+      "jp": 6,
+      "ke": 6,
+      "ng": 6,
+      "us": 6,
+      "za": 6
+    },
+    "vehicle_yaml_by_country": {
+      "in": 6,
+      "ke": 2,
+      "us": 2
+    }
+  },
+  "resources": [
+    {
+      "id": "br-bcb",
+      "title": "Banco Central do Brasil",
+      "url": "https://www.bcb.gov.br/en",
+      "country": "br",
+      "language": "en",
+      "topics": [
+        "banking",
+        "mobile-money",
+        "financial-literacy"
+      ],
+      "audience": [
+        "general",
+        "low-income"
+      ],
+      "source_type": "central-bank",
+      "last_checked": "2026-10-17",
+      "age_days": 5,
+      "freshness": "fresh",
+      "file": "data/resources/br-bcb.yaml"
+    },
+    {
+      "id": "br-cvm",
+      "title": "CVM Brazil",
+      "url": "https://www.gov.br/cvm/pt-br",
+      "country": "br",
+      "language": "pt",
+      "topics": [
+        "investing-basics",
+        "regulation"
+      ],
+      "audience": [
+        "general"
+      ],
+      "source_type": "securities-regulator",
+      "last_checked": "2026-10-17",
+      "age_days": 5,
+      "freshness": "fresh",
+      "file": "data/resources/br-cvm.yaml"
+    },
+    {
+      "id": "br-fgc",
+      "title": "FGC",
+      "url": "https://www.fgc.org.br/",
+      "country": "br",
+      "language": "pt",
+      "topics": [
+        "banking",
+        "savings"
+      ],
+      "audience": [
+        "general"
+      ],
+      "source_type": "government-portal",
+      "last_checked": "2026-10-17",
+      "age_days": 5,
+      "freshness": "fresh",
+      "file": "data/resources/br-fgc.yaml"
+    },
+    {
+      "id": "br-tesouro-direto",
+      "title": "Tesouro Direto",
+      "url": "https://www.tesourodireto.com.br/",
+      "country": "br",
+      "language": "pt",
+      "topics": [
+        "savings",
+        "investing-basics"
+      ],
+      "audience": [
+        "general"
+      ],
+      "source_type": "treasury",
+      "last_checked": "2026-10-17",
+      "age_days": 5,
+      "freshness": "fresh",
+      "file": "data/resources/br-tesouro-direto.yaml"
+    },
+    {
+      "id": "ca-boc",
+      "title": "Bank of Canada",
+      "url": "https://www.bankofcanada.ca/",
+      "country": "ca",
+      "language": "en",
+      "topics": [
+        "banking",
+        "financial-literacy"
+      ],
+      "audience": [
+        "general"
+      ],
+      "source_type": "central-bank",
+      "last_checked": "2026-10-17",
+      "age_days": 5,
+      "freshness": "fresh",
+      "file": "data/resources/ca-boc.yaml"
+    },
+    {
+      "id": "ca-cdic",
+      "title": "Canada Deposit Insurance Corporation",
+      "url": "https://www.cdic.ca/",
+      "country": "ca",
+      "language": "en",
+      "topics": [
+        "banking",
+        "savings"
+      ],
+      "audience": [
+        "general"
+      ],
+      "source_type": "government-portal",
+      "last_checked": "2026-10-17",
+      "age_days": 5,
+      "freshness": "fresh",
+      "file": "data/resources/ca-cdic.yaml"
+    },
+    {
+      "id": "ca-fcac",
+      "title": "Financial Consumer Agency of Canada",
+      "url": "https://www.canada.ca/en/financial-consumer-agency.html",
+      "country": "ca",
+      "language": "en",
+      "topics": [
+        "financial-literacy",
+        "banking",
+        "savings"
+      ],
+      "audience": [
+        "general",
+        "low-income",
+        "women"
+      ],
+      "source_type": "government-portal",
+      "last_checked": "2026-10-17",
+      "age_days": 5,
+      "freshness": "fresh",
+      "file": "data/resources/ca-fcac.yaml"
+    },
+    {
+      "id": "ca-osfi",
+      "title": "OSFI",
+      "url": "https://www.osfi-bsif.gc.ca/en",
+      "country": "ca",
+      "language": "en",
+      "topics": [
+        "regulation",
+        "pensions"
+      ],
+      "audience": [
+        "general"
+      ],
+      "source_type": "government-portal",
+      "last_checked": "2026-10-17",
+      "age_days": 5,
+      "freshness": "fresh",
+      "file": "data/resources/ca-osfi.yaml"
+    },
+    {
+      "id": "cn-mof",
+      "title": "Ministry of Finance of China",
+      "url": "https://www.mof.gov.cn/",
+      "country": "cn",
+      "language": "zh",
+      "topics": [
+        "savings",
+        "regulation"
+      ],
+      "audience": [
+        "general"
+      ],
+      "source_type": "ministry",
+      "last_checked": "2026-10-17",
+      "age_days": 5,
+      "freshness": "fresh",
+      "file": "data/resources/cn-mof.yaml"
+    },
+    {
+      "id": "cn-nfra",
+      "title": "National Financial Regulatory Administration (China)",
+      "url": "https://www.nfra.gov.cn/",
+      "country": "cn",
+      "language": "zh",
+      "topics": [
+        "regulation",
+        "banking"
+      ],
+      "audience": [
+        "general"
+      ],
+      "source_type": "government-portal",
+      "last_checked": "2026-10-17",
+      "age_days": 5,
+      "freshness": "fresh",
+      "file": "data/resources/cn-nfra.yaml"
+    },
+    {
+      "id": "cn-pboc",
+      "title": "People’s Bank of China",
+      "url": "https://www.pbc.gov.cn/",
+      "country": "cn",
+      "language": "zh",
+      "topics": [
+        "banking",
+        "regulation",
+        "financial-literacy"
+      ],
+      "audience": [
+        "general",
+        "low-income"
+      ],
+      "source_type": "central-bank",
+      "last_checked": "2026-10-17",
+      "age_days": 5,
+      "freshness": "fresh",
+      "file": "data/resources/cn-pboc.yaml"
+    },
+    {
+      "id": "de-bafin",
+      "title": "BaFin",
+      "url": "https://www.bafin.de/EN/",
+      "country": "de",
+      "language": "en",
+      "topics": [
+        "regulation",
+        "investing-basics",
+        "financial-literacy"
+      ],
+      "audience": [
+        "general"
+      ],
+      "source_type": "securities-regulator",
+      "last_checked": "2026-10-17",
+      "age_days": 5,
+      "freshness": "fresh",
+      "file": "data/resources/de-bafin.yaml"
+    },
+    {
+      "id": "de-bundesbank",
+      "title": "Deutsche Bundesbank",
+      "url": "https://www.bundesbank.de/en",
+      "country": "de",
+      "language": "en",
+      "topics": [
+        "banking",
+        "financial-literacy"
+      ],
+      "audience": [
+        "general"
+      ],
+      "source_type": "central-bank",
+      "last_checked": "2026-10-17",
+      "age_days": 5,
+      "freshness": "fresh",
+      "file": "data/resources/de-bundesbank.yaml"
+    },
+    {
+      "id": "de-finanzagentur",
+      "title": "Finanzagentur",
+      "url": "https://www.deutsche-finanzagentur.de/en/",
+      "country": "de",
+      "language": "en",
+      "topics": [
+        "savings",
+        "investing-basics"
+      ],
+      "audience": [
+        "general"
+      ],
+      "source_type": "treasury",
+      "last_checked": "2026-10-17",
+      "age_days": 5,
+      "freshness": "fresh",
+      "file": "data/resources/de-finanzagentur.yaml"
+    },
+    {
+      "id": "eg-cbe",
+      "title": "Central Bank of Egypt",
+      "url": "https://www.cbe.org.eg/en/",
+      "country": "eg",
+      "language": "en",
+      "topics": [
+        "banking",
+        "savings",
+        "regulation"
+      ],
+      "audience": [
+        "general",
+        "low-income"
+      ],
+      "source_type": "central-bank",
+      "last_checked": "2026-10-17",
+      "age_days": 5,
+      "freshness": "fresh",
+      "file": "data/resources/eg-cbe.yaml"
+    },
+    {
+      "id": "eg-fra",
+      "title": "Financial Regulatory Authority Egypt",
+      "url": "https://fra.gov.eg/en/",
+      "country": "eg",
+      "language": "en",
+      "topics": [
+        "investing-basics",
+        "debt",
+        "women",
+        "regulation"
+      ],
+      "audience": [
+        "general",
+        "women",
+        "low-income"
+      ],
+      "source_type": "securities-regulator",
+      "last_checked": "2026-10-17",
+      "age_days": 5,
+      "freshness": "fresh",
+      "file": "data/resources/eg-fra.yaml"
+    },
+    {
+      "id": "eg-mof",
+      "title": "Ministry of Finance Egypt",
+      "url": "https://www.mof.gov.eg/",
+      "country": "eg",
+      "language": "en",
+      "topics": [
+        "savings",
+        "inflation",
+        "regulation"
+      ],
+      "audience": [
+        "general"
+      ],
+      "source_type": "ministry",
+      "last_checked": "2026-10-17",
+      "age_days": 5,
+      "freshness": "fresh",
+      "file": "data/resources/eg-mof.yaml"
+    },
+    {
+      "id": "fr-amf",
+      "title": "AMF France",
+      "url": "https://www.amf-france.org/en",
+      "country": "fr",
+      "language": "en",
+      "topics": [
+        "investing-basics",
+        "regulation"
+      ],
+      "audience": [
+        "general"
+      ],
+      "source_type": "securities-regulator",
+      "last_checked": "2026-10-17",
+      "age_days": 5,
+      "freshness": "fresh",
+      "file": "data/resources/fr-amf.yaml"
+    },
+    {
+      "id": "fr-banque-france",
+      "title": "Banque de France",
+      "url": "https://www.banque-france.fr/en",
+      "country": "fr",
+      "language": "en",
+      "topics": [
+        "banking",
+        "financial-literacy"
+      ],
+      "audience": [
+        "general",
+        "low-income"
+      ],
+      "source_type": "central-bank",
+      "last_checked": "2026-10-17",
+      "age_days": 5,
+      "freshness": "fresh",
+      "file": "data/resources/fr-banque-france.yaml"
+    },
+    {
+      "id": "fr-service-public",
+      "title": "service-public.fr",
+      "url": "https://www.service-public.fr/",
+      "country": "fr",
+      "language": "fr",
+      "topics": [
+        "savings",
+        "financial-literacy"
+      ],
+      "audience": [
+        "general",
+        "low-income"
+      ],
+      "source_type": "government-portal",
+      "last_checked": "2026-10-17",
+      "age_days": 5,
+      "freshness": "fresh",
+      "file": "data/resources/fr-service-public.yaml"
+    },
+    {
+      "id": "gb-fca",
+      "title": "Financial Conduct Authority (UK)",
+      "url": "https://www.fca.org.uk/",
+      "country": "gb",
+      "language": "en",
+      "topics": [
+        "regulation",
+        "investing-basics",
+        "scams"
+      ],
+      "audience": [
+        "general",
+        "low-income"
+      ],
+      "source_type": "securities-regulator",
+      "last_checked": "2026-10-17",
+      "age_days": 5,
+      "freshness": "fresh",
+      "file": "data/resources/gb-fca.yaml"
+    },
+    {
+      "id": "gb-fscs",
+      "title": "Financial Services Compensation Scheme",
+      "url": "https://www.fscs.org.uk/",
+      "country": "gb",
+      "language": "en",
+      "topics": [
+        "banking",
+        "savings"
+      ],
+      "audience": [
+        "general"
+      ],
+      "source_type": "government-portal",
+      "last_checked": "2026-10-17",
+      "age_days": 5,
+      "freshness": "fresh",
+      "file": "data/resources/gb-fscs.yaml"
+    },
+    {
+      "id": "gb-nsandi",
+      "title": "NS&I",
+      "url": "https://www.nsandi.com/",
+      "country": "gb",
+      "language": "en",
+      "topics": [
+        "savings"
+      ],
+      "audience": [
+        "general"
+      ],
+      "source_type": "government-portal",
+      "last_checked": "2026-10-17",
+      "age_days": 5,
+      "freshness": "fresh",
+      "file": "data/resources/gb-nsandi.yaml"
+    },
+    {
+      "id": "gb-tpr",
+      "title": "The Pensions Regulator (UK)",
+      "url": "https://www.thepensionsregulator.gov.uk/",
+      "country": "gb",
+      "language": "en",
+      "topics": [
+        "pensions"
+      ],
+      "audience": [
+        "general"
+      ],
+      "source_type": "government-portal",
+      "last_checked": "2026-10-17",
+      "age_days": 5,
+      "freshness": "fresh",
+      "file": "data/resources/gb-tpr.yaml"
+    },
+    {
+      "id": "gh-bog",
+      "title": "Bank of Ghana",
+      "url": "https://www.bog.gov.gh/",
+      "country": "gh",
+      "language": "en",
+      "topics": [
+        "banking",
+        "mobile-money",
+        "financial-literacy",
+        "regulation"
+      ],
+      "audience": [
+        "general",
+        "low-income",
+        "rural"
+      ],
+      "source_type": "central-bank",
+      "last_checked": "2026-10-17",
+      "age_days": 5,
+      "freshness": "fresh",
+      "file": "data/resources/gh-bog.yaml"
+    },
+    {
+      "id": "gh-mofep",
+      "title": "Ministry of Finance Ghana",
+      "url": "https://mofep.gov.gh/",
+      "country": "gh",
+      "language": "en",
+      "topics": [
+        "savings",
+        "inflation",
+        "regulation"
+      ],
+      "audience": [
+        "general"
+      ],
+      "source_type": "ministry",
+      "last_checked": "2026-10-17",
+      "age_days": 5,
+      "freshness": "fresh",
+      "file": "data/resources/gh-mofep.yaml"
+    },
+    {
+      "id": "gh-sec",
+      "title": "Securities and Exchange Commission Ghana",
+      "url": "https://sec.gov.gh/",
+      "country": "gh",
+      "language": "en",
+      "topics": [
+        "investing-basics",
+        "regulation"
+      ],
+      "audience": [
+        "general"
+      ],
+      "source_type": "securities-regulator",
+      "last_checked": "2026-10-17",
+      "age_days": 5,
+      "freshness": "fresh",
+      "file": "data/resources/gh-sec.yaml"
+    },
+    {
+      "id": "gh-ssnit",
+      "title": "Social Security and National Insurance Trust (SSNIT)",
+      "url": "https://www.ssnit.org.gh/",
+      "country": "gh",
+      "language": "en",
+      "topics": [
+        "pensions"
+      ],
+      "audience": [
+        "general"
+      ],
+      "source_type": "government-portal",
+      "last_checked": "2026-10-17",
+      "age_days": 5,
+      "freshness": "fresh",
+      "file": "data/resources/gh-ssnit.yaml"
+    },
+    {
+      "id": "gl-cgap",
+      "title": "CGAP — Consultative Group to Assist the Poor",
+      "url": "https://www.cgap.org/",
+      "country": "global",
+      "language": "en",
+      "topics": [
+        "financial-literacy",
+        "women",
+        "mobile-money"
+      ],
+      "audience": [
+        "low-income",
+        "women"
+      ],
+      "source_type": "multilateral",
+      "last_checked": "2026-10-17",
+      "age_days": 5,
+      "freshness": "fresh",
+      "file": "data/resources/gl-cgap.yaml"
+    },
+    {
+      "id": "gl-worldbank-findex",
+      "title": "World Bank — Global Findex",
+      "url": "https://www.worldbank.org/en/publication/globalfindex",
+      "country": "global",
+      "language": "en",
+      "topics": [
+        "financial-literacy",
+        "banking"
+      ],
+      "audience": [
+        "general",
+        "low-income",
+        "women"
+      ],
+      "source_type": "multilateral",
+      "last_checked": "2026-10-17",
+      "age_days": 5,
+      "freshness": "fresh",
+      "file": "data/resources/gl-worldbank-findex.yaml"
+    },
+    {
+      "id": "in-amfi",
+      "title": "Association of Mutual Funds in India",
+      "url": "https://www.amfiindia.com/",
+      "country": "in",
+      "language": "en",
+      "topics": [
+        "investing-basics"
+      ],
+      "audience": [
+        "general"
+      ],
+      "source_type": "other-public",
+      "last_checked": "2026-10-17",
+      "age_days": 5,
+      "freshness": "fresh",
+      "file": "data/resources/in-amfi.yaml"
+    },
+    {
+      "id": "in-dfs",
+      "title": "Department of Financial Services",
+      "url": "https://financialservices.gov.in/",
+      "country": "in",
+      "language": "en",
+      "topics": [
+        "regulation",
+        "savings",
+        "financial-literacy"
+      ],
+      "audience": [
+        "general"
+      ],
+      "source_type": "ministry",
+      "last_checked": "2026-10-17",
+      "age_days": 5,
+      "freshness": "fresh",
+      "file": "data/resources/in-dfs.yaml"
+    },
+    {
+      "id": "in-dicgc",
+      "title": "Deposit Insurance and Credit Guarantee Corporation",
+      "url": "https://www.dicgc.org.in/",
+      "country": "in",
+      "language": "en",
+      "topics": [
+        "banking",
+        "savings"
+      ],
+      "audience": [
+        "general",
+        "low-income"
+      ],
+      "source_type": "central-bank",
+      "last_checked": "2026-10-17",
+      "age_days": 5,
+      "freshness": "fresh",
+      "file": "data/resources/in-dicgc.yaml"
+    },
+    {
+      "id": "in-incometax",
+      "title": "Income Tax Department (India)",
+      "url": "https://www.incometax.gov.in/",
+      "country": "in",
+      "language": "en",
+      "topics": [
+        "regulation"
+      ],
+      "audience": [
+        "general"
+      ],
+      "source_type": "government-portal",
+      "last_checked": "2026-10-17",
+      "age_days": 5,
+      "freshness": "fresh",
+      "file": "data/resources/in-incometax.yaml"
+    },
+    {
+      "id": "in-india-post",
+      "title": "India Post",
+      "url": "https://www.indiapost.gov.in/",
+      "country": "in",
+      "language": "en",
+      "topics": [
+        "savings",
+        "banking"
+      ],
+      "audience": [
+        "general",
+        "rural",
+        "low-income"
+      ],
+      "source_type": "government-portal",
+      "last_checked": "2026-10-17",
+      "age_days": 5,
+      "freshness": "fresh",
+      "file": "data/resources/in-india-post.yaml"
+    },
+    {
+      "id": "in-mospi",
+      "title": "Ministry of Statistics and Programme Implementation",
+      "url": "https://www.mospi.gov.in/",
+      "country": "in",
+      "language": "en",
+      "topics": [
+        "inflation"
+      ],
+      "audience": [
+        "general"
+      ],
+      "source_type": "ministry",
+      "last_checked": "2026-10-17",
+      "age_days": 5,
+      "freshness": "fresh",
+      "file": "data/resources/in-mospi.yaml"
+    },
+    {
+      "id": "in-myscheme",
+      "title": "myScheme — government schemes discovery",
+      "url": "https://www.myscheme.gov.in/",
+      "country": "in",
+      "language": "en",
+      "topics": [
+        "financial-literacy"
+      ],
+      "audience": [
+        "general",
+        "women",
+        "low-income"
+      ],
+      "source_type": "government-portal",
+      "last_checked": "2026-10-17",
+      "age_days": 5,
+      "freshness": "fresh",
+      "file": "data/resources/in-myscheme.yaml"
+    },
+    {
+      "id": "in-ncfe",
+      "title": "National Centre for Financial Education (NCFE)",
+      "url": "https://ncfe.org.in/",
+      "country": "in",
+      "language": "en",
+      "topics": [
+        "financial-literacy"
+      ],
+      "audience": [
+        "general",
+        "low-income",
+        "women"
+      ],
+      "source_type": "ngo",
+      "last_checked": "2026-10-17",
+      "age_days": 5,
+      "freshness": "fresh",
+      "file": "data/resources/in-ncfe.yaml"
+    },
+    {
+      "id": "in-npci-upi",
+      "title": "NPCI — UPI product overview",
+      "url": "https://www.npci.org.in/what-we-do/upi/product-overview",
+      "country": "in",
+      "language": "en",
+      "topics": [
+        "mobile-money",
+        "banking"
+      ],
+      "audience": [
+        "general",
+        "low-income"
+      ],
+      "source_type": "other-public",
+      "last_checked": "2026-10-17",
+      "age_days": 5,
+      "freshness": "fresh",
+      "file": "data/resources/in-npci-upi.yaml"
+    },
+    {
+      "id": "in-nps-trust",
+      "title": "NPS Trust",
+      "url": "https://npstrust.org.in/",
+      "country": "in",
+      "language": "en",
+      "topics": [
+        "pensions"
+      ],
+      "audience": [
+        "general"
+      ],
+      "source_type": "government-portal",
+      "last_checked": "2026-10-17",
+      "age_days": 5,
+      "freshness": "fresh",
+      "file": "data/resources/in-nps-trust.yaml"
+    },
+    {
+      "id": "in-pfrda",
+      "title": "Pension Fund Regulatory and Development Authority",
+      "url": "https://www.pfrda.org.in/",
+      "country": "in",
+      "language": "en",
+      "topics": [
+        "pensions",
+        "regulation"
+      ],
+      "audience": [
+        "general"
+      ],
+      "source_type": "government-portal",
+      "last_checked": "2026-10-17",
+      "age_days": 5,
+      "freshness": "fresh",
+      "file": "data/resources/in-pfrda.yaml"
+    },
+    {
+      "id": "in-rbi-financial-literacy",
+      "title": "Reserve Bank of India — Financial Education",
+      "url": "https://www.rbi.org.in/FinancialEducation/",
+      "country": "in",
+      "language": "en",
+      "topics": [
+        "financial-literacy",
+        "banking"
+      ],
+      "audience": [
+        "general",
+        "low-income"
+      ],
+      "source_type": "central-bank",
+      "last_checked": "2026-10-17",
+      "age_days": 5,
+      "freshness": "fresh",
+      "file": "data/resources/in-rbi-financial-literacy.yaml"
+    },
+    {
+      "id": "in-sebi-home",
+      "title": "Securities and Exchange Board of India",
+      "url": "https://www.sebi.gov.in/",
+      "country": "in",
+      "language": "en",
+      "topics": [
+        "regulation",
+        "investing-basics"
+      ],
+      "audience": [
+        "general"
+      ],
+      "source_type": "securities-regulator",
+      "last_checked": "2026-10-17",
+      "age_days": 5,
+      "freshness": "fresh",
+      "file": "data/resources/in-sebi-home.yaml"
+    },
+    {
+      "id": "in-sebi-investor-portal",
+      "title": "SEBI Investor Portal",
+      "url": "https://investor.sebi.gov.in/",
+      "country": "in",
+      "language": "en",
+      "topics": [
+        "investing-basics",
+        "financial-literacy",
+        "scams"
+      ],
+      "audience": [
+        "general"
+      ],
+      "source_type": "securities-regulator",
+      "last_checked": "2026-10-17",
+      "age_days": 5,
+      "freshness": "fresh",
+      "file": "data/resources/in-sebi-investor-portal.yaml"
+    },
+    {
+      "id": "it-bancaditalia",
+      "title": "Banca d'Italia",
+      "url": "https://www.bancaditalia.it/homepage/index.html?com.dotmarketing.htmlpage.language=1",
+      "country": "it",
+      "language": "en",
+      "topics": [
+        "banking",
+        "financial-literacy"
+      ],
+      "audience": [
+        "general"
+      ],
+      "source_type": "central-bank",
+      "last_checked": "2026-10-17",
+      "age_days": 5,
+      "freshness": "fresh",
+      "file": "data/resources/it-bancaditalia.yaml"
+    },
+    {
+      "id": "it-consob",
+      "title": "Consob",
+      "url": "https://www.consob.it/web/consob-and-its-activities",
+      "country": "it",
+      "language": "en",
+      "topics": [
+        "investing-basics",
+        "regulation"
+      ],
+      "audience": [
+        "general"
+      ],
+      "source_type": "securities-regulator",
+      "last_checked": "2026-10-17",
+      "age_days": 5,
+      "freshness": "fresh",
+      "file": "data/resources/it-consob.yaml"
+    },
+    {
+      "id": "it-fitd",
+      "title": "FITD",
+      "url": "https://www.fitd.it/",
+      "country": "it",
+      "language": "it",
+      "topics": [
+        "banking",
+        "savings"
+      ],
+      "audience": [
+        "general"
+      ],
+      "source_type": "government-portal",
+      "last_checked": "2026-10-17",
+      "age_days": 5,
+      "freshness": "fresh",
+      "file": "data/resources/it-fitd.yaml"
+    },
+    {
+      "id": "jp-boj",
+      "title": "Bank of Japan",
+      "url": "https://www.boj.or.jp/en/",
+      "country": "jp",
+      "language": "en",
+      "topics": [
+        "banking",
+        "financial-literacy"
+      ],
+      "audience": [
+        "general"
+      ],
+      "source_type": "central-bank",
+      "last_checked": "2026-10-17",
+      "age_days": 5,
+      "freshness": "fresh",
+      "file": "data/resources/jp-boj.yaml"
+    },
+    {
+      "id": "jp-fsa",
+      "title": "Financial Services Agency (Japan)",
+      "url": "https://www.fsa.go.jp/en/",
+      "country": "jp",
+      "language": "en",
+      "topics": [
+        "regulation",
+        "investing-basics",
+        "financial-literacy"
+      ],
+      "audience": [
+        "general"
+      ],
+      "source_type": "securities-regulator",
+      "last_checked": "2026-10-17",
+      "age_days": 5,
+      "freshness": "fresh",
+      "file": "data/resources/jp-fsa.yaml"
+    },
+    {
+      "id": "jp-mof",
+      "title": "Ministry of Finance Japan",
+      "url": "https://www.mof.go.jp/english/",
+      "country": "jp",
+      "language": "en",
+      "topics": [
+        "savings",
+        "regulation"
+      ],
+      "audience": [
+        "general"
+      ],
+      "source_type": "ministry",
+      "last_checked": "2026-10-17",
+      "age_days": 5,
+      "freshness": "fresh",
+      "file": "data/resources/jp-mof.yaml"
+    },
+    {
+      "id": "ke-ca",
+      "title": "Communications Authority of Kenya",
+      "url": "https://www.ca.go.ke/",
+      "country": "ke",
+      "language": "en",
+      "topics": [
+        "mobile-money",
+        "regulation"
+      ],
+      "audience": [
+        "general"
+      ],
+      "source_type": "government-portal",
+      "last_checked": "2026-10-17",
+      "age_days": 5,
+      "freshness": "fresh",
+      "file": "data/resources/ke-ca.yaml"
+    },
+    {
+      "id": "ke-cbk-education",
+      "title": "Central Bank of Kenya — Financial education",
+      "url": "https://www.centralbank.go.ke/financial-education/",
+      "country": "ke",
+      "language": "en",
+      "topics": [
+        "financial-literacy",
+        "banking"
+      ],
+      "audience": [
+        "general",
+        "low-income",
+        "women"
+      ],
+      "source_type": "central-bank",
+      "last_checked": "2026-10-17",
+      "age_days": 5,
+      "freshness": "fresh",
+      "file": "data/resources/ke-cbk-financial-education.yaml"
+    },
+    {
+      "id": "ke-cbk-payments",
+      "title": "Central Bank of Kenya — National payments system",
+      "url": "https://www.centralbank.go.ke/national-payments-system/",
+      "country": "ke",
+      "language": "en",
+      "topics": [
+        "mobile-money",
+        "banking"
+      ],
+      "audience": [
+        "general",
+        "low-income"
+      ],
+      "source_type": "central-bank",
+      "last_checked": "2026-10-17",
+      "age_days": 5,
+      "freshness": "fresh",
+      "file": "data/resources/ke-cbk-payments.yaml"
+    },
+    {
+      "id": "ke-central-bank",
+      "title": "Central Bank of Kenya",
+      "url": "https://www.centralbank.go.ke/",
+      "country": "ke",
+      "language": "en",
+      "topics": [
+        "banking",
+        "mobile-money",
+        "regulation"
+      ],
+      "audience": [
+        "general",
+        "low-income"
+      ],
+      "source_type": "central-bank",
+      "last_checked": "2026-10-17",
+      "age_days": 5,
+      "freshness": "fresh",
+      "file": "data/resources/ke-central-bank.yaml"
+    },
+    {
+      "id": "ke-kba",
+      "title": "Kenya Bankers Association",
+      "url": "https://www.kba.co.ke/",
+      "country": "ke",
+      "language": "en",
+      "topics": [
+        "banking",
+        "financial-literacy"
+      ],
+      "audience": [
+        "general"
+      ],
+      "source_type": "other-public",
+      "last_checked": "2026-10-17",
+      "age_days": 5,
+      "freshness": "fresh",
+      "file": "data/resources/ke-kba.yaml"
+    },
+    {
+      "id": "ke-nssf",
+      "title": "National Social Security Fund (Kenya)",
+      "url": "https://www.nssf.or.ke/",
+      "country": "ke",
+      "language": "en",
+      "topics": [
+        "pensions"
+      ],
+      "audience": [
+        "general"
+      ],
+      "source_type": "government-portal",
+      "last_checked": "2026-10-17",
+      "age_days": 5,
+      "freshness": "fresh",
+      "file": "data/resources/ke-nssf.yaml"
+    },
+    {
+      "id": "ke-sasra",
+      "title": "SASRA — Sacco Societies Regulatory Authority",
+      "url": "https://www.sasra.go.ke/",
+      "country": "ke",
+      "language": "en",
+      "topics": [
+        "savings",
+        "regulation"
+      ],
+      "audience": [
+        "general",
+        "low-income"
+      ],
+      "source_type": "government-portal",
+      "last_checked": "2026-10-17",
+      "age_days": 5,
+      "freshness": "fresh",
+      "file": "data/resources/ke-sasra.yaml"
+    },
+    {
+      "id": "ke-treasury",
+      "title": "The National Treasury — Kenya",
+      "url": "https://www.treasury.go.ke/",
+      "country": "ke",
+      "language": "en",
+      "topics": [
+        "savings",
+        "regulation"
+      ],
+      "audience": [
+        "general"
+      ],
+      "source_type": "treasury",
+      "last_checked": "2026-10-17",
+      "age_days": 5,
+      "freshness": "fresh",
+      "file": "data/resources/ke-treasury.yaml"
+    },
+    {
+      "id": "ng-cbn",
+      "title": "Central Bank of Nigeria",
+      "url": "https://www.cbn.gov.ng/",
+      "country": "ng",
+      "language": "en",
+      "topics": [
+        "banking",
+        "mobile-money",
+        "regulation"
+      ],
+      "audience": [
+        "general",
+        "low-income"
+      ],
+      "source_type": "central-bank",
+      "last_checked": "2026-10-17",
+      "age_days": 5,
+      "freshness": "fresh",
+      "file": "data/resources/ng-cbn.yaml"
+    },
+    {
+      "id": "ng-dmo",
+      "title": "Debt Management Office Nigeria",
+      "url": "https://www.dmo.gov.ng/",
+      "country": "ng",
+      "language": "en",
+      "topics": [
+        "savings",
+        "inflation",
+        "regulation"
+      ],
+      "audience": [
+        "general"
+      ],
+      "source_type": "treasury",
+      "last_checked": "2026-10-17",
+      "age_days": 5,
+      "freshness": "fresh",
+      "file": "data/resources/ng-dmo.yaml"
+    },
+    {
+      "id": "ng-pencom",
+      "title": "National Pension Commission (PenCom)",
+      "url": "https://www.pencom.gov.ng/",
+      "country": "ng",
+      "language": "en",
+      "topics": [
+        "pensions",
+        "regulation"
+      ],
+      "audience": [
+        "general"
+      ],
+      "source_type": "government-portal",
+      "last_checked": "2026-10-17",
+      "age_days": 5,
+      "freshness": "fresh",
+      "file": "data/resources/ng-pencom.yaml"
+    },
+    {
+      "id": "ng-sec",
+      "title": "Securities and Exchange Commission Nigeria",
+      "url": "https://sec.gov.ng/",
+      "country": "ng",
+      "language": "en",
+      "topics": [
+        "investing-basics",
+        "regulation"
+      ],
+      "audience": [
+        "general"
+      ],
+      "source_type": "securities-regulator",
+      "last_checked": "2026-10-17",
+      "age_days": 5,
+      "freshness": "fresh",
+      "file": "data/resources/ng-sec.yaml"
+    },
+    {
+      "id": "us-cfpb",
+      "title": "Consumer Financial Protection Bureau",
+      "url": "https://www.consumerfinance.gov/",
+      "country": "us",
+      "language": "en",
+      "topics": [
+        "financial-literacy",
+        "banking",
+        "debt"
+      ],
+      "audience": [
+        "general",
+        "low-income"
+      ],
+      "source_type": "government-portal",
+      "last_checked": "2026-10-17",
+      "age_days": 5,
+      "freshness": "fresh",
+      "file": "data/resources/us-cfpb.yaml"
+    },
+    {
+      "id": "us-cfpb-tools",
+      "title": "CFPB — Consumer tools",
+      "url": "https://www.consumerfinance.gov/consumer-tools/",
+      "country": "us",
+      "language": "en",
+      "topics": [
+        "financial-literacy",
+        "banking",
+        "debt"
+      ],
+      "audience": [
+        "general",
+        "low-income",
+        "women"
+      ],
+      "source_type": "government-portal",
+      "last_checked": "2026-10-17",
+      "age_days": 5,
+      "freshness": "fresh",
+      "file": "data/resources/us-cfpb-tools.yaml"
+    },
+    {
+      "id": "us-dol",
+      "title": "U.S. Department of Labor",
+      "url": "https://www.dol.gov/",
+      "country": "us",
+      "language": "en",
+      "topics": [
+        "pensions",
+        "financial-literacy"
+      ],
+      "audience": [
+        "general"
+      ],
+      "source_type": "ministry",
+      "last_checked": "2026-10-17",
+      "age_days": 5,
+      "freshness": "fresh",
+      "file": "data/resources/us-dol.yaml"
+    },
+    {
+      "id": "us-fdic-consumers",
+      "title": "FDIC — Consumer resources",
+      "url": "https://www.fdic.gov/resources/consumers/",
+      "country": "us",
+      "language": "en",
+      "topics": [
+        "banking",
+        "financial-literacy"
+      ],
+      "audience": [
+        "general",
+        "low-income"
+      ],
+      "source_type": "government-portal",
+      "last_checked": "2026-10-17",
+      "age_days": 5,
+      "freshness": "fresh",
+      "file": "data/resources/us-fdic-consumers.yaml"
+    },
+    {
+      "id": "us-fdic-deposit-insurance",
+      "title": "FDIC — Deposit Insurance resources",
+      "url": "https://www.fdic.gov/resources/deposit-insurance/",
+      "country": "us",
+      "language": "en",
+      "topics": [
+        "banking",
+        "savings"
+      ],
+      "audience": [
+        "general"
+      ],
+      "source_type": "government-portal",
+      "last_checked": "2026-10-17",
+      "age_days": 5,
+      "freshness": "fresh",
+      "file": "data/resources/us-fdic-deposit-insurance.yaml"
+    },
+    {
+      "id": "us-fed-consumers",
+      "title": "Federal Reserve — Consumers and communities",
+      "url": "https://www.federalreserve.gov/consumerscommunities.htm",
+      "country": "us",
+      "language": "en",
+      "topics": [
+        "financial-literacy",
+        "banking"
+      ],
+      "audience": [
+        "general"
+      ],
+      "source_type": "central-bank",
+      "last_checked": "2026-10-17",
+      "age_days": 5,
+      "freshness": "fresh",
+      "file": "data/resources/us-federal-reserve-consumers.yaml"
+    },
+    {
+      "id": "us-investor-gov",
+      "title": "Investor.gov — Introduction to investing",
+      "url": "https://www.investor.gov/introduction-investing",
+      "country": "us",
+      "language": "en",
+      "topics": [
+        "investing-basics",
+        "financial-literacy",
+        "scams"
+      ],
+      "audience": [
+        "general"
+      ],
+      "source_type": "securities-regulator",
+      "last_checked": "2026-10-17",
+      "age_days": 5,
+      "freshness": "fresh",
+      "file": "data/resources/us-investor-gov-intro.yaml"
+    },
+    {
+      "id": "us-irs-education",
+      "title": "IRS — Education credits",
+      "url": "https://www.irs.gov/credits-deductions/individuals/education-credits-aotc-llc",
+      "country": "us",
+      "language": "en",
+      "topics": [
+        "financial-literacy"
+      ],
+      "audience": [
+        "general"
+      ],
+      "source_type": "government-portal",
+      "last_checked": "2026-10-17",
+      "age_days": 5,
+      "freshness": "fresh",
+      "file": "data/resources/us-irs-education-credits.yaml"
+    },
+    {
+      "id": "us-irs-retirement",
+      "title": "IRS — Retirement plans",
+      "url": "https://www.irs.gov/retirement-plans",
+      "country": "us",
+      "language": "en",
+      "topics": [
+        "pensions",
+        "financial-literacy"
+      ],
+      "audience": [
+        "general"
+      ],
+      "source_type": "government-portal",
+      "last_checked": "2026-10-17",
+      "age_days": 5,
+      "freshness": "fresh",
+      "file": "data/resources/us-irs-retirement.yaml"
+    },
+    {
+      "id": "us-irs-topic313",
+      "title": "IRS Tax Topic 313 — Educational expenses / savings context",
+      "url": "https://www.irs.gov/taxtopics/tc313",
+      "country": "us",
+      "language": "en",
+      "topics": [
+        "financial-literacy"
+      ],
+      "audience": [
+        "general"
+      ],
+      "source_type": "government-portal",
+      "last_checked": "2026-10-17",
+      "age_days": 5,
+      "freshness": "fresh",
+      "file": "data/resources/us-irs-topic-313.yaml"
+    },
+    {
+      "id": "us-ncua-consumers",
+      "title": "NCUA — Consumers",
+      "url": "https://www.ncua.gov/consumers",
+      "country": "us",
+      "language": "en",
+      "topics": [
+        "banking",
+        "savings"
+      ],
+      "audience": [
+        "general",
+        "low-income"
+      ],
+      "source_type": "government-portal",
+      "last_checked": "2026-10-17",
+      "age_days": 5,
+      "freshness": "fresh",
+      "file": "data/resources/us-ncua-consumers.yaml"
+    },
+    {
+      "id": "us-sec-investor",
+      "title": "SEC — Investor resources",
+      "url": "https://www.sec.gov/investor",
+      "country": "us",
+      "language": "en",
+      "topics": [
+        "investing-basics",
+        "regulation"
+      ],
+      "audience": [
+        "general"
+      ],
+      "source_type": "securities-regulator",
+      "last_checked": "2026-10-17",
+      "age_days": 5,
+      "freshness": "fresh",
+      "file": "data/resources/us-sec-investor.yaml"
+    },
+    {
+      "id": "us-td-bonds",
+      "title": "TreasuryDirect — Savings bonds",
+      "url": "https://www.treasurydirect.gov/savings-bonds/",
+      "country": "us",
+      "language": "en",
+      "topics": [
+        "savings"
+      ],
+      "audience": [
+        "general"
+      ],
+      "source_type": "treasury",
+      "last_checked": "2026-10-17",
+      "age_days": 5,
+      "freshness": "fresh",
+      "file": "data/resources/us-treasurydirect-savings-bonds.yaml"
+    },
+    {
+      "id": "us-td-marketable",
+      "title": "TreasuryDirect — Marketable securities",
+      "url": "https://www.treasurydirect.gov/marketable-securities/",
+      "country": "us",
+      "language": "en",
+      "topics": [
+        "savings",
+        "investing-basics"
+      ],
+      "audience": [
+        "general"
+      ],
+      "source_type": "treasury",
+      "last_checked": "2026-10-17",
+      "age_days": 5,
+      "freshness": "fresh",
+      "file": "data/resources/us-treasurydirect-marketable.yaml"
+    },
+    {
+      "id": "us-treasurydirect",
+      "title": "TreasuryDirect",
+      "url": "https://treasurydirect.gov/",
+      "country": "us",
+      "language": "en",
+      "topics": [
+        "savings",
+        "investing-basics"
+      ],
+      "audience": [
+        "general"
+      ],
+      "source_type": "treasury",
+      "last_checked": "2026-10-17",
+      "age_days": 5,
+      "freshness": "fresh",
+      "file": "data/resources/us-treasurydirect.yaml"
+    },
+    {
+      "id": "za-fsca",
+      "title": "Financial Sector Conduct Authority (South Africa)",
+      "url": "https://www.fsca.co.za/",
+      "country": "za",
+      "language": "en",
+      "topics": [
+        "investing-basics",
+        "pensions",
+        "scams",
+        "regulation"
+      ],
+      "audience": [
+        "general",
+        "low-income"
+      ],
+      "source_type": "securities-regulator",
+      "last_checked": "2026-10-17",
+      "age_days": 5,
+      "freshness": "fresh",
+      "file": "data/resources/za-fsca.yaml"
+    },
+    {
+      "id": "za-sarb",
+      "title": "South African Reserve Bank",
+      "url": "https://www.resbank.co.za/",
+      "country": "za",
+      "language": "en",
+      "topics": [
+        "banking",
+        "financial-literacy",
+        "regulation"
+      ],
+      "audience": [
+        "general",
+        "low-income"
+      ],
+      "source_type": "central-bank",
+      "last_checked": "2026-10-17",
+      "age_days": 5,
+      "freshness": "fresh",
+      "file": "data/resources/za-sarb.yaml"
+    },
+    {
+      "id": "za-sars",
+      "title": "South African Revenue Service",
+      "url": "https://www.sars.gov.za/",
+      "country": "za",
+      "language": "en",
+      "topics": [
+        "savings",
+        "pensions",
+        "financial-literacy"
+      ],
+      "audience": [
+        "general"
+      ],
+      "source_type": "government-portal",
+      "last_checked": "2026-10-17",
+      "age_days": 5,
+      "freshness": "fresh",
+      "file": "data/resources/za-sars.yaml"
+    },
+    {
+      "id": "za-treasury",
+      "title": "National Treasury South Africa",
+      "url": "https://www.treasury.gov.za/",
+      "country": "za",
+      "language": "en",
+      "topics": [
+        "savings",
+        "regulation"
+      ],
+      "audience": [
+        "general"
+      ],
+      "source_type": "treasury",
+      "last_checked": "2026-10-17",
+      "age_days": 5,
+      "freshness": "fresh",
+      "file": "data/resources/za-treasury.yaml"
+    }
+  ],
+  "vehicles": [
+    {
+      "id": "in-bank-savings",
+      "name": "Bank savings account",
+      "country": "in",
+      "category": "bank-deposit",
+      "liquidity": "high",
+      "status": "published",
+      "official_url": "https://www.rbi.org.in/FinancialEducation/",
+      "docs_path": "vehicles/in/bank-savings.md",
+      "source_types": [
+        "central-bank"
+      ],
+      "last_reviewed": "2026-10-17",
+      "age_days": 5,
+      "freshness": "fresh",
+      "file": "data/vehicles/in-bank-savings.yaml"
+    },
+    {
+      "id": "in-fd",
+      "name": "Fixed Deposit (FD)",
+      "country": "in",
+      "category": "bank-deposit",
+      "liquidity": "low",
+      "status": "published",
+      "official_url": "https://www.dicgc.org.in/",
+      "docs_path": "vehicles/in/fixed-deposit.md",
+      "source_types": [
+        "central-bank"
+      ],
+      "last_reviewed": "2026-10-17",
+      "age_days": 5,
+      "freshness": "fresh",
+      "file": "data/vehicles/in-fd.yaml"
+    },
+    {
+      "id": "in-nps",
+      "name": "National Pension System (NPS)",
+      "country": "in",
+      "category": "pension",
+      "liquidity": "low",
+      "status": "published",
+      "official_url": "https://www.pfrda.org.in/",
+      "docs_path": "vehicles/in/nps.md",
+      "source_types": [
+        "pension-regulator",
+        "government-portal"
+      ],
+      "last_reviewed": "2026-10-17",
+      "age_days": 5,
+      "freshness": "fresh",
+      "file": "data/vehicles/in-nps.yaml"
+    },
+    {
+      "id": "in-ppf",
+      "name": "Public Provident Fund (PPF)",
+      "country": "in",
+      "category": "government-scheme",
+      "liquidity": "locked-term",
+      "status": "published",
+      "official_url": "https://financialservices.gov.in/",
+      "docs_path": "vehicles/in/ppf.md",
+      "source_types": [
+        "ministry",
+        "government-portal"
+      ],
+      "last_reviewed": "2026-10-17",
+      "age_days": 5,
+      "freshness": "fresh",
+      "file": "data/vehicles/in-ppf.yaml"
+    },
+    {
+      "id": "in-rd",
+      "name": "Recurring Deposit (RD)",
+      "country": "in",
+      "category": "bank-deposit",
+      "liquidity": "medium",
+      "status": "published",
+      "official_url": "https://www.rbi.org.in/FinancialEducation/",
+      "docs_path": "vehicles/in/recurring-deposit.md",
+      "source_types": [
+        "central-bank"
+      ],
+      "last_reviewed": "2026-10-17",
+      "age_days": 5,
+      "freshness": "fresh",
+      "file": "data/vehicles/in-rd.yaml"
+    },
+    {
+      "id": "in-ssy",
+      "name": "Sukanya Samriddhi Yojana (SSY)",
+      "country": "in",
+      "category": "government-scheme",
+      "liquidity": "locked-term",
+      "status": "published",
+      "official_url": "https://www.myscheme.gov.in/",
+      "docs_path": "vehicles/in/sukanya-samriddhi.md",
+      "source_types": [
+        "ministry",
+        "government-portal"
+      ],
+      "last_reviewed": "2026-10-17",
+      "age_days": 5,
+      "freshness": "fresh",
+      "file": "data/vehicles/in-ssy.yaml"
+    },
+    {
+      "id": "ke-mobile-money",
+      "name": "Mobile money savings and lock products",
+      "country": "ke",
+      "category": "mobile-money-savings",
+      "liquidity": "high",
+      "status": "published",
+      "official_url": "https://www.centralbank.go.ke/financial-education/",
+      "docs_path": "vehicles/ke/mobile-money-savings.md",
+      "source_types": [
+        "central-bank"
+      ],
+      "last_reviewed": "2026-10-17",
+      "age_days": 5,
+      "freshness": "fresh",
+      "file": "data/vehicles/ke-mobile-money.yaml"
+    },
+    {
+      "id": "ke-saccos",
+      "name": "SACCOs",
+      "country": "ke",
+      "category": "cooperative",
+      "liquidity": "medium",
+      "status": "published",
+      "official_url": "https://www.sasra.go.ke/",
+      "docs_path": "vehicles/ke/saccos.md",
+      "source_types": [
+        "government-portal"
+      ],
+      "last_reviewed": "2026-10-17",
+      "age_days": 5,
+      "freshness": "fresh",
+      "file": "data/vehicles/ke-saccos.yaml"
+    },
+    {
+      "id": "us-401k-ira",
+      "name": "401(k) and IRA concepts",
+      "country": "us",
+      "category": "pension",
+      "liquidity": "low",
+      "status": "published",
+      "official_url": "https://www.irs.gov/retirement-plans",
+      "docs_path": "vehicles/us/retirement-401k-ira.md",
+      "source_types": [
+        "ministry",
+        "government-portal"
+      ],
+      "last_reviewed": "2026-10-17",
+      "age_days": 5,
+      "freshness": "fresh",
+      "file": "data/vehicles/us-401k-ira.yaml"
+    },
+    {
+      "id": "us-fdic-savings",
+      "name": "FDIC-insured savings / MMDA",
+      "country": "us",
+      "category": "bank-deposit",
+      "liquidity": "high",
+      "status": "published",
+      "official_url": "https://www.fdic.gov/resources/deposit-insurance/",
+      "docs_path": "vehicles/us/fdic-savings.md",
+      "source_types": [
+        "central-bank",
+        "government-portal"
+      ],
+      "last_reviewed": "2026-10-17",
+      "age_days": 5,
+      "freshness": "fresh",
+      "file": "data/vehicles/us-fdic-savings.yaml"
+    }
+  ]
+}

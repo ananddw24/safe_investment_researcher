@@ -2,7 +2,7 @@
 title: Vehicles
 description: Regulated savings and investment types by country
 status: published
-last_reviewed: "2026-10-17"
+last_reviewed: "2026-10-22"
 ---
 
 # Vehicles
@@ -12,17 +12,32 @@ last_reviewed: "2026-10-17"
     an offer to sell, or a recommendation to buy, sell, or hold any product.
     Rules differ by country; verify with official sources in your jurisdiction.
 
+Vehicles are accessible savings and investment *types* for ordinary households,
+organized by ISO country code. Pages describe how a type **typically** works —
+not which product you should buy.
 
-Vehicles are accessible savings/investment *types* for ordinary households,
-organized by ISO country code.
+## How to read these pages
+
+Each vehicle page follows a common outline: what it is, who it is usually for,
+liquidity, risks, literacy angles, and where to verify on official sites.
+
+**Depth varies by country:**
+
+| Depth | Countries | Notes |
+| --- | --- | --- |
+| Deep narrative | India, United States, Kenya | More context on access, fees, and everyday use |
+| Short sketch | Nigeria, South Africa, Ghana, Egypt, China, Germany, Japan, United Kingdom, France, Italy, Brazil, Canada | Orientation only — pair with the [resource catalog](../resources/catalog.md) for your country |
+
+If you only read one page in a short country, start with the vehicle that
+matches where you already save (often **bank deposits** or **mobile money**).
 
 ## Countries
 
 | Country | Status |
 | --- | --- |
-| [India (`in`)](in/index.md) | Published (v0.2.0) |
-| [United States (`us`)](us/index.md) | Published (v0.3.0) |
-| [Kenya (`ke`)](ke/index.md) | Published (v0.3.0) |
+| [India (`in`)](in/index.md) | Published — deep pages (v0.2.0) |
+| [United States (`us`)](us/index.md) | Published — deep pages (v0.3.0) |
+| [Kenya (`ke`)](ke/index.md) | Published — deep pages (v0.3.0) |
 | [Nigeria (`ng`)](ng/index.md) | Short pages (v0.5.0) |
 | [South Africa (`za`)](za/index.md) | Short pages (v0.5.0) |
 | [Ghana (`gh`)](gh/index.md) | Short pages (v0.5.0) |
@@ -39,4 +54,4 @@ organized by ISO country code.
 Africa cluster: Kenya (v0.3.0) plus Nigeria, South Africa, Ghana, and Egypt
 (v0.5.0). See the [release plan](../about/release-plan.md).
 
-Template: [`_template.md`](_template.md).
+Template for new pages: [`_template.md`](_template.md).

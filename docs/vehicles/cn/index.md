@@ -27,6 +27,12 @@ picks. Prefer emergency cash in safe, accessible forms before long lock-ins.
 | [Bank wealth vs deposit products](wealth-vs-deposits.md) | Distinguish deposits from investments |
 | [Inclusive finance / microcredit literacy](inclusive-finance.md) | Debt risk emphasis |
 
+
+## Official links
+
+Curated regulator and government URLs for this country are in the
+[resource catalog](../../resources/catalog.md#cn).
+
 ## Related
 
 - [Vehicles home](../index.md) · [Guides](../../guides/index.md)

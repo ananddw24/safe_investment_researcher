@@ -1,0 +1,84 @@
+name: weekly-maintenance
+
+on:
+  schedule:
+    - cron: "0 6 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  maintain:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+
+      - name: Setup Python
+        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97  # v7.0.0
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: scripts/requirements-dev.txt
+
+      - name: Install deps
+        run: pip install -r scripts/requirements-dev.txt
+
+      - name: Validate data
+        run: |
+          python scripts/validate_data.py
+          python scripts/check_ids.py
+
+      - name: Rebuild knowledge-base index
+        run: python scripts/build_kb_index.py
+
+      - name: Regenerate resource catalog
+        run: python scripts/generate_resources_catalog.py
+
+      - name: Staleness report
+        id: stale
+        run: |
+          python scripts/staleness_report.py --md-out /tmp/staleness.md --json-out /tmp/staleness.json
+          echo "needs_attention=$(python -c "import json; c=json.load(open('/tmp/staleness.json'))['counts']; print(c.get('stale',0)+c.get('unknown',0))")" >> "$GITHUB_OUTPUT"
+
+      - name: Commit refreshed artifacts
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/kb-index.json docs/resources/catalog.md
+          git diff --staged --quiet || git commit -m "chore: weekly KB index and resource catalog refresh"
+          git push || true
+
+      - name: Open maintenance issue when records are stale
+        if: steps.stale.outputs.needs_attention != '0'
+        uses: actions/github-script@60a0d83039c8a0a3b51d79a4c6811ea564e948e9  # v7.0.1
+        with:
+          script: |
+            const fs = require('fs');
+            const body = fs.readFileSync('/tmp/staleness.md', 'utf8');
+            const title = 'Weekly maintenance: stale knowledge-base records';
+            const issues = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+              labels: 'maintenance',
+            });
+            const existing = issues.data.find(i => i.title === title);
+            if (existing) {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: existing.number,
+                body: `Updated staleness report:\n\n${body}`,
+              });
+            } else {
+              await github.rest.issues.create({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                title,
+                body,
+                labels: ['maintenance'],
+              });
+            }

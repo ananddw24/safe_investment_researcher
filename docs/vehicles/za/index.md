@@ -29,6 +29,12 @@ regulated channels and treat “guaranteed high returns” as a red flag
 | [Stokvels (informal rotating savings)](stokvels.md) | Rules, theft, documentation |
 | [Retirement annuity / pension basics](retirement-pensions.md) | Long-term literacy |
 
+
+## Official links
+
+Curated regulator and government URLs for this country are in the
+[resource catalog](../../resources/catalog.md#za).
+
 ## Related
 
 - [Kenya vehicles](../ke/index.md) · [Nigeria](../ng/index.md) · [Vehicles home](../index.md)

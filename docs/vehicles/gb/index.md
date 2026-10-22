@@ -27,6 +27,12 @@ picks. Prefer emergency cash in safe, accessible forms before long lock-ins.
 | [Stocks & Shares ISA / funds](stocks-shares-isa.md) | Market risk and fees |
 | [Credit union savings](credit-union.md) | Community finance |
 
+
+## Official links
+
+Curated regulator and government URLs for this country are in the
+[resource catalog](../../resources/catalog.md#gb).
+
 ## Related
 
 - [Vehicles home](../index.md) · [Guides](../../guides/index.md)

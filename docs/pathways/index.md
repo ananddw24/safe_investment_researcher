@@ -2,7 +2,7 @@
 title: Pathways
 description: Ordered reading paths (not advice engines)
 status: published
-last_reviewed: "2026-10-17"
+last_reviewed: "2026-10-22"
 ---
 
 # Pathways
@@ -12,11 +12,12 @@ last_reviewed: "2026-10-17"
     an offer to sell, or a recommendation to buy, sell, or hold any product.
     Rules differ by country; verify with official sources in your jurisdiction.
 
-
-Pathways only sequence pages that already exist. They never invent products.
+Pathways only sequence pages that already exist. They never invent products or
+recommend amounts.
 
 | Pathway | Persona |
 | --- | --- |
-| [Woman-led household](woman-led-household.md) | Women / caregivers managing household money |
+| [New reader](new-reader.md) | First visit; country-neutral basics |
+| [Woman-led household](woman-led-household.md) | Women / caregivers managing household money (India-heavy examples) |
 
 Template: [`_template.md`](_template.md).

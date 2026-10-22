@@ -27,6 +27,12 @@ picks. Prefer emergency cash in safe, accessible forms before long lock-ins.
 | [Fondi pensione concepts](fondi-pensione.md) | Long-term pensions |
 | [Cooperative credit banks](cooperative-banks.md) | Local access |
 
+
+## Official links
+
+Curated regulator and government URLs for this country are in the
+[resource catalog](../../resources/catalog.md#it).
+
 ## Related
 
 - [Vehicles home](../index.md) · [Guides](../../guides/index.md)

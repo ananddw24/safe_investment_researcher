@@ -27,6 +27,12 @@ picks. Prefer emergency cash in safe, accessible forms before long lock-ins.
 | [Regulated fixed-income funds](renda-fixa-funds.md) | Fees and risk |
 | [PIX-linked savings habits](pix-savings-habits.md) | Inclusion angle |
 
+
+## Official links
+
+Curated regulator and government URLs for this country are in the
+[resource catalog](../../resources/catalog.md#br).
+
 ## Related
 
 - [Vehicles home](../index.md) · [Guides](../../guides/index.md)

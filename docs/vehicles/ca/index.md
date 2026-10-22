@@ -27,6 +27,12 @@ picks. Prefer emergency cash in safe, accessible forms before long lock-ins.
 | [Credit union deposits](credit-union.md) | Provincial deposit insurance literacy |
 | [Workplace pensions / CPP basics](pensions-cpp.md) | Social + private mix |
 
+
+## Official links
+
+Curated regulator and government URLs for this country are in the
+[resource catalog](../../resources/catalog.md#ca).
+
 ## Related
 
 - [Vehicles home](../index.md) · [Guides](../../guides/index.md)

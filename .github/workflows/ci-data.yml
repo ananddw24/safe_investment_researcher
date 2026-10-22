@@ -7,6 +7,8 @@ on:
       - "scripts/validate_data.py"
       - "scripts/check_ids.py"
       - "scripts/export_resources_json.py"
+      - "scripts/generate_resources_catalog.py"
+      - "docs/resources/catalog.md"
       - "scripts/requirements-dev.txt"
       - ".github/workflows/ci-data.yml"
   pull_request:
@@ -15,6 +17,8 @@ on:
       - "scripts/validate_data.py"
       - "scripts/check_ids.py"
       - "scripts/export_resources_json.py"
+      - "scripts/generate_resources_catalog.py"
+      - "docs/resources/catalog.md"
       - "scripts/requirements-dev.txt"
       - ".github/workflows/ci-data.yml"
 
@@ -46,3 +50,6 @@ jobs:
 
       - name: Export resources JSON
         run: python scripts/export_resources_json.py
+
+      - name: Check resource catalog is up to date
+        run: python scripts/generate_resources_catalog.py --check

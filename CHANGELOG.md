@@ -9,6 +9,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- Reader onboarding: [Using this library](docs/about/using-this-library.md),
+  [For educators and NGOs](docs/about/for-educators-and-ngos.md), and
+  [New reader pathway](docs/pathways/new-reader.md)
+- Generated [resource catalog](docs/resources/catalog.md) (`scripts/generate_resources_catalog.py`,
+  `make catalog`) with CI freshness check
+- Official-link sections on all country vehicle index pages pointing at the catalog
+
+### Added (knowledge base)
+
 - Knowledge-base layer for agent consumers: `llms.txt` entry point,
   `docs/knowledge-base.md` agent guide (consumption paths, freshness
   semantics, citation rules), and `data/kb-index.json`, a consolidated
@@ -17,8 +26,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   `scripts/staleness_report.py` (last_checked aging report with
   fresh / aging / stale buckets); `make kb` runs both
 - Weekly maintenance workflow (`.github/workflows/weekly-maintenance.yml`):
-  validates data, rebuilds the index, and files a maintenance issue when
-  records go stale
+  validates data, rebuilds the index and resource catalog, and files a
+  maintenance issue when records go stale
 - Python quality tooling: `ruff` lint configuration in `pyproject.toml`
   (`make lint`) and a `pytest` suite under `tests/` (`make test`) covering
   the knowledge-base scripts' date/freshness logic and schema validation

@@ -27,6 +27,12 @@ picks. Prefer emergency cash in safe, accessible forms before long lock-ins.
 | [Employer savings (PEE) concepts](pee.md) | Employer-linked plans |
 | [French sovereign bonds basics](sovereign-bonds.md) | Debt education |
 
+
+## Official links
+
+Curated regulator and government URLs for this country are in the
+[resource catalog](../../resources/catalog.md#fr).
+
 ## Related
 
 - [Vehicles home](../index.md) · [Guides](../../guides/index.md)
