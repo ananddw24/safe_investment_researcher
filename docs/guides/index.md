@@ -19,4 +19,3 @@ last_reviewed: "2026-10-17"
 | [Inflation and capital preservation](inflation-capital-preservation.md) | Purchasing power literacy |
 | [Spotting unregulated schemes](spotting-unregulated-schemes.md) | Scam and “guaranteed return” red flags |
 
-Templates for new guides: [`_template.md`](_template.md).

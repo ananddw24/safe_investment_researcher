@@ -80,11 +80,24 @@ agents and tools can consume directly:
 - **Code, scripts, schemas, workflows:** [MIT](LICENSE)
 - **Educational prose and curated metadata:** [CC BY 4.0](LICENSE-CONTENT)
 
-## Status
+## What's inside
 
-**v0.6.0** — Deep household vehicle pages for all Top 10 GDP economies; Africa
-cluster pages remain shorter orientation sketches. 80+ curated regulator/government
-resource records with generated [browse tables](docs/resources/catalog.md).
+Current release: **v0.6.0**.
 
-Next: deepen Africa cluster pages; then **v1.0.0** (see
-[release plan](docs/about/release-plan.md)).
+- **Guides** — plain-language explainers: emergency savings, inflation and
+  capital preservation, and spotting unregulated schemes.
+- **Vehicle pages** — savings and investment *types* for 15 countries:
+  deep guide sets for the Top 10 GDP economies (India, the United States,
+  Kenya, China, Germany, Japan, the United Kingdom, France, Italy, Brazil,
+  and Canada); introductory overviews for Nigeria, South Africa, Ghana,
+  and Egypt.
+- **Records** — 80 curated links to regulators, government portals,
+  deposit insurers, and other public sources (as of October 2026), each
+  carrying a verification date. Browse them in the
+  [resource catalog](docs/resources/catalog.md).
+- **Pathways** — suggested reading orders, including a
+  [new reader pathway](docs/pathways/new-reader.md) and a pathway for
+  woman-led households.
+
+What changed in each version is recorded in the
+[release history](docs/about/release-plan.md).

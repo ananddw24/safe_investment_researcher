@@ -44,3 +44,10 @@ mkdocs build --strict
 
 Full contributor guide:
 [CONTRIBUTING.md](https://github.com/ananddw24/safe_investment_researcher/blob/main/CONTRIBUTING.md)
+
+## Page templates
+
+New guides, pathways, and vehicle pages start from the templates kept beside
+the content (`docs/guides/_template.md`, `docs/pathways/_template.md`,
+`docs/vehicles/_template.md`). They are contributor scaffolding and are
+excluded from the published site.

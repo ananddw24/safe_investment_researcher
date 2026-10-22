@@ -60,11 +60,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Remaining version drift from the open-source readiness audit:
   `CITATION.cff` now reports 0.5.0, `SECURITY.md` supported versions cover
   the 0.5.x release line, and `GOVERNANCE.md` no longer carries v0.1 labels
+- Reader site no longer publishes contributor page templates: the
+  `docs/**/_template.md` scaffolding files are excluded from the MkDocs
+  build (`exclude_docs`) and de-linked from the section indexes
+  (Stage 3 reader audit, B2)
+- Resource-record claims corrected to the counted total — 80 records from
+  regulators, government portals, deposit insurers, and other public
+  sources — in the README and on the homepage (Stage 3 reader audit, M5)
 
 ### Changed
 
 - README gains badges for the link-check and markdown-lint workflows
 - `pyproject.toml` uses the SPDX license string and adds package classifiers
+- Release plan page slimmed to a factual release history: contributor
+  directives removed, and the nav label and cross-links relabeled
+  (Stage 3 reader audit, M3)
 
 
 ## [0.5.0] - 2026-10-17

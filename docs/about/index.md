@@ -18,5 +18,5 @@ points to trusted public resources.
 - [For educators and NGOs](for-educators-and-ngos.md)
 - [Audience](audience.md)
 - [Licenses](licenses.md)
-- [Release plan](release-plan.md)
+- [Release history](release-plan.md)
 - [Disclaimer](../disclaimer.md)
