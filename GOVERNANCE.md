@@ -1,13 +1,13 @@
 # Governance
 
-Lightweight governance for FinancialLibrary (v0.1).
+Lightweight governance for FinancialLibrary.
 
 ## Maintainers
 
 - Primary: [@ananddw24](https://github.com/ananddw24)
 - Additional maintainers may be added by consensus (1–3 people total initially).
 
-There is **no board** and no separate steering committee at v0.1.
+There is **no board** and no separate steering committee.
 
 ## Decision making
 

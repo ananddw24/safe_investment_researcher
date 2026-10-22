@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
-from pathlib import Path
 import re
 import sys
+from pathlib import Path
+
 urls = []
 root = Path(__file__).resolve().parents[1]
 for path in (root / "data" / "resources").rglob("*.yaml"):

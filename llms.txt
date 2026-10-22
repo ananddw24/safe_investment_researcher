@@ -1,0 +1,36 @@
+# FinancialLibrary
+
+> Open educational knowledge base on household financial literacy: regulated
+> savings and investment *types* by country, plain-language guides, and curated
+> links to official regulator/government resources. Educational only — never
+> personalized financial advice.
+
+## Start here
+
+- [Knowledge base guide for agents](https://github.com/ananddw24/safe_investment_researcher/blob/main/docs/knowledge-base.md): how to query this base, freshness semantics, and citation rules
+- [Machine-readable index (JSON)](https://github.com/ananddw24/safe_investment_researcher/blob/main/data/kb-index.json): one consolidated index of every resource and vehicle record, regenerated weekly
+- [Documentation site](https://ananddw24.github.io/safe_investment_researcher/): human-readable guides, vehicle pages, and pathways
+
+## Data (source of truth)
+
+- Resource records (YAML): `data/resources/` in the repository — one file per curated official resource, each with `id`, `url`, `country`, `topics`, `source_type`, and `last_checked`
+- Vehicle records (YAML): `data/vehicles/` — machine-readable records for regulated savings/investment types, each with `id`, `country`, `category`, `official_url`, `docs_path`, and `last_reviewed`
+- Schemas: `data/schemas/resource.schema.json`, `data/schemas/vehicle.schema.json`
+
+## Rules for agents using this base
+
+- Educational use only. Do not turn records into personalized recommendations.
+- Respect freshness: every record carries a verification date (`last_checked`
+  for resources, `last_reviewed` for vehicles). Treat records older than 180
+  days as stale and say so when citing them.
+- Cite the record `id` and its official URL, not this repository, as the
+  authority. Prefer `source_type` values from regulators and governments.
+- Rates, limits, and scheme rules change; verify against the official source
+  before presenting any figure as current.
+
+## Maintenance
+
+- Weekly automated maintenance validates all records, rebuilds
+  `data/kb-index.json`, and files a maintenance issue when records go stale.
+  See `.github/workflows/weekly-maintenance.yml` and
+  `scripts/staleness_report.py`.

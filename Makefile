@@ -1,4 +1,4 @@
-.PHONY: serve build validate export check-ids
+.PHONY: serve build validate export check-ids kb lint test
 
 serve:
 	pip install -r requirements.txt
@@ -20,3 +20,16 @@ export:
 check-ids:
 	pip install -r scripts/requirements-dev.txt
 	python scripts/check_ids.py
+
+kb:
+	pip install -r scripts/requirements-dev.txt
+	python scripts/build_kb_index.py
+	python scripts/staleness_report.py
+
+lint:
+	pip install -r scripts/requirements-dev.txt
+	ruff check scripts tests
+
+test:
+	pip install -r scripts/requirements-dev.txt
+	python -m pytest

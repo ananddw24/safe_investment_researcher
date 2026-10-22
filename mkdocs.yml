@@ -184,6 +184,7 @@ nav:
       - pathways/index.md
       - Woman-led household: pathways/woman-led-household.md
   - Resources: resources/index.md
+  - Knowledge base: knowledge-base.md
   - Contributing: contributing.md
 
 extra:

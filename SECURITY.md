@@ -4,7 +4,8 @@
 
 | Version | Supported |
 | --- | --- |
-| `v0.1.x` (main) | Yes |
+| `0.5.x` (latest release) | Yes |
+| `< 0.5.0` | No |
 
 ## Reporting a vulnerability
 
@@ -21,7 +22,7 @@ this project should never store secrets in the repo).
 - We aim to acknowledge reports within **7 days**.
 - We aim to publish a fix or mitigation within **90 days**, coordinating
   disclosure with the reporter when practical.
-- No bug bounty is offered at v0.1.
+- No bug bounty is offered.
 
 ## Scope notes
 

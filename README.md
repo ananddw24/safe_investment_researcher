@@ -2,6 +2,8 @@
 
 [![Docs](https://github.com/ananddw24/safe_investment_researcher/actions/workflows/ci-docs.yml/badge.svg)](https://github.com/ananddw24/safe_investment_researcher/actions/workflows/ci-docs.yml)
 [![Data](https://github.com/ananddw24/safe_investment_researcher/actions/workflows/ci-data.yml/badge.svg)](https://github.com/ananddw24/safe_investment_researcher/actions/workflows/ci-data.yml)
+[![Links](https://github.com/ananddw24/safe_investment_researcher/actions/workflows/ci-links.yml/badge.svg)](https://github.com/ananddw24/safe_investment_researcher/actions/workflows/ci-links.yml)
+[![Markdown](https://github.com/ananddw24/safe_investment_researcher/actions/workflows/ci-markdown.yml/badge.svg)](https://github.com/ananddw24/safe_investment_researcher/actions/workflows/ci-markdown.yml)
 [![License: MIT](https://img.shields.io/badge/license%20(code)-MIT-blue.svg)](LICENSE)
 [![License: CC BY 4.0](https://img.shields.io/badge/license%20(content)-CC%20BY%204.0-lightgrey.svg)](LICENSE-CONTENT)
 [![Pages](https://img.shields.io/badge/docs-GitHub%20Pages-222222.svg)](https://ananddw24.github.io/safe_investment_researcher/)
@@ -56,6 +58,24 @@ See also [docs/disclaimer.md](docs/disclaimer.md).
 3. Run `python scripts/validate_data.py`.
 4. Open a PR (see [CONTRIBUTING.md](CONTRIBUTING.md)).
 
+## Knowledge base (for agents)
+
+FinancialLibrary is maintained as a machine-readable knowledge base that other
+agents and tools can consume directly:
+
+- **Agent guide:** [docs/knowledge-base.md](docs/knowledge-base.md) — how to
+  query the base, freshness semantics, and citation rules.
+- **Index:** `data/kb-index.json` — a single consolidated JSON index of every
+  resource and vehicle record, regenerated weekly (build it any time with
+  `make kb` or `python scripts/build_kb_index.py`).
+- **Records:** the YAML files under `data/resources/` and `data/vehicles/` are
+  the source of truth; `data/schemas/` defines their shape.
+- **Freshness:** every record carries `last_checked`. Weekly maintenance
+  (`.github/workflows/weekly-maintenance.yml`) validates the data, rebuilds
+  the index, and reports records going stale — see
+  `python scripts/staleness_report.py`.
+- **Agent entry point:** [`llms.txt`](llms.txt) at the repository root.
+
 ## License
 
 - **Code, scripts, schemas, workflows:** [MIT](LICENSE)
@@ -63,8 +83,10 @@ See also [docs/disclaimer.md](docs/disclaimer.md).
 
 ## Status
 
-**v0.4.0** — Top 10 GDP countries have household vehicle pages (India deep set;
-US+Kenya; short pages for CN/DE/JP/GB/FR/IT/BR/CA).
+**v0.5.0** — Top 10 GDP countries plus the Africa cluster (Nigeria, South
+Africa, Ghana, Egypt; Kenya from v0.3.0) have household vehicle pages, backed
+by 80+ curated regulator/government resource records.
 
 The GitHub repository may remain **private** until the owner flips visibility.
-Next: **v0.5.0** Africa cluster (see [release plan](docs/about/release-plan.md)).
+Next: knowledge-base hardening and weekly maintenance (see
+[release plan](docs/about/release-plan.md)).
