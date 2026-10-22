@@ -37,7 +37,7 @@ Savers learning sovereign debt after [HISA](hisa.md) emergency funding is in pla
 ## Risks
 
 - Websites selling “Government of Canada 8% bonds” unrelated to official channels.
-- Confusing ** provincial bonds** with federal products and insurance rules.
+- Confusing provincial bonds with federal products and insurance rules.
 
 ## Literacy angle
 

@@ -25,7 +25,7 @@ personalized advice.
 | Code, schemas, scripts | MIT | Pipelines that validate or mirror the YAML |
 
 Attribution example: “Adapted from FinancialLibrary (CC BY 4.0),
-https://ananddw24.github.io/safe_investment_researcher/”.
+[ananddw24.github.io/safe_investment_researcher](https://ananddw24.github.io/safe_investment_researcher/).”
 
 ## How to build a session
 

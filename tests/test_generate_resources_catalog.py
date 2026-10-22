@@ -23,8 +23,7 @@ def test_build_markdown_includes_country_anchor_and_table():
         }
     ]
     md = catalog.build_markdown(records)
-    assert "## India (`in`)" in md
-    assert "{ #in }" in md
+    assert '<h2 id="in">India (`in`)</h2>' in md
     assert "Department of Financial Services" in md
     assert "2026-10-17" in md
     assert "generated" in md.lower()

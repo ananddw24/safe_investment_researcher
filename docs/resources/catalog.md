@@ -39,13 +39,15 @@ official site if something looks outdated.
 | [United States (`us`)](#us) | 15 |
 | [South Africa (`za`)](#za) | 4 |
 
-## Global (`global`) { #global }
+<h2 id="global">Global (`global`)</h2>
+
 | Title | Type | Topics | Checked |
 | --- | --- | --- | --- |
 | [CGAP — Consultative Group to Assist the Poor](https://www.cgap.org/) | multilateral | financial-literacy, women, mobile-money | 2026-10-17 |
 | [World Bank — Global Findex](https://www.worldbank.org/en/publication/globalfindex) | multilateral | financial-literacy, banking | 2026-10-17 |
 
-## Brazil (`br`) { #br }
+<h2 id="br">Brazil (`br`)</h2>
+
 | Title | Type | Topics | Checked |
 | --- | --- | --- | --- |
 | [Banco Central do Brasil](https://www.bcb.gov.br/en) | central-bank | banking, mobile-money, financial-literacy | 2026-10-17 |
@@ -53,7 +55,8 @@ official site if something looks outdated.
 | [FGC](https://www.fgc.org.br/) | government-portal | banking, savings | 2026-10-17 |
 | [Tesouro Direto](https://www.tesourodireto.com.br/) | treasury | savings, investing-basics | 2026-10-17 |
 
-## Canada (`ca`) { #ca }
+<h2 id="ca">Canada (`ca`)</h2>
+
 | Title | Type | Topics | Checked |
 | --- | --- | --- | --- |
 | [Bank of Canada](https://www.bankofcanada.ca/) | central-bank | banking, financial-literacy | 2026-10-17 |
@@ -61,35 +64,40 @@ official site if something looks outdated.
 | [Financial Consumer Agency of Canada](https://www.canada.ca/en/financial-consumer-agency.html) | government-portal | financial-literacy, banking, savings | 2026-10-17 |
 | [OSFI](https://www.osfi-bsif.gc.ca/en) | government-portal | regulation, pensions | 2026-10-17 |
 
-## China (`cn`) { #cn }
+<h2 id="cn">China (`cn`)</h2>
+
 | Title | Type | Topics | Checked |
 | --- | --- | --- | --- |
 | [Ministry of Finance of China](https://www.mof.gov.cn/) | ministry | savings, regulation | 2026-10-17 |
 | [National Financial Regulatory Administration (China)](https://www.nfra.gov.cn/) | government-portal | regulation, banking | 2026-10-17 |
 | [People’s Bank of China](https://www.pbc.gov.cn/) | central-bank | banking, regulation, financial-literacy | 2026-10-17 |
 
-## Germany (`de`) { #de }
+<h2 id="de">Germany (`de`)</h2>
+
 | Title | Type | Topics | Checked |
 | --- | --- | --- | --- |
 | [BaFin](https://www.bafin.de/EN/) | securities-regulator | regulation, investing-basics, financial-literacy | 2026-10-17 |
 | [Deutsche Bundesbank](https://www.bundesbank.de/en) | central-bank | banking, financial-literacy | 2026-10-17 |
 | [Finanzagentur](https://www.deutsche-finanzagentur.de/en/) | treasury | savings, investing-basics | 2026-10-17 |
 
-## Egypt (`eg`) { #eg }
+<h2 id="eg">Egypt (`eg`)</h2>
+
 | Title | Type | Topics | Checked |
 | --- | --- | --- | --- |
 | [Central Bank of Egypt](https://www.cbe.org.eg/en/) | central-bank | banking, savings, regulation | 2026-10-17 |
 | [Financial Regulatory Authority Egypt](https://fra.gov.eg/en/) | securities-regulator | investing-basics, debt, women, regulation | 2026-10-17 |
 | [Ministry of Finance Egypt](https://www.mof.gov.eg/) | ministry | savings, inflation, regulation | 2026-10-17 |
 
-## France (`fr`) { #fr }
+<h2 id="fr">France (`fr`)</h2>
+
 | Title | Type | Topics | Checked |
 | --- | --- | --- | --- |
 | [AMF France](https://www.amf-france.org/en) | securities-regulator | investing-basics, regulation | 2026-10-17 |
 | [Banque de France](https://www.banque-france.fr/en) | central-bank | banking, financial-literacy | 2026-10-17 |
 | [service-public.fr](https://www.service-public.fr/) | government-portal | savings, financial-literacy | 2026-10-17 |
 
-## United Kingdom (`gb`) { #gb }
+<h2 id="gb">United Kingdom (`gb`)</h2>
+
 | Title | Type | Topics | Checked |
 | --- | --- | --- | --- |
 | [Financial Conduct Authority (UK)](https://www.fca.org.uk/) | securities-regulator | regulation, investing-basics, scams | 2026-10-17 |
@@ -97,7 +105,8 @@ official site if something looks outdated.
 | [NS&I](https://www.nsandi.com/) | government-portal | savings | 2026-10-17 |
 | [The Pensions Regulator (UK)](https://www.thepensionsregulator.gov.uk/) | government-portal | pensions | 2026-10-17 |
 
-## Ghana (`gh`) { #gh }
+<h2 id="gh">Ghana (`gh`)</h2>
+
 | Title | Type | Topics | Checked |
 | --- | --- | --- | --- |
 | [Bank of Ghana](https://www.bog.gov.gh/) | central-bank | banking, mobile-money, financial-literacy, regulation | 2026-10-17 |
@@ -105,7 +114,8 @@ official site if something looks outdated.
 | [Securities and Exchange Commission Ghana](https://sec.gov.gh/) | securities-regulator | investing-basics, regulation | 2026-10-17 |
 | [Social Security and National Insurance Trust (SSNIT)](https://www.ssnit.org.gh/) | government-portal | pensions | 2026-10-17 |
 
-## India (`in`) { #in }
+<h2 id="in">India (`in`)</h2>
+
 | Title | Type | Topics | Checked |
 | --- | --- | --- | --- |
 | [Association of Mutual Funds in India](https://www.amfiindia.com/) | other-public | investing-basics | 2026-10-17 |
@@ -123,21 +133,24 @@ official site if something looks outdated.
 | [SEBI Investor Portal](https://investor.sebi.gov.in/) | securities-regulator | investing-basics, financial-literacy, scams | 2026-10-17 |
 | [Securities and Exchange Board of India](https://www.sebi.gov.in/) | securities-regulator | regulation, investing-basics | 2026-10-17 |
 
-## Italy (`it`) { #it }
+<h2 id="it">Italy (`it`)</h2>
+
 | Title | Type | Topics | Checked |
 | --- | --- | --- | --- |
 | [Banca d'Italia](https://www.bancaditalia.it/homepage/index.html?com.dotmarketing.htmlpage.language=1) | central-bank | banking, financial-literacy | 2026-10-17 |
 | [Consob](https://www.consob.it/web/consob-and-its-activities) | securities-regulator | investing-basics, regulation | 2026-10-17 |
 | [FITD](https://www.fitd.it/) | government-portal | banking, savings | 2026-10-17 |
 
-## Japan (`jp`) { #jp }
+<h2 id="jp">Japan (`jp`)</h2>
+
 | Title | Type | Topics | Checked |
 | --- | --- | --- | --- |
 | [Bank of Japan](https://www.boj.or.jp/en/) | central-bank | banking, financial-literacy | 2026-10-17 |
 | [Financial Services Agency (Japan)](https://www.fsa.go.jp/en/) | securities-regulator | regulation, investing-basics, financial-literacy | 2026-10-17 |
 | [Ministry of Finance Japan](https://www.mof.go.jp/english/) | ministry | savings, regulation | 2026-10-17 |
 
-## Kenya (`ke`) { #ke }
+<h2 id="ke">Kenya (`ke`)</h2>
+
 | Title | Type | Topics | Checked |
 | --- | --- | --- | --- |
 | [Central Bank of Kenya](https://www.centralbank.go.ke/) | central-bank | banking, mobile-money, regulation | 2026-10-17 |
@@ -149,7 +162,8 @@ official site if something looks outdated.
 | [SASRA — Sacco Societies Regulatory Authority](https://www.sasra.go.ke/) | government-portal | savings, regulation | 2026-10-17 |
 | [The National Treasury — Kenya](https://www.treasury.go.ke/) | treasury | savings, regulation | 2026-10-17 |
 
-## Nigeria (`ng`) { #ng }
+<h2 id="ng">Nigeria (`ng`)</h2>
+
 | Title | Type | Topics | Checked |
 | --- | --- | --- | --- |
 | [Central Bank of Nigeria](https://www.cbn.gov.ng/) | central-bank | banking, mobile-money, regulation | 2026-10-17 |
@@ -157,7 +171,8 @@ official site if something looks outdated.
 | [National Pension Commission (PenCom)](https://www.pencom.gov.ng/) | government-portal | pensions, regulation | 2026-10-17 |
 | [Securities and Exchange Commission Nigeria](https://sec.gov.ng/) | securities-regulator | investing-basics, regulation | 2026-10-17 |
 
-## United States (`us`) { #us }
+<h2 id="us">United States (`us`)</h2>
+
 | Title | Type | Topics | Checked |
 | --- | --- | --- | --- |
 | [CFPB — Consumer tools](https://www.consumerfinance.gov/consumer-tools/) | government-portal | financial-literacy, banking, debt | 2026-10-17 |
@@ -176,7 +191,8 @@ official site if something looks outdated.
 | [TreasuryDirect — Savings bonds](https://www.treasurydirect.gov/savings-bonds/) | treasury | savings | 2026-10-17 |
 | [U.S. Department of Labor](https://www.dol.gov/) | ministry | pensions, financial-literacy | 2026-10-17 |
 
-## South Africa (`za`) { #za }
+<h2 id="za">South Africa (`za`)</h2>
+
 | Title | Type | Topics | Checked |
 | --- | --- | --- | --- |
 | [Financial Sector Conduct Authority (South Africa)](https://www.fsca.co.za/) | securities-regulator | investing-basics, pensions, scams, regulation | 2026-10-17 |

@@ -89,8 +89,9 @@ def escape_cell(text: str) -> str:
 
 
 def country_heading(code: str) -> str:
+    """HTML heading so markdownlint MD051 recognizes #fragment links."""
     label = COUNTRY_LABELS.get(code, code.upper())
-    return f"## {label} (`{code}`) {{ #{code} }}"
+    return f'<h2 id="{code}">{label} (`{code}`)</h2>\n'
 
 
 def render_table(rows: list[dict]) -> str:
