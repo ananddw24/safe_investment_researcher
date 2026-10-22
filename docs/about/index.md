@@ -14,9 +14,12 @@ FinancialLibrary is an open educational hub for low-income households and women.
 It explains money basics, regulated savings and investment *types* by country, and
 points to trusted public resources.
 
+Start with the homepage [country map](../index.md#country-map) and
+[Start here](../index.md#start-here) path, or jump to:
+
 - [Using this library](using-this-library.md)
 - [For educators and NGOs](for-educators-and-ngos.md)
 - [Audience](audience.md)
 - [Licenses](licenses.md)
-- [Release plan](release-plan.md)
+- [Release plan](release-plan.md) — v0.1.0–v0.6.0 shipped; v1.0.0 waits on a public site
 - [Disclaimer](../disclaimer.md)

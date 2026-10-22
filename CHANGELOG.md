@@ -11,61 +11,36 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- Deep household vehicle prose for remaining Top 10 GDP economies: China, Germany,
-  Japan, United Kingdom, France, Italy, Brazil, and Canada (48 vehicle pages
-  expanded with access, fee, fraud, and official-source literacy)
+- Docs hub for first-time readers: homepage country map (Top 10 + Africa),
+  Start here path into guides and both pathways, Vehicles nav grouped by
+  region
+- Reader onboarding from PR #11: [Using this library](docs/about/using-this-library.md),
+  [For educators and NGOs](docs/about/for-educators-and-ngos.md), and
+  [New reader pathway](docs/pathways/new-reader.md)
+- Generated [resource catalog](docs/resources/catalog.md) (`make catalog`) with
+  CI freshness check; official-link sections on country vehicle indexes
+- Deep household vehicle prose for remaining Top 10 GDP economies: China,
+  Germany, Japan, United Kingdom, France, Italy, Brazil, and Canada (48 pages
+  expanded with access, fee, fraud, and official-source literacy) — shipped in
+  PR #11 and tagged with this release
+- Knowledge-base layer: `llms.txt`, `docs/knowledge-base.md`,
+  `data/kb-index.json`, `scripts/build_kb_index.py`,
+  `scripts/staleness_report.py`, weekly maintenance workflow, pytest suite,
+  `RELEASING.md`
 
 ### Changed
 
-- Vehicles index and release plan mark v0.6.0; Africa cluster remains short pages
-
-## [Unreleased]
-
-### Added
-
-- Reader onboarding: [Using this library](docs/about/using-this-library.md),
-  [For educators and NGOs](docs/about/for-educators-and-ngos.md), and
-  [New reader pathway](docs/pathways/new-reader.md)
-- Generated [resource catalog](docs/resources/catalog.md) (`scripts/generate_resources_catalog.py`,
-  `make catalog`) with CI freshness check
-- Official-link sections on all country vehicle index pages pointing at the catalog
-
-### Added (knowledge base)
-
-- Knowledge-base layer for agent consumers: `llms.txt` entry point,
-  `docs/knowledge-base.md` agent guide (consumption paths, freshness
-  semantics, citation rules), and `data/kb-index.json`, a consolidated
-  machine-readable index of all resource and vehicle records
-- `scripts/build_kb_index.py` (index builder) and
-  `scripts/staleness_report.py` (last_checked aging report with
-  fresh / aging / stale buckets); `make kb` runs both
-- Weekly maintenance workflow (`.github/workflows/weekly-maintenance.yml`):
-  validates data, rebuilds the index and resource catalog, and files a
-  maintenance issue when records go stale
-- Python quality tooling: `ruff` lint configuration in `pyproject.toml`
-  (`make lint`) and a `pytest` suite under `tests/` (`make test`) covering
-  the knowledge-base scripts' date/freshness logic and schema validation
-  of conforming and non-conforming records
-- Dependabot now also watches `scripts/requirements-dev.txt`
-- `RELEASING.md`: the release checklist (version bumps across
-  pyproject/CITATION/README/SECURITY, changelog, tag, verification)
+- Release plan matches reality through v0.5.0 and notes PR #11; v1.0.0 still
+  waits on a public GitHub Pages site
+- Guides, pathways, and audience pages cross-link Start here routes; woman-led
+  pathway links Africa cluster peers without rewriting Kenya or India steps
+- Softened “live site” claims until Pages is enabled by the owner
+- `SECURITY.md` supported line covers `0.6.x`
 
 ### Fixed
 
-- Version drift: `pyproject.toml` and the README status section now agree
-  with the changelog (v0.5.0)
-- Lint findings in the scripts: `datetime.UTC` alias, sorted imports in
-  `extract_resource_urls.py`, and wrapped over-length lines in
-  `staleness_report.py` (no behavior changes)
-- Remaining version drift from the open-source readiness audit:
-  `CITATION.cff` now reports 0.5.0, `SECURITY.md` supported versions cover
-  the 0.5.x release line, and `GOVERNANCE.md` no longer carries v0.1 labels
-
-### Changed
-
-- README gains badges for the link-check and markdown-lint workflows
-- `pyproject.toml` uses the SPDX license string and adds package classifiers
-
+- Changelog no longer has duplicate `[Unreleased]` blocks left from the PR #11
+  merge window
 
 ## [0.5.0] - 2026-10-17
 
@@ -144,7 +119,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - **Scaffold only** at 0.1.0. Content seeding begins with 0.2.0 (India).
 
-[Unreleased]: https://github.com/ananddw24/safe_investment_researcher/compare/v0.5.0...HEAD
+[Unreleased]: https://github.com/ananddw24/safe_investment_researcher/compare/v0.6.0...HEAD
+[0.6.0]: https://github.com/ananddw24/safe_investment_researcher/releases/tag/v0.6.0
 [0.5.0]: https://github.com/ananddw24/safe_investment_researcher/releases/tag/v0.5.0
 [0.4.0]: https://github.com/ananddw24/safe_investment_researcher/releases/tag/v0.4.0
 [0.3.0]: https://github.com/ananddw24/safe_investment_researcher/releases/tag/v0.3.0

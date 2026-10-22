@@ -27,3 +27,5 @@ Next steps:
 - [Using this library](using-this-library.md)
 - [For educators and NGOs](for-educators-and-ngos.md)
 - [New reader pathway](../pathways/new-reader.md)
+- [Woman-led household pathway](../pathways/woman-led-household.md)
+- Homepage [country map](../index.md#country-map)

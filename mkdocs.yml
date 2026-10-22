@@ -58,130 +58,132 @@ nav:
       - Spotting unregulated schemes: guides/spotting-unregulated-schemes.md
   - Vehicles:
       - vehicles/index.md
-      - India:
-          - vehicles/in/index.md
-          - Bank savings: vehicles/in/bank-savings.md
-          - Recurring Deposit: vehicles/in/recurring-deposit.md
-          - Fixed Deposit: vehicles/in/fixed-deposit.md
-          - PPF: vehicles/in/ppf.md
-          - Sukanya Samriddhi: vehicles/in/sukanya-samriddhi.md
-          - NPS: vehicles/in/nps.md
-          - SIP / ELSS literacy: vehicles/in/sip-elss.md
-          - India Post schemes: vehicles/in/postal-schemes.md
-          - Gold SGB vs physical: vehicles/in/gold-sgb-physical.md
-          - SHG / microfinance: vehicles/in/shg-microfinance.md
-      - United States:
-          - vehicles/us/index.md
-          - FDIC savings / MMDA: vehicles/us/fdic-savings.md
-          - 401(k) and IRA concepts: vehicles/us/retirement-401k-ira.md
-          - TreasuryDirect: vehicles/us/treasurydirect.md
-          - Index funds / ETFs literacy: vehicles/us/index-funds-etfs.md
-          - Credit union savings: vehicles/us/credit-union-savings.md
-          - 529 / Coverdell: vehicles/us/education-529-coverdell.md
-      - Kenya:
-          - vehicles/ke/index.md
-          - Mobile money savings: vehicles/ke/mobile-money-savings.md
-          - Bank / MFI deposits: vehicles/ke/bank-mfi-deposits.md
-          - Money market funds: vehicles/ke/money-market-funds.md
-          - Treasury bills / bonds: vehicles/ke/treasury-bills-bonds.md
-          - SACCOs: vehicles/ke/saccos.md
-          - NSSF / pensions: vehicles/ke/nssf-pensions.md
-      - Nigeria:
-          - vehicles/ng/index.md
-          - Bank savings / fixed deposits: vehicles/ng/bank-deposits.md
-          - SEC-registered funds: vehicles/ng/sec-funds.md
-          - Treasury bills / FGN bonds: vehicles/ng/treasury-debt.md
-          - Contributory Pension System: vehicles/ng/pension-cps.md
-          - Cooperatives / thrift societies: vehicles/ng/cooperatives.md
-          - Mobile money / fintech wallets: vehicles/ng/mobile-money.md
-      - South Africa:
-          - vehicles/za/index.md
-          - Bank savings / fixed deposits: vehicles/za/bank-deposits.md
-          - Tax-Free Savings Account: vehicles/za/tfsa.md
-          - Unit trusts / CIS: vehicles/za/unit-trusts.md
-          - RSA Retail Savings Bonds: vehicles/za/rsa-retail-bonds.md
-          - Stokvels: vehicles/za/stokvels.md
-          - Retirement / pensions: vehicles/za/retirement-pensions.md
-      - Ghana:
-          - vehicles/gh/index.md
-          - Bank / rural bank deposits: vehicles/gh/bank-deposits.md
-          - Mobile money wallets: vehicles/gh/mobile-money.md
-          - Treasury bills: vehicles/gh/treasury-bills.md
-          - SEC-licensed funds: vehicles/gh/sec-funds.md
-          - Susu / cooperatives: vehicles/gh/susu-cooperatives.md
-          - SSNIT pension: vehicles/gh/ssnit.md
-      - Egypt:
-          - vehicles/eg/index.md
-          - Bank savings / CDs: vehicles/eg/bank-deposits.md
-          - Postal savings: vehicles/eg/postal-savings.md
-          - Treasury bills / bonds: vehicles/eg/treasury-debt.md
-          - Money market / fixed-income funds: vehicles/eg/funds.md
-          - Pension / social insurance: vehicles/eg/pensions.md
-          - Microfinance / NGO savings: vehicles/eg/microfinance.md
-      - China:
-          - vehicles/cn/index.md
-          - Bank deposits: vehicles/cn/bank-deposits.md
-          - Money market funds: vehicles/cn/money-market-funds.md
-          - Government bonds: vehicles/cn/government-bonds.md
-          - Employer pension concepts: vehicles/cn/employer-pension.md
-          - Wealth vs deposits: vehicles/cn/wealth-vs-deposits.md
-          - Inclusive finance literacy: vehicles/cn/inclusive-finance.md
-      - Germany:
-          - vehicles/de/index.md
-          - Girokonto / Tagesgeld: vehicles/de/giro-tagesgeld.md
-          - Festgeld: vehicles/de/festgeld.md
-          - Riester / Betriebsrente: vehicles/de/riester-betriebsrente.md
-          - Mutual funds: vehicles/de/fonds.md
-          - Bunds: vehicles/de/bunds.md
-          - Sparkasse / cooperatives: vehicles/de/sparkasse-cooperative.md
-      - Japan:
-          - vehicles/jp/index.md
-          - Bank / postal deposits: vehicles/jp/bank-postal-deposits.md
-          - Time deposits: vehicles/jp/time-deposits.md
-          - NISA: vehicles/jp/nisa.md
-          - iDeCo: vehicles/jp/ideco.md
-          - JGB retail: vehicles/jp/jgb-retail.md
-          - Workplace pensions: vehicles/jp/workplace-pensions.md
-      - United Kingdom:
-          - vehicles/gb/index.md
-          - Easy-access savings: vehicles/gb/easy-access-savings.md
-          - Cash ISA: vehicles/gb/cash-isa.md
-          - Premium Bonds: vehicles/gb/premium-bonds.md
-          - Workplace pension: vehicles/gb/workplace-pension.md
-          - Stocks & Shares ISA: vehicles/gb/stocks-shares-isa.md
-          - Credit unions: vehicles/gb/credit-union.md
-      - France:
-          - vehicles/fr/index.md
-          - Livret A / LDDS: vehicles/fr/livret-a-ldds.md
-          - LEP: vehicles/fr/lep.md
-          - PEL / CEL: vehicles/fr/pel-cel.md
-          - Assurance-vie: vehicles/fr/assurance-vie.md
-          - PEE concepts: vehicles/fr/pee.md
-          - Sovereign bonds: vehicles/fr/sovereign-bonds.md
-      - Italy:
-          - vehicles/it/index.md
-          - Bank deposits: vehicles/it/conto-deposito.md
-          - Postal savings: vehicles/it/postal-savings.md
-          - BTP retail: vehicles/it/btp-retail.md
-          - Funds / PIR: vehicles/it/fondi-pir.md
-          - Pension funds: vehicles/it/fondi-pensione.md
-          - Cooperative banks: vehicles/it/cooperative-banks.md
-      - Brazil:
-          - vehicles/br/index.md
-          - Poupança: vehicles/br/poupanca.md
-          - Tesouro Direto: vehicles/br/tesouro-direto.md
-          - CDB deposits: vehicles/br/cdb-deposits.md
-          - FGTS literacy: vehicles/br/fgts.md
-          - Fixed-income funds: vehicles/br/renda-fixa-funds.md
-          - PIX savings habits: vehicles/br/pix-savings-habits.md
-      - Canada:
-          - vehicles/ca/index.md
-          - High-interest savings: vehicles/ca/hisa.md
-          - TFSA: vehicles/ca/tfsa.md
-          - RRSP: vehicles/ca/rrsp.md
-          - Government retail debt: vehicles/ca/gov-retail-debt.md
-          - Credit unions: vehicles/ca/credit-union.md
-          - Pensions / CPP: vehicles/ca/pensions-cpp.md
+      - Top 10 economies:
+          - India:
+              - vehicles/in/index.md
+              - Bank savings: vehicles/in/bank-savings.md
+              - Recurring Deposit: vehicles/in/recurring-deposit.md
+              - Fixed Deposit: vehicles/in/fixed-deposit.md
+              - PPF: vehicles/in/ppf.md
+              - Sukanya Samriddhi: vehicles/in/sukanya-samriddhi.md
+              - NPS: vehicles/in/nps.md
+              - SIP / ELSS literacy: vehicles/in/sip-elss.md
+              - India Post schemes: vehicles/in/postal-schemes.md
+              - Gold SGB vs physical: vehicles/in/gold-sgb-physical.md
+              - SHG / microfinance: vehicles/in/shg-microfinance.md
+          - United States:
+              - vehicles/us/index.md
+              - FDIC savings / MMDA: vehicles/us/fdic-savings.md
+              - 401(k) and IRA concepts: vehicles/us/retirement-401k-ira.md
+              - TreasuryDirect: vehicles/us/treasurydirect.md
+              - Index funds / ETFs literacy: vehicles/us/index-funds-etfs.md
+              - Credit union savings: vehicles/us/credit-union-savings.md
+              - 529 / Coverdell: vehicles/us/education-529-coverdell.md
+          - China:
+              - vehicles/cn/index.md
+              - Bank deposits: vehicles/cn/bank-deposits.md
+              - Money market funds: vehicles/cn/money-market-funds.md
+              - Government bonds: vehicles/cn/government-bonds.md
+              - Employer pension concepts: vehicles/cn/employer-pension.md
+              - Wealth vs deposits: vehicles/cn/wealth-vs-deposits.md
+              - Inclusive finance literacy: vehicles/cn/inclusive-finance.md
+          - Germany:
+              - vehicles/de/index.md
+              - Girokonto / Tagesgeld: vehicles/de/giro-tagesgeld.md
+              - Festgeld: vehicles/de/festgeld.md
+              - Riester / Betriebsrente: vehicles/de/riester-betriebsrente.md
+              - Mutual funds: vehicles/de/fonds.md
+              - Bunds: vehicles/de/bunds.md
+              - Sparkasse / cooperatives: vehicles/de/sparkasse-cooperative.md
+          - Japan:
+              - vehicles/jp/index.md
+              - Bank / postal deposits: vehicles/jp/bank-postal-deposits.md
+              - Time deposits: vehicles/jp/time-deposits.md
+              - NISA: vehicles/jp/nisa.md
+              - iDeCo: vehicles/jp/ideco.md
+              - JGB retail: vehicles/jp/jgb-retail.md
+              - Workplace pensions: vehicles/jp/workplace-pensions.md
+          - United Kingdom:
+              - vehicles/gb/index.md
+              - Easy-access savings: vehicles/gb/easy-access-savings.md
+              - Cash ISA: vehicles/gb/cash-isa.md
+              - Premium Bonds: vehicles/gb/premium-bonds.md
+              - Workplace pension: vehicles/gb/workplace-pension.md
+              - Stocks & Shares ISA: vehicles/gb/stocks-shares-isa.md
+              - Credit unions: vehicles/gb/credit-union.md
+          - France:
+              - vehicles/fr/index.md
+              - Livret A / LDDS: vehicles/fr/livret-a-ldds.md
+              - LEP: vehicles/fr/lep.md
+              - PEL / CEL: vehicles/fr/pel-cel.md
+              - Assurance-vie: vehicles/fr/assurance-vie.md
+              - PEE concepts: vehicles/fr/pee.md
+              - Sovereign bonds: vehicles/fr/sovereign-bonds.md
+          - Italy:
+              - vehicles/it/index.md
+              - Bank deposits: vehicles/it/conto-deposito.md
+              - Postal savings: vehicles/it/postal-savings.md
+              - BTP retail: vehicles/it/btp-retail.md
+              - Funds / PIR: vehicles/it/fondi-pir.md
+              - Pension funds: vehicles/it/fondi-pensione.md
+              - Cooperative banks: vehicles/it/cooperative-banks.md
+          - Brazil:
+              - vehicles/br/index.md
+              - Poupança: vehicles/br/poupanca.md
+              - Tesouro Direto: vehicles/br/tesouro-direto.md
+              - CDB deposits: vehicles/br/cdb-deposits.md
+              - FGTS literacy: vehicles/br/fgts.md
+              - Fixed-income funds: vehicles/br/renda-fixa-funds.md
+              - PIX savings habits: vehicles/br/pix-savings-habits.md
+          - Canada:
+              - vehicles/ca/index.md
+              - High-interest savings: vehicles/ca/hisa.md
+              - TFSA: vehicles/ca/tfsa.md
+              - RRSP: vehicles/ca/rrsp.md
+              - Government retail debt: vehicles/ca/gov-retail-debt.md
+              - Credit unions: vehicles/ca/credit-union.md
+              - Pensions / CPP: vehicles/ca/pensions-cpp.md
+      - Africa cluster:
+          - Kenya:
+              - vehicles/ke/index.md
+              - Mobile money savings: vehicles/ke/mobile-money-savings.md
+              - Bank / MFI deposits: vehicles/ke/bank-mfi-deposits.md
+              - Money market funds: vehicles/ke/money-market-funds.md
+              - Treasury bills / bonds: vehicles/ke/treasury-bills-bonds.md
+              - SACCOs: vehicles/ke/saccos.md
+              - NSSF / pensions: vehicles/ke/nssf-pensions.md
+          - Nigeria:
+              - vehicles/ng/index.md
+              - Bank savings / fixed deposits: vehicles/ng/bank-deposits.md
+              - SEC-registered funds: vehicles/ng/sec-funds.md
+              - Treasury bills / FGN bonds: vehicles/ng/treasury-debt.md
+              - Contributory Pension System: vehicles/ng/pension-cps.md
+              - Cooperatives / thrift societies: vehicles/ng/cooperatives.md
+              - Mobile money / fintech wallets: vehicles/ng/mobile-money.md
+          - South Africa:
+              - vehicles/za/index.md
+              - Bank savings / fixed deposits: vehicles/za/bank-deposits.md
+              - Tax-Free Savings Account: vehicles/za/tfsa.md
+              - Unit trusts / CIS: vehicles/za/unit-trusts.md
+              - RSA Retail Savings Bonds: vehicles/za/rsa-retail-bonds.md
+              - Stokvels: vehicles/za/stokvels.md
+              - Retirement / pensions: vehicles/za/retirement-pensions.md
+          - Ghana:
+              - vehicles/gh/index.md
+              - Bank / rural bank deposits: vehicles/gh/bank-deposits.md
+              - Mobile money wallets: vehicles/gh/mobile-money.md
+              - Treasury bills: vehicles/gh/treasury-bills.md
+              - SEC-licensed funds: vehicles/gh/sec-funds.md
+              - Susu / cooperatives: vehicles/gh/susu-cooperatives.md
+              - SSNIT pension: vehicles/gh/ssnit.md
+          - Egypt:
+              - vehicles/eg/index.md
+              - Bank savings / CDs: vehicles/eg/bank-deposits.md
+              - Postal savings: vehicles/eg/postal-savings.md
+              - Treasury bills / bonds: vehicles/eg/treasury-debt.md
+              - Money market / fixed-income funds: vehicles/eg/funds.md
+              - Pension / social insurance: vehicles/eg/pensions.md
+              - Microfinance / NGO savings: vehicles/eg/microfinance.md
   - Pathways:
       - pathways/index.md
       - New reader: pathways/new-reader.md

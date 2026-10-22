@@ -3,7 +3,7 @@ title: Pathway — woman-led household
 persona: woman-led-household
 audience: [women, low-income]
 status: published
-last_reviewed: "2026-10-17"
+last_reviewed: "2026-10-22"
 ---
 
 # Pathway: woman-led household
@@ -17,7 +17,10 @@ last_reviewed: "2026-10-17"
 ## Who this path is for
 
 Women and caregivers who manage day-to-day money, may share or seek account
-access, and want a **reading order** — not a personal financial plan.
+access, and want a **reading order** — not a personal financial plan. The
+ordered steps below use India examples that already ship in this library. If
+you live elsewhere, keep the same *order of ideas* and swap in your country
+from the [Vehicles](../vehicles/index.md) map.
 
 ## Ordered steps
 
@@ -50,4 +53,9 @@ access, and want a **reading order** — not a personal financial plan.
 ## Related
 
 - [India vehicles index](../vehicles/in/index.md)
-- [Resources](../resources/index.md)
+- Africa cluster peers (link only — not rewritten here):
+  [Kenya](../vehicles/ke/index.md) · [Nigeria](../vehicles/ng/index.md) ·
+  [South Africa](../vehicles/za/index.md) · [Ghana](../vehicles/gh/index.md) ·
+  [Egypt](../vehicles/eg/index.md)
+- [United States vehicles](../vehicles/us/index.md)
+- [New reader pathway](new-reader.md) · [Resources](../resources/index.md)
