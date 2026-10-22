@@ -2,7 +2,7 @@
 title: "Japan — household savings and investment types"
 country: jp
 status: published
-last_reviewed: "2026-10-17"
+last_reviewed: "2026-10-22"
 ---
 
 # Japan — household savings and investment types
@@ -12,26 +12,30 @@ last_reviewed: "2026-10-17"
     an offer to sell, or a recommendation to buy, sell, or hold any product.
     Rules differ by country; verify with official sources in your jurisdiction.
 
+Educational pages on regulated types — not product recommendations. Build ordinary
+deposit liquidity before teiki, NISA, iDeCo, or retail JGB purchases.
 
-Short educational pages on household savings and investment *types*. Not product
-picks. Prefer emergency cash in safe, accessible forms before long lock-ins.
+## Suggested reading order
+
+1. [Emergency savings guide](../../guides/emergency-savings.md)
+2. [Bank and Japan Post deposits](bank-postal-deposits.md)
+3. [Time deposits](time-deposits.md) only after a cash buffer exists
+4. Long-term pages (NISA, iDeCo, workplace pensions) when horizon matches
 
 ## Vehicle pages
 
 | Vehicle | Focus |
 | --- | --- |
-| [Bank / Japan Post Bank deposits](bank-postal-deposits.md) | Default household savings |
-| [Time deposits (teiki)](time-deposits.md) | Liquidity vs rate |
+| [Bank / postal deposits](bank-postal-deposits.md) | Everyday savings |
+| [Time deposits (teiki)](time-deposits.md) | Term deposits |
 | [NISA concepts](nisa.md) | Tax-advantaged investing literacy |
-| [iDeCo concepts](ideco.md) | Personal DC pension literacy |
-| [JGBs retail programs](jgb-retail.md) | Government bond education |
-| [Workplace pensions overview](workplace-pensions.md) | Employer-dependent |
-
+| [iDeCo concepts](ideco.md) | Personal pension lock-up |
+| [Retail JGBs](jgb-retail.md) | Government retail bonds |
+| [Workplace pensions](workplace-pensions.md) | Employer plans |
 
 ## Official links
 
-Curated regulator and government URLs for this country are in the
-[resource catalog](../../resources/catalog.md#jp).
+[Resource catalog — Japan](../../resources/catalog.md#jp)
 
 ## Related
 

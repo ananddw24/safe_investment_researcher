@@ -82,10 +82,9 @@ agents and tools can consume directly:
 
 ## Status
 
-**v0.5.0** — Top 10 GDP countries plus the Africa cluster (Nigeria, South
-Africa, Ghana, Egypt; Kenya from v0.3.0) have household vehicle pages, backed
-by 80+ curated regulator/government resource records. Human-readable
-[browse tables](docs/resources/catalog.md) are generated from the YAML.
+**v0.6.0** — Deep household vehicle pages for all Top 10 GDP economies; Africa
+cluster pages remain shorter orientation sketches. 80+ curated regulator/government
+resource records with generated [browse tables](docs/resources/catalog.md).
 
-Next: **v1.0.0** stable public contribution model (see
+Next: deepen Africa cluster pages; then **v1.0.0** (see
 [release plan](docs/about/release-plan.md)).

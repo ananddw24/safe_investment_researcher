@@ -2,7 +2,7 @@
 title: "Canada — household savings and investment types"
 country: ca
 status: published
-last_reviewed: "2026-10-17"
+last_reviewed: "2026-10-22"
 ---
 
 # Canada — household savings and investment types
@@ -12,26 +12,30 @@ last_reviewed: "2026-10-17"
     an offer to sell, or a recommendation to buy, sell, or hold any product.
     Rules differ by country; verify with official sources in your jurisdiction.
 
+Educational pages on regulated types — not product picks. Build CDIC-aware HISA
+emergency cash before registered retirement contributions or market TFSAs.
 
-Short educational pages on household savings and investment *types*. Not product
-picks. Prefer emergency cash in safe, accessible forms before long lock-ins.
+## Suggested reading order
+
+1. [Emergency savings guide](../../guides/emergency-savings.md)
+2. [High-interest savings account](hisa.md)
+3. [Credit union deposits](credit-union.md) if you bank cooperatively
+4. [TFSA](tfsa.md) / [RRSP](rrsp.md) when long horizons are clear
 
 ## Vehicle pages
 
 | Vehicle | Focus |
 | --- | --- |
-| [High-interest savings accounts](hisa.md) | Emergency cash |
-| [TFSA concepts](tfsa.md) | Contribution room literacy |
-| [RRSP concepts](rrsp.md) | Retirement tax-deferral literacy |
-| [Government of Canada retail debt](gov-retail-debt.md) | Current official offerings |
-| [Credit union deposits](credit-union.md) | Provincial deposit insurance literacy |
-| [Workplace pensions / CPP basics](pensions-cpp.md) | Social + private mix |
-
+| [High-interest savings (HISA)](hisa.md) | Accessible cash + CDIC literacy |
+| [TFSA concepts](tfsa.md) | Tax-free wrapper |
+| [RRSP concepts](rrsp.md) | Tax-deferred retirement |
+| [Government retail debt / GIC literacy](gov-retail-debt.md) | Sovereign & term products |
+| [Credit union deposits](credit-union.md) | Provincial insurance |
+| [Workplace pensions / CPP](pensions-cpp.md) | Public + employer pillars |
 
 ## Official links
 
-Curated regulator and government URLs for this country are in the
-[resource catalog](../../resources/catalog.md#ca).
+[Resource catalog — Canada](../../resources/catalog.md#ca)
 
 ## Related
 

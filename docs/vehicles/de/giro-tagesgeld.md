@@ -4,7 +4,7 @@ country: de
 vehicle_id: "de-giro-tagesgeld"
 category: "bank-deposit"
 status: published
-last_reviewed: "2026-10-17"
+last_reviewed: "2026-10-22"
 ---
 
 # Girokonto and Tagesgeld (Germany)
@@ -17,26 +17,51 @@ last_reviewed: "2026-10-17"
 
 ## What it is
 
-A **Girokonto** is a payment account; **Tagesgeld** is overnight/flexible savings at a bank. Together they support emergency cash literacy.
+A **Girokonto** is a payment account for wages, rent, direct debits, and card
+payments. **Tagesgeld** (overnight money) is a flexible savings product at a
+bank, typically with daily availability and a variable interest rate. Together
+they are the everyday plumbing for household cash — not long-term investment
+vehicles.
 
 ## Who it is typically designed for
 
-Households needing day-to-day payments plus a liquid buffer. Watch fees on low balances.
+Most households in the formal banking system. Students, low-income savers, and
+new residents should compare **account maintenance fees**, card fees, and
+overdraft interest — small balances can disappear to charges if you do not read
+the **Preisverzeichnis** (fee schedule).
 
 ## Liquidity and commitments
 
-Typically high for both; bank-specific rules apply.
+- **Girokonto:** high liquidity for payments; overdraft (Dispo) is **expensive
+  debt**, not savings.
+- **Tagesgeld:** generally withdrawable on short notice; banks may require notice
+  for very large transfers — check product terms.
+- Neither replaces [Festgeld](festgeld.md) for fixed terms nor funds for market risk.
 
 ## Risks
 
-Fees, phishing, and confusing deposits with investment products.
+- **Phishing and payment fraud** (fake invoices, parcel scams, “bank security” calls).
+- **Negative balance fees** from accidental overdraft.
+- Buying **investment funds** at the branch when you intended a deposit — see
+  [regulated funds](fonds.md).
 
 ## Literacy angle
 
-Build a fee-aware emergency buffer before lock-ins.
+Keep a visible **emergency buffer** in Tagesgeld or an easy-access savings tier
+before locking money in Festgeld or pension products. Use BaFin and Bundesbank
+consumer pages to learn deposit protection basics for your institution type.
 
 ## Official source types
 
-BaFin; Deutsche Bundesbank education.
+- BaFin consumer and banking supervision materials
+- Deutsche Bundesbank financial education
+- Your bank’s published fee schedule and deposit information sheet (Einlagensicherung)
 
-Links: [BaFin EN](https://www.bafin.de/EN/), [BaFin](https://www.bafin.de/), [Bundesbank](https://www.bundesbank.de/en).
+Links: [BaFin EN](https://www.bafin.de/EN/), [BaFin](https://www.bafin.de/),
+[Bundesbank](https://www.bundesbank.de/en).
+
+## Related
+
+- [Festgeld](festgeld.md) · [Sparkasse / cooperative banks](sparkasse-cooperative.md) ·
+  [Resource catalog — Germany](../../resources/catalog.md#de) ·
+  [Emergency savings guide](../../guides/emergency-savings.md)

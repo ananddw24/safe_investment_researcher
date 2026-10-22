@@ -4,7 +4,7 @@ country: ca
 vehicle_id: "ca-pensions-cpp"
 category: "pension"
 status: published
-last_reviewed: "2026-10-17"
+last_reviewed: "2026-10-22"
 ---
 
 # Workplace pensions and CPP basics (Canada)
@@ -17,26 +17,42 @@ last_reviewed: "2026-10-17"
 
 ## What it is
 
-Workplace pensions plus Canada Pension Plan basics form a social + private retirement mix.
+Canadian retirement income usually blends **Canada Pension Plan (CPP)** / **Québec Pension
+Plan (QPP)** for workers, **Old Age Security (OAS)** for residents meeting residency rules,
+and **workplace pensions** (defined benefit or defined contribution) plus personal
+[RRSP](rrsp.md)/[TFSA](tfsa.md) savings. CPP is **not a bank account** — benefits depend
+on contributions and start ages published on Service Canada.
 
 ## Who it is typically designed for
 
-Workers and residents learning what is automatic vs optional.
+All formal workers contribute to CPP/QPP within rules; workplace plans depend on employer
+sponsorship — gig workers may lack employer pensions.
 
 ## Liquidity and commitments
 
-Long-term; CPP rules are public.
+- **CPP/OAS:** begin at elected ages within official ranges; not accessible for emergencies.
+- **DC pension pots** follow plan rules; **DB pensions** pay later per formula.
 
 ## Risks
 
-Assuming workplace coverage that does not exist; informal pension tips.
+- **Opting out** of workplace plans without understanding employer match (where offered).
+- Pension scams targeting seniors to “unlock CPP early” for a fee.
+- Confusing **CPP disability** rules with generic savings.
 
 ## Literacy angle
 
-Use Canada.ca / FCAC / OSFI materials for official vocabulary.
+Use Service Canada and FCAC retirement calculators as **education**, not personalized
+plans. Keep [HISA](hisa.md) liquidity separate from locked retirement assets.
 
 ## Official source types
 
-FCAC; OSFI; Canada.ca.
+- Service Canada CPP/OAS pages (Canada.ca)
+- FCAC and OSFI pension education
+- Office of the Superintendent of Financial Institutions (OSFI) for regulated pension funds context
 
-Links: [FCAC](https://www.canada.ca/en/financial-consumer-agency.html), [OSFI](https://www.osfi-bsif.gc.ca/en), [Canada.ca](https://www.canada.ca/en.html).
+Links: [FCAC](https://www.canada.ca/en/financial-consumer-agency.html),
+[OSFI](https://www.osfi-bsif.gc.ca/en), [Canada.ca](https://www.canada.ca/en.html).
+
+## Related
+
+- [RRSP concepts](rrsp.md) · [TFSA concepts](tfsa.md)

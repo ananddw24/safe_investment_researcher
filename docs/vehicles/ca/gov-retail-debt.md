@@ -4,7 +4,7 @@ country: ca
 vehicle_id: "ca-gov-debt"
 category: "government-scheme"
 status: published
-last_reviewed: "2026-10-17"
+last_reviewed: "2026-10-22"
 ---
 
 # Government of Canada retail debt options
@@ -17,26 +17,41 @@ last_reviewed: "2026-10-17"
 
 ## What it is
 
-Historical Canada Savings Bonds and current Government of Canada retail debt offerings change over time — point to current official channels.
+The Government of Canada historically offered **Canada Savings Bonds (CSB)** to retail
+savers; newer programs evolve — always check **current** offerings on Bank of Canada
+and Canada.ca rather than assuming CSB still exists. Retail savers today often access
+**Government of Canada marketable bonds** indirectly via **ETFs/funds**, or buy **GICs**
+from banks insured separately under CDIC rules.
+
+This page teaches **how to verify what is actually offered now**.
 
 ## Who it is typically designed for
 
-Savers learning government debt after emergency cash exists.
+Savers learning sovereign debt after [HISA](hisa.md) emergency funding is in place.
 
 ## Liquidity and commitments
 
-Product-specific; verify current availability.
+- **GICs:** locked terms with penalties for early cash-out unless redeemable GIC (rare/premium).
+- **Bond funds/ETFs:** daily liquidity with **price risk**.
 
 ## Risks
 
-Relying on outdated product names; scam sites.
+- Websites selling “Government of Canada 8% bonds” unrelated to official channels.
+- Confusing ** provincial bonds** with federal products and insurance rules.
 
 ## Literacy angle
 
-Check Bank of Canada and Canada.ca for what is currently offered.
+Start at [Bank of Canada](https://www.bankofcanada.ca/) and FCAC bond/GIC explainers.
+Ignore cold calls referencing old CSB branding.
 
 ## Official source types
 
-Bank of Canada; Canada.ca.
+- Bank of Canada financial education
+- FCAC GIC and investment basics
 
-Links: [Bank of Canada](https://www.bankofcanada.ca/), [Canada.ca](https://www.canada.ca/en.html).
+Links: [Bank of Canada](https://www.bankofcanada.ca/),
+[FCAC](https://www.canada.ca/en/financial-consumer-agency.html).
+
+## Related
+
+- [HISA](hisa.md) · [Inflation guide](../../guides/inflation-capital-preservation.md)

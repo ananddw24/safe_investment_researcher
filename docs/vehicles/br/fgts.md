@@ -2,9 +2,9 @@
 title: "FGTS literacy (Brazil)"
 country: br
 vehicle_id: "br-fgts"
-category: "other-regulated"
+category: "pension"
 status: published
-last_reviewed: "2026-10-17"
+last_reviewed: "2026-10-22"
 ---
 
 # FGTS literacy (Brazil)
@@ -17,26 +17,41 @@ last_reviewed: "2026-10-17"
 
 ## What it is
 
-FGTS is a worker fund concept — rights literacy, not a free discretionary investment account.
+**FGTS** (Fundo de Garantia do Tempo de Serviço) is a **mandatory employer-funded**
+account for formal workers, held per employment relationship with rules on **withdrawals**
+(special cases such as dismissal without cause, home purchase programs, serious illness,
+etc. — verify current Caixa/gov.br lists). It is **not** everyday spending money.
 
 ## Who it is typically designed for
 
-Formal workers covered under published FGTS rules.
+CLT and other covered formal workers. Informal workers may have **no FGTS** — plan
+savings without assuming FGTS backstop.
 
 ## Liquidity and commitments
 
-Withdrawals are rule-bound for specific situations.
+- **Blocked** except statutory withdrawal triggers and approved programs (e.g. some
+  housing uses under official rules).
+- Balances earn regulated returns published by the manager — not a free ATM.
 
 ## Risks
 
-Misunderstanding eligibility; scam “FGTS unlock” services.
+- **Scams** offering “anticipate FGTS for fee” via unofficial apps.
+- Using permitted withdrawals for consumption instead of planned goals.
+- Confusing FGTS with **private pension (PGBL/VGBL)** products sold at banks.
 
 ## Literacy angle
 
-Verify on official Caixa / government materials; Caixa portal URLs omitted when unreliable from our checker.
+Check balances only via **Caixa FGTS** official app/site. Read gov.br withdrawal
+conditions before paying third-party “liberadores.”
 
 ## Official source types
 
-gov.br; BCB context.
+- Caixa Econômica Federal FGTS portal
+- Ministério do Trabalho / gov.br worker rights pages
 
-Links: [gov.br](https://www.gov.br/), [BCB EN](https://www.bcb.gov.br/en).
+Links: [FGTS Caixa](https://www.caixa.gov.br/trabalhador/fgts/Paginas/default.aspx),
+[gov.br](https://www.gov.br/).
+
+## Related
+
+- [Poupança](poupanca.md) · [Resource catalog — Brazil](../../resources/catalog.md#br)

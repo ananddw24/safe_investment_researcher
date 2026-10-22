@@ -25,8 +25,8 @@ liquidity, risks, literacy angles, and where to verify on official sites.
 
 | Depth | Countries | Notes |
 | --- | --- | --- |
-| Deep narrative | India, United States, Kenya | More context on access, fees, and everyday use |
-| Short sketch | Nigeria, South Africa, Ghana, Egypt, China, Germany, Japan, United Kingdom, France, Italy, Brazil, Canada | Orientation only — pair with the [resource catalog](../resources/catalog.md) for your country |
+| Deep narrative | India, United States, Kenya, China, Germany, Japan, United Kingdom, France, Italy, Brazil, Canada | Access, fees, fraud, and official-source literacy |
+| Short sketch | Nigeria, South Africa, Ghana, Egypt | Orientation — pair with the [resource catalog](../resources/catalog.md) |
 
 If you only read one page in a short country, start with the vehicle that
 matches where you already save (often **bank deposits** or **mobile money**).
@@ -42,14 +42,14 @@ matches where you already save (often **bank deposits** or **mobile money**).
 | [South Africa (`za`)](za/index.md) | Short pages (v0.5.0) |
 | [Ghana (`gh`)](gh/index.md) | Short pages (v0.5.0) |
 | [Egypt (`eg`)](eg/index.md) | Short pages (v0.5.0) |
-| [China (`cn`)](cn/index.md) | Short pages (v0.4.0) |
-| [Germany (`de`)](de/index.md) | Short pages (v0.4.0) |
-| [Japan (`jp`)](jp/index.md) | Short pages (v0.4.0) |
-| [United Kingdom (`gb`)](gb/index.md) | Short pages (v0.4.0) |
-| [France (`fr`)](fr/index.md) | Short pages (v0.4.0) |
-| [Italy (`it`)](it/index.md) | Short pages (v0.4.0) |
-| [Brazil (`br`)](br/index.md) | Short pages (v0.4.0) |
-| [Canada (`ca`)](ca/index.md) | Short pages (v0.4.0) |
+| [China (`cn`)](cn/index.md) | Deep pages (v0.6.0) |
+| [Germany (`de`)](de/index.md) | Deep pages (v0.6.0) |
+| [Japan (`jp`)](jp/index.md) | Deep pages (v0.6.0) |
+| [United Kingdom (`gb`)](gb/index.md) | Deep pages (v0.6.0) |
+| [France (`fr`)](fr/index.md) | Deep pages (v0.6.0) |
+| [Italy (`it`)](it/index.md) | Deep pages (v0.6.0) |
+| [Brazil (`br`)](br/index.md) | Deep pages (v0.6.0) |
+| [Canada (`ca`)](ca/index.md) | Deep pages (v0.6.0) |
 
 Africa cluster: Kenya (v0.3.0) plus Nigeria, South Africa, Ghana, and Egypt
 (v0.5.0). See the [release plan](../about/release-plan.md).

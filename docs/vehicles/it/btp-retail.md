@@ -1,13 +1,13 @@
 ---
-title: "BTP / retail government bonds (Italy)"
+title: "BTP retail / government bonds (Italy)"
 country: it
 vehicle_id: "it-btp"
 category: "government-scheme"
 status: published
-last_reviewed: "2026-10-17"
+last_reviewed: "2026-10-22"
 ---
 
-# BTP / retail government bonds (Italy)
+# BTP retail / government bonds (Italy)
 
 !!! warning "Educational only"
     This page is for financial literacy. It is **not** personalized advice,
@@ -17,26 +17,39 @@ last_reviewed: "2026-10-17"
 
 ## What it is
 
-BTP and retail government bonds teach interest-rate and inflation awareness.
+**BTP** (Buoni del Tesoro poliennali) are Italian government bonds. Retail-focused
+issues (including programs marketed to households in plain language) let savers lend
+to the state under published coupons and maturities via **authorized banks** or
+official channels announced by the **Dipartimento del Tesoro**.
 
 ## Who it is typically designed for
 
-Savers using official retail channels after emergency cash exists.
+Savers with emergency liquidity elsewhere who want to learn **sovereign bond** mechanics.
+Not a payment account replacement.
 
 ## Liquidity and commitments
 
-Market prices can move before maturity.
+- Selling before maturity via markets may yield **more or less** than face value.
+- Retail tranches may have **subscription windows** — calendar matters.
 
 ## Risks
 
-Rate risk; fake bond offers.
+- **Inflation** vs fixed coupons.
+- Fake “BTP Telegram” groups collecting transfers to personal IBANs.
+- Confusing **BTP Italia** retail issues with bank **conto deposito**.
 
 ## Literacy angle
 
-Use Dipartimento del Tesoro materials.
+Use Ministry of Economy and Finance / Treasury educational pages and bank official
+prospectuses only.
 
 ## Official source types
 
-Dipartimento del Tesoro; Consob.
+- MEF / Dipartimento del Tesoro
+- Consob warnings on unauthorized offerings
 
-Links: [DT MEF](https://www.dt.mef.gov.it/), [Consob](https://www.consob.it/web/consob-and-its-activities).
+Links: [MEF](https://www.mef.gov.it/), [Consob](https://www.consob.it/).
+
+## Related
+
+- [Conto deposito](conto-deposito.md) · [Fondi / PIR](fondi-pir.md)

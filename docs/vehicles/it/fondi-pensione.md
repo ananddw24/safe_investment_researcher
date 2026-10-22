@@ -1,13 +1,13 @@
 ---
-title: "Fondi pensione / previdenza complementare (Italy)"
+title: "Pension funds (fondi pensione) concepts"
 country: it
 vehicle_id: "it-fondi-pensione"
 category: "pension"
 status: published
-last_reviewed: "2026-10-17"
+last_reviewed: "2026-10-22"
 ---
 
-# Fondi pensione / previdenza complementare (Italy)
+# Pension funds (fondi pensione) concepts
 
 !!! warning "Educational only"
     This page is for financial literacy. It is **not** personalized advice,
@@ -17,26 +17,41 @@ last_reviewed: "2026-10-17"
 
 ## What it is
 
-Complementary pension funds are long-term retirement vehicles under Italian rules (COVIP oversight context).
+Italy’s **second pension pillar** includes **fondi pensione aperti** (open) and
+**negoziali/chiusi** linked to employers or categories. Contributions invest in
+regulated portfolios until retirement with **restricted access** before pension age
+except cases defined in law.
+
+This complements **INPS** public pension, which is a separate literacy topic.
 
 ## Who it is typically designed for
 
-Workers building long-horizon savings.
+Workers choosing **TFR** (severance) destination into pension funds or joining employer
+negotial plans. Gig and informal workers may lack access — coverage gaps are common.
 
 ## Liquidity and commitments
 
-Low; restricted access.
+- **Very low** pre-retirement liquidity.
+- Investment lines range from conservative to balanced — read **KID** and default line.
 
 ## Risks
 
-Market-linked options; contribution gaps.
+- Choosing high-risk lines without horizon literacy.
+- Ignoring **costs** (commissioni di gestione) over decades.
+- Informal “pension pools” outside COVIP oversight.
 
 ## Literacy angle
 
-Verify on official pension authority materials; COVIP portal URLs omitted when unreachable.
+Use **COVIP** (pension regulator) educational materials when comparing open funds.
+Keep [liquid deposits](conto-deposito.md) for emergencies.
 
 ## Official source types
 
-COVIP; Consob/Banca d’Italia education context.
+- COVIP
+- Consob / Banca d’Italia cross-references
 
-Links: [Consob](https://www.consob.it/web/consob-and-its-activities), [Banca d’Italia](https://www.bancaditalia.it/homepage/index.html?com.dotmarketing.htmlpage.language=1).
+Links: [COVIP](https://www.covip.it/), [Consob](https://www.consob.it/).
+
+## Related
+
+- [Fondi / PIR](fondi-pir.md) · [Resource catalog — Italy](../../resources/catalog.md#it)

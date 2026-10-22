@@ -41,14 +41,15 @@ what you choose to read.
 
 ## Depth: “deep” vs “short” country pages
 
-Not every country section has the same level of narrative detail yet. The
-[Vehicles index](../vehicles/index.md) marks which releases added **deep** pages
-(India, United States, Kenya) versus **short** sketches (many Top 10 GDP and
-Africa cluster countries).
+The [Vehicles index](../vehicles/index.md) marks narrative depth by country.
+**Deep** pages now cover all Top 10 GDP economies (including China, Germany,
+Japan, United Kingdom, France, Italy, Brazil, and Canada, alongside India, the
+United States, and Kenya). **Short** pages remain for parts of the Africa cluster
+until a later release.
 
-Short pages still follow the same rules: no product picks, no personalized
-advice. Use them as **orientation**, then confirm details on the official sites
-listed for your country in the [resource catalog](../resources/catalog.md).
+All pages are educational only. Confirm rates, limits, and eligibility on official
+sources — especially on short pages and aging `last_checked` dates in the
+[resource catalog](../resources/catalog.md).
 
 ## Rules we ask you to keep in mind
 

@@ -7,6 +7,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.6.0] - 2026-10-22
+
+### Added
+
+- Deep household vehicle prose for remaining Top 10 GDP economies: China, Germany,
+  Japan, United Kingdom, France, Italy, Brazil, and Canada (48 vehicle pages
+  expanded with access, fee, fraud, and official-source literacy)
+
+### Changed
+
+- Vehicles index and release plan mark v0.6.0; Africa cluster remains short pages
+
+## [Unreleased]
+
 ### Added
 
 - Reader onboarding: [Using this library](docs/about/using-this-library.md),

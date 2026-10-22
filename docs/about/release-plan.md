@@ -24,7 +24,8 @@ semantic versioning. Force-push is forbidden on `main` and on published tags.
 | **v0.2.0** | India household vehicles + guides + pathway + resources | Shipped |
 | **v0.3.0** | United States + Kenya vehicle pages and resources | Shipped |
 | **v0.4.0** | Remaining Top 10 GDP countries as short vehicle pages | Shipped |
-| **v0.5.0** | Africa cluster: Nigeria, South Africa, Ghana, Egypt | Shipped (this release) |
+| **v0.5.0** | Africa cluster: Nigeria, South Africa, Ghana, Egypt | Shipped |
+| **v0.6.0** | Deep household vehicle pages for remaining Top 10 GDP economies (CN, DE, JP, GB, FR, IT, BR, CA) | Shipped (this release) |
 | **v1.0.0** | Stable contribution model, public Pages live, OpenSSF hygiene | Planned |
 
 ## Rules for every release
@@ -37,6 +38,7 @@ semantic versioning. Force-push is forbidden on `main` and on published tags.
 
 ## Current focus
 
-**v0.5.0** ships Africa cluster household pages for Nigeria, South Africa, Ghana,
-and Egypt (Kenya already shipped in v0.3.0 — linked, not rewritten). Do **not**
-start **v1.0.0** in this release.
+**v0.6.0** deepens Top 10 GDP vehicle prose for China, Germany, Japan, United
+Kingdom, France, Italy, Brazil, and Canada (India, US, Kenya were already deep).
+Africa cluster short pages remain for a future release. Do **not** start **v1.0.0**
+in this release.

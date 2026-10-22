@@ -2,7 +2,7 @@
 title: "Germany — household savings and investment types"
 country: de
 status: published
-last_reviewed: "2026-10-17"
+last_reviewed: "2026-10-22"
 ---
 
 # Germany — household savings and investment types
@@ -12,27 +12,32 @@ last_reviewed: "2026-10-17"
     an offer to sell, or a recommendation to buy, sell, or hold any product.
     Rules differ by country; verify with official sources in your jurisdiction.
 
+Educational pages on regulated savings and investment *types* — not product picks.
+Build fee-aware emergency cash in Giro/Tagesgeld before Festgeld, funds, or pension
+lock-ins.
 
-Short educational pages on household savings and investment *types*. Not product
-picks. Prefer emergency cash in safe, accessible forms before long lock-ins.
+## Suggested reading order
+
+1. [Emergency savings guide](../../guides/emergency-savings.md)
+2. [Girokonto and Tagesgeld](giro-tagesgeld.md)
+3. [Sparkasse and cooperative banks](sparkasse-cooperative.md) if you use local branches
+4. Other pages as needed
 
 ## Vehicle pages
 
 | Vehicle | Focus |
 | --- | --- |
-| [Girokonto + Tagesgeld](giro-tagesgeld.md) | Emergency cash first |
+| [Girokonto / Tagesgeld](giro-tagesgeld.md) | Payments and liquid savings |
 | [Festgeld](festgeld.md) | Fixed-term deposits |
-| [Riester / Betriebsrente concepts](riester-betriebsrente.md) | Pension literacy |
-| [Regulated mutual funds](fonds.md) | Market risk and costs |
-| [Bunds / federal securities](bunds.md) | Government debt education |
-| [Sparkasse / cooperative savings](sparkasse-cooperative.md) | Local banking access |
-
+| [Riester / Betriebsrente concepts](riester-betriebsrente.md) | Long-term pension literacy |
+| [Regulated mutual funds](fonds.md) | Market risk and fees |
+| [Bunds / federal securities](bunds.md) | Government debt literacy |
+| [Sparkasse / cooperative banks](sparkasse-cooperative.md) | Local access channel |
 
 ## Official links
 
-Curated regulator and government URLs for this country are in the
-[resource catalog](../../resources/catalog.md#de).
+[Resource catalog — Germany](../../resources/catalog.md#de)
 
 ## Related
 
-- [Vehicles home](../index.md)
+- [Vehicles home](../index.md) · [Guides](../../guides/index.md)
