@@ -41,6 +41,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - README gains badges for the link-check and markdown-lint workflows
+- Reader-facing framing (Stage 3 reader audit): README and the site
+  homepage rewritten for first-time external readers — maintainer
+  instructions and publishing-process language removed, and the release
+  plan page slimmed to a factual release history
 - `pyproject.toml` uses the SPDX license string and adds package classifiers
 
 

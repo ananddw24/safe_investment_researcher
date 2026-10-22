@@ -13,11 +13,6 @@ understand money basics, regulated savings and investment *types* by country, an
 public resources — without opening accounts, selling products, or giving personalized advice.
 Everything is educational only; always verify with official sources in your jurisdiction.
 
-> **Repository name:** This project currently lives at
-> [`ananddw24/safe_investment_researcher`](https://github.com/ananddw24/safe_investment_researcher).
-> You can rename it to `financial-library` later in GitHub **Settings → General → Repository name**
-> (do not rely on API rename if it returns 403). Product name remains **FinancialLibrary**.
-
 ## What this is / is not
 
 | Is | Is not |
@@ -27,7 +22,13 @@ Everything is educational only; always verify with official sources in your juri
 | Cite-first educational material for NGOs & educators | KYC, user financial data, or commercial lead gen |
 | Fork-friendly MIT (code) + CC BY 4.0 (content) | Unregulated product promotion or “guaranteed returns” content |
 
-## Quick start
+## Read it online
+
+The library is published as a website:
+<https://ananddw24.github.io/safe_investment_researcher/> — start with the
+guides, then your country's vehicle pages.
+
+## Run it locally (for contributors)
 
 ```bash
 python -m venv .venv
@@ -37,8 +38,6 @@ mkdocs serve
 ```
 
 Or: `make serve` · build: `make build` · validate data: `make validate`
-
-Docs site (after Pages is enabled): <https://ananddw24.github.io/safe_investment_researcher/>
 
 ## Taxonomy map
 
@@ -81,12 +80,20 @@ agents and tools can consume directly:
 - **Code, scripts, schemas, workflows:** [MIT](LICENSE)
 - **Educational prose and curated metadata:** [CC BY 4.0](LICENSE-CONTENT)
 
-## Status
+## What's inside
 
-**v0.5.0** — Top 10 GDP countries plus the Africa cluster (Nigeria, South
-Africa, Ghana, Egypt; Kenya from v0.3.0) have household vehicle pages, backed
-by 80+ curated regulator/government resource records.
+Current release: **v0.5.0**.
 
-The GitHub repository may remain **private** until the owner flips visibility.
-Next: knowledge-base hardening and weekly maintenance (see
-[release plan](docs/about/release-plan.md)).
+- **Guides** — plain-language explainers: emergency savings, inflation and
+  capital preservation, and spotting unregulated schemes.
+- **Vehicle pages** — savings and investment *types* for 15 countries:
+  fuller guide sets for India, the United States, and Kenya; introductory
+  overviews for Nigeria, South Africa, Ghana, Egypt, China, Germany,
+  Japan, the United Kingdom, France, Italy, Brazil, and Canada.
+- **Records** — 80 curated links to regulators, government portals,
+  deposit insurers, and other public sources (as of October 2026), each
+  carrying a verification date.
+- **Pathway** — a suggested reading order for woman-led households.
+
+What changed in each version is recorded in the
+[release history](docs/about/release-plan.md).
