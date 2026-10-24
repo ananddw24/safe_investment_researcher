@@ -2,7 +2,7 @@
 title: Guides
 description: Plain-language financial literacy guides
 status: published
-last_reviewed: "2026-10-22"
+last_reviewed: "2026-10-24"
 ---
 
 # Guides
@@ -13,15 +13,19 @@ last_reviewed: "2026-10-22"
     Rules differ by country; verify with official sources in your jurisdiction.
 
 These three literacy guides ship with every country set. Read them before (or
-alongside) country vehicle pages. For a full reading order, use the
-[New reader pathway](../pathways/new-reader.md) or the
-[Woman-led household pathway](../pathways/woman-led-household.md).
+alongside) country vehicle pages. Stuck on a word? Open the
+[Glossary](../glossary.md).
 
-| Guide | Topics |
-| --- | --- |
-| [Emergency savings](emergency-savings.md) | Cash buffer before lock-ins |
-| [Inflation and capital preservation](inflation-capital-preservation.md) | Purchasing power literacy |
-| [Spotting unregulated schemes](spotting-unregulated-schemes.md) | Scam and “guaranteed return” red flags |
+For a full reading order, use the
+[New reader pathway](../pathways/new-reader.md) or the
+[Woman-led household pathway](../pathways/woman-led-household.md). Facilitators
+can run the matching [community training](../training/index.md) sessions.
+
+| Guide | Topics | Workshop plan |
+| --- | --- | --- |
+| [Emergency savings](emergency-savings.md) | Cash buffer before lock-ins | [Session 1](../training/session-01-emergency-savings.md) |
+| [Inflation and capital preservation](inflation-capital-preservation.md) | Purchasing power literacy | [Session 2](../training/session-02-inflation.md) |
+| [Spotting unregulated schemes](spotting-unregulated-schemes.md) | Scam and “guaranteed return” red flags | [Session 3](../training/session-03-unregulated-schemes.md) |
 
 After the guides, open your country under [Vehicles](../vehicles/index.md).
 

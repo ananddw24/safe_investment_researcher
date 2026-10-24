@@ -7,6 +7,28 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.7.0] - 2026-10-24
+
+### Added
+
+- Community training: three 75-minute facilitator session plans under
+  `docs/training/` (emergency savings, inflation, unregulated schemes) plus
+  facilitator index; woman-led pathway linked as optional discussion only
+- [Glossary](docs/glossary.md) for terms already used (inflation, liquidity,
+  emergency fund, regulated vs unregulated, and related)
+- [Where to check official figures](docs/about/where-to-check.md) — dated
+  publisher links only; no invented rates or forecasts
+- `.github/workflows/weekly-update.yml` (Monday 13:00 UTC) opens a PR or issue;
+  never pushes to `main`. Helper `scripts/weekly_where_to_check.py`
+
+### Changed
+
+- Plain-language accessibility pass on homepage, Start here, and the three
+  guides; site `theme.language: en`
+- Existing `weekly-maintenance.yml` proposes a PR for catalog/index refresh
+  instead of pushing to `main`
+- Release plan adds v0.7.0; v1.0.0 remains contribution/OpenSSF polish
+
 ## [0.6.0] - 2026-10-22
 
 ### Added
@@ -119,7 +141,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - **Scaffold only** at 0.1.0. Content seeding begins with 0.2.0 (India).
 
-[Unreleased]: https://github.com/ananddw24/safe_investment_researcher/compare/v0.6.0...HEAD
+[Unreleased]: https://github.com/ananddw24/safe_investment_researcher/compare/v0.7.0...HEAD
+[0.7.0]: https://github.com/ananddw24/safe_investment_researcher/releases/tag/v0.7.0
 [0.6.0]: https://github.com/ananddw24/safe_investment_researcher/releases/tag/v0.6.0
 [0.5.0]: https://github.com/ananddw24/safe_investment_researcher/releases/tag/v0.5.0
 [0.4.0]: https://github.com/ananddw24/safe_investment_researcher/releases/tag/v0.4.0

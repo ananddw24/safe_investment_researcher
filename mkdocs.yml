@@ -7,6 +7,7 @@ edit_uri: edit/main/docs/
 
 theme:
   name: material
+  language: en
   palette:
     - scheme: default
       primary: teal
@@ -44,10 +45,12 @@ markdown_extensions:
 nav:
   - Home: index.md
   - Disclaimer: disclaimer.md
+  - Glossary: glossary.md
   - About:
       - about/index.md
       - Using this library: about/using-this-library.md
       - For educators and NGOs: about/for-educators-and-ngos.md
+      - Where to check official figures: about/where-to-check.md
       - Audience: about/audience.md
       - Licenses: about/licenses.md
       - Release plan: about/release-plan.md
@@ -56,6 +59,11 @@ nav:
       - Emergency savings: guides/emergency-savings.md
       - Inflation and capital preservation: guides/inflation-capital-preservation.md
       - Spotting unregulated schemes: guides/spotting-unregulated-schemes.md
+  - Community training:
+      - training/index.md
+      - Session 1 — Emergency savings: training/session-01-emergency-savings.md
+      - Session 2 — Inflation: training/session-02-inflation.md
+      - Session 3 — Unregulated schemes: training/session-03-unregulated-schemes.md
   - Vehicles:
       - vehicles/index.md
       - Top 10 economies:
