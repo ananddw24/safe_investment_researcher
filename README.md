@@ -83,10 +83,11 @@ agents and tools can consume directly:
 
 ## Status
 
-**v0.6.0** — Docs hub: homepage country map and Start here paths; reader
-onboarding and deep Top 10 vehicle prose from PR #11; Africa cluster pages
-remain shorter orientation sketches. 80+ curated regulator/government resource
-records with generated [browse tables](docs/resources/catalog.md).
+**v0.7.0** — Community training sessions, glossary, where-to-check official
+publishers, and a weekly workflow that opens maintenance PRs (never silent
+pushes to `main`). Docs hub and Top 10 / Africa coverage from prior releases
+remain. Live site:
+[ananddw24.github.io/safe_investment_researcher](https://ananddw24.github.io/safe_investment_researcher/).
 
-Next: **v1.0.0** when the site is public on GitHub Pages (see
+Next: **v1.0.0** contribution model and OpenSSF polish (see
 [release plan](docs/about/release-plan.md)).

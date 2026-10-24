@@ -19,7 +19,10 @@ Start with the homepage [country map](../index.md#country-map) and
 
 - [Using this library](using-this-library.md)
 - [For educators and NGOs](for-educators-and-ngos.md)
+- [Community training](../training/index.md)
+- [Where to check official figures](where-to-check.md)
+- [Glossary](../glossary.md)
 - [Audience](audience.md)
 - [Licenses](licenses.md)
-- [Release plan](release-plan.md) — v0.1.0–v0.6.0 shipped; v1.0.0 waits on a public site
+- [Release plan](release-plan.md) — v0.1.0–v0.7.0 in the sequence; v1.0.0 is contribution/OpenSSF polish
 - [Disclaimer](../disclaimer.md)

@@ -5,10 +5,12 @@ description: Open educational hub for household financial literacy
 
 # FinancialLibrary
 
-**FinancialLibrary** is an open educational hub for **low-income households**
-and **women**. It explains money basics, regulated savings and investment
-*types* by country, and points to trusted public resources — without opening
-accounts, selling products, or giving personalized advice.
+**FinancialLibrary** helps **low-income households** and **women** learn money
+basics. It explains regulated savings and investment *types* by country. It
+points to trusted public resources.
+
+This site does not open accounts. It does not sell products. It does not give
+personalized advice.
 
 !!! warning "Educational only"
     This page is for financial literacy. It is **not** personalized advice,
@@ -17,38 +19,37 @@ accounts, selling products, or giving personalized advice.
 
 ## Who this is for
 
-- People building a first emergency cash buffer
+- People building a first cash buffer ([emergency fund](glossary.md#emergency-fund))
 - Women and caregivers managing household money
-- Educators and NGOs who need cite-first, fork-friendly literacy materials
+- Community trainers and NGOs who need cite-first materials
 
-Not a brokerage, not account opening, not personalized “buy this” guidance.
-See [Audience](about/audience.md) and [Using this library](about/using-this-library.md).
+See [Audience](about/audience.md) and
+[Using this library](about/using-this-library.md).
 
 ## Start here
 
-1. Read the [Educational disclaimer](disclaimer.md) (two minutes).
-2. Follow the [New reader pathway](pathways/new-reader.md) for a short,
-   country-neutral order.
+1. Read the [Educational disclaimer](disclaimer.md) (about two minutes).
+2. Follow the [New reader pathway](pathways/new-reader.md) for a short order.
 3. Read [Emergency savings](guides/emergency-savings.md), then
    [Spotting unregulated schemes](guides/spotting-unregulated-schemes.md).
-4. Open **your country** in the map below (or the full
-   [Vehicles index](vehicles/index.md)).
-5. If you manage money for a household as a woman or caregiver, also use the
+4. Open **your country** in the [country map](#country-map) below.
+5. If you manage money as a woman or caregiver, also use the
    [Woman-led household pathway](pathways/woman-led-household.md).
 
 | If you are… | Go to |
 | --- | --- |
 | First visit | [New reader pathway](pathways/new-reader.md) |
-| Woman / caregiver | [Woman-led household pathway](pathways/woman-led-household.md) |
-| Facilitating a class or NGO program | [For educators and NGOs](about/for-educators-and-ngos.md) |
+| Woman or caregiver | [Woman-led household pathway](pathways/woman-led-household.md) |
+| Running a community workshop | [Community training](training/index.md) |
+| Looking up official figures | [Where to check official figures](about/where-to-check.md) |
 | Looking up official links | [Resource catalog](resources/catalog.md) |
-| Contributing | [Contributing](contributing.md) |
+| Stuck on a word | [Glossary](glossary.md) |
 
 ## Country map
 
-Every published country has vehicle pages and regulator links in the
-[resource catalog](resources/catalog.md). Depth varies: **deep** pages have
-fuller access/fee/fraud literacy; **short** pages are orientation sketches.
+Every published country has vehicle pages. Regulator links sit in the
+[resource catalog](resources/catalog.md). **Deep** pages have fuller fee and
+fraud literacy. **Short** pages are orientation sketches.
 
 ### Top 10 economies
 
@@ -79,21 +80,20 @@ fuller access/fee/fraud literacy; **short** pages are orientation sketches.
 
 | Section | Purpose |
 | --- | --- |
-| [Guides](guides/index.md) | Literacy explainers (emergency savings, inflation, scams) |
-| [Vehicles](vehicles/index.md) | Country-by-country product *types* |
+| [Guides](guides/index.md) | Literacy explainers |
+| [Community training](training/index.md) | 75-minute facilitator session plans |
+| [Vehicles](vehicles/index.md) | Country product *types* |
 | [Pathways](pathways/index.md) | Ordered reading paths |
-| [Resources](resources/index.md) | Curated official links ([catalog](resources/catalog.md)) |
+| [Resources](resources/index.md) | Curated official links |
+| [Glossary](glossary.md) | Plain-language terms |
 | [About](about/index.md) | Audience, licenses, [release plan](about/release-plan.md) |
-| [Knowledge base](knowledge-base.md) | For agents and developers consuming YAML + index |
 
 ## Status
 
-**v0.6.0** — Docs hub for first-time readers: country map, Start here paths, and
-release notes that match shipped coverage through v0.5.0 plus reader-facing
-improvements from [PR #11](https://github.com/ananddw24/safe_investment_researcher/pull/11)
-(onboarding pages, resource catalog, deep Top 10 vehicle prose).
+**v0.7.0** adds community training sessions, a glossary, a where-to-check page
+for official figures, and a weekly workflow that opens maintenance pull
+requests instead of editing `main` silently.
 
-The public GitHub Pages site is ready in the repo workflows but still depends
-on the owner making the repository public and enabling Pages. Until then, browse
-docs in this repository or run `mkdocs serve` locally. See the
-[release plan](about/release-plan.md).
+Browse the live docs at
+[ananddw24.github.io/safe_investment_researcher](https://ananddw24.github.io/safe_investment_researcher/).
+See the [release plan](about/release-plan.md).

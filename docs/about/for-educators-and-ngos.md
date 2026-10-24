@@ -27,16 +27,25 @@ personalized advice.
 Attribution example: “Adapted from FinancialLibrary (CC BY 4.0),
 [ananddw24.github.io/safe_investment_researcher](https://ananddw24.github.io/safe_investment_researcher/).”
 
+## Ready-made workshops
+
+Use the [community training](../training/index.md) pack: three **75-minute**
+plans that only cite pages that already exist. Optional fourth discussion:
+[Woman-led household pathway](../pathways/woman-led-household.md).
+
 ## How to build a session
 
-1. Pick a **[pathway](../pathways/index.md)** or compose your own sequence from
+1. Start from [community training](../training/index.md), or pick a
+   **[pathway](../pathways/index.md)** / compose a sequence from
    [guides](../guides/index.md) + one [country](../vehicles/index.md).
 2. Pair every vehicle page with **official links** from the
-   [resource catalog](../resources/catalog.md) for that country.
+   [resource catalog](../resources/catalog.md) or
+   [Where to check official figures](where-to-check.md).
 3. Keep the **disclaimer** visible: literacy only, not advice for a specific
    person. The standard admonition text is on every content page.
 4. Avoid quizzes that imply “the right product” for a participant — focus on
    access, liquidity, fees, documentation, and scam red flags.
+5. Point new words to the [Glossary](../glossary.md).
 
 ## Woman-led and low-income framing
 

@@ -62,9 +62,8 @@ sources — especially on short pages and aging `last_checked` dates in the
 
 ## Live site and source
 
+- **Browse online:** [GitHub Pages](https://ananddw24.github.io/safe_investment_researcher/)
 - **Source and issues:** [GitHub repository](https://github.com/ananddw24/safe_investment_researcher)
 - **Local browse:** `mkdocs serve` after installing requirements
-- **GitHub Pages:** expected at
-  [ananddw24.github.io/safe_investment_researcher](https://ananddw24.github.io/safe_investment_researcher/)
-  once the owner makes the repository public and enables Pages (part of the
-  planned v1.0.0 checklist — see the [release plan](release-plan.md))
+- **Workshops:** [Community training](../training/index.md)
+- **Official figures:** [Where to check](where-to-check.md) (publishers only — not rates)
