@@ -4,9 +4,9 @@
 
 | Version | Supported |
 | --- | --- |
-| `0.7.x` (latest release) | Yes |
-| `0.6.x` | Security fixes only |
-| `< 0.6.0` | No |
+| `1.0.x` (latest release) | Yes |
+| `0.7.x` | Security fixes only |
+| `< 0.7.0` | No |
 
 ## Reporting a vulnerability
 

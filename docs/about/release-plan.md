@@ -2,7 +2,7 @@
 title: Release plan
 description: Semver roadmap for FinancialLibrary content milestones
 status: published
-last_reviewed: "2026-10-24"
+last_reviewed: "2026-10-27"
 ---
 
 # Release plan
@@ -25,8 +25,8 @@ semantic versioning. Force-push is forbidden on `main` and on published tags.
 | **v0.4.0** | Remaining Top 10 GDP countries as short vehicle pages | Shipped |
 | **v0.5.0** | Africa cluster: Nigeria, South Africa, Ghana, Egypt (Kenya linked) | Shipped |
 | **v0.6.0** | Docs hub: coverage map, Start here paths; consolidates PR #11 reader pages + deep Top 10 prose | Shipped |
-| **v0.7.0** | Facilitator training, glossary, where-to-check official figures, weekly update PR workflow | This release (mark Shipped only after tag `v0.7.0`) |
-| **v1.0.0** | Stable contribution model + public-site hygiene (OpenSSF and contribution polish) | Planned |
+| **v0.7.0** | Facilitator training, glossary, where-to-check official figures, weekly update PR workflow | Shipped |
+| **v1.0.0** | Public release hygiene: README/contribution clarity; datasets catalog reviewed and skipped | This release (mark Shipped only after tag `v1.0.0`) |
 
 ## What each content release already shipped
 
@@ -36,6 +36,16 @@ semantic versioning. Force-push is forbidden on `main` and on published tags.
 - **v0.5.0** — Nigeria, South Africa, Ghana, Egypt (short); Kenya not rewritten
 - **v0.6.0** — Docs hub + PR #11 onboarding, catalog, and deep Top 10 prose
 - **v0.7.0** — Community training sessions; glossary; where-to-check; weekly PR automation
+- **v1.0.0** — External public-release polish; toddrjones/datasets reviewed and **not** integrated
+
+## Datasets decision
+
+An external catalog ([toddrjones/datasets](https://github.com/toddrjones/datasets),
+CC0 link bibliography) was reviewed for FinancialLibrary. It is US-heavy, does
+not redistribute publisher microdata under CC0, and adds little beyond existing
+`where-to-check` / resource links for our Africa cluster and India. **Skipped
+entirely** — including optional US CPI-U and SCF links. See the project store
+note `docs/dataset-usefulness.md` (agent store), not a site page.
 
 ## Rules for every release
 
@@ -47,7 +57,6 @@ semantic versioning. Force-push is forbidden on `main` and on published tags.
 
 ## Current focus
 
-**v0.7.0** helps facilitators run workshops from existing pages and keeps
-official-figure links maintainable via a weekly pull request — never a silent
-push to `main`. **v1.0.0** remains for contribution-model and OpenSSF polish
-after the public site is already live.
+**v1.0.0** is the public educational release of coverage through v0.7.0 with
+clear outsider contribution paths and an accurate live-site README. Further
+country deepening remains optional follow-on work, not a blocker for this tag.
