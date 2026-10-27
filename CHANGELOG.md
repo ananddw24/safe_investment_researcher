@@ -7,6 +7,27 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.0] - 2026-10-27
+
+### Added
+
+- Public-release README: mission, audience (low-income households and women),
+  educational disclaimer, live site URL, and outsider contribution path
+
+### Changed
+
+- Release plan marks v0.7.0 shipped and positions **v1.0.0** as the public
+  educational release of coverage through training sessions, glossary,
+  where-to-check, and the weekly update job
+- Homepage status reflects v1.0.0 and the live Pages URL
+
+### Notes
+
+- Coverage through v0.7.0 remains: Top 10 GDP + Africa cluster vehicles, three
+  literacy guides, community training sessions, weekly maintenance PRs
+- External catalog [toddrjones/datasets](https://github.com/toddrjones/datasets)
+  was reviewed and **not** integrated (including no CPI-U / SCF links)
+
 ## [0.7.0] - 2026-10-24
 
 ### Added
@@ -141,7 +162,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - **Scaffold only** at 0.1.0. Content seeding begins with 0.2.0 (India).
 
-[Unreleased]: https://github.com/ananddw24/safe_investment_researcher/compare/v0.7.0...HEAD
+[Unreleased]: https://github.com/ananddw24/safe_investment_researcher/compare/v1.0.0...HEAD
+[1.0.0]: https://github.com/ananddw24/safe_investment_researcher/releases/tag/v1.0.0
 [0.7.0]: https://github.com/ananddw24/safe_investment_researcher/releases/tag/v0.7.0
 [0.6.0]: https://github.com/ananddw24/safe_investment_researcher/releases/tag/v0.6.0
 [0.5.0]: https://github.com/ananddw24/safe_investment_researcher/releases/tag/v0.5.0

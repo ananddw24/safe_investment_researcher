@@ -8,32 +8,49 @@
 [![License: CC BY 4.0](https://img.shields.io/badge/license%20(content)-CC%20BY%204.0-lightgrey.svg)](LICENSE-CONTENT)
 [![Pages](https://img.shields.io/badge/docs-GitHub%20Pages-222222.svg)](https://ananddw24.github.io/safe_investment_researcher/)
 
-**FinancialLibrary** is an open educational hub that helps low-income households and women
-understand money basics, regulated savings and investment *types* by country, and trusted
-public resources — without opening accounts, selling products, or giving personalized advice.
-Everything is educational only; always verify with official sources in your jurisdiction.
+**FinancialLibrary** is an open **educational** hub for **low-income households**
+and **women**. It explains money basics, regulated savings and investment
+*types* by country, and trusted public resources — without opening accounts,
+selling products, or giving personalized advice.
+
+**Educational only.** Nothing here is personalized financial, tax, or legal
+advice, or an offer to buy, sell, or hold any product. Always verify with
+official sources in your jurisdiction. Full text:
+[docs/disclaimer.md](docs/disclaimer.md).
+
+**Live site:**
+[https://ananddw24.github.io/safe_investment_researcher/](https://ananddw24.github.io/safe_investment_researcher/)
 
 **New here?** Start with [Using this library](docs/about/using-this-library.md),
-the [New reader pathway](docs/pathways/new-reader.md), or the
-[Woman-led household pathway](docs/pathways/woman-led-household.md).
-Browse the docs in this repo or run `mkdocs serve`. GitHub Pages is expected at
-[ananddw24.github.io/safe_investment_researcher](https://ananddw24.github.io/safe_investment_researcher/)
-once the owner enables it (v1.0.0 checklist).
+the [New reader pathway](docs/pathways/new-reader.md), the
+[Woman-led household pathway](docs/pathways/woman-led-household.md), or
+[Community training](docs/training/index.md) for facilitators.
 
 ## What this is / is not
 
 | Is | Is not |
 | --- | --- |
 | Static MkDocs docs site + curated YAML resource DB | Brokerage, robo-advisor, or account-opening funnel |
-| Guides, Vehicles (by country), Resources, Pathways | Personalized “you should buy X” recommendations |
+| Guides, Vehicles (by country), Resources, Pathways, Training | Personalized “you should buy X” recommendations |
 | Cite-first educational material for NGOs & educators | KYC, user financial data, or commercial lead gen |
 | Fork-friendly MIT (code) + CC BY 4.0 (content) | Unregulated product promotion or “guaranteed returns” content |
 
-## Quick start
+## How an outsider contributes
+
+1. Read [CONTRIBUTING.md](CONTRIBUTING.md) and the
+   [Code of Conduct](CODE_OF_CONDUCT.md).
+2. Prefer a small first change: add one resource YAML from
+   [`data/resources/_template.yaml`](data/resources/_template.yaml).
+3. Run `make validate` (and `make catalog` if you changed resources) plus
+   `mkdocs build --strict` for docs.
+4. Open a pull request. Questions go to Issues via [SUPPORT.md](SUPPORT.md) —
+   not for personal financial advice.
+
+## Quick start (local docs)
 
 ```bash
 python -m venv .venv
-source .venv/bin/activate   # Windows: .venv\\Scripts\\activate
+source .venv/bin/activate   # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 mkdocs serve
 ```
@@ -45,36 +62,20 @@ Or: `make serve` · build: `make build` · validate data: `make validate`
 | Type | Path | Purpose |
 | --- | --- | --- |
 | Guides | `docs/guides/` | Plain-language literacy explainers |
+| Training | `docs/training/` | 75-minute facilitator session plans |
 | Vehicles | `docs/vehicles/<iso>/` | Regulated savings/investment *types* by country |
 | Resources | `data/resources/` + [catalog](docs/resources/catalog.md) | Curated outbound links (YAML + generated tables) |
 | Pathways | `docs/pathways/` | Ordered reading paths (no advice engine) |
 
-See also [docs/disclaimer.md](docs/disclaimer.md).
-
-## How to add a resource
-
-1. Copy [`data/resources/_template.yaml`](data/resources/_template.yaml) to a new file.
-2. Fill required fields (`id`, `title`, `url`, `country`, `language`, `topics`, `audience`, `source_type`, `last_checked`).
-3. Run `make validate` and `make catalog`.
-4. Open a PR (see [CONTRIBUTING.md](CONTRIBUTING.md)).
-
 ## Knowledge base (for agents)
 
-FinancialLibrary is maintained as a machine-readable knowledge base that other
-agents and tools can consume directly:
-
-- **Agent guide:** [docs/knowledge-base.md](docs/knowledge-base.md) — how to
-  query the base, freshness semantics, and citation rules.
-- **Index:** `data/kb-index.json` — a single consolidated JSON index of every
-  resource and vehicle record, regenerated weekly (build it any time with
-  `make kb` or `python scripts/build_kb_index.py`).
-- **Records:** the YAML files under `data/resources/` and `data/vehicles/` are
-  the source of truth; `data/schemas/` defines their shape.
-- **Freshness:** every record carries `last_checked`. Weekly maintenance
-  (`.github/workflows/weekly-maintenance.yml`) validates the data, rebuilds
-  the index, and reports records going stale — see
-  `python scripts/staleness_report.py`.
-- **Agent entry point:** [`llms.txt`](llms.txt) at the repository root.
+- **Agent guide:** [docs/knowledge-base.md](docs/knowledge-base.md)
+- **Index:** `data/kb-index.json` (`make kb`)
+- **Records:** YAML under `data/resources/` and `data/vehicles/`; schemas in
+  `data/schemas/`
+- **Freshness:** weekly workflows open maintenance PRs/issues — they never
+  push silently to `main`
+- **Agent entry point:** [`llms.txt`](llms.txt)
 
 ## License
 
@@ -83,11 +84,11 @@ agents and tools can consume directly:
 
 ## Status
 
-**v0.7.0** — Community training sessions, glossary, where-to-check official
-publishers, and a weekly workflow that opens maintenance PRs (never silent
-pushes to `main`). Docs hub and Top 10 / Africa coverage from prior releases
-remain. Live site:
+**v1.0.0** — Public educational hub: Top 10 GDP + Africa cluster vehicle pages,
+three literacy guides, community training sessions, glossary, where-to-check
+official publishers, curated resources, and weekly maintenance PRs. An external
+datasets catalog ([toddrjones/datasets](https://github.com/toddrjones/datasets))
+was reviewed and **not** integrated. Live docs:
 [ananddw24.github.io/safe_investment_researcher](https://ananddw24.github.io/safe_investment_researcher/).
 
-Next: **v1.0.0** contribution model and OpenSSF polish (see
-[release plan](docs/about/release-plan.md)).
+See the [release plan](docs/about/release-plan.md).

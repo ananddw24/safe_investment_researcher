@@ -90,9 +90,11 @@ fraud literacy. **Short** pages are orientation sketches.
 
 ## Status
 
-**v0.7.0** adds community training sessions, a glossary, a where-to-check page
-for official figures, and a weekly workflow that opens maintenance pull
-requests instead of editing `main` silently.
+**v1.0.0** is the public educational release: country vehicles through the Top
+10 GDP set and Africa cluster, three literacy guides,
+[community training](training/index.md), [glossary](glossary.md),
+[where to check official figures](about/where-to-check.md), and weekly
+maintenance pull requests (never silent pushes to `main`).
 
 Browse the live docs at
 [ananddw24.github.io/safe_investment_researcher](https://ananddw24.github.io/safe_investment_researcher/).

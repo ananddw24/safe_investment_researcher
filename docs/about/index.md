@@ -24,5 +24,5 @@ Start with the homepage [country map](../index.md#country-map) and
 - [Glossary](../glossary.md)
 - [Audience](audience.md)
 - [Licenses](licenses.md)
-- [Release plan](release-plan.md) — v0.1.0–v0.7.0 in the sequence; v1.0.0 is contribution/OpenSSF polish
+- [Release plan](release-plan.md) — v0.1.0–v1.0.0 in the sequence
 - [Disclaimer](../disclaimer.md)
