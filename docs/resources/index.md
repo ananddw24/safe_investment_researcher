@@ -22,6 +22,11 @@ pension authorities, and selected multilateral literacy portals.
 generated from the YAML records. Each row shows the verification date
 (`last_checked`).
 
+**[Explore and tools](tools.md)** — the same records, interactively:
+filter the catalog by country, topic, and audience; try an emergency-fund
+target calculator; and look up which countries have an official
+deposit-insurance source in the library.
+
 ## Source data (for contributors)
 
 Records live as YAML under [`data/resources/`](https://github.com/ananddw24/safe_investment_researcher/tree/main/data/resources)
