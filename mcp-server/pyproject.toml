@@ -1,0 +1,42 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "financial-library-mcp"
+version = "0.1.0"
+description = "Read-only MCP server for the FinancialLibrary financial-literacy knowledge base (educational only, not financial advice)"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+authors = [{ name = "Anand Dwivedi", email = "anand.dw24@gmail.com" }]
+keywords = ["mcp", "model-context-protocol", "financial-literacy", "education"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Education",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Education",
+    "Topic :: Office/Business :: Financial",
+]
+dependencies = [
+    # FastMCP API lives in the 1.x SDK line; 2.x renamed it (MCPServer).
+    "mcp>=1.2,<2",
+    "PyYAML>=6.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[project.scripts]
+financial-library-mcp = "financial_library_mcp.server:main"
+
+[project.urls]
+Homepage = "https://github.com/ananddw24/safe_investment_researcher"
+Repository = "https://github.com/ananddw24/safe_investment_researcher"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/financial_library_mcp"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
