@@ -15,6 +15,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   (`search_records`, `get_record`, `get_catalog`, `list_countries`,
   `list_topics`, `library_status`), with educational-only instructions
   and source-URL citation required. See `mcp-server/README.md`.
+- Interactive **Explore and tools** page (`docs/resources/tools.md`):
+  a filterable catalog explorer (country, topic, audience, title search)
+  over the curated records; an emergency-fund target calculator that does
+  arithmetic on visitor inputs only (planning illustration, not advice);
+  and a deposit-insurance source lookup. The lookup shows only what the
+  records hold — the official insurer source and its last-checked date —
+  and plainly marks countries not yet covered; coverage-limit amounts are
+  never shown because the records do not store them
+- `scripts/generate_interactive_data.py`, generating
+  `docs/assets/data/library-data.json` from `data/kb-index.json` for the
+  tools page; `extra_javascript` / `extra_css` wiring in `mkdocs.yml`
+  (`docs/assets/javascripts/interactive.js`,
+  `docs/assets/stylesheets/interactive.css`). With JavaScript off, the
+  static catalog remains fully readable
 
 ## [1.0.0] - 2026-10-27
 

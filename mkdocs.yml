@@ -199,8 +199,15 @@ nav:
   - Resources:
       - resources/index.md
       - Catalog: resources/catalog.md
+      - Explore & tools: resources/tools.md
   - Knowledge base: knowledge-base.md
   - Contributing: contributing.md
+
+extra_css:
+  - assets/stylesheets/interactive.css
+
+extra_javascript:
+  - assets/javascripts/interactive.js
 
 extra:
   social:
