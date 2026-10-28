@@ -9,6 +9,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- **MCP server** (`mcp-server/`): read-only Model Context Protocol server
+  (stdio, official Python SDK) exposing the library's YAML records to
+  Claude Desktop, Cursor, and other MCP clients — six tools
+  (`search_records`, `get_record`, `get_catalog`, `list_countries`,
+  `list_topics`, `library_status`), with educational-only instructions
+  and source-URL citation required. See `mcp-server/README.md`.
 - Interactive **Explore and tools** page (`docs/resources/tools.md`):
   a filterable catalog explorer (country, topic, audience, title search)
   over the curated records; an emergency-fund target calculator that does
