@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Exclude contributor `_template.md` pages from the published MkDocs site so
+  readers do not land on stubs; templates remain in-repo for contributors
+
 ### Added
 
 - **MCP server** (`mcp-server/`): read-only Model Context Protocol server

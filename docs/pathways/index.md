@@ -22,5 +22,3 @@ recommend amounts. Prefer these over jumping straight into every vehicle page.
 
 Also useful: [Using this library](../about/using-this-library.md) and the
 homepage [country map](../index.md#country-map).
-
-Template: [`_template.md`](_template.md).

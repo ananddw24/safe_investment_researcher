@@ -61,5 +61,3 @@ matches where you already save (often **bank deposits** or **mobile money**).
 
 See also [Guides](../guides/index.md), [Pathways](../pathways/index.md), and the
 [release plan](../about/release-plan.md).
-
-Template for new pages: [`_template.md`](_template.md).
