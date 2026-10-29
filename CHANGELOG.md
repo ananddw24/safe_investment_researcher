@@ -7,10 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-### Changed
-
-- Exclude contributor `_template.md` pages from the published MkDocs site so
-  readers do not land on stubs; templates remain in-repo for contributors
+## [1.1.0] - 2026-10-29
 
 ### Added
 
@@ -39,6 +36,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   (`docs/assets/javascripts/interactive.js`,
   `docs/assets/stylesheets/interactive.css`). With JavaScript off, the
   static catalog remains fully readable
+
+### Changed
+
+- Exclude contributor `_template.md` pages from the published MkDocs site so
+  readers do not land on stubs; templates remain in-repo for contributors
 
 ## [1.0.0] - 2026-10-27
 
