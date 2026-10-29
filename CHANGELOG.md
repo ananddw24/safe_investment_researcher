@@ -14,6 +14,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- Guide **Talk to the library** (`docs/guides/talk-to-the-library.md`):
+  collaborator steps for Claude Desktop (local MCP config), a short Cursor
+  pointer to `mcp-server/README.md`, plain limits for ChatGPT and Grok apps
+  that cannot attach this stdio server yet, three example questions, and the
+  educational disclaimer; linked from the homepage and Guides nav
 - **MCP server** (`mcp-server/`): read-only Model Context Protocol server
   (stdio, official Python SDK) exposing the library's YAML records to
   Claude Desktop, Cursor, and other MCP clients — six tools

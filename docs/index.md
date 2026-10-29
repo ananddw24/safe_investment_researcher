@@ -43,6 +43,7 @@ See [Audience](about/audience.md) and
 | Running a community workshop | [Community training](training/index.md) |
 | Looking up official figures | [Where to check official figures](about/where-to-check.md) |
 | Looking up official links | [Resource catalog](resources/catalog.md) |
+| Asking Claude or Cursor about the library | [Talk to the library](guides/talk-to-the-library.md) |
 | Stuck on a word | [Glossary](glossary.md) |
 
 ## Country map
