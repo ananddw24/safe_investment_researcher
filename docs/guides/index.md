@@ -26,5 +26,6 @@ can run the matching [community training](../training/index.md) sessions.
 | [Emergency savings](emergency-savings.md) | Cash buffer before lock-ins | [Session 1](../training/session-01-emergency-savings.md) |
 | [Inflation and capital preservation](inflation-capital-preservation.md) | Purchasing power literacy | [Session 2](../training/session-02-inflation.md) |
 | [Spotting unregulated schemes](spotting-unregulated-schemes.md) | Scam and “guaranteed return” red flags | [Session 3](../training/session-03-unregulated-schemes.md) |
+| [Talk to the library](talk-to-the-library.md) | Asking Claude / Cursor about curated records | — |
 
 After the guides, open your country under [Vehicles](../vehicles/index.md).
