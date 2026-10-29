@@ -44,3 +44,9 @@ mkdocs build --strict
 
 Full contributor guide:
 [CONTRIBUTING.md](https://github.com/ananddw24/safe_investment_researcher/blob/main/CONTRIBUTING.md)
+
+## Page templates
+
+Contributor page templates live in the repo as `docs/guides/_template.md`,
+`docs/pathways/_template.md`, and `docs/vehicles/_template.md`. They are
+excluded from the published MkDocs site so readers do not land on stub pages.

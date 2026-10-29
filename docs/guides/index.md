@@ -28,5 +28,3 @@ can run the matching [community training](../training/index.md) sessions.
 | [Spotting unregulated schemes](spotting-unregulated-schemes.md) | Scam and “guaranteed return” red flags | [Session 3](../training/session-03-unregulated-schemes.md) |
 
 After the guides, open your country under [Vehicles](../vehicles/index.md).
-
-Template for new guides: [`_template.md`](_template.md).
