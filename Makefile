@@ -1,4 +1,4 @@
-.PHONY: serve build validate export check-ids kb catalog lint test
+.PHONY: serve build validate export check-ids kb catalog lint test teaching teaching-build
 
 serve:
 	pip install -r requirements.txt
@@ -41,3 +41,7 @@ test:
 teaching:
 	pip install -r scripts/requirements-dev.txt -r scripts/requirements-teaching.txt
 	python3 scripts/generate_teaching_portfolio.py --check
+
+teaching-build:
+	pip install -r scripts/requirements-dev.txt -r scripts/requirements-teaching.txt
+	python3 scripts/generate_teaching_portfolio.py

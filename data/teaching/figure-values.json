@@ -23,7 +23,8 @@
         "date": "2026-09-01",
         "fedfunds": "3.75",
         "cpi_yoy_percent": "3.7",
-        "gap_percentage_points": "0.1"
+        "gap_percentage_points": "0.05",
+        "unrounded_gap_percentage_points": "0.03"
       }
     },
     "yield-curve": {
@@ -98,6 +99,9 @@
       "revenues_text": "$182.45 billion",
       "net_income_text": "$57.05 billion",
       "displayed_ratio_percent": "57.9",
+      "assets_billions_text": "$4,424.90B",
+      "deposits_billions_text": "$2,559.32B",
+      "billion_ratio_percent": "57.8",
       "ten_k_url": "https://www.sec.gov/Archives/edgar/data/19617/000162828026008131/jpm-20251231.htm"
     },
     "cross-country-inflation": {

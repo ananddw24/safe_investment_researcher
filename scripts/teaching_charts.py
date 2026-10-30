@@ -524,16 +524,26 @@ def _svg_bars(fig: BarFigure) -> str:
         bar_w = abs(x - zero_x) or 1
         lines.append(f'<rect x="{bar_x:.1f}" y="{y:.1f}" width="{bar_w:.1f}" height="16" fill="{color}" rx="1"/>')
         text = f"{_fmt(value, fig.places)}{fig.suffix}"
-        # Keep the number in the right margin so it does not sit on the bar or the country name.
-        text_x = width - 12
-        anchor = "end"
+        if fig.diverging and value < 0 and x < left + 56:
+            text_x = x + 4
+            anchor = "start"
+        elif fig.diverging and value < 0:
+            text_x = x - 4
+            anchor = "end"
+        elif fig.diverging:
+            text_x = x + 4
+            anchor = "start"
+        else:
+            text_x = width - 12
+            anchor = "end"
         lines.append(
             f'<text x="16" y="{y + 13:.1f}" fill="{PALETTE["ink"]}" font-size="13" '
             f'font-family="Segoe UI, Helvetica, Arial, sans-serif">{escape(label)}</text>'
         )
         lines.append(
             f'<text x="{text_x:.1f}" y="{y + 13:.1f}" text-anchor="{anchor}" fill="{PALETTE["ink"]}" '
-            f'font-size="12" font-family="Segoe UI, Helvetica, Arial, sans-serif">{escape(text)}</text>'
+            f'font-size="12" stroke="#FFFFFF" stroke-width="3" paint-order="stroke fill" '
+            f'font-family="Segoe UI, Helvetica, Arial, sans-serif">{escape(text)}</text>'
         )
     lines.append(
         f'<text x="{left + plot_w / 2:.0f}" y="{height - 28}" text-anchor="middle" '
@@ -748,10 +758,18 @@ def _png_bars(fig: BarFigure, path, plt) -> None:
         ax.set_xlim(-span * 1.35, span * 1.45)
     else:
         ax.set_xlim(0, max(values) * 1.28)
+    xmin, xmax = ax.get_xlim()
     for position, raw in zip(positions, fig.values, strict=True):
         value = _d(raw)
         label = f"{_fmt(value, fig.places)}{fig.suffix}"
-        ax.text(ax.get_xlim()[1], position, label, va="center", ha="right", fontsize=8, color=PALETTE["ink"])
+        if not fig.diverging:
+            ax.text(xmax, position, label, va="center", ha="right", fontsize=8, color=PALETTE["ink"])
+        elif value < 0 and float(value) < xmin + 0.12 * (xmax - xmin):
+            ax.text(float(value), position, label, va="center", ha="left", fontsize=8, color=PALETTE["ink"])
+        elif value < 0:
+            ax.text(float(value), position, label, va="center", ha="right", fontsize=8, color=PALETTE["ink"])
+        else:
+            ax.text(float(value), position, label, va="center", ha="left", fontsize=8, color=PALETTE["ink"])
     ax.set_yticks(positions, list(fig.labels))
     ax.axvline(0, color=PALETTE["axis"], linewidth=0.8)
     ax.set_xlabel(fig.x_label, color=PALETTE["ink"])

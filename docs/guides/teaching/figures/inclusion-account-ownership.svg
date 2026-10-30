@@ -7,49 +7,49 @@
 <line x1="168.0" y1="78" x2="168.0" y2="492" stroke="#1A1A1A"/>
 <rect x="168.0" y="82.0" width="206.6" height="16" fill="#0072B2" rx="1"/>
 <text x="16" y="95.0" fill="#1A1A1A" font-size="13" font-family="Segoe UI, Helvetica, Arial, sans-serif">Egypt</text>
-<text x="748.0" y="95.0" text-anchor="end" fill="#1A1A1A" font-size="12" font-family="Segoe UI, Helvetica, Arial, sans-serif">43.1%</text>
+<text x="748.0" y="95.0" text-anchor="end" fill="#1A1A1A" font-size="12" stroke="#FFFFFF" stroke-width="3" paint-order="stroke fill" font-family="Segoe UI, Helvetica, Arial, sans-serif">43.1%</text>
 <rect x="168.0" y="110.0" width="303.4" height="16" fill="#0072B2" rx="1"/>
 <text x="16" y="123.0" fill="#1A1A1A" font-size="13" font-family="Segoe UI, Helvetica, Arial, sans-serif">Nigeria</text>
-<text x="748.0" y="123.0" text-anchor="end" fill="#1A1A1A" font-size="12" font-family="Segoe UI, Helvetica, Arial, sans-serif">63.3%</text>
+<text x="748.0" y="123.0" text-anchor="end" fill="#1A1A1A" font-size="12" stroke="#FFFFFF" stroke-width="3" paint-order="stroke fill" font-family="Segoe UI, Helvetica, Arial, sans-serif">63.3%</text>
 <rect x="168.0" y="138.0" width="388.7" height="16" fill="#0072B2" rx="1"/>
 <text x="16" y="151.0" fill="#1A1A1A" font-size="13" font-family="Segoe UI, Helvetica, Arial, sans-serif">South Africa</text>
-<text x="748.0" y="151.0" text-anchor="end" fill="#1A1A1A" font-size="12" font-family="Segoe UI, Helvetica, Arial, sans-serif">81.1%</text>
+<text x="748.0" y="151.0" text-anchor="end" fill="#1A1A1A" font-size="12" stroke="#FFFFFF" stroke-width="3" paint-order="stroke fill" font-family="Segoe UI, Helvetica, Arial, sans-serif">81.1%</text>
 <rect x="168.0" y="166.0" width="389.2" height="16" fill="#0072B2" rx="1"/>
 <text x="16" y="179.0" fill="#1A1A1A" font-size="13" font-family="Segoe UI, Helvetica, Arial, sans-serif">Ghana</text>
-<text x="748.0" y="179.0" text-anchor="end" fill="#1A1A1A" font-size="12" font-family="Segoe UI, Helvetica, Arial, sans-serif">81.2%</text>
+<text x="748.0" y="179.0" text-anchor="end" fill="#1A1A1A" font-size="12" stroke="#FFFFFF" stroke-width="3" paint-order="stroke fill" font-family="Segoe UI, Helvetica, Arial, sans-serif">81.2%</text>
 <rect x="168.0" y="194.0" width="412.2" height="16" fill="#0072B2" rx="1"/>
 <text x="16" y="207.0" fill="#1A1A1A" font-size="13" font-family="Segoe UI, Helvetica, Arial, sans-serif">Italy</text>
-<text x="748.0" y="207.0" text-anchor="end" fill="#1A1A1A" font-size="12" font-family="Segoe UI, Helvetica, Arial, sans-serif">86.0%</text>
+<text x="748.0" y="207.0" text-anchor="end" fill="#1A1A1A" font-size="12" stroke="#FFFFFF" stroke-width="3" paint-order="stroke fill" font-family="Segoe UI, Helvetica, Arial, sans-serif">86.0%</text>
 <rect x="168.0" y="222.0" width="414.1" height="16" fill="#0072B2" rx="1"/>
 <text x="16" y="235.0" fill="#1A1A1A" font-size="13" font-family="Segoe UI, Helvetica, Arial, sans-serif">Brazil</text>
-<text x="748.0" y="235.0" text-anchor="end" fill="#1A1A1A" font-size="12" font-family="Segoe UI, Helvetica, Arial, sans-serif">86.4%</text>
+<text x="748.0" y="235.0" text-anchor="end" fill="#1A1A1A" font-size="12" stroke="#FFFFFF" stroke-width="3" paint-order="stroke fill" font-family="Segoe UI, Helvetica, Arial, sans-serif">86.4%</text>
 <rect x="168.0" y="250.0" width="426.6" height="16" fill="#0072B2" rx="1"/>
 <text x="16" y="263.0" fill="#1A1A1A" font-size="13" font-family="Segoe UI, Helvetica, Arial, sans-serif">India</text>
-<text x="748.0" y="263.0" text-anchor="end" fill="#1A1A1A" font-size="12" font-family="Segoe UI, Helvetica, Arial, sans-serif">89.0%</text>
+<text x="748.0" y="263.0" text-anchor="end" fill="#1A1A1A" font-size="12" stroke="#FFFFFF" stroke-width="3" paint-order="stroke fill" font-family="Segoe UI, Helvetica, Arial, sans-serif">89.0%</text>
 <rect x="168.0" y="278.0" width="428.5" height="16" fill="#0072B2" rx="1"/>
 <text x="16" y="291.0" fill="#1A1A1A" font-size="13" font-family="Segoe UI, Helvetica, Arial, sans-serif">China</text>
-<text x="748.0" y="291.0" text-anchor="end" fill="#1A1A1A" font-size="12" font-family="Segoe UI, Helvetica, Arial, sans-serif">89.4%</text>
+<text x="748.0" y="291.0" text-anchor="end" fill="#1A1A1A" font-size="12" stroke="#FFFFFF" stroke-width="3" paint-order="stroke fill" font-family="Segoe UI, Helvetica, Arial, sans-serif">89.4%</text>
 <rect x="168.0" y="306.0" width="431.8" height="16" fill="#0072B2" rx="1"/>
 <text x="16" y="319.0" fill="#1A1A1A" font-size="13" font-family="Segoe UI, Helvetica, Arial, sans-serif">Kenya</text>
-<text x="748.0" y="319.0" text-anchor="end" fill="#1A1A1A" font-size="12" font-family="Segoe UI, Helvetica, Arial, sans-serif">90.1%</text>
+<text x="748.0" y="319.0" text-anchor="end" fill="#1A1A1A" font-size="12" stroke="#FFFFFF" stroke-width="3" paint-order="stroke fill" font-family="Segoe UI, Helvetica, Arial, sans-serif">90.1%</text>
 <rect x="168.0" y="334.0" width="464.9" height="16" fill="#0072B2" rx="1"/>
 <text x="16" y="347.0" fill="#1A1A1A" font-size="13" font-family="Segoe UI, Helvetica, Arial, sans-serif">United States</text>
-<text x="748.0" y="347.0" text-anchor="end" fill="#1A1A1A" font-size="12" font-family="Segoe UI, Helvetica, Arial, sans-serif">97.0%</text>
+<text x="748.0" y="347.0" text-anchor="end" fill="#1A1A1A" font-size="12" stroke="#FFFFFF" stroke-width="3" paint-order="stroke fill" font-family="Segoe UI, Helvetica, Arial, sans-serif">97.0%</text>
 <rect x="168.0" y="362.0" width="471.1" height="16" fill="#0072B2" rx="1"/>
 <text x="16" y="375.0" fill="#1A1A1A" font-size="13" font-family="Segoe UI, Helvetica, Arial, sans-serif">Germany</text>
-<text x="748.0" y="375.0" text-anchor="end" fill="#1A1A1A" font-size="12" font-family="Segoe UI, Helvetica, Arial, sans-serif">98.3%</text>
+<text x="748.0" y="375.0" text-anchor="end" fill="#1A1A1A" font-size="12" stroke="#FFFFFF" stroke-width="3" paint-order="stroke fill" font-family="Segoe UI, Helvetica, Arial, sans-serif">98.3%</text>
 <rect x="168.0" y="390.0" width="471.6" height="16" fill="#0072B2" rx="1"/>
 <text x="16" y="403.0" fill="#1A1A1A" font-size="13" font-family="Segoe UI, Helvetica, Arial, sans-serif">Canada</text>
-<text x="748.0" y="403.0" text-anchor="end" fill="#1A1A1A" font-size="12" font-family="Segoe UI, Helvetica, Arial, sans-serif">98.4%</text>
+<text x="748.0" y="403.0" text-anchor="end" fill="#1A1A1A" font-size="12" stroke="#FFFFFF" stroke-width="3" paint-order="stroke fill" font-family="Segoe UI, Helvetica, Arial, sans-serif">98.4%</text>
 <rect x="168.0" y="418.0" width="472.1" height="16" fill="#0072B2" rx="1"/>
 <text x="16" y="431.0" fill="#1A1A1A" font-size="13" font-family="Segoe UI, Helvetica, Arial, sans-serif">Japan</text>
-<text x="748.0" y="431.0" text-anchor="end" fill="#1A1A1A" font-size="12" font-family="Segoe UI, Helvetica, Arial, sans-serif">98.5%</text>
+<text x="748.0" y="431.0" text-anchor="end" fill="#1A1A1A" font-size="12" stroke="#FFFFFF" stroke-width="3" paint-order="stroke fill" font-family="Segoe UI, Helvetica, Arial, sans-serif">98.5%</text>
 <rect x="168.0" y="446.0" width="475.4" height="16" fill="#0072B2" rx="1"/>
 <text x="16" y="459.0" fill="#1A1A1A" font-size="13" font-family="Segoe UI, Helvetica, Arial, sans-serif">France</text>
-<text x="748.0" y="459.0" text-anchor="end" fill="#1A1A1A" font-size="12" font-family="Segoe UI, Helvetica, Arial, sans-serif">99.2%</text>
+<text x="748.0" y="459.0" text-anchor="end" fill="#1A1A1A" font-size="12" stroke="#FFFFFF" stroke-width="3" paint-order="stroke fill" font-family="Segoe UI, Helvetica, Arial, sans-serif">99.2%</text>
 <rect x="168.0" y="474.0" width="475.9" height="16" fill="#0072B2" rx="1"/>
 <text x="16" y="487.0" fill="#1A1A1A" font-size="13" font-family="Segoe UI, Helvetica, Arial, sans-serif">United Kingdom</text>
-<text x="748.0" y="487.0" text-anchor="end" fill="#1A1A1A" font-size="12" font-family="Segoe UI, Helvetica, Arial, sans-serif">99.3%</text>
+<text x="748.0" y="487.0" text-anchor="end" fill="#1A1A1A" font-size="12" stroke="#FFFFFF" stroke-width="3" paint-order="stroke fill" font-family="Segoe UI, Helvetica, Arial, sans-serif">99.3%</text>
 <text x="425" y="532" text-anchor="middle" fill="#1A1A1A" font-size="12" font-family="Segoe UI, Helvetica, Arial, sans-serif">Percent</text>
 <text x="24" y="544" fill="#333333" font-size="11" font-family="Segoe UI, Helvetica, Arial, sans-serif">FinancialLibrary teaching chart · educational only · not a forecast or a recommendation</text>
 </svg>

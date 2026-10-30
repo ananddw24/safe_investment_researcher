@@ -1,7 +1,7 @@
 {
   "retrieved_on": "2026-10-30",
   "user_agent": "FinancialLibrary educator-examples anand.dw24@gmail.com",
-  "note": "FRED, World Bank, and IMF files are trimmed to the years these modules use. Each file's sha256 is of that trimmed text. url is the original request. retrieved_on is the retrieval date. EDGAR files are excerpts: each fact and filing field is copied unchanged, and full_payload_sha256 is the complete response, which is not stored.",
+  "note": "Trimmed FRED, World Bank, and IMF files have kind 'trimmed'. sha256 is the trimmed file. original_sha256 is the full download before trimming. url is the request and retrieved_on is the retrieval date. EDGAR files are excerpts: each fact and filing field is copied unchanged, and full_payload_sha256 is the complete response, which is not stored.",
   "files": [
     {
       "path": "edgar/jpmorgan-10k-facts.json",
@@ -26,98 +26,120 @@
       "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=CIVPART",
       "sha256": "d64dee471aa00ab55b35b63acbe4e84dd931a9264ac9ee92aa43af8f1efa9c50",
       "bytes": 2133,
-      "kind": "raw",
+      "kind": "trimmed",
       "series_id": "CIVPART",
-      "trimmed_to": "observations on or after 2015-10-01"
+      "trimmed_to": "observations on or after 2015-10-01",
+      "original_sha256": "04b59106d68d722b8bf0eb5c4a81ffee4511416afbc0e6103ab1676100ff1a9d",
+      "retrieved_on": "2026-10-30"
     },
     {
       "path": "fred/CPIAUCSL.csv",
       "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=CPIAUCSL",
       "sha256": "5a0a70af7963d7e87986a81a5f211380d4653db34e63631338d14d1bcb45d453",
       "bytes": 2527,
-      "kind": "raw",
+      "kind": "trimmed",
       "series_id": "CPIAUCSL",
-      "trimmed_to": "observations on or after 2015-10-01"
+      "trimmed_to": "observations on or after 2015-10-01",
+      "original_sha256": "8556b710094027fa4724641d48be620cc37c04abfa15a0c496378cf1146c1549",
+      "retrieved_on": "2026-10-30"
     },
     {
       "path": "fred/DGS10.csv",
       "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS10",
       "sha256": "92dfe5f627bfe2fdd8ef16f48e57952275e719b373c076cdb97c7d959abb9031",
       "bytes": 45791,
-      "kind": "raw",
+      "kind": "trimmed",
       "series_id": "DGS10",
-      "trimmed_to": "observations on or after 2015-10-01"
+      "trimmed_to": "observations on or after 2015-10-01",
+      "original_sha256": "55e2559ffdb30b8ed921b119935fa6b3893dde3d1ed26ddede33fb59895f0659",
+      "retrieved_on": "2026-10-30"
     },
     {
       "path": "fred/DGS2.csv",
       "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS2",
       "sha256": "c15e5bcd69949bf57b167c81f07e976cc520014e706ca2650ee81386bc3d98ff",
       "bytes": 45790,
-      "kind": "raw",
+      "kind": "trimmed",
       "series_id": "DGS2",
-      "trimmed_to": "observations on or after 2015-10-01"
+      "trimmed_to": "observations on or after 2015-10-01",
+      "original_sha256": "7c02d9334a618fc044877c714853e62becb112439eea0004a332b34a48e0a36b",
+      "retrieved_on": "2026-10-30"
     },
     {
       "path": "fred/DGS30.csv",
       "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS30",
       "sha256": "38c39108c26713914e9123921547119a11bbdd6e831f0dbea52bb5c2acbb6cf2",
       "bytes": 45791,
-      "kind": "raw",
+      "kind": "trimmed",
       "series_id": "DGS30",
-      "trimmed_to": "observations on or after 2015-10-01"
+      "trimmed_to": "observations on or after 2015-10-01",
+      "original_sha256": "dc202353308764fdf3bae031917814abb7cdaaa04f32b054b0b8e52cf17f0da9",
+      "retrieved_on": "2026-10-30"
     },
     {
       "path": "fred/DGS3MO.csv",
       "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS3MO",
       "sha256": "48911fe3d90cc0d8b87edab685e38f00684091b882432564c0219b4278e3c99c",
       "bytes": 45792,
-      "kind": "raw",
+      "kind": "trimmed",
       "series_id": "DGS3MO",
-      "trimmed_to": "observations on or after 2015-10-01"
+      "trimmed_to": "observations on or after 2015-10-01",
+      "original_sha256": "fcb916159ca4bdb520bdd9c6d4b2c121de7cb26271a8e0655e27639bf5ec2a86",
+      "retrieved_on": "2026-10-30"
     },
     {
       "path": "fred/DGS5.csv",
       "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS5",
       "sha256": "1723abdab0a658055db416ca1bc23ccc85b374249d1652cf246d5470f0a64c53",
       "bytes": 45790,
-      "kind": "raw",
+      "kind": "trimmed",
       "series_id": "DGS5",
-      "trimmed_to": "observations on or after 2015-10-01"
+      "trimmed_to": "observations on or after 2015-10-01",
+      "original_sha256": "e69e5053638c5f59594c37a682141221790e5f6521a945d2f29cda5097696a7d",
+      "retrieved_on": "2026-10-30"
     },
     {
       "path": "fred/FEDFUNDS.csv",
       "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=FEDFUNDS",
       "sha256": "3776a5f5918e71e1f1aedc1db2f9fe02b96f1a48a229e92a0110be73f8c93c3b",
       "bytes": 2138,
-      "kind": "raw",
+      "kind": "trimmed",
       "series_id": "FEDFUNDS",
-      "trimmed_to": "observations on or after 2015-10-01"
+      "trimmed_to": "observations on or after 2015-10-01",
+      "original_sha256": "74680b2d09bb28f90fb30c1c09e93ac2d443de1b7345ba5a9112b3eca9be0a25",
+      "retrieved_on": "2026-10-30"
     },
     {
       "path": "fred/PAYEMS.csv",
       "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=PAYEMS",
       "sha256": "5f26bb7154d07298528ebcd300fb3c19e414ea66fcea49ac016d4a09632f9a8b",
       "bytes": 2400,
-      "kind": "raw",
+      "kind": "trimmed",
       "series_id": "PAYEMS",
-      "trimmed_to": "observations on or after 2015-10-01"
+      "trimmed_to": "observations on or after 2015-10-01",
+      "original_sha256": "c8c429818ed73de6db985f4ff565d64bd2a5ba66a6b651b39373a1532924fc0e",
+      "retrieved_on": "2026-10-30"
     },
     {
       "path": "fred/UNRATE.csv",
       "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE",
       "sha256": "ca88e0d75b9dcb0d4088f57c83fe60f4fff5df98789d1097a062854b44ac69aa",
       "bytes": 2005,
-      "kind": "raw",
+      "kind": "trimmed",
       "series_id": "UNRATE",
-      "trimmed_to": "observations on or after 2015-10-01"
+      "trimmed_to": "observations on or after 2015-10-01",
+      "original_sha256": "621ff6fadf50910cb7a21ee20ba610c247cb043b29b4e05c4c1a72fadca2a06c",
+      "retrieved_on": "2026-10-30"
     },
     {
       "path": "imf/PCPIPCH.json",
       "url": "https://www.imf.org/external/datamapper/api/v1/PCPIPCH",
       "sha256": "150bc29ccab2bbde4bda0b8273f3cd3a92d8ed8c08b77261ee00e208d0169f95",
       "bytes": 3269,
-      "kind": "raw",
-      "trimmed_to": "library countries, years from 2016"
+      "kind": "trimmed",
+      "trimmed_to": "library countries, years from 2016",
+      "original_sha256": "3ba7355ac2a1d89f718eba1f438b6a583d1c5f23f098a858daf393c6c292f961",
+      "retrieved_on": "2026-10-30"
     },
     {
       "path": "imf/indicators.json",
@@ -131,36 +153,44 @@
       "url": "https://api.worldbank.org/v2/country/BRA;CAN;CHN;DEU;EGY;FRA;GBR;GHA;IND;ITA;JPN;KEN;NGA;USA;ZAF/indicator/FP.CPI.TOTL.ZG?format=json&per_page=2000&page=1",
       "sha256": "33714525cdaf6899a1b962b4d7b0971747929af0efe2c8ab40fb5f1a24f15675",
       "bytes": 56073,
-      "kind": "raw",
+      "kind": "trimmed",
       "indicator": "FP.CPI.TOTL.ZG",
-      "trimmed_to": "non-null rows from 2011 on"
+      "trimmed_to": "non-null rows from 2011 on",
+      "original_sha256": "bbc0bac777ac25de296bd1df72bdb9be182e7fe73f252c35191014756f5e5107",
+      "retrieved_on": "2026-10-30"
     },
     {
       "path": "worldbank/FX.OWN.TOTL.FE.ZS.json",
       "url": "https://api.worldbank.org/v2/country/BRA;CAN;CHN;DEU;EGY;FRA;GBR;GHA;IND;ITA;JPN;KEN;NGA;USA;ZAF/indicator/FX.OWN.TOTL.FE.ZS?format=json&per_page=2000&page=1",
       "sha256": "714c960162384cfe0230034806a9636a2d906a9c6e893bbad11c6a738df35b95",
       "bytes": 24836,
-      "kind": "raw",
+      "kind": "trimmed",
       "indicator": "FX.OWN.TOTL.FE.ZS",
-      "trimmed_to": "non-null rows from 2011 on"
+      "trimmed_to": "non-null rows from 2011 on",
+      "original_sha256": "1b572c6d1e7d8f4f9b4546db2d18a893d5e1359af5d768593f570873a99ae4e3",
+      "retrieved_on": "2026-10-30"
     },
     {
       "path": "worldbank/FX.OWN.TOTL.MA.ZS.json",
       "url": "https://api.worldbank.org/v2/country/BRA;CAN;CHN;DEU;EGY;FRA;GBR;GHA;IND;ITA;JPN;KEN;NGA;USA;ZAF/indicator/FX.OWN.TOTL.MA.ZS?format=json&per_page=2000&page=1",
       "sha256": "d7889fe014e16877a9606b3452cdd922f42292bb54ebf5b55456041f54b93bf1",
       "bytes": 24717,
-      "kind": "raw",
+      "kind": "trimmed",
       "indicator": "FX.OWN.TOTL.MA.ZS",
-      "trimmed_to": "non-null rows from 2011 on"
+      "trimmed_to": "non-null rows from 2011 on",
+      "original_sha256": "87c59d30814d5e8f7d30e1bcd79f35364a13ba39675a0adb96a4b0a13c9fa03c",
+      "retrieved_on": "2026-10-30"
     },
     {
       "path": "worldbank/FX.OWN.TOTL.ZS.json",
       "url": "https://api.worldbank.org/v2/country/BRA;CAN;CHN;DEU;EGY;FRA;GBR;GHA;IND;ITA;JPN;KEN;NGA;USA;ZAF/indicator/FX.OWN.TOTL.ZS?format=json&per_page=2000&page=1",
       "sha256": "0a41e926a5302cee4610455cc8ac79a3fc164ea48c7c507313b6a8760f8b7e1a",
       "bytes": 24383,
-      "kind": "raw",
+      "kind": "trimmed",
       "indicator": "FX.OWN.TOTL.ZS",
-      "trimmed_to": "non-null rows from 2011 on"
+      "trimmed_to": "non-null rows from 2011 on",
+      "original_sha256": "3750a1ee4f1ed7f52687ceea246099883cb195e26c3c521cdc3a5a694c16e094",
+      "retrieved_on": "2026-10-30"
     }
   ]
 }

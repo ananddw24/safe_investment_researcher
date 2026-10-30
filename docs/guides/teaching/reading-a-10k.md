@@ -56,8 +56,9 @@ you read it.
 
 For the fiscal year ended 2025-12-31, filed 2026-02-13, accession `0001628280-26-008131`: assets
 $4.42 trillion, deposits $2.56 trillion, revenues $182.45 billion, and net income $57.05
-billion. Those are the tagged US dollar amounts scaled and rounded half up. Using those rounded
-amounts, deposits divided by assets are 57.9 percent.
+billion. Those are the tagged US dollar amounts in trillions, rounded half up. In billions, to
+two decimals, deposits are $2,559.32B and assets are $4,424.90B. Dividing those billion amounts
+gives 57.8 percent, the same one-decimal result as the tagged integers.
 
 The same year can show a different number in a later 10-K when the company presents comparative
 columns or revises a figure. The charts keep the number from the 10-K whose fiscal-year tag
@@ -72,9 +73,9 @@ matches that year.
 
 ## Exercise
 
-Using the rounded amounts in the explainer for the fiscal year ended 2025-12-31 ($2.56 trillion
-of deposits and $4.42 trillion of assets), divide deposits by assets and give the result as a
-percent to one decimal place. Then name the filing date and the accession number.
+Using the billion amounts for the fiscal year ended 2025-12-31 ($2,559.32B of deposits and
+$4,424.90B of assets), divide deposits by assets and give the result as a percent to one decimal
+place. Then name the filing date and the accession number.
 
 ## Answer key
 
@@ -83,9 +84,9 @@ Discussion questions stay open. This key answers the exercise only.
 <details markdown="1">
 <summary>Show the answer key</summary>
 
-The explainer amounts are $2.56 trillion of deposits and $4.42 trillion of assets. Dividing
-those rounded amounts gives 57.9 percent. The 10-K was filed on 2026-02-13, accession
-`0001628280-26-008131`, for the period ended 2025-12-31. Primary document:
+Deposits are $2,559.32B and assets are $4,424.90B. Dividing those amounts gives 57.8 percent.
+The 10-K was filed on 2026-02-13, accession `0001628280-26-008131`, for the period ended
+2025-12-31. Primary document:
 [10-K on EDGAR](https://www.sec.gov/Archives/edgar/data/19617/000162828026008131/jpm-20251231.htm).
 The ratio describes two lines in a filing. It is not a capital ratio, not an insurance
 calculation, and not a recommendation.
@@ -104,7 +105,7 @@ stored; `data/teaching/snapshots/manifest.json` records its SHA-256. Selection r
 | Deposits | Deposits | 2025-12-31 | 2026-02-13 | 2559320000000 | $2.56 trillion |
 | Revenues | Revenues | 2025-12-31 | 2026-02-13 | 182447000000 | $182.45 billion |
 | Net income | NetIncomeLoss | 2025-12-31 | 2026-02-13 | 57048000000 | $57.05 billion |
-| Deposits / assets from the rounded readings | Deposits and Assets | 2025-12-31 | 2026-02-13 | see tagged amounts | 57.9% |
+| Deposits / assets from the rounded readings | Deposits and Assets | 2025-12-31 | 2026-02-13 | see tagged amounts | 57.8% |
 
 Latest 10-K on or before 2026-10-30: filed 2026-02-13, accession `0001628280-26-008131`, primary
 document `jpm-20251231.htm`.

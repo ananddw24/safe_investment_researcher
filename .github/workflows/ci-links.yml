@@ -5,12 +5,16 @@ on:
     paths:
       - "docs/**"
       - "data/resources/**"
+      - "mkdocs.yml"
+      - "requirements.txt"
       - ".lychee.toml"
       - ".github/workflows/ci-links.yml"
   pull_request:
     paths:
       - "docs/**"
       - "data/resources/**"
+      - "mkdocs.yml"
+      - "requirements.txt"
       - ".lychee.toml"
       - ".github/workflows/ci-links.yml"
   schedule:
@@ -26,6 +30,18 @@ jobs:
       - name: Checkout
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
 
+      - name: Setup Python
+        uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0  # v7.1.0
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install docs deps
+        run: pip install -r requirements.txt
+
+      - name: Build MkDocs
+        run: mkdocs build --strict
+
       - name: Extract resource URLs
         run: |
           mkdir -p .lychee-inputs
@@ -37,7 +53,7 @@ jobs:
           args: >-
             --offline
             --config .lychee.toml
-            docs/
+            site/
 
       # External links stay warn-only; publishers rate-limit and flake.
       - name: Link check (soft-fail until v0.2.0)

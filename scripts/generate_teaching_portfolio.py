@@ -581,13 +581,13 @@ def build_figures(portfolio: Portfolio) -> list:
         "Displayed funds rate minus the displayed CPI change",
         "Both readings are the rounded values on the page. Not a published real interest rate.",
         (
-            f"Computed gap, funds rate minus 12-month CPI change, through {gap_points[-1][0][:7]}. "
-            f"Ends at {quantize(gap_points[-1][1], 1)} percentage points."
+            f"Displayed funds rate minus displayed CPI change, through {gap_points[-1][0][:7]}. "
+            f"Ends at {quantize(gap_points[-1][1], 2)} percentage points."
         ),
         "Percentage points",
-        (_series("Computed gap", gap_points, charts.PALETTE["green"], "solid", 1),),
+        (_series("Computed gap", gap_points, charts.PALETTE["green"], "solid", 2),),
         True,
-        1,
+        2,
     )
     curve = charts.CurveFigure(
         "yield-curve-snapshot",
@@ -835,6 +835,9 @@ def build_values(portfolio: Portfolio) -> dict:
     _revenue_scaled, revenue_text, _revenue_unit = usd_text(int(revenues["val"]))
     _income_scaled, income_text, _income_unit = usd_text(int(income["val"]))
     displayed_ratio = quantize(deposit_scaled / asset_scaled * Decimal(100), 1)
+    asset_b, asset_b_text = usd_billions(int(assets["val"]))
+    deposit_b, deposit_b_text = usd_billions(int(deposits["val"]))
+    billion_ratio = quantize(deposit_b / asset_b * Decimal(100), 1)
     year = str(portfolio.complete_year)
     comp = str(portfolio.comparison_year)
     wb_latest = []
@@ -891,7 +894,8 @@ def build_values(portfolio: Portfolio) -> dict:
                     "date": observed,
                     "fedfunds": exact(fund_value),
                     "cpi_yoy_percent": quantize(cpi_value, 1),
-                    "gap_percentage_points": quantize(gap_value, 1),
+                    "gap_percentage_points": quantize(gap_value, 2),
+                    "unrounded_gap_percentage_points": quantize(Decimal(fund.raw) - pct, 2),
                 },
             },
             "yield-curve": {
@@ -928,6 +932,9 @@ def build_values(portfolio: Portfolio) -> dict:
                 "revenues_text": revenue_text,
                 "net_income_text": income_text,
                 "displayed_ratio_percent": displayed_ratio,
+                "assets_billions_text": asset_b_text,
+                "deposits_billions_text": deposit_b_text,
+                "billion_ratio_percent": billion_ratio,
                 "ten_k_url": filing_url(
                     portfolio.edgar_cik,
                     portfolio.filings["10-K"]["accessionNumber"],
@@ -1101,6 +1108,12 @@ def usd_text(amount: int) -> tuple[Decimal, str, str]:
     return scaled, f"${quantize(value / Decimal('1000000000'), 2)} billion", "Billions of US dollars"
 
 
+def usd_billions(amount: int) -> tuple[Decimal, str]:
+    """Billions with two decimals and a thousands separator, such as $4,424.90B."""
+    scaled = Decimal(quantize(Decimal(amount) / Decimal("1000000000"), 2))
+    return scaled, f"${scaled:,.2f}B"
+
+
 def render_pages(portfolio: Portfolio) -> dict[str, str]:
     by_slug = {fig.slug: fig for fig in portfolio.figures}
     pages = {
@@ -1245,7 +1258,7 @@ def page_rates(portfolio: Portfolio, figs: dict) -> str:
     cpi = values["cpi_yoy_latest"]
     gap = values["computed_gap_latest"]
     funds = in_window(portfolio.fred["FEDFUNDS"], WINDOW_START, portfolio.retrieved_on)
-    gap_points = [Obs(item[0], quantize(item[3], 1), item[3]) for item in portfolio.gap]
+    gap_points = [Obs(item[0], quantize(item[3], 2), item[3]) for item in portfolio.gap]
     gap_number = Decimal(gap["gap_percentage_points"])
     if gap_number > 0:
         gap_words = "positive"
@@ -1253,7 +1266,6 @@ def page_rates(portfolio: Portfolio, figs: dict) -> str:
         gap_words = "negative"
     else:
         gap_words = "zero"
-    shown_difference = Decimal(fund["raw"]) - Decimal(cpi["yoy_percent"])
     cpi_note = _gap_note(portfolio.fred["CPIAUCSL"], "CPIAUCSL", portfolio.retrieved_on)
     doc = Doc()
     doc.add(
@@ -1294,8 +1306,8 @@ def page_rates(portfolio: Portfolio, figs: dict) -> str:
     )
     doc.figure(
         figs["rates-computed-gap"],
-        "Each point is the displayed funds rate (two decimals) minus the displayed CPI change (one decimal). "
-        "The difference is then rounded half up to one decimal. Computed in this library. "
+        "Each point is the displayed funds rate (two decimals) minus the displayed CPI change (one decimal), "
+        "shown to two decimals. It is not rounded again. Computed in this library. "
         "It is not a separate published series and not a real interest rate.",
     )
     doc.h(2, "Explainer")
@@ -1315,11 +1327,13 @@ def page_rates(portfolio: Portfolio, figs: dict) -> str:
         f"is {fund['raw']}% on {fund['date']}. The CPI index on {cpi['date']} is {cpi['raw']}, "
         f"against {cpi['prior_raw']} on {cpi['prior_date']}. That ratio, rounded half up, is a "
         f"{cpi['yoy_percent']}% change. The gap chart uses those displayed readings: "
-        f"{fund['raw']} minus {cpi['yoy_percent']} is {shown_difference}, which rounds half up to "
-        f"{gap['gap_percentage_points']} percentage points. That result is {gap_words}."
+        f"{fund['raw']} minus {cpi['yoy_percent']} is {gap['gap_percentage_points']} percentage points. "
+        f"That result is {gap_words}. "
+        f"The gap from the unrounded CPI change is about {gap['unrounded_gap_percentage_points']} "
+        "percentage points."
     )
     doc.p(_range_sentence("the effective funds rate", funds, 2, "%"))
-    doc.p(_range_sentence("the computed gap", gap_points, 1, " percentage points"))
+    doc.p(_range_sentence("the computed gap", gap_points, 2, " percentage points"))
     doc.p(
         "A household savings rate can sit far from the funds rate because of the product, the bank, "
         "fees, and insurance limits. This page does not collect those rates and does not suggest chasing the gap. "
@@ -1340,7 +1354,7 @@ def page_rates(portfolio: Portfolio, figs: dict) -> str:
     doc.p(
         f"Using the readings printed for {cpi['date']}, subtract the 12-month CPI change "
         f"({cpi['yoy_percent']}%, one decimal) from the effective federal funds rate "
-        f"({fund['raw']}%, two decimals). Round that difference half up to one decimal place. "
+        f"({fund['raw']}%, two decimals). Give the difference to two decimals. "
         "Say whether the result is positive or negative. Also name the two CPI index levels behind the change."
     )
     doc.answer(
@@ -1348,8 +1362,10 @@ def page_rates(portfolio: Portfolio, figs: dict) -> str:
             f"The displayed effective federal funds rate on {fund['date']} is {fund['raw']} percent (`FEDFUNDS`). "
             f"The CPI index is {cpi['raw']} on {cpi['date']} and {cpi['prior_raw']} on {cpi['prior_date']} "
             f"(`CPIAUCSL`). The displayed 12-month change is {cpi['yoy_percent']} percent. "
-            f"{fund['raw']} minus {cpi['yoy_percent']} is {shown_difference}, which rounds half up to "
-            f"{gap['gap_percentage_points']} percentage points. The result is {gap_words}. "
+            f"{fund['raw']} minus {cpi['yoy_percent']} is {gap['gap_percentage_points']} percentage points. "
+            f"The result is {gap_words}. "
+            f"The unrounded gap, the funds rate minus the CPI change before that change is rounded, "
+            f"is about {gap['unrounded_gap_percentage_points']} percentage points. "
             "The gap compares two readings. It is not a published real rate and not a return.",
         ]
     )
@@ -1767,8 +1783,10 @@ def page_filing(portfolio: Portfolio, figs: dict) -> str:
         f"accession `{values['accession']}`: assets {usd_text(int(values['assets']))[1]}, "
         f"deposits {usd_text(int(values['deposits']))[1]}, "
         f"revenues {usd_text(int(values['revenues']))[1]}, and net income {usd_text(int(values['net_income']))[1]}. "
-        "Those are the tagged US dollar amounts scaled and rounded half up. "
-        f"Using those rounded amounts, deposits divided by assets are {values['displayed_ratio_percent']} percent."
+        "Those are the tagged US dollar amounts in trillions, rounded half up. "
+        f"In billions, to two decimals, deposits are {values['deposits_billions_text']} and assets are "
+        f"{values['assets_billions_text']}. Dividing those billion amounts gives "
+        f"{values['billion_ratio_percent']} percent, the same one-decimal result as the tagged integers."
     )
     doc.p(
         "The same year can show a different number in a later 10-K when the company presents comparative columns "
@@ -1785,14 +1803,15 @@ def page_filing(portfolio: Portfolio, figs: dict) -> str:
     )
     doc.h(2, "Exercise")
     doc.p(
-        f"Using the rounded amounts in the explainer for the fiscal year ended {values['fiscal_year_end']} "
-        f"({values['deposits_text']} of deposits and {values['assets_text']} of assets), divide deposits by assets "
-        "and give the result as a percent to one decimal place. Then name the filing date and the accession number."
+        f"Using the billion amounts for the fiscal year ended {values['fiscal_year_end']} "
+        f"({values['deposits_billions_text']} of deposits and {values['assets_billions_text']} of assets), "
+        "divide deposits by assets and give the result as a percent to one decimal place. "
+        "Then name the filing date and the accession number."
     )
     doc.answer(
         [
-            f"The explainer amounts are {values['deposits_text']} of deposits and {values['assets_text']} of assets. "
-            f"Dividing those rounded amounts gives {values['displayed_ratio_percent']} percent. "
+            f"Deposits are {values['deposits_billions_text']} and assets are {values['assets_billions_text']}. "
+            f"Dividing those amounts gives {values['billion_ratio_percent']} percent. "
             f"The 10-K was filed on {values['filed']}, accession `{values['accession']}`, "
             f"for the period ended {values['fiscal_year_end']}. "
             f"Primary document: [10-K on EDGAR]({values['ten_k_url']}). "
@@ -1848,7 +1867,7 @@ def page_filing(portfolio: Portfolio, figs: dict) -> str:
                 values["fiscal_year_end"],
                 values["filed"],
                 "see tagged amounts",
-                f"{values['displayed_ratio_percent']}%",
+                f"{values['billion_ratio_percent']}%",
             ],
         ],
     )
@@ -2361,7 +2380,8 @@ def fetch_snapshots() -> None:
         fred_dir.mkdir()
         for series_id in FRED_SERIES:
             url = fred_url(series_id)
-            body = trim_fred_csv(fetch_bytes(url).decode("utf-8")).encode("utf-8")
+            raw = fetch_bytes(url)
+            body = trim_fred_csv(raw.decode("utf-8")).encode("utf-8")
             relative = f"fred/{series_id}.csv"
             (stage / relative).write_bytes(body)
             entries.append(
@@ -2369,7 +2389,10 @@ def fetch_snapshots() -> None:
                     relative,
                     url,
                     body,
+                    kind="trimmed",
                     series_id=series_id,
+                    original_sha256=sha256_bytes(raw),
+                    retrieved_on=retrieved_on,
                     trimmed_to=f"observations on or after {FRED_KEEP_FROM}",
                 )
             )
@@ -2393,6 +2416,7 @@ def fetch_snapshots() -> None:
                     text += "\n"
             else:
                 text = json.dumps({"raw_pages": raw_pages, "note": "Unmodified page bodies."}, indent=2) + "\n"
+            original = text.encode("utf-8")
             data = trim_world_bank(text).encode("utf-8")
             (stage / relative).write_bytes(data)
             entries.append(
@@ -2400,7 +2424,10 @@ def fetch_snapshots() -> None:
                     relative,
                     wb_url(indicator, 1),
                     data,
+                    kind="trimmed",
                     indicator=indicator,
+                    original_sha256=sha256_bytes(original),
+                    retrieved_on=retrieved_on,
                     trimmed_to=f"non-null rows from {WB_KEEP_FROM_YEAR} on",
                 )
             )
@@ -2411,17 +2438,21 @@ def fetch_snapshots() -> None:
             ("indicators.json", "https://www.imf.org/external/datamapper/api/v1/indicators"),
         ):
             body = fetch_bytes(url, timeout=90)
-            text = body.decode("utf-8")
+            original_text = body.decode("utf-8")
             if name == "PCPIPCH.json":
-                text = trim_imf_inflation(text)
-            elif not text.endswith("\n"):
-                text += "\n"
+                text = trim_imf_inflation(original_text)
+                extra = {
+                    "kind": "trimmed",
+                    "original_sha256": sha256_bytes(body),
+                    "retrieved_on": retrieved_on,
+                    "trimmed_to": f"library countries, years from {IMF_KEEP_FROM_YEAR}",
+                }
+            else:
+                text = original_text if original_text.endswith("\n") else original_text + "\n"
+                extra = {}
             data = text.encode("utf-8")
             relative = f"imf/{name}"
             (stage / relative).write_bytes(data)
-            extra = (
-                {"trimmed_to": f"library countries, years from {IMF_KEEP_FROM_YEAR}"} if name == "PCPIPCH.json" else {}
-            )
             entries.append(_manifest_entry(relative, url, data, **extra))
         companyfacts = fetch_bytes(
             f"https://data.sec.gov/api/xbrl/companyfacts/CIK{EDGAR_CIK}.json",
@@ -2463,8 +2494,8 @@ def fetch_snapshots() -> None:
             "retrieved_on": retrieved_on,
             "user_agent": UA,
             "note": (
-                "FRED, World Bank, and IMF files are trimmed to the years these modules use. "
-                "Each file's sha256 is of that trimmed text. url is the original request. "
+                "Trimmed FRED, World Bank, and IMF files have kind 'trimmed'. sha256 is the trimmed "
+                "file. original_sha256 is the full download before trimming. url is the request and "
                 "retrieved_on is the retrieval date. EDGAR files are excerpts: each fact and filing "
                 "field is copied unchanged, and full_payload_sha256 is the complete response, which is not stored."
             ),

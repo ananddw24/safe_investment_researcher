@@ -96,6 +96,8 @@ def test_modules_have_objectives_sources_alt_text_and_answer_key() -> None:
 
 
 def test_portfolio_regenerates_from_snapshots() -> None:
+    pytest = __import__("pytest")
+    pytest.importorskip("matplotlib")
     portfolio = gen.load_portfolio()
     assert gen.check_outputs(portfolio) == []
 
@@ -111,6 +113,11 @@ def test_snapshot_manifest_hashes_match_files() -> None:
         if entry["kind"] == "excerpt":
             assert len(entry["full_payload_sha256"]) == 64
             assert entry["full_payload_bytes"] > entry["bytes"]
+        if entry["kind"] == "trimmed":
+            assert len(entry["original_sha256"]) == 64
+            assert entry["original_sha256"] != entry["sha256"]
+            assert entry["retrieved_on"] == manifest["retrieved_on"]
+            assert entry.get("trimmed_to")
 
 
 def test_rates_trace_to_fred_snapshot() -> None:
@@ -130,11 +137,16 @@ def test_rates_trace_to_fred_snapshot() -> None:
     assert rounded in svg
     assert "CPIAUCSL" in page and "FEDFUNDS" in page
     # The exercise uses the displayed readings: funds to 2 decimals minus CPI change to 1 decimal.
-    displayed = _quantize(Decimal(funds[latest]) - Decimal(rounded), 1)
-    assert displayed == "0.1"
-    assert "3.75 minus 3.7" in page
-    assert f"{displayed} percentage points" in page
-    answer = page.split("## Answer key", 1)[1]
+    displayed = _quantize(Decimal(funds[latest]) - Decimal(rounded), 2)
+    assert displayed == "0.05"
+    collapsed = " ".join(page.split())
+    assert "3.75 minus 3.7" in collapsed
+    assert "0.05 percentage points" in collapsed
+    assert "about 0.03" in collapsed
+    assert "Give the difference to two decimals" in collapsed
+    gap_svg = (DOCS / "figures" / "rates-computed-gap.svg").read_text(encoding="utf-8")
+    assert ">0.05<" in gap_svg
+    answer = collapsed.split("## Answer key", 1)[1]
     assert "The result is positive." in answer
 
 
@@ -196,13 +208,15 @@ def test_ten_k_facts_trace_to_edgar_excerpt() -> None:
     assert assets["accn"] in page
     assert assets["filed"] in page
     assert "0000019617" in page
-    asset_reading = _quantize(Decimal(assets["val"]) / Decimal("1000000000000"), 2)
-    deposit_reading = _quantize(Decimal(deposits["val"]) / Decimal("1000000000000"), 2)
-    displayed = _quantize(Decimal(deposit_reading) / Decimal(asset_reading) * Decimal(100), 1)
-    answer = page.split("## Answer key", 1)[1]
-    assert f"${asset_reading} trillion" in answer
-    assert f"${deposit_reading} trillion" in answer
-    assert displayed in answer
+    asset_b = _quantize(Decimal(assets["val"]) / Decimal("1000000000"), 2)
+    deposit_b = _quantize(Decimal(deposits["val"]) / Decimal("1000000000"), 2)
+    ratio = _quantize(Decimal(deposit_b) / Decimal(asset_b) * Decimal(100), 1)
+    answer = " ".join(page.split("## Answer key", 1)[1].split())
+    assert f"${Decimal(deposit_b):,.2f}B" in answer
+    assert f"${Decimal(asset_b):,.2f}B" in answer
+    assert ratio == "57.8"
+    assert ratio in answer
+    assert "$4.42 trillion" in page
     assert "not an assessment of the company" in page.casefold() or "not an assessment" in page.casefold()
     assert "mid-year" not in page
     assert "<polyline" not in (DOCS / "figures" / "filing-assets-deposits.svg").read_text(encoding="utf-8")
@@ -331,7 +345,7 @@ def test_exercise_and_answer_key_agree() -> None:
         "rates-and-inflation.md": ("3.75 minus 3.7", "The result is positive."),
         "yield-curve.md": ("above", "0.37"),
         "labor-market.md": ("higher", "4.2"),
-        "reading-a-10k.md": ("$4.42 trillion", "$2.56 trillion"),
+        "reading-a-10k.md": ("$2,559.32B", "$4,424.90B", "57.8"),
         "cross-country-inflation.md": ("Nigeria", "23.0"),
         "household-finance.md": ("Egypt", "-22.09", "The result is negative."),
     }
