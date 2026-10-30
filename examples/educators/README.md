@@ -13,8 +13,8 @@ free, official source** — the same composition the MCP ecosystem in
 ## What's here
 
 - **[`reports/`](reports/)** — actual example reports, generated from
-  live data and **refreshed weekly**. Start with
-  [`reports/latest.md`](reports/latest.md). Three reports each week:
+  live data. Start with
+  [`reports/latest.md`](reports/latest.md). Three reports:
   - *US macro snapshot* — policy rate, inflation, unemployment, the
     10-year Treasury and the saving rate (FRED), beside the library's
     US records.

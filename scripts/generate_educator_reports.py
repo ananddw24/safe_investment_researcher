@@ -71,6 +71,12 @@ def prose(text: str, width: int = 88) -> list[str]:
 def quote(text: str, width: int = 88) -> list[str]:
     return ["> " + line for line in prose(text, width=width)]
 
+
+def _document(lines: list[str]) -> str:
+    """Join Markdown lines and end the file with one newline."""
+    return "\n".join(lines).rstrip("\n") + "\n"
+
+
 # Household countries with vehicle pages. `global` is a resource bucket
 # in the catalog, not an extra country. Display order is by name.
 LIBRARY_COUNTRIES = (
@@ -345,7 +351,7 @@ def macro_report(as_of: date, fetch) -> tuple[str, list[str]]:
         "",
         _footer(as_of),
     ]
-    return "\n".join(lines), failures
+    return _document(lines), failures
 
 
 def filing_report(as_of: date, fetch) -> tuple[str, list[str]]:
@@ -385,9 +391,12 @@ def filing_report(as_of: date, fetch) -> tuple[str, list[str]]:
         accessions = recent.get("accessionNumber") or []
         documents = recent.get("primaryDocument") or []
         for form, filed, accession, doc in zip(forms, filed_dates, accessions, documents, strict=False):
-            if filed > as_of.isoformat():
+            if filed > as_of.isoformat() or form not in FORM_ORDER:
                 continue
-            if form in FORM_ORDER and form not in picked:
+            # Keep the latest date. The submissions feed is usually newest-first,
+            # but a reordered page must not publish an older filing.
+            previous = picked.get(form)
+            if previous is None or filed > previous[0]:
                 picked[form] = (filed, accession, doc)
         lines.append("| Form | Filed | What it is | Filing |")
         lines.append("| --- | --- | --- | --- |")
@@ -413,7 +422,7 @@ def filing_report(as_of: date, fetch) -> tuple[str, list[str]]:
         "",
         _footer(as_of),
     ]
-    return "\n".join(lines), failures
+    return _document(lines), failures
 
 
 def _world_bank_url(indicator: str, page: int) -> str:
@@ -520,7 +529,7 @@ def world_report(as_of: date, fetch) -> tuple[str, list[str]]:
         "",
         _footer(as_of),
     ]
-    return "\n".join(lines), failures
+    return _document(lines), failures
 
 
 def _failure_note(failures: list[str]) -> str:
@@ -551,8 +560,7 @@ def render_index(as_of: date, names: list[str]) -> str:
     lines.extend(f"- [{name}]({name})" for name in names)
     lines.append("")
     lines.append(_footer(as_of))
-    lines.append("")
-    return "\n".join(lines)
+    return _document(lines)
 
 
 def build_reports(as_of: date, fetch) -> tuple[dict[str, str], list[str]]:

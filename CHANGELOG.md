@@ -15,7 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   country ids, and the inflation request stopped at 500 historical
   rows). The generator now asks for the latest non-empty value
   (`mrnev=1`), follows pages, includes Egypt, and cites
-  `FX.OWN.TOTL.ZG`. US macro rows name the series id, keep the source's
+  `FX.OWN.TOTL.ZS`. US macro rows name the series id, keep the source's
   decimal places, and separate the FOMC target range (`DFEDTARL` /
   `DFEDTARU`) from the monthly effective rate (`FEDFUNDS`). CPI
   percent changes are labeled as computed from `CPIAUCSL` and `CPIAUCNS`

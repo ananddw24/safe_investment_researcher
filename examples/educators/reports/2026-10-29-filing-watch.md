@@ -4,7 +4,7 @@
 > filing dates and primary-document links below matched. The
 > [2026-10-30 filing watch](2026-10-30-filing-watch.md) lists the same
 > documents in form order 10-K, 10-Q, 8-K.
-
+>
 > **Educational only, not investment advice.** Figures are retrieved from the
 > public sources cited on the retrieval date shown; re-check any figure at its
 > source before relying on it. Not financial advice.

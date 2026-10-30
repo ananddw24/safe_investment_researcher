@@ -9,7 +9,7 @@
 > `CPIAUCSL` (336.298 vs 324.245), not a separate percent series. The
 > not-seasonally-adjusted index `CPIAUCNS` gives the same 3.7% at one
 > decimal. See [2026-10-30-macro-snapshot.md](2026-10-30-macro-snapshot.md).
-
+>
 > **Educational only, not investment advice.** Figures are retrieved from the
 > public sources cited on the retrieval date shown; re-check any figure at its
 > source before relying on it. Not financial advice.

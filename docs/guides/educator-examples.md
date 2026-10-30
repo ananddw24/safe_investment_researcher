@@ -36,7 +36,7 @@ The server itself can recite the list: ask for `list_ecosystem_servers`.
 The rule in every example: **cite the record for the explanation, and
 the live source — with its date — for the figure.**
 
-## Example reports, refreshed weekly
+## Example reports
 
 Three example reports are generated from live, keyless official
 endpoints (FRED, SEC EDGAR, the World Bank) by

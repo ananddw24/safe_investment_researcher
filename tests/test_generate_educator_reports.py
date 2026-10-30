@@ -192,6 +192,34 @@ def test_world_bank_follows_pages_and_iso3_ids_and_lists_every_country():
     assert text.count("| Brazil |") == 0 or "Brazil" in text
 
 
+def test_filing_keeps_the_latest_date_when_the_feed_is_not_sorted():
+    payload = {
+        "filings": {
+            "recent": {
+                "form": ["10-K", "10-K", "10-Q", "8-K"],
+                "filingDate": ["2020-01-01", "2026-02-13", "2026-08-06", "2026-10-20"],
+                "accessionNumber": [
+                    "0000000000-20-000001",
+                    "0001628280-26-008131",
+                    "0001628280-26-054343",
+                    "0001193125-26-426704",
+                ],
+                "primaryDocument": ["old.htm", "annual.htm", "quarter.htm", "eight.htm"],
+            }
+        }
+    }
+
+    def fetch(_url: str) -> bytes:
+        return json.dumps(payload).encode()
+
+    text, failures = gen.filing_report(AS_OF, fetch)
+    assert failures == []
+    assert "old.htm" not in text
+    assert "annual.htm" in text
+    assert text.endswith("\n")
+    assert not text.endswith("\n\n")
+
+
 def test_filing_order_is_stable_and_ignores_other_forms():
     reports, _failures, _router = _reports()
     text = reports["filing-watch"]
@@ -291,6 +319,10 @@ def test_main_writes_only_the_pinned_date(tmp_path, monkeypatch):
     latest = (tmp_path / "latest.md").read_text(encoding="utf-8")
     assert "2026-10-30-macro-snapshot.md" in latest
     assert "Mu" + "se" not in latest
+    for path in tmp_path.iterdir():
+        raw = path.read_bytes()
+        assert raw.endswith(b"\n")
+        assert not raw.endswith(b"\n\n")
 
 
 def test_main_returns_nonzero_when_a_source_fails(tmp_path, monkeypatch):
