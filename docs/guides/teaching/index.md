@@ -35,10 +35,11 @@ python3 scripts/generate_teaching_portfolio.py
 python3 scripts/generate_teaching_portfolio.py --check
 ```
 
-Raw FRED CSV files, World Bank API responses, and IMF DataMapper responses are stored under
-`data/teaching/snapshots/`. The EDGAR companyfacts and submissions documents are large, so the
-snapshot keeps the facts and filing fields this portfolio uses, copied unchanged, plus the
-SHA-256 of each full payload in `manifest.json`.
+FRED, World Bank, and IMF files under `data/teaching/snapshots/` are trimmed to the years these
+modules use. The manifest records the original request URL, the retrieval date, and the SHA-256
+of the trimmed file. The EDGAR companyfacts and submissions documents are large, so the snapshot
+keeps the facts and filing fields this portfolio uses, copied unchanged, plus the SHA-256 of
+each full payload in `manifest.json`.
 
 ![Style sample, not data: blue solid, vermillion dashed, green dotted, plus orange, sky, and purple.](figures/chart-style.svg){.teaching-figure}
 
@@ -54,9 +55,28 @@ PNG of the same chart: [download](figures/chart-style.png).
 | [Rates and inflation](rates-and-inflation.md) | FRED `FEDFUNDS`, `CPIAUCSL` | 3.75% on 2026-09-01 |
 | [Yield curve](yield-curve.md) | FRED `DGS3MO`, `DGS2`, `DGS5`, `DGS10`, `DGS30` | 10-year minus 2-year 0.37 on 2026-10-29 |
 | [Labor market](labor-market.md) | FRED `UNRATE`, `PAYEMS`, `CIVPART` | Unemployment 4.2% on 2026-09-01 |
-| [Reading a 10-K](reading-a-10k.md) | SEC EDGAR companyfacts, CIK `0000019617` | FY 2025-12-31 assets 4424900000000 |
+| [Reading a 10-K](reading-a-10k.md) | SEC EDGAR companyfacts, CIK `0000019617` | FY 2025 assets $4.42 trillion |
 | [Cross-country inflation](cross-country-inflation.md) | World Bank `FP.CPI.TOTL.ZG`, IMF `PCPIPCH` | Comparison year 2024 |
 | [Household finance](household-finance.md) | World Bank Findex `FX.OWN.TOTL.ZS` and the female and male series | Survey year 2024 |
+
+## Data terms
+
+The numbers on these pages are copied or computed from official series. The prose and chart code
+are this library's. Each publisher has its own terms.
+
+- FRED, from the Federal Reserve Bank of St. Louis, redistributes series from source agencies.
+  The series on these pages come from the Board of Governors, the Bureau of Labor Statistics,
+  and the U.S. Treasury. Use follows the
+  [St. Louis Fed legal terms](https://fred.stlouisfed.org/legal) and the source agency's
+  terms.
+- World Bank indicators, including Findex, are used under the
+  [terms of use for datasets](https://www.worldbank.org/en/about/legal/terms-of-use-for-datasets),
+  which apply Creative Commons Attribution 4.0.
+- IMF DataMapper series, including WEO `PCPIPCH`, are used under the
+  [IMF copyright and usage terms](https://www.imf.org/en/About/copyright-and-usage). The
+  edition is the source string in the snapshot metadata.
+- SEC EDGAR companyfacts are public filings. The amounts are the filer's tagged values. See
+  the [SEC's EDGAR access guidance](https://www.sec.gov/os/accessing-edgar-data).
 
 ## Related
 

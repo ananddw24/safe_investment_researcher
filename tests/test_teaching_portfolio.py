@@ -129,16 +129,19 @@ def test_rates_trace_to_fred_snapshot() -> None:
     assert rounded in page
     assert rounded in svg
     assert "CPIAUCSL" in page and "FEDFUNDS" in page
-    # The rounded gap is funds minus the unrounded change, not minus the rounded percent.
-    gap = _quantize(Decimal(funds[latest]) - change, 1)
-    assert gap in page
+    # The exercise uses the displayed readings: funds to 2 decimals minus CPI change to 1 decimal.
+    displayed = _quantize(Decimal(funds[latest]) - Decimal(rounded), 1)
+    assert displayed == "0.1"
+    assert "3.75 minus 3.7" in page
+    assert f"{displayed} percentage points" in page
+    answer = page.split("## Answer key", 1)[1]
+    assert "The result is positive." in answer
 
 
 def test_yield_curve_spread_traces_to_fred_snapshot() -> None:
     as_of = _manifest()["retrieved_on"]
     series = {
-        name: {date: Decimal(raw) for date, raw in _fred(name).items() if date <= as_of}
-        for name, _label in gen.CURVE
+        name: {date: Decimal(raw) for date, raw in _fred(name).items() if date <= as_of} for name, _label in gen.CURVE
     }
     common = set.intersection(*(set(points) for points in series.values()))
     curve_date = max(common)
@@ -193,9 +196,16 @@ def test_ten_k_facts_trace_to_edgar_excerpt() -> None:
     assert assets["accn"] in page
     assert assets["filed"] in page
     assert "0000019617" in page
-    ratio = _quantize(Decimal(deposits["val"]) / Decimal(assets["val"]) * Decimal(100), 1)
-    assert ratio in page
+    asset_reading = _quantize(Decimal(assets["val"]) / Decimal("1000000000000"), 2)
+    deposit_reading = _quantize(Decimal(deposits["val"]) / Decimal("1000000000000"), 2)
+    displayed = _quantize(Decimal(deposit_reading) / Decimal(asset_reading) * Decimal(100), 1)
+    answer = page.split("## Answer key", 1)[1]
+    assert f"${asset_reading} trillion" in answer
+    assert f"${deposit_reading} trillion" in answer
+    assert displayed in answer
     assert "not an assessment of the company" in page.casefold() or "not an assessment" in page.casefold()
+    assert "mid-year" not in page
+    assert "<polyline" not in (DOCS / "figures" / "filing-assets-deposits.svg").read_text(encoding="utf-8")
 
 
 def test_world_bank_and_imf_trace_to_snapshots() -> None:
@@ -205,20 +215,34 @@ def test_world_bank_and_imf_trace_to_snapshots() -> None:
         parse_int=Decimal,
     )
     nigeria = [
-        row for row in payload[1]
+        row
+        for row in payload[1]
         if row.get("countryiso3code") == "NGA" and row.get("date") == "2025" and row.get("value") is not None
     ]
     assert len(nigeria) == 1
-    exact = format(nigeria[0]["value"], "f")
+    shown = _quantize(nigeria[0]["value"], 1)
     page = (DOCS / "cross-country-inflation.md").read_text(encoding="utf-8")
-    assert exact in page
-    assert "United States" in page and "omitted" in page.casefold() or "Missing" in page
+    assert shown in page
+    assert "United States" in page and ("omitted" in page.casefold() or "Missing" in page)
     indicators = json.loads((SNAPSHOTS / "imf" / "indicators.json").read_text(encoding="utf-8"))
     meta = indicators["indicators"]["PCPIPCH"]
     assert meta["source"] in page
     assert meta["label"] in page
     assert "PCPIPCH" in page
-    assert "2026" in page and "not as measured inflation" in page
+    assert "WEO projection" in page
+    imf = json.loads(
+        (SNAPSHOTS / "imf" / "PCPIPCH.json").read_text(encoding="utf-8"),
+        parse_float=Decimal,
+        parse_int=Decimal,
+    )
+    last_year = max(int(year) for series in imf["values"]["PCPIPCH"].values() for year in series)
+    header = page.split("## WEO projections", 1)[1].split("\n", 8)
+    table_header = next(line for line in header if line.startswith("| Country"))
+    for year in range(2026, last_year + 1):
+        assert str(year) in table_header
+    generator = (ROOT / "scripts" / "generate_teaching_portfolio.py").read_text(encoding="utf-8")
+    assert "October 2026" not in generator
+    assert "2031" not in generator
 
 
 def test_findex_gap_traces_to_world_bank_snapshot() -> None:
@@ -243,11 +267,85 @@ def test_findex_gap_traces_to_world_bank_snapshot() -> None:
     names = dict(gen.COUNTRIES)
     page = (DOCS / "household-finance.md").read_text(encoding="utf-8")
     assert names[lowest] in page
-    assert format(total[lowest], "f") in page
+    assert _quantize(total[lowest], 1) in page
     assert names[widest] in page
-    assert _quantize(gap[widest], 1) in page
+    assert _quantize(gap[widest], 2) in page
     assert "FX.OWN.TOTL.ZS" in page
     assert "not a separate published series" in page.casefold()
+    answer = " ".join(page.split("## Answer key", 1)[1].split())
+    assert "The result is negative." in answer
+
+
+def test_range_sentence_names_a_stretch_when_the_extreme_holds() -> None:
+    funds = _fred("FEDFUNDS")
+    window = {date: Decimal(raw) for date, raw in funds.items() if "2016-10-01" <= date <= "2026-10-30"}
+    high = max(window.values())
+    dates = sorted(date for date, value in window.items() if value == high)
+    page = (DOCS / "rates-and-inflation.md").read_text(encoding="utf-8")
+    assert dates[0] in page and dates[-1] in page
+    assert f"5.33% (from {dates[0]} to {dates[-1]})" in page
+
+
+def test_october_2025_gap_breaks_the_line_without_stating_a_cause() -> None:
+    page = (DOCS / "rates-and-inflation.md").read_text(encoding="utf-8")
+    assert "2025-10-01" in page
+    assert "does not state a cause" in page
+    assert "shutdown" not in page.casefold()
+    svg = (DOCS / "figures" / "rates-policy-and-inflation.svg").read_text(encoding="utf-8")
+    assert svg.count("<polyline") >= 2
+    labor = " ".join((DOCS / "labor-market.md").read_text(encoding="utf-8").split())
+    assert "UNRATE has no observation on 2025-10-01" in labor
+    assert "CIVPART has no observation on 2025-10-01" in labor
+
+
+def test_gender_gap_sign_color_and_label() -> None:
+    svg = (DOCS / "figures" / "inclusion-gender-gap.svg").read_text(encoding="utf-8")
+    assert "-0.0<" not in svg
+    assert "> -0.0<" not in svg
+    assert "-0.03" in svg
+    assert "Percentage points" in svg
+    uk = svg.split("-0.03", 1)[0][-500:]
+    assert 'fill="#D55E00"' in uk
+    assert 'fill="#0072B2"' not in uk
+    png = (DOCS / "figures" / "inclusion-gender-gap.png").read_bytes()
+    assert png.startswith(b"\x89PNG\r\n\x1a\n")
+
+
+def test_svg_and_png_share_labels() -> None:
+    pytest = __import__("pytest")
+    pytest.importorskip("matplotlib")
+    portfolio = gen.load_portfolio()
+    charts = gen.charts
+    for fig in portfolio.figures:
+        svg = charts.render_svg(fig)
+        for label in charts.label_plan(fig):
+            assert label in svg, fig.slug
+        buffer = __import__("io").BytesIO()
+        charts.render_png(fig, buffer)
+        committed = (DOCS / "figures" / f"{fig.slug}.png").read_bytes()
+        assert buffer.getvalue() == committed, fig.slug
+
+
+def test_exercise_and_answer_key_agree() -> None:
+    pages = {
+        "rates-and-inflation.md": ("3.75 minus 3.7", "The result is positive."),
+        "yield-curve.md": ("above", "0.37"),
+        "labor-market.md": ("higher", "4.2"),
+        "reading-a-10k.md": ("$4.42 trillion", "$2.56 trillion"),
+        "cross-country-inflation.md": ("Nigeria", "23.0"),
+        "household-finance.md": ("Egypt", "-22.09", "The result is negative."),
+    }
+    for name, phrases in pages.items():
+        text = (DOCS / name).read_text(encoding="utf-8")
+        answer = " ".join(text.split("## Answer key", 1)[1].split())
+        for phrase in phrases:
+            assert phrase in answer, f"{name} missing {phrase}"
+
+
+def test_data_terms_name_each_publisher() -> None:
+    index = (DOCS / "index.md").read_text(encoding="utf-8")
+    for phrase in ("Creative Commons Attribution 4.0", "fred.stlouisfed.org/legal", "copyright-and-usage", "EDGAR"):
+        assert phrase in index
 
 
 def test_notebook_prints_the_snapshot_funds_rate() -> None:

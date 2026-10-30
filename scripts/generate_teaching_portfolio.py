@@ -51,6 +51,9 @@ NOTEBOOK_PATH = REPO_ROOT / "examples" / "educators" / "notebooks" / "teaching-p
 
 UA = "FinancialLibrary educator-examples anand.dw24@gmail.com"
 WINDOW_START = "2016-10-01"
+FRED_KEEP_FROM = "2015-10-01"
+WB_KEEP_FROM_YEAR = "2011"
+IMF_KEEP_FROM_YEAR = 2016
 EDGAR_CIK = "0000019617"
 EDGAR_CONCEPTS = ("Assets", "Deposits", "NetIncomeLoss", "Revenues")
 FRED_SERIES = (
@@ -182,6 +185,47 @@ def fetch_bytes(url: str, *, timeout: float = 60.0, attempts: int = 3) -> bytes:
                 raise RuntimeError(f"{url} failed after {attempts} attempts: {last}") from exc
             time.sleep(0.4 * attempt)
     raise RuntimeError(last)
+
+
+def trim_fred_csv(text: str) -> str:
+    """Keep observations from ``FRED_KEEP_FROM`` on, including the prior year the CPI change needs."""
+    source = io.StringIO(text)
+    reader = csv.DictReader(source)
+    if not reader.fieldnames:
+        return text
+    output = io.StringIO()
+    writer = csv.DictWriter(output, fieldnames=reader.fieldnames, lineterminator="\n")
+    writer.writeheader()
+    for row in reader:
+        if (row.get("observation_date") or "") >= FRED_KEEP_FROM:
+            writer.writerow(row)
+    return output.getvalue()
+
+
+def trim_world_bank(text: str) -> str:
+    payload = json.loads(text)
+    if isinstance(payload, dict) and "raw_pages" in payload:
+        rows: list[dict] = []
+        meta = None
+        for page in payload["raw_pages"]:
+            parsed = json.loads(page)
+            meta = parsed[0]
+            rows.extend(parsed[1] or [])
+    else:
+        meta, rows = payload[0], list(payload[1] or [])
+    kept = [row for row in rows if row.get("value") is not None and str(row.get("date") or "") >= WB_KEEP_FROM_YEAR]
+    return json.dumps([meta, kept]) + "\n"
+
+
+def trim_imf_inflation(text: str) -> str:
+    payload = json.loads(text)
+    block = payload["values"]["PCPIPCH"]
+    kept = {}
+    for iso3 in NAMES:
+        series = block.get(iso3) or {}
+        kept[iso3] = {year: series[year] for year in series if str(year).isdigit() and int(year) >= IMF_KEEP_FROM_YEAR}
+    payload["values"]["PCPIPCH"] = kept
+    return json.dumps(payload) + "\n"
 
 
 def fred_url(series_id: str) -> str:
@@ -379,7 +423,10 @@ def load_portfolio() -> Portfolio:
         fund = funds.get(now.observed)
         if fund is None:
             continue
-        gap.append((now.observed, fund.value, pct, fund.value - pct))
+        # The gap uses the same rounded readings the page displays, then rounds the difference.
+        displayed_fund = Decimal(quantize(fund.value, 2))
+        displayed_cpi = Decimal(quantize(pct, 1))
+        gap.append((now.observed, displayed_fund, displayed_cpi, displayed_fund - displayed_cpi))
     dgs10 = {item.observed: item.value for item in fred["DGS10"]}
     dgs2 = {item.observed: item.value for item in fred["DGS2"]}
     spread = []
@@ -531,8 +578,8 @@ def build_figures(portfolio: Portfolio) -> list:
     )
     gap_fig = charts.LineFigure(
         "rates-computed-gap",
-        "Funds rate minus the computed CPI change",
-        "Computed in this library. Not a published real interest rate.",
+        "Displayed funds rate minus the displayed CPI change",
+        "Both readings are the rounded values on the page. Not a published real interest rate.",
         (
             f"Computed gap, funds rate minus 12-month CPI change, through {gap_points[-1][0][:7]}. "
             f"Ends at {quantize(gap_points[-1][1], 1)} percentage points."
@@ -604,44 +651,57 @@ def build_figures(portfolio: Portfolio) -> list:
         False,
         1,
     )
-    # Mid-year positions keep the fiscal year under the point. Period ends stay in the table.
-    assets = [(f"{fact['end'][:4]}-07-01", billions(int(fact["val"]))) for fact in portfolio.facts["Assets"]]
-    deposits = [(f"{fact['end'][:4]}-07-01", billions(int(fact["val"]))) for fact in portfolio.facts["Deposits"]]
-    revenues = [(f"{fact['end'][:4]}-07-01", billions(int(fact["val"]))) for fact in portfolio.facts["Revenues"]]
-    income = [(f"{fact['end'][:4]}-07-01", billions(int(fact["val"]))) for fact in portfolio.facts["NetIncomeLoss"]]
-    filing_balance = charts.LineFigure(
+
+    def _year_values(concept: str) -> tuple[tuple[str, ...], tuple[str, ...]]:
+        years = []
+        values = []
+        for fact in portfolio.facts[concept]:
+            scaled, _text, _unit = usd_text(int(fact["val"]))
+            years.append(fact["end"][:4])
+            values.append(quantize(scaled, 2))
+        return tuple(years), tuple(values)
+
+    asset_years, asset_values = _year_values("Assets")
+    deposit_years, deposit_values = _year_values("Deposits")
+    revenue_years, revenue_values = _year_values("Revenues")
+    income_years, income_values = _year_values("NetIncomeLoss")
+    if asset_years != deposit_years or revenue_years != income_years:
+        raise RuntimeError("10-K concepts do not share fiscal years")
+    _assets_scaled, assets_prose, assets_unit = usd_text(int(portfolio.facts["Assets"][-1]["val"]))
+    _deposits_scaled, deposits_prose, _deposits_unit = usd_text(int(portfolio.facts["Deposits"][-1]["val"]))
+    _revenue_scaled, revenue_prose, income_unit = usd_text(int(portfolio.facts["Revenues"][-1]["val"]))
+    _income_scaled, income_prose, _income_unit = usd_text(int(portfolio.facts["NetIncomeLoss"][-1]["val"]))
+    filing_balance = charts.GroupedBarFigure(
         "filing-assets-deposits",
-        "Total assets and deposits, billions of US dollars",
-        "EDGAR 10-K facts. Billions are the integer divided by 1,000,000,000.",
+        "Total assets and deposits at fiscal year-end",
+        "EDGAR 10-K facts. Bars are year-end stocks, not a line through the year.",
         (
-            f"Assets and deposits, FY {assets[0][0][:4]}–{assets[-1][0][:4]}. "
-            f"{assets[-1][0][:4]} assets {quantize(assets[-1][1], 1)}bn, "
-            f"deposits {quantize(deposits[-1][1], 1)}bn."
+            f"Assets and deposits, fiscal years {asset_years[0]} to {asset_years[-1]}. "
+            f"{asset_years[-1]}: assets {assets_prose}, deposits {deposits_prose}."
         ),
-        "Billions of US dollars",
-        (
-            _series("Assets", assets, charts.PALETTE["blue"], "solid", 3),
-            _series("Deposits", deposits, charts.PALETTE["orange"], "dashed", 3),
-        ),
-        True,
-        3,
+        asset_years,
+        ("Assets", "Deposits"),
+        (charts.PALETTE["blue"], charts.PALETTE["orange"]),
+        (asset_values, deposit_values),
+        2,
+        "",
+        assets_unit,
     )
-    filing_income = charts.LineFigure(
+    filing_income = charts.GroupedBarFigure(
         "filing-revenue-income",
-        "Revenues and net income, billions of US dollars",
+        "Revenues and net income for the fiscal year",
         "EDGAR 10-K facts for a full fiscal year. Not a view on the company.",
         (
-            f"Revenues and net income, FY {revenues[0][0][:4]}–{revenues[-1][0][:4]}. "
-            f"{revenues[-1][0][:4]} revenues {quantize(revenues[-1][1], 1)}bn, "
-            f"net income {quantize(income[-1][1], 1)}bn."
+            f"Revenues and net income, fiscal years {revenue_years[0]} to {revenue_years[-1]}. "
+            f"{revenue_years[-1]}: revenues {revenue_prose}, net income {income_prose}."
         ),
-        "Billions of US dollars",
-        (
-            _series("Revenues", revenues, charts.PALETTE["sky"], "solid", 3),
-            _series("Net income", income, charts.PALETTE["vermillion"], "dashed", 3),
-        ),
-        True,
-        3,
+        revenue_years,
+        ("Revenues", "Net income"),
+        (charts.PALETTE["sky"], charts.PALETTE["vermillion"]),
+        (revenue_values, income_values),
+        2,
+        "",
+        income_unit,
     )
     year = str(portfolio.complete_year)
     wb_rows = []
@@ -661,7 +721,7 @@ def build_figures(portfolio: Portfolio) -> list:
         tuple(quantize(value, 1) for _label, value in wb_rows),
         1,
         "%",
-        False,
+        "Percent",
     )
     comp = str(portfolio.comparison_year)
     paired = []
@@ -685,6 +745,7 @@ def build_figures(portfolio: Portfolio) -> list:
         ),
         1,
         "%",
+        "Percent",
     )
     own = []
     gaps = []
@@ -708,7 +769,7 @@ def build_figures(portfolio: Portfolio) -> list:
         tuple(quantize(value, 1) for _label, value in own),
         1,
         "%",
-        False,
+        "Percent",
     )
     gap_bar = charts.BarFigure(
         "inclusion-gender-gap",
@@ -716,12 +777,13 @@ def build_figures(portfolio: Portfolio) -> list:
         "Computed from FX.OWN.TOTL.FE.ZS minus FX.OWN.TOTL.MA.ZS. Not a published gap series.",
         (
             f"Computed gender gap in {portfolio.survey_year}. "
-            f"Most negative: {gaps[0][0]} at {quantize(gaps[0][1], 1)} percentage points."
+            f"Most negative: {gaps[0][0]} at {quantize(gaps[0][1], 2)} percentage points."
         ),
         tuple(label for label, _value in gaps),
-        tuple(quantize(value, 1) for _label, value in gaps),
-        1,
+        tuple(quantize(value, 2) for _label, value in gaps),
+        2,
         "",
+        "Percentage points",
         True,
     )
     figures = [
@@ -768,6 +830,11 @@ def build_values(portfolio: Portfolio) -> dict:
     revenues = portfolio.facts["Revenues"][-1]
     income = portfolio.facts["NetIncomeLoss"][-1]
     ratio = Decimal(int(deposits["val"])) / Decimal(int(assets["val"])) * Decimal(100)
+    asset_scaled, asset_text, _asset_unit = usd_text(int(assets["val"]))
+    deposit_scaled, deposit_text, _deposit_unit = usd_text(int(deposits["val"]))
+    _revenue_scaled, revenue_text, _revenue_unit = usd_text(int(revenues["val"]))
+    _income_scaled, income_text, _income_unit = usd_text(int(income["val"]))
+    displayed_ratio = quantize(deposit_scaled / asset_scaled * Decimal(100), 1)
     year = str(portfolio.complete_year)
     comp = str(portfolio.comparison_year)
     wb_latest = []
@@ -856,6 +923,11 @@ def build_values(portfolio: Portfolio) -> dict:
                 "revenues": int(revenues["val"]),
                 "net_income": int(income["val"]),
                 "deposits_over_assets_percent": quantize(ratio, 1),
+                "assets_text": asset_text,
+                "deposits_text": deposit_text,
+                "revenues_text": revenue_text,
+                "net_income_text": income_text,
+                "displayed_ratio_percent": displayed_ratio,
                 "ten_k_url": filing_url(
                     portfolio.edgar_cik,
                     portfolio.filings["10-K"]["accessionNumber"],
@@ -949,12 +1021,84 @@ def _front(title: str, description: str, topics: str, retrieved: str) -> str:
     )
 
 
+def _longest_run(points: list[Obs], places: int, target: Decimal) -> tuple[str, str]:
+    quantized = [(item.observed, Decimal(quantize(item.value, places))) for item in points]
+    best: tuple[str, str] | None = None
+    start: str | None = None
+    previous: int | None = None
+    for index, (observed, value) in enumerate(quantized):
+        if value != target:
+            start = None
+            previous = None
+            continue
+        if start is None or previous != index - 1:
+            start = observed
+        previous = index
+        if best is None or (observed > best[1]) or (observed == best[1] and start < best[0]):
+            best = (start, observed)
+    if best is None:
+        raise RuntimeError("no run for extreme")
+    return best
+
+
+def _when(start: str, end: str) -> str:
+    if start == end:
+        return f"on {start}"
+    return f"from {start} to {end}"
+
+
 def _range_sentence(label: str, points: list[Obs], places: int, suffix: str) -> str:
-    low, high = _extreme(points)
+    quantized = [Decimal(quantize(item.value, places)) for item in points]
+    low_value = min(quantized)
+    high_value = max(quantized)
+    low_span = _longest_run(points, places, low_value)
+    high_span = _longest_run(points, places, high_value)
     return (
-        f"In this window, {label} ranges from {quantize(low.value, places)}{suffix} "
-        f"on {low.observed} to {quantize(high.value, places)}{suffix} on {high.observed}."
+        f"In this window, {label} ranges from {low_value:.{places}f}{suffix} ({_when(*low_span)}) "
+        f"to {high_value:.{places}f}{suffix} ({_when(*high_span)})."
     )
+
+
+def _missing_months(points: list[Obs], start: str, end: str) -> list[str]:
+    """Months inside the series span that have no observation. Months after the last point are not holes."""
+    observed = [item.observed for item in points if start <= item.observed <= end]
+    if len(observed) < 2:
+        return []
+    first, last = min(observed), max(observed)
+    have = set(observed)
+    missing: list[str] = []
+    year, month = int(first[:4]), int(first[5:7])
+    stop = (int(last[:4]), int(last[5:7]))
+    while (year, month) < stop:
+        key = f"{year:04d}-{month:02d}-01"
+        if key not in have:
+            missing.append(key)
+        month += 1
+        if month == 13:
+            month = 1
+            year += 1
+    return missing
+
+
+def _gap_note(points: list[Obs], series_id: str, as_of: str) -> str:
+    missing = _missing_months(points, WINDOW_START, as_of)
+    if not missing:
+        return ""
+    listed = ", ".join(missing)
+    return (
+        f" {series_id} has no observation on {listed} in this FRED snapshot, so the line breaks "
+        "instead of bridging that month. This page does not state a cause."
+    )
+
+
+def usd_text(amount: int) -> tuple[Decimal, str, str]:
+    """Scaled amount, prose, and axis label. Trillions from 1 trillion up; otherwise billions."""
+    value = Decimal(amount)
+    if abs(value) >= Decimal("1000000000000"):
+        scaled = Decimal(quantize(value / Decimal("1000000000000"), 2))
+        return scaled, f"${quantize(value / Decimal('1000000000000'), 2)} trillion", "Trillions of US dollars"
+    scaled = Decimal(quantize(value / Decimal("1000000000"), 2))
+    return scaled, f"${quantize(value / Decimal('1000000000'), 2)} billion", "Billions of US dollars"
 
 
 def render_pages(portfolio: Portfolio) -> dict[str, str]:
@@ -1009,10 +1153,11 @@ def page_index(portfolio: Portfolio, figs: dict) -> str:
     doc.add("```")
     doc.add("")
     doc.p(
-        "Raw FRED CSV files, World Bank API responses, and IMF DataMapper responses are stored "
-        "under `data/teaching/snapshots/`. The EDGAR companyfacts and submissions documents are "
-        "large, so the snapshot keeps the facts and filing fields this portfolio uses, copied "
-        "unchanged, plus the SHA-256 of each full payload in `manifest.json`."
+        "FRED, World Bank, and IMF files under `data/teaching/snapshots/` are trimmed to the years "
+        "these modules use. The manifest records the original request URL, the retrieval date, and the "
+        "SHA-256 of the trimmed file. The EDGAR companyfacts and submissions documents are large, so the "
+        "snapshot keeps the facts and filing fields this portfolio uses, copied unchanged, plus the "
+        "SHA-256 of each full payload in `manifest.json`."
     )
     doc.figure(
         figs["chart-style"],
@@ -1046,7 +1191,7 @@ def page_index(portfolio: Portfolio, figs: dict) -> str:
             [
                 "[Reading a 10-K](reading-a-10k.md)",
                 "SEC EDGAR companyfacts, CIK `0000019617`",
-                f"FY {filing['fiscal_year_end']} assets {filing['assets']}",
+                f"FY {filing['fiscal_year_end'][:4]} assets {filing['assets_text']}",
             ],
             [
                 "[Cross-country inflation](cross-country-inflation.md)",
@@ -1059,6 +1204,27 @@ def page_index(portfolio: Portfolio, figs: dict) -> str:
                 f"Survey year {portfolio.survey_year}",
             ],
         ],
+    )
+    doc.h(2, "Data terms")
+    doc.p(
+        "The numbers on these pages are copied or computed from official series. "
+        "The prose and chart code are this library's. Each publisher has its own terms."
+    )
+    doc.items(
+        [
+            "FRED, from the Federal Reserve Bank of St. Louis, redistributes series from source agencies. "
+            "The series on these pages come from the Board of Governors, the Bureau of Labor Statistics, "
+            "and the U.S. Treasury. Use follows the [St. Louis Fed legal terms](https://fred.stlouisfed.org/legal) "
+            "and the source agency's terms.",
+            "World Bank indicators, including Findex, are used under the "
+            "[terms of use for datasets](https://www.worldbank.org/en/about/legal/terms-of-use-for-datasets), "
+            "which apply Creative Commons Attribution 4.0.",
+            "IMF DataMapper series, including WEO `PCPIPCH`, are used under the "
+            "[IMF copyright and usage terms](https://www.imf.org/en/About/copyright-and-usage). "
+            "The edition is the source string in the snapshot metadata.",
+            "SEC EDGAR companyfacts are public filings. The amounts are the filer's tagged values. "
+            "See the [SEC's EDGAR access guidance](https://www.sec.gov/os/accessing-edgar-data).",
+        ]
     )
     doc.h(2, "Related")
     doc.items(
@@ -1080,14 +1246,15 @@ def page_rates(portfolio: Portfolio, figs: dict) -> str:
     gap = values["computed_gap_latest"]
     funds = in_window(portfolio.fred["FEDFUNDS"], WINDOW_START, portfolio.retrieved_on)
     gap_points = [Obs(item[0], quantize(item[3], 1), item[3]) for item in portfolio.gap]
-    unrounded_cpi = (Decimal(cpi["raw"]) / Decimal(cpi["prior_raw"]) - Decimal(1)) * Decimal(100)
     gap_number = Decimal(gap["gap_percentage_points"])
     if gap_number > 0:
         gap_words = "positive"
     elif gap_number < 0:
         gap_words = "negative"
     else:
-        gap_words = "zero after rounding"
+        gap_words = "zero"
+    shown_difference = Decimal(fund["raw"]) - Decimal(cpi["yoy_percent"])
+    cpi_note = _gap_note(portfolio.fred["CPIAUCSL"], "CPIAUCSL", portfolio.retrieved_on)
     doc = Doc()
     doc.add(
         _front(
@@ -1120,13 +1287,16 @@ def page_rates(portfolio: Portfolio, figs: dict) -> str:
     doc.figure(
         figs["rates-policy-and-inflation"],
         "Solid blue is FRED `FEDFUNDS`, the monthly average effective federal funds rate. "
-        "Dashed vermillion is the 12-month percent change in `CPIAUCSL`, computed here from the index. "
-        f"Window: {WINDOW_START} through {portfolio.retrieved_on}. The vertical axis includes zero.",
+        "Dashed vermillion is the 12-month percent change in `CPIAUCSL`, computed here from the index "
+        "and rounded half up to one decimal. "
+        f"Window: {WINDOW_START} through {portfolio.retrieved_on}. The vertical axis includes zero."
+        f"{cpi_note}",
     )
     doc.figure(
         figs["rates-computed-gap"],
-        "Each point is the effective funds rate minus the computed 12-month CPI change for that month. "
-        "Computed in this library. It is not a separate published series and not a real interest rate.",
+        "Each point is the displayed funds rate (two decimals) minus the displayed CPI change (one decimal). "
+        "The difference is then rounded half up to one decimal. Computed in this library. "
+        "It is not a separate published series and not a real interest rate.",
     )
     doc.h(2, "Explainer")
     doc.p(
@@ -1143,12 +1313,10 @@ def page_rates(portfolio: Portfolio, figs: dict) -> str:
     doc.p(
         f"The latest funds-rate observation in the snapshot on or before {portfolio.retrieved_on} "
         f"is {fund['raw']}% on {fund['date']}. The CPI index on {cpi['date']} is {cpi['raw']}, "
-        f"against {cpi['prior_raw']} on {cpi['prior_date']}. The unrounded change is "
-        f"{exact(unrounded_cpi)} percent, which rounds half up to {cpi['yoy_percent']}%. "
-        f"The gap subtracts that unrounded change from the funds rate and then rounds: "
-        f"{gap['gap_percentage_points']} percentage points, which is {gap_words}. "
-        f"Subtracting the already rounded percents, {fund['raw']} minus {cpi['yoy_percent']}, "
-        "is a different operation and is not the number on the chart."
+        f"against {cpi['prior_raw']} on {cpi['prior_date']}. That ratio, rounded half up, is a "
+        f"{cpi['yoy_percent']}% change. The gap chart uses those displayed readings: "
+        f"{fund['raw']} minus {cpi['yoy_percent']} is {shown_difference}, which rounds half up to "
+        f"{gap['gap_percentage_points']} percentage points. That result is {gap_words}."
     )
     doc.p(_range_sentence("the effective funds rate", funds, 2, "%"))
     doc.p(_range_sentence("the computed gap", gap_points, 1, " percentage points"))
@@ -1170,28 +1338,26 @@ def page_rates(portfolio: Portfolio, figs: dict) -> str:
     )
     doc.h(2, "Exercise")
     doc.p(
-        f"Using the snapshot readings for {cpi['date']}, subtract the 12-month CPI percent change "
-        "from the effective federal funds rate. Give the result to one decimal place, and say whether it is "
-        "positive or negative. "
-        "Show the two CPI index levels you used."
+        f"Using the readings printed for {cpi['date']}, subtract the 12-month CPI change "
+        f"({cpi['yoy_percent']}%, one decimal) from the effective federal funds rate "
+        f"({fund['raw']}%, two decimals). Round that difference half up to one decimal place. "
+        "Say whether the result is positive or negative. Also name the two CPI index levels behind the change."
     )
     doc.answer(
         [
-            f"The effective federal funds rate on {fund['date']} is {fund['raw']} percent (`FEDFUNDS`). "
+            f"The displayed effective federal funds rate on {fund['date']} is {fund['raw']} percent (`FEDFUNDS`). "
             f"The CPI index is {cpi['raw']} on {cpi['date']} and {cpi['prior_raw']} on {cpi['prior_date']} "
-            f"(`CPIAUCSL`). "
-            f"The unrounded 12-month change is {exact(unrounded_cpi)} percent, which rounds half up to "
-            f"{cpi['yoy_percent']} percent. "
-            f"The chart gap is {fund['raw']} minus that unrounded change, then rounded half up: "
-            f"{gap['gap_percentage_points']} percentage points ({gap_words}). "
-            f"It is not {fund['raw']} minus {cpi['yoy_percent']}. "
+            f"(`CPIAUCSL`). The displayed 12-month change is {cpi['yoy_percent']} percent. "
+            f"{fund['raw']} minus {cpi['yoy_percent']} is {shown_difference}, which rounds half up to "
+            f"{gap['gap_percentage_points']} percentage points. The result is {gap_words}. "
             "The gap compares two readings. It is not a published real rate and not a return.",
         ]
     )
     doc.h(2, "Sources and citations")
     doc.p(
         f"Retrieved {portfolio.retrieved_on}. Observations after that date are ignored. "
-        "Request URLs are also in `data/teaching/snapshots/manifest.json`."
+        "Request URLs are also in `data/teaching/snapshots/manifest.json`. "
+        "Terms: [data terms](index.md#data-terms)."
     )
     doc.table(
         ["Series", "ID", "Observation", "Value", "Series page"],
@@ -1212,13 +1378,6 @@ def page_rates(portfolio: Portfolio, figs: dict) -> str:
                 f"[FRED]({fred_page('CPIAUCSL')})",
             ],
             [
-                "12-month CPI change, unrounded",
-                "CPIAUCSL",
-                cpi["date"],
-                exact(unrounded_cpi),
-                "Computed here, not a separate FRED series",
-            ],
-            [
                 "12-month CPI change, rounded half up",
                 "CPIAUCSL",
                 cpi["date"],
@@ -1226,7 +1385,7 @@ def page_rates(portfolio: Portfolio, figs: dict) -> str:
                 "Computed here, not a separate FRED series",
             ],
             [
-                "Funds rate minus CPI change, computed here",
+                "Displayed funds rate minus displayed CPI change",
                 "FEDFUNDS and CPIAUCSL",
                 gap["date"],
                 f"{gap['gap_percentage_points']} pp",
@@ -1430,7 +1589,7 @@ def page_labor(portfolio: Portfolio, figs: dict) -> str:
         figs["labor-unemployment"],
         f"FRED `UNRATE`, the seasonally adjusted U-3 unemployment rate. Window {WINDOW_START} through "
         f"{portfolio.retrieved_on}. "
-        "The vertical axis includes zero.",
+        "The vertical axis includes zero." + _gap_note(portfolio.fred["UNRATE"], "UNRATE", portfolio.retrieved_on),
     )
     doc.figure(
         figs["labor-payroll-change"],
@@ -1442,7 +1601,8 @@ def page_labor(portfolio: Portfolio, figs: dict) -> str:
     doc.figure(
         figs["labor-participation"],
         "FRED `CIVPART`, the labor force participation rate. The vertical axis does not start at zero, "
-        "so a small move looks larger than it would on an axis from zero. Read the labels.",
+        "so a small move looks larger than it would on an axis from zero. Read the labels."
+        + _gap_note(portfolio.fred["CIVPART"], "CIVPART", portfolio.retrieved_on),
     )
     doc.h(2, "Explainer")
     doc.p(
@@ -1585,17 +1745,15 @@ def page_filing(portfolio: Portfolio, figs: dict) -> str:
     doc.h(2, "The picture")
     doc.figure(
         figs["filing-assets-deposits"],
-        "Billions of US dollars, equal to the EDGAR integer divided by 1,000,000,000. "
-        "Points sit at mid-year so the axis label matches the fiscal year; the period end is 31 December, "
-        "shown in the sources table. Each point is the current-year column of that year's 10-K: "
-        "`form` is `10-K`, `fp` is `FY`, and `fy` matches the year of `end`. "
-        "Comparative columns repeated in a later 10-K are excluded. This is not a later restatement.",
+        "Grouped bars for each fiscal year ending 31 December. The bars are not joined. "
+        "Each bar is the current-year column of that year's 10-K: `form` is `10-K`, `fp` is `FY`, "
+        "and `fy` matches the year of `end`. Comparative columns repeated in a later 10-K are excluded. "
+        "Amounts are the tagged integer divided by one trillion, rounded half up to two decimals.",
     )
     doc.figure(
         figs["filing-revenue-income"],
-        "Revenues (`Revenues`) and net income (`NetIncomeLoss`) for the full fiscal year, in billions of US dollars, "
-        "using the same selection rule and the same mid-year placement. A duration fact must also start in "
-        "that same year.",
+        "Revenues (`Revenues`) and net income (`NetIncomeLoss`) for the full fiscal year, as separate bars. "
+        "Same selection rule. Amounts are the tagged integer divided by one billion, rounded half up to two decimals.",
     )
     doc.h(2, "Explainer")
     doc.p(
@@ -1606,9 +1764,11 @@ def page_filing(portfolio: Portfolio, figs: dict) -> str:
     )
     doc.p(
         f"For the fiscal year ended {values['fiscal_year_end']}, filed {values['filed']}, "
-        f"accession `{values['accession']}`: assets {values['assets']}, deposits {values['deposits']}, "
-        f"revenues {values['revenues']}, and net income {values['net_income']}, all in US dollars as tagged. "
-        f"Deposits divided by assets, computed here, are {values['deposits_over_assets_percent']} percent."
+        f"accession `{values['accession']}`: assets {usd_text(int(values['assets']))[1]}, "
+        f"deposits {usd_text(int(values['deposits']))[1]}, "
+        f"revenues {usd_text(int(values['revenues']))[1]}, and net income {usd_text(int(values['net_income']))[1]}. "
+        "Those are the tagged US dollar amounts scaled and rounded half up. "
+        f"Using those rounded amounts, deposits divided by assets are {values['displayed_ratio_percent']} percent."
     )
     doc.p(
         "The same year can show a different number in a later 10-K when the company presents comparative columns "
@@ -1625,15 +1785,14 @@ def page_filing(portfolio: Portfolio, figs: dict) -> str:
     )
     doc.h(2, "Exercise")
     doc.p(
-        f"Using the fiscal year ended {values['fiscal_year_end']}, divide deposits by assets and express the result "
-        "as a percent to one decimal place. Then name the filing date and the accession number of the 10-K "
-        "those facts come from."
+        f"Using the rounded amounts in the explainer for the fiscal year ended {values['fiscal_year_end']} "
+        f"({values['deposits_text']} of deposits and {values['assets_text']} of assets), divide deposits by assets "
+        "and give the result as a percent to one decimal place. Then name the filing date and the accession number."
     )
     doc.answer(
         [
-            f"Assets are {values['assets']} and deposits are {values['deposits']} US dollars. "
-            f"Deposits divided by assets are {values['deposits_over_assets_percent']} percent, rounded half "
-            f"up to one decimal. "
+            f"The explainer amounts are {values['deposits_text']} of deposits and {values['assets_text']} of assets. "
+            f"Dividing those rounded amounts gives {values['displayed_ratio_percent']} percent. "
             f"The 10-K was filed on {values['filed']}, accession `{values['accession']}`, "
             f"for the period ended {values['fiscal_year_end']}. "
             f"Primary document: [10-K on EDGAR]({values['ten_k_url']}). "
@@ -1649,18 +1808,47 @@ def page_filing(portfolio: Portfolio, figs: dict) -> str:
         "start in that year."
     )
     doc.table(
-        ["Line", "US-GAAP concept", "Period end", "Filed", "Value (USD)"],
+        ["Line", "US-GAAP concept", "Period end", "Filed", "Tagged USD", "Rounded reading"],
         [
-            ["Assets", "Assets", values["fiscal_year_end"], values["filed"], str(values["assets"])],
-            ["Deposits", "Deposits", values["fiscal_year_end"], values["filed"], str(values["deposits"])],
-            ["Revenues", "Revenues", values["fiscal_year_end"], values["filed"], str(values["revenues"])],
-            ["Net income", "NetIncomeLoss", values["fiscal_year_end"], values["filed"], str(values["net_income"])],
             [
-                "Deposits / assets, computed here",
+                "Assets",
+                "Assets",
+                values["fiscal_year_end"],
+                values["filed"],
+                str(values["assets"]),
+                values["assets_text"],
+            ],
+            [
+                "Deposits",
+                "Deposits",
+                values["fiscal_year_end"],
+                values["filed"],
+                str(values["deposits"]),
+                values["deposits_text"],
+            ],
+            [
+                "Revenues",
+                "Revenues",
+                values["fiscal_year_end"],
+                values["filed"],
+                str(values["revenues"]),
+                values["revenues_text"],
+            ],
+            [
+                "Net income",
+                "NetIncomeLoss",
+                values["fiscal_year_end"],
+                values["filed"],
+                str(values["net_income"]),
+                values["net_income_text"],
+            ],
+            [
+                "Deposits / assets from the rounded readings",
                 "Deposits and Assets",
                 values["fiscal_year_end"],
                 values["filed"],
-                f"{values['deposits_over_assets_percent']}%",
+                "see tagged amounts",
+                f"{values['displayed_ratio_percent']}%",
             ],
         ],
     )
@@ -1720,7 +1908,7 @@ def page_countries(portfolio: Portfolio, figs: dict) -> str:
         [
             "Read an annual inflation bar as one official series for one year, with the year attached.",
             "Treat a missing country as a gap, not as zero.",
-            "Label IMF values for years that were not finished on the retrieval date as unpublished outcomes.",
+            "Label IMF values for years after the last complete calendar year as WEO projections.",
         ],
         numbered=True,
     )
@@ -1747,40 +1935,40 @@ def page_countries(portfolio: Portfolio, figs: dict) -> str:
     doc.p(
         f"On the {year} World Bank chart, the highest value among the countries that have a number is "
         f"{highest['name']}, {quantize(Decimal(highest['value']), 1)} percent. "
-        f"The unrounded snapshot value is {highest['value']}. "
         f"The United States' latest World Bank observation in this pull is {block['usa_latest_world_bank']['year']}: "
-        f"{block['usa_latest_world_bank']['value']}."
+        f"{quantize(Decimal(block['usa_latest_world_bank']['value']), 1)} percent."
+    )
+    imf_years = sorted({int(item) for country in portfolio.countries for item in country.imf_inflation})
+    imf_last_year = imf_years[-1]
+    projection_years = [str(item) for item in range(portfolio.complete_year + 1, imf_last_year + 1)]
+    doc.p(
+        f'The snapshot metadata names the source as "{block["imf_source"]}". '
+        f"For these countries the series runs through {imf_last_year}. "
+        f"History charts stop at {portfolio.complete_year}, the last calendar year that had ended on "
+        f"{portfolio.retrieved_on}. Later years are in the table below and are labeled WEO projections: "
+        "they are the vintage's published values for years that were not finished on the retrieval date, "
+        "not measured inflation."
     )
     doc.p(
-        f"The IMF series in the file runs past {portfolio.complete_year}, through later years including 2031. "
-        f"The metadata does not mark each year as an actual or a projection. "
-        f"This module plots only through {portfolio.complete_year}, the last calendar year that had ended on "
-        f"{portfolio.retrieved_on}. Values for later years are in the table below and in the snapshot. "
-        "Read them as numbers the October 2026 World Economic Outlook vintage published for years that were "
-        "not finished "
-        "on the retrieval date, not as measured inflation."
+        f"For {highest['name']} in {comp}, the World Bank value is "
+        f"{quantize(Decimal(imf_for_highest['world_bank']), 1)} percent and the IMF value is "
+        f"{quantize(Decimal(imf_for_highest['imf']), 1)} percent. "
+        "Use the comparison chart and the table for every country. Do not average the pair."
     )
+    doc.h(2, "WEO projections")
     doc.p(
-        f"For {highest['name']} in {comp}, the World Bank value is {imf_for_highest['world_bank']} and the "
-        f"IMF value is "
-        f"{imf_for_highest['imf']}. Use the comparison chart and the table for every country. Do not average the pair."
-    )
-    # If highest year != comparison year, the sentence above might mix. Let me check logic.
-    # highest is from year (complete year). imf_for_highest is comparison year row for that country.
-    # The sentence says "For {name} in {comp}" which is correct for the comparison row, not the 2025 highest.
-    # Good, the wording says `in {comp}`.
-    doc.h(2, "Years not complete on the retrieval date")
-    doc.p(
-        f"IMF `PCPIPCH` for {portfolio.complete_year + 1}, the first year that was not finished on "
-        f"{portfolio.retrieved_on}. "
-        "These are not plotted on the history charts."
+        f"IMF `PCPIPCH` for {projection_years[0]} through {projection_years[-1]}, from the source named in the "
+        f'snapshot metadata ("{block["imf_source"]}"). Each of these years is a WEO projection in this module. '
+        "They are not plotted on the history charts. Values are rounded half up to one decimal."
     )
     future_rows = []
-    future_year = str(portfolio.complete_year + 1)
     for country in portfolio.countries:
-        raw = country.imf_inflation.get(future_year)
-        future_rows.append([country.name, country.iso3, future_year, exact(raw) if raw is not None else "no value"])
-    doc.table(["Country", "ISO3", "Year", "IMF PCPIPCH"], future_rows)
+        row = [country.name, country.iso3]
+        for item in projection_years:
+            raw = country.imf_inflation.get(item)
+            row.append(quantize(raw, 1) if raw is not None else "no value")
+        future_rows.append(row)
+    doc.table(["Country", "ISO3", *projection_years], future_rows)
     doc.h(2, "Discussion questions")
     doc.items(
         [
@@ -1793,9 +1981,8 @@ def page_countries(portfolio: Portfolio, figs: dict) -> str:
     )
     doc.h(2, "Exercise")
     doc.p(
-        f"On the {year} World Bank chart, which plotted country is highest, and what is that value rounded half up "
-        "to one decimal place? Also write the unrounded snapshot value. If a library country is missing, name it and "
-        "do not treat it as zero."
+        f"On the {year} World Bank chart, which plotted country is highest, and what is that value to one decimal "
+        "place? If a library country is missing, name it and do not treat it as zero."
     )
     missing_sentence = (
         f"Missing in {year}: {missing}."
@@ -1805,8 +1992,8 @@ def page_countries(portfolio: Portfolio, figs: dict) -> str:
     doc.answer(
         [
             f"The highest plotted World Bank value for {year} is {highest['name']} (`{highest['iso3']}`), "
-            f"{quantize(Decimal(highest['value']), 1)} percent, from the unrounded snapshot value {highest['value']} "
-            f"(`FP.CPI.TOTL.ZG`). {missing_sentence} "
+            f"{quantize(Decimal(highest['value']), 1)} percent (`FP.CPI.TOTL.ZG`, rounded half up to one decimal). "
+            f"{missing_sentence} "
             "A higher inflation reading is not a verdict on a country and not a product suggestion.",
         ]
     )
@@ -1832,19 +2019,24 @@ def page_countries(portfolio: Portfolio, figs: dict) -> str:
             ],
         ],
     )
-    doc.p(f"World Bank {year} values in this snapshot, unrounded:")
+    doc.p(f"World Bank {year} values, rounded half up to one decimal:")
     doc.table(
         ["Country", "ISO3", "Year", "Value"],
         [
-            [item["name"], item["iso3"], item["year"], item["value"]]
+            [item["name"], item["iso3"], item["year"], quantize(Decimal(item["value"]), 1)]
             for item in sorted(rows, key=lambda item: item["name"])
         ],
     )
-    doc.p(f"Comparison year {comp}, unrounded World Bank value and IMF value:")
+    doc.p(f"Comparison year {comp}, both series rounded half up to one decimal:")
     doc.table(
         ["Country", "ISO3", "World Bank", "IMF PCPIPCH"],
         [
-            [item["name"], item["iso3"], item["world_bank"], item["imf"]]
+            [
+                item["name"],
+                item["iso3"],
+                quantize(Decimal(item["world_bank"]), 1),
+                quantize(Decimal(item["imf"]), 1),
+            ]
             for item in sorted(comparison, key=lambda item: item["name"])
         ],
     )
@@ -1915,10 +2107,11 @@ def page_household(portfolio: Portfolio, figs: dict) -> str:
     doc.p(f"The male series is named: {portfolio.wb_names['FX.OWN.TOTL.MA.ZS']}.")
     doc.p(
         f"In {portfolio.survey_year}, the lowest total share among these countries is {lowest['name']} "
-        f"at {quantize(Decimal(lowest['ownership']), 1)} percent (unrounded {lowest['ownership']}). "
+        f"at {quantize(Decimal(lowest['ownership']), 1)} percent. "
         f"The most negative female-minus-male gap is {widest['name']} at "
-        f"{quantize(Decimal(widest['gap_female_minus_male']), 1)} percentage points "
-        f"(female {widest['female']}, male {widest['male']})."
+        f"{quantize(Decimal(widest['gap_female_minus_male']), 2)} percentage points "
+        f"(female {quantize(Decimal(widest['female']), 2)} minus male {quantize(Decimal(widest['male']), 2)}). "
+        "That gap is negative: the reported female share is lower."
     )
     doc.p(
         "Findex years in this snapshot are survey years, not every calendar year. "
@@ -1940,19 +2133,17 @@ def page_household(portfolio: Portfolio, figs: dict) -> str:
     doc.h(2, "Exercise")
     doc.p(
         f"For {portfolio.survey_year}, name the library country with the lowest account-ownership share and "
-        f"the country "
-        "with the most negative female-minus-male gap. Give both figures to one decimal place, and show the "
-        "female and male "
-        "shares you subtracted."
+        "the country with the most negative female-minus-male gap. Give the ownership share to one decimal "
+        "place and the gap to two decimal places. Say whether that gap is positive or negative."
     )
     doc.answer(
         [
             f"Lowest account ownership in {portfolio.survey_year} is {lowest['name']} (`{lowest['iso3']}`), "
-            f"{quantize(Decimal(lowest['ownership']), 1)} percent, unrounded {lowest['ownership']} (`FX.OWN.TOTL.ZS`). "
-            f"The most negative gap is {widest['name']} (`{widest['iso3']}`): female {widest['female']} minus "
-            f"male {widest['male']} "
-            f"is {exact(Decimal(widest['gap_female_minus_male']))}, which rounds half up to "
-            f"{quantize(Decimal(widest['gap_female_minus_male']), 1)} percentage points. "
+            f"{quantize(Decimal(lowest['ownership']), 1)} percent (`FX.OWN.TOTL.ZS`). "
+            f"The most negative gap is {widest['name']} (`{widest['iso3']}`): female "
+            f"{quantize(Decimal(widest['female']), 2)} minus male {quantize(Decimal(widest['male']), 2)} "
+            f"is {quantize(Decimal(widest['gap_female_minus_male']), 2)} percentage points. "
+            "The result is negative. "
             "The gap is computed in this library. It is not a published series and not a recommendation.",
         ]
     )
@@ -1972,10 +2163,10 @@ def page_household(portfolio: Portfolio, figs: dict) -> str:
             [
                 item["name"],
                 item["iso3"],
-                item["ownership"],
-                item["female"],
-                item["male"],
-                item["gap_female_minus_male"],
+                quantize(Decimal(item["ownership"]), 1),
+                quantize(Decimal(item["female"]), 2),
+                quantize(Decimal(item["male"]), 2),
+                quantize(Decimal(item["gap_female_minus_male"]), 2),
             ]
             for item in sorted(rows, key=lambda item: item["name"])
         ],
@@ -2078,8 +2269,11 @@ def check_outputs(portfolio: Portfolio) -> list[str]:
             errors.append(f"differs {path.relative_to(REPO_ROOT)}")
     for fig in portfolio.figures:
         png = FIGURES / f"{fig.slug}.png"
-        if not png.exists() or not png.read_bytes().startswith(b"\x89PNG\r\n\x1a\n"):
-            errors.append(f"missing png {png.relative_to(REPO_ROOT)}")
+        buffer = io.BytesIO()
+        charts.render_png(fig, buffer)
+        rendered = buffer.getvalue()
+        if not png.exists() or png.read_bytes() != rendered:
+            errors.append(f"differs png {png.relative_to(REPO_ROOT)}")
     return errors
 
 
@@ -2167,10 +2361,18 @@ def fetch_snapshots() -> None:
         fred_dir.mkdir()
         for series_id in FRED_SERIES:
             url = fred_url(series_id)
-            body = fetch_bytes(url)
+            body = trim_fred_csv(fetch_bytes(url).decode("utf-8")).encode("utf-8")
             relative = f"fred/{series_id}.csv"
             (stage / relative).write_bytes(body)
-            entries.append(_manifest_entry(relative, url, body, series_id=series_id))
+            entries.append(
+                _manifest_entry(
+                    relative,
+                    url,
+                    body,
+                    series_id=series_id,
+                    trimmed_to=f"observations on or after {FRED_KEEP_FROM}",
+                )
+            )
         wb_dir = stage / "worldbank"
         wb_dir.mkdir()
         for indicator in WB_INDICATORS:
@@ -2191,9 +2393,17 @@ def fetch_snapshots() -> None:
                     text += "\n"
             else:
                 text = json.dumps({"raw_pages": raw_pages, "note": "Unmodified page bodies."}, indent=2) + "\n"
-            data = text.encode("utf-8")
+            data = trim_world_bank(text).encode("utf-8")
             (stage / relative).write_bytes(data)
-            entries.append(_manifest_entry(relative, wb_url(indicator, 1), data, indicator=indicator))
+            entries.append(
+                _manifest_entry(
+                    relative,
+                    wb_url(indicator, 1),
+                    data,
+                    indicator=indicator,
+                    trimmed_to=f"non-null rows from {WB_KEEP_FROM_YEAR} on",
+                )
+            )
         imf_dir = stage / "imf"
         imf_dir.mkdir()
         for name, url in (
@@ -2202,12 +2412,17 @@ def fetch_snapshots() -> None:
         ):
             body = fetch_bytes(url, timeout=90)
             text = body.decode("utf-8")
-            if not text.endswith("\n"):
+            if name == "PCPIPCH.json":
+                text = trim_imf_inflation(text)
+            elif not text.endswith("\n"):
                 text += "\n"
             data = text.encode("utf-8")
             relative = f"imf/{name}"
             (stage / relative).write_bytes(data)
-            entries.append(_manifest_entry(relative, url, data))
+            extra = (
+                {"trimmed_to": f"library countries, years from {IMF_KEEP_FROM_YEAR}"} if name == "PCPIPCH.json" else {}
+            )
+            entries.append(_manifest_entry(relative, url, data, **extra))
         companyfacts = fetch_bytes(
             f"https://data.sec.gov/api/xbrl/companyfacts/CIK{EDGAR_CIK}.json",
             timeout=120,
@@ -2248,9 +2463,10 @@ def fetch_snapshots() -> None:
             "retrieved_on": retrieved_on,
             "user_agent": UA,
             "note": (
-                "FRED, World Bank, and IMF files are the HTTP bodies, with a trailing newline added "
-                "if the body had none. EDGAR files are excerpts. Each fact and filing field is copied "
-                "unchanged. full_payload_sha256 is the SHA-256 of the complete response, which is not stored."
+                "FRED, World Bank, and IMF files are trimmed to the years these modules use. "
+                "Each file's sha256 is of that trimmed text. url is the original request. "
+                "retrieved_on is the retrieval date. EDGAR files are excerpts: each fact and filing "
+                "field is copied unchanged, and full_payload_sha256 is the complete response, which is not stored."
             ),
             "files": sorted(entries, key=lambda item: item["path"]),
         }

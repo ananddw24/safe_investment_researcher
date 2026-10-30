@@ -12,6 +12,8 @@ on:
       - "scripts/requirements-dev.txt"
       - "scripts/requirements-teaching.txt"
       - "tests/test_teaching_portfolio.py"
+      - "mkdocs.yml"
+      - "Makefile"
       - ".github/workflows/ci-teaching.yml"
   pull_request:
     paths:
@@ -24,6 +26,8 @@ on:
       - "scripts/requirements-dev.txt"
       - "scripts/requirements-teaching.txt"
       - "tests/test_teaching_portfolio.py"
+      - "mkdocs.yml"
+      - "Makefile"
       - ".github/workflows/ci-teaching.yml"
 
 permissions:
@@ -44,10 +48,14 @@ jobs:
           cache-dependency-path: scripts/requirements-dev.txt
 
       - name: Install test deps
-        run: pip install -r scripts/requirements-dev.txt
+        run: |
+          pip install -r scripts/requirements-dev.txt
+          pip install -r scripts/requirements-teaching.txt
 
       - name: Ruff
         run: ruff check scripts/generate_teaching_portfolio.py scripts/teaching_charts.py tests/test_teaching_portfolio.py
 
-      - name: Portfolio tests
-        run: python -m pytest tests/test_teaching_portfolio.py -q
+      - name: Portfolio tests and generator check
+        run: |
+          python -m pytest tests/test_teaching_portfolio.py -q
+          python scripts/generate_teaching_portfolio.py --check

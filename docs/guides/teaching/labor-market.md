@@ -31,7 +31,9 @@ force. This module does not turn any of them into a personal money decision.
 ![US unemployment rate, Oct 2016 to 2026-09. Ends at 4.2 percent.](figures/labor-unemployment.svg){.teaching-figure}
 
 Caption: FRED `UNRATE`, the seasonally adjusted U-3 unemployment rate. Window 2016-10-01 through
-2026-10-30. The vertical axis includes zero.
+2026-10-30. The vertical axis includes zero. UNRATE has no observation on 2025-10-01 in this
+FRED snapshot, so the line breaks instead of bridging that month. This page does not state a
+cause.
 
 PNG of the same chart: [download](figures/labor-unemployment.png).
 
@@ -46,7 +48,9 @@ PNG of the same chart: [download](figures/labor-payroll-change.png).
 ![Labor force participation, Oct 2016 to 2026-09. Ends at 61.8 percent.](figures/labor-participation.svg){.teaching-figure}
 
 Caption: FRED `CIVPART`, the labor force participation rate. The vertical axis does not start at
-zero, so a small move looks larger than it would on an axis from zero. Read the labels.
+zero, so a small move looks larger than it would on an axis from zero. Read the labels. CIVPART
+has no observation on 2025-10-01 in this FRED snapshot, so the line breaks instead of bridging
+that month. This page does not state a cause.
 
 PNG of the same chart: [download](figures/labor-participation.png).
 
@@ -57,9 +61,10 @@ labor force. People who are not looking for work are outside that rate. `PAYEMS`
 nonfarm payrolls, in thousands of persons, not a percent. `CIVPART` is the share of the civilian
 noninstitutional population that is in the labor force.
 
-In this window, the unemployment rate ranges from 3.4% on 2023-04-01 to 14.8% on 2020-04-01.
+In this window, the unemployment rate ranges from 3.4% (on 2023-04-01) to 14.8% (on 2020-04-01).
 
-In this window, the participation rate ranges from 60.1% on 2020-04-01 to 63.3% on 2020-02-01.
+In this window, the participation rate ranges from 60.1% (on 2020-04-01) to 63.3% (from
+2019-10-01 to 2020-02-01).
 
 On 2026-09-01, payroll employment is 159044 thousand persons, against 158548 thousand on
 2025-09-01. The level is higher by 496 thousand persons. The computed 12-month percent change is

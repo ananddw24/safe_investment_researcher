@@ -29,21 +29,20 @@ company and not a recommendation to buy, sell, or hold its securities.
 
 ## The picture
 
-![Assets and deposits, FY 2016–2025. 2025 assets 4424.9bn, deposits 2559.3bn.](figures/filing-assets-deposits.svg){.teaching-figure}
+![Assets and deposits, fiscal years 2016 to 2025. 2025: assets $4.42 trillion, deposits $2.56 trillion.](figures/filing-assets-deposits.svg){.teaching-figure}
 
-Caption: Billions of US dollars, equal to the EDGAR integer divided by 1,000,000,000. Points sit
-at mid-year so the axis label matches the fiscal year; the period end is 31 December, shown in
-the sources table. Each point is the current-year column of that year's 10-K: `form` is `10-K`,
-`fp` is `FY`, and `fy` matches the year of `end`. Comparative columns repeated in a later 10-K
-are excluded. This is not a later restatement.
+Caption: Grouped bars for each fiscal year ending 31 December. The bars are not joined. Each bar
+is the current-year column of that year's 10-K: `form` is `10-K`, `fp` is `FY`, and `fy` matches
+the year of `end`. Comparative columns repeated in a later 10-K are excluded. Amounts are the
+tagged integer divided by one trillion, rounded half up to two decimals.
 
 PNG of the same chart: [download](figures/filing-assets-deposits.png).
 
-![Revenues and net income, FY 2016–2025. 2025 revenues 182.4bn, net income 57.0bn.](figures/filing-revenue-income.svg){.teaching-figure}
+![Revenues and net income, fiscal years 2016 to 2025. 2025: revenues $182.45 billion, net income $57.05 billion.](figures/filing-revenue-income.svg){.teaching-figure}
 
-Caption: Revenues (`Revenues`) and net income (`NetIncomeLoss`) for the full fiscal year, in
-billions of US dollars, using the same selection rule and the same mid-year placement. A
-duration fact must also start in that same year.
+Caption: Revenues (`Revenues`) and net income (`NetIncomeLoss`) for the full fiscal year, as
+separate bars. Same selection rule. Amounts are the tagged integer divided by one billion,
+rounded half up to two decimals.
 
 PNG of the same chart: [download](figures/filing-revenue-income.png).
 
@@ -56,8 +55,9 @@ page does not state one. Read the current limit on the FDIC's own page, and writ
 you read it.
 
 For the fiscal year ended 2025-12-31, filed 2026-02-13, accession `0001628280-26-008131`: assets
-4424900000000, deposits 2559320000000, revenues 182447000000, and net income 57048000000, all in
-US dollars as tagged. Deposits divided by assets, computed here, are 57.8 percent.
+$4.42 trillion, deposits $2.56 trillion, revenues $182.45 billion, and net income $57.05
+billion. Those are the tagged US dollar amounts scaled and rounded half up. Using those rounded
+amounts, deposits divided by assets are 57.9 percent.
 
 The same year can show a different number in a later 10-K when the company presents comparative
 columns or revises a figure. The charts keep the number from the 10-K whose fiscal-year tag
@@ -72,9 +72,9 @@ matches that year.
 
 ## Exercise
 
-Using the fiscal year ended 2025-12-31, divide deposits by assets and express the result as a
-percent to one decimal place. Then name the filing date and the accession number of the 10-K
-those facts come from.
+Using the rounded amounts in the explainer for the fiscal year ended 2025-12-31 ($2.56 trillion
+of deposits and $4.42 trillion of assets), divide deposits by assets and give the result as a
+percent to one decimal place. Then name the filing date and the accession number.
 
 ## Answer key
 
@@ -83,8 +83,8 @@ Discussion questions stay open. This key answers the exercise only.
 <details markdown="1">
 <summary>Show the answer key</summary>
 
-Assets are 4424900000000 and deposits are 2559320000000 US dollars. Deposits divided by assets
-are 57.8 percent, rounded half up to one decimal. The 10-K was filed on 2026-02-13, accession
+The explainer amounts are $2.56 trillion of deposits and $4.42 trillion of assets. Dividing
+those rounded amounts gives 57.9 percent. The 10-K was filed on 2026-02-13, accession
 `0001628280-26-008131`, for the period ended 2025-12-31. Primary document:
 [10-K on EDGAR](https://www.sec.gov/Archives/edgar/data/19617/000162828026008131/jpm-20251231.htm).
 The ratio describes two lines in a filing. It is not a capital ratio, not an insurance
@@ -98,13 +98,13 @@ Retrieved 2026-10-30. Facts are copied from the SEC companyfacts JSON. The full 
 stored; `data/teaching/snapshots/manifest.json` records its SHA-256. Selection rule: `form`
 `10-K`, `fp` `FY`, `fy` equal to the year of `end`; duration facts must also start in that year.
 
-| Line | US-GAAP concept | Period end | Filed | Value (USD) |
-| --- | --- | --- | --- | --- |
-| Assets | Assets | 2025-12-31 | 2026-02-13 | 4424900000000 |
-| Deposits | Deposits | 2025-12-31 | 2026-02-13 | 2559320000000 |
-| Revenues | Revenues | 2025-12-31 | 2026-02-13 | 182447000000 |
-| Net income | NetIncomeLoss | 2025-12-31 | 2026-02-13 | 57048000000 |
-| Deposits / assets, computed here | Deposits and Assets | 2025-12-31 | 2026-02-13 | 57.8% |
+| Line | US-GAAP concept | Period end | Filed | Tagged USD | Rounded reading |
+| --- | --- | --- | --- | --- | --- |
+| Assets | Assets | 2025-12-31 | 2026-02-13 | 4424900000000 | $4.42 trillion |
+| Deposits | Deposits | 2025-12-31 | 2026-02-13 | 2559320000000 | $2.56 trillion |
+| Revenues | Revenues | 2025-12-31 | 2026-02-13 | 182447000000 | $182.45 billion |
+| Net income | NetIncomeLoss | 2025-12-31 | 2026-02-13 | 57048000000 | $57.05 billion |
+| Deposits / assets from the rounded readings | Deposits and Assets | 2025-12-31 | 2026-02-13 | see tagged amounts | 57.9% |
 
 Latest 10-K on or before 2026-10-30: filed 2026-02-13, accession `0001628280-26-008131`, primary
 document `jpm-20251231.htm`.

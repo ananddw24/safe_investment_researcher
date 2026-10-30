@@ -3,12 +3,12 @@
 <desc id="desc-cross-country-wb-imf">Paired 2024 inflation bars. Solid: World Bank. Hatched: IMF. Highest World Bank: Nigeria 33.2%.</desc>
 <rect width="760" height="684" fill="#FFFFFF"/>
 <text x="24" y="28" fill="#1A1A1A" font-size="16" font-weight="700" font-family="Segoe UI, Helvetica, Arial, sans-serif">World Bank and IMF inflation, 2024</text>
-<text x="24" y="48" fill="#4D4D4D" font-size="12" font-family="Segoe UI, Helvetica, Arial, sans-serif">Same countries and year. Different official series. Do not average them.</text>
+<text x="24" y="48" fill="#333333" font-size="12" font-family="Segoe UI, Helvetica, Arial, sans-serif">Same countries and year. Different official series. Do not average them.</text>
 <defs><pattern id="hatch-cross-country-wb-imf" patternUnits="userSpaceOnUse" width="6" height="6"><path d="M0,6 l6,-6" stroke="#E69F00" stroke-width="1.2"/></pattern></defs>
-<line x1="24" y1="74" x2="52" y2="74" stroke="#0072B2" stroke-width="2.5" stroke-dasharray=""/>
-<text x="58" y="78" fill="#1A1A1A" font-size="12" font-family="Segoe UI, Helvetica, Arial, sans-serif">World Bank</text>
-<line x1="128" y1="74" x2="156" y2="74" stroke="#E69F00" stroke-width="2.5" stroke-dasharray="2 2"/>
-<text x="162" y="78" fill="#1A1A1A" font-size="12" font-family="Segoe UI, Helvetica, Arial, sans-serif">IMF WEO</text>
+<rect x="24" y="66" width="22" height="10" fill="#0072B2" stroke="#0072B2"/>
+<text x="50" y="75" fill="#1A1A1A" font-size="12" font-family="Segoe UI, Helvetica, Arial, sans-serif">World Bank</text>
+<rect x="180" y="66" width="22" height="10" fill="url(#hatch-cross-country-wb-imf)" stroke="#E69F00" stroke-width="1"/>
+<text x="206" y="75" fill="#1A1A1A" font-size="12" font-family="Segoe UI, Helvetica, Arial, sans-serif">IMF WEO (hatched)</text>
 <text x="12" y="118.0" fill="#1A1A1A" font-size="12" font-family="Segoe UI, Helvetica, Arial, sans-serif">China</text>
 <rect x="150" y="100.0" width="2.8" height="12" fill="#0072B2" stroke="#0072B2" stroke-width="1"/>
 <text x="156.8" y="110.0" fill="#1A1A1A" font-size="10" font-family="Segoe UI, Helvetica, Arial, sans-serif">0.2%</text>
@@ -84,6 +84,6 @@
 <text x="615.1" y="614.0" fill="#1A1A1A" font-size="10" font-family="Segoe UI, Helvetica, Arial, sans-serif">33.2%</text>
 <rect x="150" y="618.0" width="461.1" height="12" fill="url(#hatch-cross-country-wb-imf)" stroke="#E69F00" stroke-width="1"/>
 <text x="615.1" y="628.0" fill="#1A1A1A" font-size="10" font-family="Segoe UI, Helvetica, Arial, sans-serif">33.2%</text>
-<text x="24" y="652" fill="#4D4D4D" font-size="11" font-family="Segoe UI, Helvetica, Arial, sans-serif">Top bar in each pair is listed first in the legend. The second bar is hatched.</text>
-<text x="24" y="668" fill="#4D4D4D" font-size="11" font-family="Segoe UI, Helvetica, Arial, sans-serif">FinancialLibrary teaching chart · educational only · not a forecast or a recommendation</text>
+<text x="409" y="656" text-anchor="middle" fill="#1A1A1A" font-size="12" font-family="Segoe UI, Helvetica, Arial, sans-serif">Percent</text>
+<text x="24" y="668" fill="#333333" font-size="11" font-family="Segoe UI, Helvetica, Arial, sans-serif">FinancialLibrary teaching chart · educational only · not a forecast or a recommendation</text>
 </svg>

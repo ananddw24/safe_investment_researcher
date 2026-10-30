@@ -1,37 +1,64 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="760" height="460" viewBox="0 0 760 460" role="img" aria-labelledby="title-filing-assets-deposits desc-filing-assets-deposits">
-<title id="title-filing-assets-deposits">Total assets and deposits, billions of US dollars</title>
-<desc id="desc-filing-assets-deposits">Assets and deposits, FY 2016–2025. 2025 assets 4424.9bn, deposits 2559.3bn.</desc>
-<rect width="760" height="460" fill="#FFFFFF"/>
-<text x="24" y="28" fill="#1A1A1A" font-size="16" font-weight="700" font-family="Segoe UI, Helvetica, Arial, sans-serif">Total assets and deposits, billions of US dollars</text>
-<text x="24" y="48" fill="#4D4D4D" font-size="12" font-family="Segoe UI, Helvetica, Arial, sans-serif">EDGAR 10-K facts. Billions are the integer divided by 1,000,000,000.</text>
-<line x1="24" y1="70" x2="52" y2="70" stroke="#0072B2" stroke-width="2.5" stroke-dasharray=""/>
-<text x="58" y="74" fill="#1A1A1A" font-size="12" font-family="Segoe UI, Helvetica, Arial, sans-serif">Assets</text>
-<line x1="106" y1="70" x2="134" y2="70" stroke="#E69F00" stroke-width="2.5" stroke-dasharray="7 4"/>
-<text x="140" y="74" fill="#1A1A1A" font-size="12" font-family="Segoe UI, Helvetica, Arial, sans-serif">Deposits</text>
-<line x1="64" y1="396.0" x2="732" y2="396.0" stroke="#E6E6E6" stroke-width="1"/>
-<text x="56" y="400.0" text-anchor="end" fill="#1A1A1A" font-size="11" font-family="Segoe UI, Helvetica, Arial, sans-serif">0</text>
-<line x1="64" y1="332.4" x2="732" y2="332.4" stroke="#E6E6E6" stroke-width="1"/>
-<text x="56" y="336.4" text-anchor="end" fill="#1A1A1A" font-size="11" font-family="Segoe UI, Helvetica, Arial, sans-serif">1000</text>
-<line x1="64" y1="268.8" x2="732" y2="268.8" stroke="#E6E6E6" stroke-width="1"/>
-<text x="56" y="272.8" text-anchor="end" fill="#1A1A1A" font-size="11" font-family="Segoe UI, Helvetica, Arial, sans-serif">2000</text>
-<line x1="64" y1="205.2" x2="732" y2="205.2" stroke="#E6E6E6" stroke-width="1"/>
-<text x="56" y="209.2" text-anchor="end" fill="#1A1A1A" font-size="11" font-family="Segoe UI, Helvetica, Arial, sans-serif">3000</text>
-<line x1="64" y1="141.5" x2="732" y2="141.5" stroke="#E6E6E6" stroke-width="1"/>
-<text x="56" y="145.5" text-anchor="end" fill="#1A1A1A" font-size="11" font-family="Segoe UI, Helvetica, Arial, sans-serif">4000</text>
-<text x="16" y="244" fill="#4D4D4D" font-size="11" transform="rotate(-90 16 244)" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif">Billions of US dollars</text>
-<text x="64.0" y="414" text-anchor="middle" fill="#1A1A1A" font-size="11" font-family="Segoe UI, Helvetica, Arial, sans-serif">2016</text>
-<text x="175.6" y="414" text-anchor="middle" fill="#1A1A1A" font-size="11" font-family="Segoe UI, Helvetica, Arial, sans-serif">2018</text>
-<text x="323.9" y="414" text-anchor="middle" fill="#1A1A1A" font-size="11" font-family="Segoe UI, Helvetica, Arial, sans-serif">2020</text>
-<text x="472.5" y="414" text-anchor="middle" fill="#1A1A1A" font-size="11" font-family="Segoe UI, Helvetica, Arial, sans-serif">2022</text>
-<text x="620.8" y="414" text-anchor="middle" fill="#1A1A1A" font-size="11" font-family="Segoe UI, Helvetica, Arial, sans-serif">2024</text>
-<text x="695.2" y="414" text-anchor="middle" fill="#1A1A1A" font-size="11" font-family="Segoe UI, Helvetica, Arial, sans-serif">2025</text>
-<line x1="64" y1="92" x2="64" y2="396" stroke="#767676"/>
-<line x1="64" y1="396" x2="732" y2="396" stroke="#767676"/>
-<polyline fill="none" stroke="#0072B2" stroke-width="2.25" stroke-dasharray="" stroke-linejoin="round" stroke-linecap="round" points="64.0,237.5 138.2,234.8 212.4,229.2 286.5,225.0 360.9,180.6 435.1,157.9 509.3,162.8 583.4,149.5 657.8,141.4 732.0,114.5"/>
-<circle cx="732.0" cy="114.5" r="3.5" fill="#0072B2"/>
-<text x="724.0" y="104.5" text-anchor="end" fill="#0072B2" font-size="12" font-weight="700" font-family="Segoe UI, Helvetica, Arial, sans-serif">4424.900</text>
-<polyline fill="none" stroke="#E69F00" stroke-width="2.25" stroke-dasharray="7 4" stroke-linejoin="round" stroke-linecap="round" points="64.0,308.5 138.2,304.1 212.4,302.4 286.5,296.6 360.9,259.6 435.1,239.4 509.3,247.1 583.4,243.3 657.8,242.9 732.0,233.2"/>
-<circle cx="732.0" cy="233.2" r="3.5" fill="#E69F00"/>
-<text x="724.0" y="249.2" text-anchor="end" fill="#E69F00" font-size="12" font-weight="700" font-family="Segoe UI, Helvetica, Arial, sans-serif">2559.320</text>
-<text x="24" y="444" fill="#4D4D4D" font-size="11" font-family="Segoe UI, Helvetica, Arial, sans-serif">FinancialLibrary teaching chart · educational only · not a forecast or a recommendation</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="504" viewBox="0 0 760 504" role="img" aria-labelledby="title-filing-assets-deposits desc-filing-assets-deposits">
+<title id="title-filing-assets-deposits">Total assets and deposits at fiscal year-end</title>
+<desc id="desc-filing-assets-deposits">Assets and deposits, fiscal years 2016 to 2025. 2025: assets $4.42 trillion, deposits $2.56 trillion.</desc>
+<rect width="760" height="504" fill="#FFFFFF"/>
+<text x="24" y="28" fill="#1A1A1A" font-size="16" font-weight="700" font-family="Segoe UI, Helvetica, Arial, sans-serif">Total assets and deposits at fiscal year-end</text>
+<text x="24" y="48" fill="#333333" font-size="12" font-family="Segoe UI, Helvetica, Arial, sans-serif">EDGAR 10-K facts. Bars are year-end stocks, not a line through the year.</text>
+<defs><pattern id="hatch-filing-assets-deposits" patternUnits="userSpaceOnUse" width="6" height="6"><path d="M0,6 l6,-6" stroke="#E69F00" stroke-width="1.2"/></pattern></defs>
+<rect x="24" y="66" width="22" height="10" fill="#0072B2" stroke="#0072B2"/>
+<text x="50" y="75" fill="#1A1A1A" font-size="12" font-family="Segoe UI, Helvetica, Arial, sans-serif">Assets</text>
+<rect x="180" y="66" width="22" height="10" fill="url(#hatch-filing-assets-deposits)" stroke="#E69F00" stroke-width="1"/>
+<text x="206" y="75" fill="#1A1A1A" font-size="12" font-family="Segoe UI, Helvetica, Arial, sans-serif">Deposits (hatched)</text>
+<text x="12" y="118.0" fill="#1A1A1A" font-size="12" font-family="Segoe UI, Helvetica, Arial, sans-serif">2016</text>
+<rect x="150" y="100.0" width="260.5" height="12" fill="#0072B2" stroke="#0072B2" stroke-width="1"/>
+<text x="414.5" y="110.0" fill="#1A1A1A" font-size="10" font-family="Segoe UI, Helvetica, Arial, sans-serif">2.49</text>
+<rect x="150" y="114.0" width="144.4" height="12" fill="url(#hatch-filing-assets-deposits)" stroke="#E69F00" stroke-width="1"/>
+<text x="298.4" y="124.0" fill="#1A1A1A" font-size="10" font-family="Segoe UI, Helvetica, Arial, sans-serif">1.38</text>
+<text x="12" y="154.0" fill="#1A1A1A" font-size="12" font-family="Segoe UI, Helvetica, Arial, sans-serif">2017</text>
+<rect x="150" y="136.0" width="264.7" height="12" fill="#0072B2" stroke="#0072B2" stroke-width="1"/>
+<text x="418.7" y="146.0" fill="#1A1A1A" font-size="10" font-family="Segoe UI, Helvetica, Arial, sans-serif">2.53</text>
+<rect x="150" y="150.0" width="150.7" height="12" fill="url(#hatch-filing-assets-deposits)" stroke="#E69F00" stroke-width="1"/>
+<text x="304.7" y="160.0" fill="#1A1A1A" font-size="10" font-family="Segoe UI, Helvetica, Arial, sans-serif">1.44</text>
+<text x="12" y="190.0" fill="#1A1A1A" font-size="12" font-family="Segoe UI, Helvetica, Arial, sans-serif">2018</text>
+<rect x="150" y="172.0" width="274.2" height="12" fill="#0072B2" stroke="#0072B2" stroke-width="1"/>
+<text x="428.2" y="182.0" fill="#1A1A1A" font-size="10" font-family="Segoe UI, Helvetica, Arial, sans-serif">2.62</text>
+<rect x="150" y="186.0" width="153.8" height="12" fill="url(#hatch-filing-assets-deposits)" stroke="#E69F00" stroke-width="1"/>
+<text x="307.8" y="196.0" fill="#1A1A1A" font-size="10" font-family="Segoe UI, Helvetica, Arial, sans-serif">1.47</text>
+<text x="12" y="226.0" fill="#1A1A1A" font-size="12" font-family="Segoe UI, Helvetica, Arial, sans-serif">2019</text>
+<rect x="150" y="208.0" width="281.5" height="12" fill="#0072B2" stroke="#0072B2" stroke-width="1"/>
+<text x="435.5" y="218.0" fill="#1A1A1A" font-size="10" font-family="Segoe UI, Helvetica, Arial, sans-serif">2.69</text>
+<rect x="150" y="222.0" width="163.2" height="12" fill="url(#hatch-filing-assets-deposits)" stroke="#E69F00" stroke-width="1"/>
+<text x="317.2" y="232.0" fill="#1A1A1A" font-size="10" font-family="Segoe UI, Helvetica, Arial, sans-serif">1.56</text>
+<text x="12" y="262.0" fill="#1A1A1A" font-size="12" font-family="Segoe UI, Helvetica, Arial, sans-serif">2020</text>
+<rect x="150" y="244.0" width="354.7" height="12" fill="#0072B2" stroke="#0072B2" stroke-width="1"/>
+<text x="508.7" y="254.0" fill="#1A1A1A" font-size="10" font-family="Segoe UI, Helvetica, Arial, sans-serif">3.39</text>
+<rect x="150" y="258.0" width="223.9" height="12" fill="url(#hatch-filing-assets-deposits)" stroke="#E69F00" stroke-width="1"/>
+<text x="377.9" y="268.0" fill="#1A1A1A" font-size="10" font-family="Segoe UI, Helvetica, Arial, sans-serif">2.14</text>
+<text x="12" y="298.0" fill="#1A1A1A" font-size="12" font-family="Segoe UI, Helvetica, Arial, sans-serif">2021</text>
+<rect x="150" y="280.0" width="391.3" height="12" fill="#0072B2" stroke="#0072B2" stroke-width="1"/>
+<text x="545.3" y="290.0" fill="#1A1A1A" font-size="10" font-family="Segoe UI, Helvetica, Arial, sans-serif">3.74</text>
+<rect x="150" y="294.0" width="257.4" height="12" fill="url(#hatch-filing-assets-deposits)" stroke="#E69F00" stroke-width="1"/>
+<text x="411.4" y="304.0" fill="#1A1A1A" font-size="10" font-family="Segoe UI, Helvetica, Arial, sans-serif">2.46</text>
+<text x="12" y="334.0" fill="#1A1A1A" font-size="12" font-family="Segoe UI, Helvetica, Arial, sans-serif">2022</text>
+<rect x="150" y="316.0" width="384.0" height="12" fill="#0072B2" stroke="#0072B2" stroke-width="1"/>
+<text x="538.0" y="326.0" fill="#1A1A1A" font-size="10" font-family="Segoe UI, Helvetica, Arial, sans-serif">3.67</text>
+<rect x="150" y="330.0" width="244.9" height="12" fill="url(#hatch-filing-assets-deposits)" stroke="#E69F00" stroke-width="1"/>
+<text x="398.9" y="340.0" fill="#1A1A1A" font-size="10" font-family="Segoe UI, Helvetica, Arial, sans-serif">2.34</text>
+<text x="12" y="370.0" fill="#1A1A1A" font-size="12" font-family="Segoe UI, Helvetica, Arial, sans-serif">2023</text>
+<rect x="150" y="352.0" width="406.0" height="12" fill="#0072B2" stroke="#0072B2" stroke-width="1"/>
+<text x="560.0" y="362.0" fill="#1A1A1A" font-size="10" font-family="Segoe UI, Helvetica, Arial, sans-serif">3.88</text>
+<rect x="150" y="366.0" width="251.1" height="12" fill="url(#hatch-filing-assets-deposits)" stroke="#E69F00" stroke-width="1"/>
+<text x="405.1" y="376.0" fill="#1A1A1A" font-size="10" font-family="Segoe UI, Helvetica, Arial, sans-serif">2.40</text>
+<text x="12" y="406.0" fill="#1A1A1A" font-size="12" font-family="Segoe UI, Helvetica, Arial, sans-serif">2024</text>
+<rect x="150" y="388.0" width="418.6" height="12" fill="#0072B2" stroke="#0072B2" stroke-width="1"/>
+<text x="572.6" y="398.0" fill="#1A1A1A" font-size="10" font-family="Segoe UI, Helvetica, Arial, sans-serif">4.00</text>
+<rect x="150" y="402.0" width="252.2" height="12" fill="url(#hatch-filing-assets-deposits)" stroke="#E69F00" stroke-width="1"/>
+<text x="406.2" y="412.0" fill="#1A1A1A" font-size="10" font-family="Segoe UI, Helvetica, Arial, sans-serif">2.41</text>
+<text x="12" y="442.0" fill="#1A1A1A" font-size="12" font-family="Segoe UI, Helvetica, Arial, sans-serif">2025</text>
+<rect x="150" y="424.0" width="462.5" height="12" fill="#0072B2" stroke="#0072B2" stroke-width="1"/>
+<text x="616.5" y="434.0" fill="#1A1A1A" font-size="10" font-family="Segoe UI, Helvetica, Arial, sans-serif">4.42</text>
+<rect x="150" y="438.0" width="267.9" height="12" fill="url(#hatch-filing-assets-deposits)" stroke="#E69F00" stroke-width="1"/>
+<text x="421.9" y="448.0" fill="#1A1A1A" font-size="10" font-family="Segoe UI, Helvetica, Arial, sans-serif">2.56</text>
+<text x="409" y="476" text-anchor="middle" fill="#1A1A1A" font-size="12" font-family="Segoe UI, Helvetica, Arial, sans-serif">Trillions of US dollars</text>
+<text x="24" y="488" fill="#333333" font-size="11" font-family="Segoe UI, Helvetica, Arial, sans-serif">FinancialLibrary teaching chart · educational only · not a forecast or a recommendation</text>
 </svg>

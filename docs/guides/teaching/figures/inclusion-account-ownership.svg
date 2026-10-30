@@ -1,54 +1,55 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="760" height="546" viewBox="0 0 760 546" role="img" aria-labelledby="title-inclusion-account-ownership desc-inclusion-account-ownership">
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="560" viewBox="0 0 760 560" role="img" aria-labelledby="title-inclusion-account-ownership desc-inclusion-account-ownership">
 <title id="title-inclusion-account-ownership">Account ownership, ages 15+, 2024</title>
 <desc id="desc-inclusion-account-ownership">Account ownership in 2024. Lowest: Egypt at 43.1 percent. Highest: United Kingdom at 99.3 percent.</desc>
-<rect width="760" height="546" fill="#FFFFFF"/>
+<rect width="760" height="560" fill="#FFFFFF"/>
 <text x="24" y="28" fill="#1A1A1A" font-size="16" font-weight="700" font-family="Segoe UI, Helvetica, Arial, sans-serif">Account ownership, ages 15+, 2024</text>
-<text x="24" y="48" fill="#4D4D4D" font-size="12" font-family="Segoe UI, Helvetica, Arial, sans-serif">World Bank Findex FX.OWN.TOTL.ZS. A survey share, not wealth and not a ranking to act on.</text>
-<line x1="168.0" y1="78" x2="168.0" y2="492" stroke="#767676"/>
+<text x="24" y="48" fill="#333333" font-size="12" font-family="Segoe UI, Helvetica, Arial, sans-serif">World Bank Findex FX.OWN.TOTL.ZS. A survey share, not wealth and not a ranking to act on.</text>
+<line x1="168.0" y1="78" x2="168.0" y2="492" stroke="#1A1A1A"/>
 <rect x="168.0" y="82.0" width="206.6" height="16" fill="#0072B2" rx="1"/>
 <text x="16" y="95.0" fill="#1A1A1A" font-size="13" font-family="Segoe UI, Helvetica, Arial, sans-serif">Egypt</text>
-<text x="380.6" y="95.0" text-anchor="start" fill="#1A1A1A" font-size="12" font-family="Segoe UI, Helvetica, Arial, sans-serif">43.1%</text>
+<text x="748.0" y="95.0" text-anchor="end" fill="#1A1A1A" font-size="12" font-family="Segoe UI, Helvetica, Arial, sans-serif">43.1%</text>
 <rect x="168.0" y="110.0" width="303.4" height="16" fill="#0072B2" rx="1"/>
 <text x="16" y="123.0" fill="#1A1A1A" font-size="13" font-family="Segoe UI, Helvetica, Arial, sans-serif">Nigeria</text>
-<text x="477.4" y="123.0" text-anchor="start" fill="#1A1A1A" font-size="12" font-family="Segoe UI, Helvetica, Arial, sans-serif">63.3%</text>
+<text x="748.0" y="123.0" text-anchor="end" fill="#1A1A1A" font-size="12" font-family="Segoe UI, Helvetica, Arial, sans-serif">63.3%</text>
 <rect x="168.0" y="138.0" width="388.7" height="16" fill="#0072B2" rx="1"/>
 <text x="16" y="151.0" fill="#1A1A1A" font-size="13" font-family="Segoe UI, Helvetica, Arial, sans-serif">South Africa</text>
-<text x="562.7" y="151.0" text-anchor="start" fill="#1A1A1A" font-size="12" font-family="Segoe UI, Helvetica, Arial, sans-serif">81.1%</text>
+<text x="748.0" y="151.0" text-anchor="end" fill="#1A1A1A" font-size="12" font-family="Segoe UI, Helvetica, Arial, sans-serif">81.1%</text>
 <rect x="168.0" y="166.0" width="389.2" height="16" fill="#0072B2" rx="1"/>
 <text x="16" y="179.0" fill="#1A1A1A" font-size="13" font-family="Segoe UI, Helvetica, Arial, sans-serif">Ghana</text>
-<text x="563.2" y="179.0" text-anchor="start" fill="#1A1A1A" font-size="12" font-family="Segoe UI, Helvetica, Arial, sans-serif">81.2%</text>
+<text x="748.0" y="179.0" text-anchor="end" fill="#1A1A1A" font-size="12" font-family="Segoe UI, Helvetica, Arial, sans-serif">81.2%</text>
 <rect x="168.0" y="194.0" width="412.2" height="16" fill="#0072B2" rx="1"/>
 <text x="16" y="207.0" fill="#1A1A1A" font-size="13" font-family="Segoe UI, Helvetica, Arial, sans-serif">Italy</text>
-<text x="586.2" y="207.0" text-anchor="start" fill="#1A1A1A" font-size="12" font-family="Segoe UI, Helvetica, Arial, sans-serif">86.0%</text>
+<text x="748.0" y="207.0" text-anchor="end" fill="#1A1A1A" font-size="12" font-family="Segoe UI, Helvetica, Arial, sans-serif">86.0%</text>
 <rect x="168.0" y="222.0" width="414.1" height="16" fill="#0072B2" rx="1"/>
 <text x="16" y="235.0" fill="#1A1A1A" font-size="13" font-family="Segoe UI, Helvetica, Arial, sans-serif">Brazil</text>
-<text x="588.1" y="235.0" text-anchor="start" fill="#1A1A1A" font-size="12" font-family="Segoe UI, Helvetica, Arial, sans-serif">86.4%</text>
+<text x="748.0" y="235.0" text-anchor="end" fill="#1A1A1A" font-size="12" font-family="Segoe UI, Helvetica, Arial, sans-serif">86.4%</text>
 <rect x="168.0" y="250.0" width="426.6" height="16" fill="#0072B2" rx="1"/>
 <text x="16" y="263.0" fill="#1A1A1A" font-size="13" font-family="Segoe UI, Helvetica, Arial, sans-serif">India</text>
-<text x="600.6" y="263.0" text-anchor="start" fill="#1A1A1A" font-size="12" font-family="Segoe UI, Helvetica, Arial, sans-serif">89.0%</text>
+<text x="748.0" y="263.0" text-anchor="end" fill="#1A1A1A" font-size="12" font-family="Segoe UI, Helvetica, Arial, sans-serif">89.0%</text>
 <rect x="168.0" y="278.0" width="428.5" height="16" fill="#0072B2" rx="1"/>
 <text x="16" y="291.0" fill="#1A1A1A" font-size="13" font-family="Segoe UI, Helvetica, Arial, sans-serif">China</text>
-<text x="602.5" y="291.0" text-anchor="start" fill="#1A1A1A" font-size="12" font-family="Segoe UI, Helvetica, Arial, sans-serif">89.4%</text>
+<text x="748.0" y="291.0" text-anchor="end" fill="#1A1A1A" font-size="12" font-family="Segoe UI, Helvetica, Arial, sans-serif">89.4%</text>
 <rect x="168.0" y="306.0" width="431.8" height="16" fill="#0072B2" rx="1"/>
 <text x="16" y="319.0" fill="#1A1A1A" font-size="13" font-family="Segoe UI, Helvetica, Arial, sans-serif">Kenya</text>
-<text x="605.8" y="319.0" text-anchor="start" fill="#1A1A1A" font-size="12" font-family="Segoe UI, Helvetica, Arial, sans-serif">90.1%</text>
+<text x="748.0" y="319.0" text-anchor="end" fill="#1A1A1A" font-size="12" font-family="Segoe UI, Helvetica, Arial, sans-serif">90.1%</text>
 <rect x="168.0" y="334.0" width="464.9" height="16" fill="#0072B2" rx="1"/>
 <text x="16" y="347.0" fill="#1A1A1A" font-size="13" font-family="Segoe UI, Helvetica, Arial, sans-serif">United States</text>
-<text x="638.9" y="347.0" text-anchor="start" fill="#1A1A1A" font-size="12" font-family="Segoe UI, Helvetica, Arial, sans-serif">97.0%</text>
+<text x="748.0" y="347.0" text-anchor="end" fill="#1A1A1A" font-size="12" font-family="Segoe UI, Helvetica, Arial, sans-serif">97.0%</text>
 <rect x="168.0" y="362.0" width="471.1" height="16" fill="#0072B2" rx="1"/>
 <text x="16" y="375.0" fill="#1A1A1A" font-size="13" font-family="Segoe UI, Helvetica, Arial, sans-serif">Germany</text>
-<text x="645.1" y="375.0" text-anchor="start" fill="#1A1A1A" font-size="12" font-family="Segoe UI, Helvetica, Arial, sans-serif">98.3%</text>
+<text x="748.0" y="375.0" text-anchor="end" fill="#1A1A1A" font-size="12" font-family="Segoe UI, Helvetica, Arial, sans-serif">98.3%</text>
 <rect x="168.0" y="390.0" width="471.6" height="16" fill="#0072B2" rx="1"/>
 <text x="16" y="403.0" fill="#1A1A1A" font-size="13" font-family="Segoe UI, Helvetica, Arial, sans-serif">Canada</text>
-<text x="645.6" y="403.0" text-anchor="start" fill="#1A1A1A" font-size="12" font-family="Segoe UI, Helvetica, Arial, sans-serif">98.4%</text>
+<text x="748.0" y="403.0" text-anchor="end" fill="#1A1A1A" font-size="12" font-family="Segoe UI, Helvetica, Arial, sans-serif">98.4%</text>
 <rect x="168.0" y="418.0" width="472.1" height="16" fill="#0072B2" rx="1"/>
 <text x="16" y="431.0" fill="#1A1A1A" font-size="13" font-family="Segoe UI, Helvetica, Arial, sans-serif">Japan</text>
-<text x="646.1" y="431.0" text-anchor="start" fill="#1A1A1A" font-size="12" font-family="Segoe UI, Helvetica, Arial, sans-serif">98.5%</text>
+<text x="748.0" y="431.0" text-anchor="end" fill="#1A1A1A" font-size="12" font-family="Segoe UI, Helvetica, Arial, sans-serif">98.5%</text>
 <rect x="168.0" y="446.0" width="475.4" height="16" fill="#0072B2" rx="1"/>
 <text x="16" y="459.0" fill="#1A1A1A" font-size="13" font-family="Segoe UI, Helvetica, Arial, sans-serif">France</text>
-<text x="649.4" y="459.0" text-anchor="start" fill="#1A1A1A" font-size="12" font-family="Segoe UI, Helvetica, Arial, sans-serif">99.2%</text>
+<text x="748.0" y="459.0" text-anchor="end" fill="#1A1A1A" font-size="12" font-family="Segoe UI, Helvetica, Arial, sans-serif">99.2%</text>
 <rect x="168.0" y="474.0" width="475.9" height="16" fill="#0072B2" rx="1"/>
 <text x="16" y="487.0" fill="#1A1A1A" font-size="13" font-family="Segoe UI, Helvetica, Arial, sans-serif">United Kingdom</text>
-<text x="649.9" y="487.0" text-anchor="start" fill="#1A1A1A" font-size="12" font-family="Segoe UI, Helvetica, Arial, sans-serif">99.3%</text>
-<text x="24" y="530" fill="#4D4D4D" font-size="11" font-family="Segoe UI, Helvetica, Arial, sans-serif">FinancialLibrary teaching chart · educational only · not a forecast or a recommendation</text>
+<text x="748.0" y="487.0" text-anchor="end" fill="#1A1A1A" font-size="12" font-family="Segoe UI, Helvetica, Arial, sans-serif">99.3%</text>
+<text x="425" y="532" text-anchor="middle" fill="#1A1A1A" font-size="12" font-family="Segoe UI, Helvetica, Arial, sans-serif">Percent</text>
+<text x="24" y="544" fill="#333333" font-size="11" font-family="Segoe UI, Helvetica, Arial, sans-serif">FinancialLibrary teaching chart · educational only · not a forecast or a recommendation</text>
 </svg>

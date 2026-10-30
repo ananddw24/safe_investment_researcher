@@ -31,16 +31,18 @@ index. It does not say what a household should do with either number.
 ![Funds rate and computed 12-month CPI change, Oct 2016 to 2026-09. Ends at 3.75% and 3.7%.](figures/rates-policy-and-inflation.svg){.teaching-figure}
 
 Caption: Solid blue is FRED `FEDFUNDS`, the monthly average effective federal funds rate. Dashed
-vermillion is the 12-month percent change in `CPIAUCSL`, computed here from the index. Window:
-2016-10-01 through 2026-10-30. The vertical axis includes zero.
+vermillion is the 12-month percent change in `CPIAUCSL`, computed here from the index and
+rounded half up to one decimal. Window: 2016-10-01 through 2026-10-30. The vertical axis
+includes zero. CPIAUCSL has no observation on 2025-10-01 in this FRED snapshot, so the line
+breaks instead of bridging that month. This page does not state a cause.
 
 PNG of the same chart: [download](figures/rates-policy-and-inflation.png).
 
-![Computed gap, funds rate minus 12-month CPI change, through 2026-09. Ends at 0.0 percentage points.](figures/rates-computed-gap.svg){.teaching-figure}
+![Computed gap, funds rate minus 12-month CPI change, through 2026-09. Ends at 0.1 percentage points.](figures/rates-computed-gap.svg){.teaching-figure}
 
-Caption: Each point is the effective funds rate minus the computed 12-month CPI change for that
-month. Computed in this library. It is not a separate published series and not a real interest
-rate.
+Caption: Each point is the displayed funds rate (two decimals) minus the displayed CPI change
+(one decimal). The difference is then rounded half up to one decimal. Computed in this library.
+It is not a separate published series and not a real interest rate.
 
 PNG of the same chart: [download](figures/rates-computed-gap.png).
 
@@ -57,16 +59,15 @@ place. If that prior month is missing, the point is skipped. A nearby month is n
 stand-in.
 
 The latest funds-rate observation in the snapshot on or before 2026-10-30 is 3.75% on
-2026-09-01. The CPI index on 2026-09-01 is 336.298, against 324.245 on 2025-09-01. The unrounded
-change is 3.717250844268994124813027200 percent, which rounds half up to 3.7%. The gap subtracts
-that unrounded change from the funds rate and then rounds: 0.0 percentage points, which is zero
-after rounding. Subtracting the already rounded percents, 3.75 minus 3.7, is a different
-operation and is not the number on the chart.
+2026-09-01. The CPI index on 2026-09-01 is 336.298, against 324.245 on 2025-09-01. That ratio,
+rounded half up, is a 3.7% change. The gap chart uses those displayed readings: 3.75 minus 3.7
+is 0.05, which rounds half up to 0.1 percentage points. That result is positive.
 
-In this window, the effective funds rate ranges from 0.05% on 2020-04-01 to 5.33% on 2024-08-01.
+In this window, the effective funds rate ranges from 0.05% (from 2020-04-01 to 2020-05-01) to
+5.33% (from 2023-08-01 to 2024-08-01).
 
-In this window, the computed gap ranges from -8.4 percentage points on 2022-03-01 to 2.7
-percentage points on 2024-08-01.
+In this window, the computed gap ranges from -8.4 percentage points (on 2022-03-01) to 2.7
+percentage points (from 2024-08-01 to 2024-09-01).
 
 A household savings rate can sit far from the funds rate because of the product, the bank, fees,
 and insurance limits. This page does not collect those rates and does not suggest chasing the
@@ -84,9 +85,10 @@ gap. For the literacy framing, use
 
 ## Exercise
 
-Using the snapshot readings for 2026-09-01, subtract the 12-month CPI percent change from the
-effective federal funds rate. Give the result to one decimal place, and say whether it is
-positive or negative. Show the two CPI index levels you used.
+Using the readings printed for 2026-09-01, subtract the 12-month CPI change (3.7%, one decimal)
+from the effective federal funds rate (3.75%, two decimals). Round that difference half up to
+one decimal place. Say whether the result is positive or negative. Also name the two CPI index
+levels behind the change.
 
 ## Answer key
 
@@ -95,28 +97,26 @@ Discussion questions stay open. This key answers the exercise only.
 <details markdown="1">
 <summary>Show the answer key</summary>
 
-The effective federal funds rate on 2026-09-01 is 3.75 percent (`FEDFUNDS`). The CPI index is
-336.298 on 2026-09-01 and 324.245 on 2025-09-01 (`CPIAUCSL`). The unrounded 12-month change is
-3.717250844268994124813027200 percent, which rounds half up to 3.7 percent. The chart gap is
-3.75 minus that unrounded change, then rounded half up: 0.0 percentage points (zero after
-rounding). It is not 3.75 minus 3.7. The gap compares two readings. It is not a published real
-rate and not a return.
+The displayed effective federal funds rate on 2026-09-01 is 3.75 percent (`FEDFUNDS`). The CPI
+index is 336.298 on 2026-09-01 and 324.245 on 2025-09-01 (`CPIAUCSL`). The displayed 12-month
+change is 3.7 percent. 3.75 minus 3.7 is 0.05, which rounds half up to 0.1 percentage points.
+The result is positive. The gap compares two readings. It is not a published real rate and not a
+return.
 
 </details>
 
 ## Sources and citations
 
 Retrieved 2026-10-30. Observations after that date are ignored. Request URLs are also in
-`data/teaching/snapshots/manifest.json`.
+`data/teaching/snapshots/manifest.json`. Terms: [data terms](index.md#data-terms).
 
 | Series | ID | Observation | Value | Series page |
 | --- | --- | --- | --- | --- |
 | Effective federal funds rate | FEDFUNDS | 2026-09-01 | 3.75% | [FRED](https://fred.stlouisfed.org/series/FEDFUNDS) |
 | CPI index, seasonally adjusted | CPIAUCSL | 2026-09-01 | 336.298 | [FRED](https://fred.stlouisfed.org/series/CPIAUCSL) |
 | CPI index, one year earlier | CPIAUCSL | 2025-09-01 | 324.245 | [FRED](https://fred.stlouisfed.org/series/CPIAUCSL) |
-| 12-month CPI change, unrounded | CPIAUCSL | 2026-09-01 | 3.717250844268994124813027200 | Computed here, not a separate FRED series |
 | 12-month CPI change, rounded half up | CPIAUCSL | 2026-09-01 | 3.7% | Computed here, not a separate FRED series |
-| Funds rate minus CPI change, computed here | FEDFUNDS and CPIAUCSL | 2026-09-01 | 0.0 pp | Not a separate FRED series |
+| Displayed funds rate minus displayed CPI change | FEDFUNDS and CPIAUCSL | 2026-09-01 | 0.1 pp | Not a separate FRED series |
 
 ```text
 https://fred.stlouisfed.org/graph/fredgraph.csv?id=FEDFUNDS

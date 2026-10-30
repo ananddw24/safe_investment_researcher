@@ -19,8 +19,8 @@ from xml.sax.saxutils import escape
 # Okabe–Ito, plus neutral interface colors. Do not introduce one-off hexes.
 PALETTE = {
     "ink": "#1A1A1A",
-    "muted": "#4D4D4D",
-    "axis": "#767676",
+    "muted": "#333333",
+    "axis": "#1A1A1A",
     "grid": "#E6E6E6",
     "bg": "#FFFFFF",
     "blue": "#0072B2",
@@ -107,7 +107,56 @@ def _limits(values: list[Decimal], include_zero: bool) -> tuple[Decimal, Decimal
 
 
 def _fmt(value: Decimal, places: int) -> str:
-    return f"{value:.{places}f}"
+    text = f"{value:.{places}f}"
+    # A negative amount must not render as -0.0.
+    if value < 0 and Decimal(text) == 0:
+        text = f"{value:.{places + 1}f}"
+    return text
+
+
+def _segments(dates: tuple[str, ...] | list[str], values: tuple[str, ...] | list[str], max_gap_days: int):
+    """Split a series where an observation is missing, so the line does not bridge the gap."""
+    runs: list[list[tuple[str, str]]] = []
+    current: list[tuple[str, str]] = []
+    previous: str | None = None
+    for observed, raw in zip(dates, values, strict=True):
+        if previous is not None and _ordinal(observed) - _ordinal(previous) > max_gap_days:
+            if current:
+                runs.append(current)
+            current = []
+        current.append((observed, raw))
+        previous = observed
+    if current:
+        runs.append(current)
+    return runs
+
+
+def label_plan(fig: Figure) -> list[str]:
+    """Text both the SVG and the PNG must show."""
+    labels = [fig.title]
+    if isinstance(fig, LineFigure):
+        labels.append(fig.y_label)
+        for series in fig.series:
+            labels.append(series.label)
+            if series.values:
+                labels.append(series.values[-1])
+    elif isinstance(fig, CurveFigure):
+        labels.append(fig.y_label)
+        labels.extend(fig.categories)
+        labels.extend(_fmt(_d(value), fig.places) for value in fig.values)
+    elif isinstance(fig, BarFigure):
+        labels.append(fig.x_label)
+        labels.extend(fig.labels)
+        labels.extend(f"{_fmt(_d(value), fig.places)}{fig.suffix}" for value in fig.values)
+    elif isinstance(fig, GroupedBarFigure):
+        labels.append(fig.x_label)
+        labels.extend(fig.series_labels)
+        labels.extend(fig.labels)
+        for series in fig.series_values:
+            labels.extend(f"{_fmt(_d(value), fig.places)}{fig.suffix}" for value in series)
+    elif isinstance(fig, StyleLegend):
+        labels.extend(["Blue, solid", "Vermillion, dashed", "Green, dotted", "Orange", "Sky", "Purple"])
+    return labels
 
 
 @dataclass(frozen=True)
@@ -129,6 +178,8 @@ class LineFigure:
     series: tuple[LineSeries, ...]
     include_zero: bool
     places: int
+    # Break the line when the next observation is more than this many days later.
+    max_gap_days: int = 40
 
 
 @dataclass(frozen=True)
@@ -156,6 +207,7 @@ class BarFigure:
     values: tuple[str, ...]
     places: int
     suffix: str
+    x_label: str = "Percent"
     diverging: bool = False
 
 
@@ -171,6 +223,7 @@ class GroupedBarFigure:
     series_values: tuple[tuple[str, ...], ...]
     places: int
     suffix: str
+    x_label: str = "Percent"
 
 
 @dataclass(frozen=True)
@@ -336,23 +389,23 @@ def _svg_line(fig: LineFigure) -> str:
         f'<line x1="{left}" y1="{top + plot_h}" x2="{width - right}" y2="{top + plot_h}" stroke="{PALETTE["axis"]}"/>'
     )
     for index, series in enumerate(fig.series):
-        coords = []
-        for iso, raw in zip(series.dates, series.values, strict=True):
-            coords.append(f"{x_of(iso):.1f},{y_of(_d(raw)):.1f}")
-        lines.append(
-            f'<polyline fill="none" stroke="{series.color}" stroke-width="2.25" '
-            f'stroke-dasharray="{DASH[series.dash]}" stroke-linejoin="round" '
-            f'stroke-linecap="round" points="{" ".join(coords)}"/>'
-        )
+        for run in _segments(series.dates, series.values, fig.max_gap_days):
+            coords = [f"{x_of(iso):.1f},{y_of(_d(raw)):.1f}" for iso, raw in run]
+            lines.append(
+                f'<polyline fill="none" stroke="{series.color}" stroke-width="2.25" '
+                f'stroke-dasharray="{DASH[series.dash]}" stroke-linejoin="round" '
+                f'stroke-linecap="round" points="{" ".join(coords)}"/>'
+            )
         last_x = x_of(series.dates[-1])
         last_y = y_of(_d(series.values[-1]))
         lines.append(f'<circle cx="{last_x:.1f}" cy="{last_y:.1f}" r="3.5" fill="{series.color}"/>')
-        label = series.values[-1]
-        dy = -10 if index % 2 == 0 else 16
+        # White stroke keeps the value readable when it sits on the line.
+        dy = -16 if index % 2 == 0 else 18
         lines.append(
             f'<text x="{last_x - 8:.1f}" y="{last_y + dy:.1f}" text-anchor="end" '
             f'fill="{series.color}" font-size="12" font-weight="700" '
-            f'font-family="Segoe UI, Helvetica, Arial, sans-serif">{escape(label)}</text>'
+            f'stroke="#FFFFFF" stroke-width="3" paint-order="stroke fill" '
+            f'font-family="Segoe UI, Helvetica, Arial, sans-serif">{escape(series.values[-1])}</text>'
         )
     return _svg_footer(lines, width, height)
 
@@ -443,7 +496,7 @@ def _svg_bars(fig: BarFigure) -> str:
     left = 168
     right = 78
     top = 78
-    bottom = 48
+    bottom = 62
     width = 760
     height = top + bottom + n * row
     plot_w = width - left - right
@@ -466,13 +519,14 @@ def _svg_bars(fig: BarFigure) -> str:
     for index, (label, value) in enumerate(zip(fig.labels, values, strict=True)):
         y = top + index * row + 4
         x = x_of(value)
-        color = PALETTE["vermillion"] if value < 0 else PALETTE["blue"]
+        color = PALETTE["vermillion"] if value < 0 else PALETTE["blue"] if value > 0 else PALETTE["axis"]
         bar_x = min(zero_x, x)
         bar_w = abs(x - zero_x) or 1
         lines.append(f'<rect x="{bar_x:.1f}" y="{y:.1f}" width="{bar_w:.1f}" height="16" fill="{color}" rx="1"/>')
         text = f"{_fmt(value, fig.places)}{fig.suffix}"
-        text_x = x + (6 if value >= 0 else -6)
-        anchor = "start" if value >= 0 else "end"
+        # Keep the number in the right margin so it does not sit on the bar or the country name.
+        text_x = width - 12
+        anchor = "end"
         lines.append(
             f'<text x="16" y="{y + 13:.1f}" fill="{PALETTE["ink"]}" font-size="13" '
             f'font-family="Segoe UI, Helvetica, Arial, sans-serif">{escape(label)}</text>'
@@ -481,6 +535,11 @@ def _svg_bars(fig: BarFigure) -> str:
             f'<text x="{text_x:.1f}" y="{y + 13:.1f}" text-anchor="{anchor}" fill="{PALETTE["ink"]}" '
             f'font-size="12" font-family="Segoe UI, Helvetica, Arial, sans-serif">{escape(text)}</text>'
         )
+    lines.append(
+        f'<text x="{left + plot_w / 2:.0f}" y="{height - 28}" text-anchor="middle" '
+        f'fill="{PALETTE["ink"]}" font-size="12" font-family="Segoe UI, Helvetica, Arial, sans-serif">'
+        f"{escape(fig.x_label)}</text>"
+    )
     return _svg_footer(lines, width, height)
 
 
@@ -501,14 +560,20 @@ def _svg_grouped(fig: GroupedBarFigure) -> str:
         f'<path d="M0,6 l6,-6" stroke="{fig.series_colors[1]}" stroke-width="1.2"/>'
         f"</pattern></defs>"
     )
-    _legend_row(
-        lines,
-        [
-            (fig.series_labels[0], fig.series_colors[0], ""),
-            (fig.series_labels[1], fig.series_colors[1], "2 2"),
-        ],
-        24,
-        74,
+    lines.append(
+        f'<rect x="24" y="66" width="22" height="10" fill="{fig.series_colors[0]}" stroke="{fig.series_colors[0]}"/>'
+    )
+    lines.append(
+        f'<text x="50" y="75" fill="{PALETTE["ink"]}" font-size="12" '
+        f'font-family="Segoe UI, Helvetica, Arial, sans-serif">{escape(fig.series_labels[0])}</text>'
+    )
+    lines.append(
+        f'<rect x="180" y="66" width="22" height="10" fill="url(#hatch-{fig.slug})" '
+        f'stroke="{fig.series_colors[1]}" stroke-width="1"/>'
+    )
+    lines.append(
+        f'<text x="206" y="75" fill="{PALETTE["ink"]}" font-size="12" '
+        f'font-family="Segoe UI, Helvetica, Arial, sans-serif">{escape(fig.series_labels[1])} (hatched)</text>'
     )
     flat = [_d(v) for series in fig.series_values for v in series]
     hi = max(max(flat), Decimal(0)) * Decimal("1.12") or Decimal(1)
@@ -538,10 +603,10 @@ def _svg_grouped(fig: GroupedBarFigure) -> str:
                 f'font-size="10" font-family="Segoe UI, Helvetica, Arial, sans-serif">'
                 f"{escape(_fmt(value, fig.places) + fig.suffix)}</text>"
             )
-    note = "Top bar in each pair is listed first in the legend. The second bar is hatched."
     lines.append(
-        f'<text x="24" y="{height - 32}" fill="{PALETTE["muted"]}" font-size="11" '
-        f'font-family="Segoe UI, Helvetica, Arial, sans-serif">{escape(note)}</text>'
+        f'<text x="{left + plot_w / 2:.0f}" y="{height - 28}" text-anchor="middle" '
+        f'fill="{PALETTE["ink"]}" font-size="12" font-family="Segoe UI, Helvetica, Arial, sans-serif">'
+        f"{escape(fig.x_label)}</text>"
     )
     return _svg_footer(lines, width, height)
 
@@ -582,124 +647,193 @@ def _style_axes(ax, title: str, subtitle: str) -> None:
     ax.tick_params(colors=PALETTE["ink"])
 
 
+def _png_setup() -> None:
+    import matplotlib
+
+    matplotlib.rcParams.update(
+        {
+            "font.family": "DejaVu Sans",
+            "axes.unicode_minus": False,
+            "savefig.facecolor": "white",
+            "figure.facecolor": "white",
+        }
+    )
+
+
+def _save_png(fig_m, path) -> None:
+    # Fixed metadata so two renders of the same figure match byte for byte.
+    fig_m.savefig(path, dpi=120, metadata={"Software": "FinancialLibrary", "Creation Time": "2026-10-30"})
+    import matplotlib.pyplot as plt
+
+    plt.close(fig_m)
+
+
 def _png_line(fig: LineFigure, path, plt) -> None:
     from datetime import datetime
 
+    _png_setup()
     fig_m, ax = plt.subplots(figsize=(9.6, 5.4), dpi=120)
     fig_m.patch.set_facecolor("white")
     ax.set_facecolor("white")
     for series in fig.series:
-        xs = [datetime.fromisoformat(d) for d in series.dates]
-        ys = [float(_d(v)) for v in series.values]
         linestyle = {"solid": "solid", "dashed": "dashed", "dotted": "dotted"}[series.dash]
-        ax.plot(xs, ys, color=series.color, linestyle=linestyle, linewidth=2, label=series.label)
+        labeled = False
+        for run in _segments(series.dates, series.values, fig.max_gap_days):
+            xs = [datetime.fromisoformat(observed) for observed, _raw in run]
+            ys = [float(_d(raw)) for _observed, raw in run]
+            ax.plot(
+                xs,
+                ys,
+                color=series.color,
+                linestyle=linestyle,
+                linewidth=2,
+                label=series.label if not labeled else None,
+            )
+            labeled = True
+        ax.annotate(
+            series.values[-1],
+            (datetime.fromisoformat(series.dates[-1]), float(_d(series.values[-1]))),
+            textcoords="offset points",
+            xytext=(-8, 8 if series == fig.series[0] else -12),
+            ha="right",
+            color=series.color,
+            fontsize=9,
+            fontweight="bold",
+        )
     if fig.include_zero:
         ax.set_ylim(bottom=min(0, ax.get_ylim()[0]))
-    ax.set_ylabel(fig.y_label, color=PALETTE["muted"])
+    ax.set_ylabel(fig.y_label, color=PALETTE["ink"])
     ax.legend(frameon=False)
     _style_axes(ax, fig.title, fig.subtitle)
-    fig_m.text(0.01, 0.01, FOOTER, color=PALETTE["muted"], fontsize=8)
+    fig_m.text(0.01, 0.01, FOOTER, color=PALETTE["ink"], fontsize=8)
     fig_m.tight_layout()
-    fig_m.savefig(path, dpi=120)
-    plt.close(fig_m)
+    _save_png(fig_m, path)
 
 
 def _png_curve(fig: CurveFigure, path, plt) -> None:
+    _png_setup()
     fig_m, ax = plt.subplots(figsize=(9.6, 5.0), dpi=120)
     fig_m.patch.set_facecolor("white")
     ys = [float(_d(v)) for v in fig.values]
     ax.plot(range(len(ys)), ys, color=fig.color, marker="o", linewidth=2)
     for index, value in enumerate(ys):
         ax.annotate(
-            f"{value:.{fig.places}f}",
+            _fmt(_d(fig.values[index]), fig.places),
             (index, value),
             textcoords="offset points",
             xytext=(0, 8),
             ha="center",
             color=fig.color,
+            fontsize=9,
+            fontweight="bold",
         )
     ax.set_xticks(range(len(fig.categories)), list(fig.categories))
-    ax.set_ylabel(fig.y_label, color=PALETTE["muted"])
+    ax.set_ylabel(fig.y_label, color=PALETTE["ink"])
     _style_axes(ax, fig.title, fig.subtitle)
-    fig_m.text(0.01, 0.01, FOOTER, color=PALETTE["muted"], fontsize=8)
+    fig_m.text(0.01, 0.01, FOOTER, color=PALETTE["ink"], fontsize=8)
     fig_m.tight_layout()
-    fig_m.savefig(path, dpi=120)
-    plt.close(fig_m)
+    _save_png(fig_m, path)
 
 
 def _png_bars(fig: BarFigure, path, plt) -> None:
-    fig_m, ax = plt.subplots(figsize=(9.6, max(4.8, 0.38 * len(fig.labels) + 1.6)), dpi=120)
+    _png_setup()
+    fig_m, ax = plt.subplots(figsize=(9.6, max(4.8, 0.38 * len(fig.labels) + 1.8)), dpi=120)
     fig_m.patch.set_facecolor("white")
     values = [float(_d(v)) for v in fig.values]
-    colors = [PALETTE["vermillion"] if v < 0 else PALETTE["blue"] for v in values]
+    colors = [PALETTE["vermillion"] if v < 0 else PALETTE["blue"] if v > 0 else PALETTE["axis"] for v in values]
     positions = list(range(len(fig.labels) - 1, -1, -1))
     ax.barh(positions, values, color=colors, height=0.7)
     span = max(abs(v) for v in values) or 1
-    ax.set_xlim(-span * 1.25 if fig.diverging else 0, span * 1.18 if fig.diverging else max(values) * 1.18)
-    for position, value in zip(positions, values, strict=True):
-        label = f"{value:.{fig.places}f}{fig.suffix}"
-        if value >= 0:
-            ax.text(value + span * 0.02, position, label, va="center", ha="left", fontsize=8, color=PALETTE["ink"])
-        else:
-            ax.text(value - span * 0.02, position, label, va="center", ha="right", fontsize=8, color=PALETTE["ink"])
+    if fig.diverging:
+        ax.set_xlim(-span * 1.35, span * 1.45)
+    else:
+        ax.set_xlim(0, max(values) * 1.28)
+    for position, raw in zip(positions, fig.values, strict=True):
+        value = _d(raw)
+        label = f"{_fmt(value, fig.places)}{fig.suffix}"
+        ax.text(ax.get_xlim()[1], position, label, va="center", ha="right", fontsize=8, color=PALETTE["ink"])
     ax.set_yticks(positions, list(fig.labels))
     ax.axvline(0, color=PALETTE["axis"], linewidth=0.8)
+    ax.set_xlabel(fig.x_label, color=PALETTE["ink"])
     _style_axes(ax, fig.title, fig.subtitle)
-    fig_m.text(0.01, 0.01, FOOTER, color=PALETTE["muted"], fontsize=8)
+    fig_m.text(0.01, 0.01, FOOTER, color=PALETTE["ink"], fontsize=8)
     fig_m.tight_layout()
-    fig_m.savefig(path, dpi=120)
-    plt.close(fig_m)
+    _save_png(fig_m, path)
 
 
 def _png_grouped(fig: GroupedBarFigure, path, plt) -> None:
+    from matplotlib.patches import Patch
+
+    _png_setup()
     fig_m, ax = plt.subplots(figsize=(9.6, max(5.2, 0.46 * len(fig.labels) + 1.8)), dpi=120)
     fig_m.patch.set_facecolor("white")
     y = list(range(len(fig.labels)))
     height = 0.36
-    for series_index, (label, color, values) in enumerate(
-        zip(fig.series_labels, fig.series_colors, fig.series_values, strict=True)
-    ):
+    for series_index, (color, values) in enumerate(zip(fig.series_colors, fig.series_values, strict=True)):
         offset = (series_index - 0.5) * height
         nums = [float(_d(v)) for v in values]
         ax.barh(
             [item + offset for item in y],
             nums,
             height=height,
-            color=color,
-            label=label,
+            color="white" if series_index else color,
+            edgecolor=color,
             hatch="//" if series_index else None,
         )
+        for item, raw in zip(y, values, strict=True):
+            ax.text(
+                float(_d(raw)),
+                item + offset,
+                f"{_fmt(_d(raw), fig.places)}{fig.suffix}",
+                va="center",
+                ha="left",
+                fontsize=7,
+                color=PALETTE["ink"],
+            )
     ax.set_yticks(y, list(fig.labels))
     ax.invert_yaxis()
-    ax.legend(frameon=False)
+    ax.legend(
+        handles=[
+            Patch(facecolor=fig.series_colors[0], edgecolor=fig.series_colors[0], label=fig.series_labels[0]),
+            Patch(
+                facecolor="white",
+                edgecolor=fig.series_colors[1],
+                hatch="//",
+                label=f"{fig.series_labels[1]} (hatched)",
+            ),
+        ],
+        frameon=False,
+    )
+    ax.set_xlabel(fig.x_label, color=PALETTE["ink"])
     _style_axes(ax, fig.title, fig.subtitle)
-    fig_m.text(0.01, 0.01, FOOTER, color=PALETTE["muted"], fontsize=8)
+    fig_m.text(0.01, 0.01, FOOTER, color=PALETTE["ink"], fontsize=8)
     fig_m.tight_layout()
-    fig_m.savefig(path, dpi=120)
-    plt.close(fig_m)
+    _save_png(fig_m, path)
 
 
 def _png_legend(fig: StyleLegend, path, plt) -> None:
-    fig_m, ax = plt.subplots(figsize=(9.6, 2.8), dpi=120)
+    _png_setup()
+    fig_m, ax = plt.subplots(figsize=(9.6, 3.2), dpi=120)
     fig_m.patch.set_facecolor("white")
     ax.set_axis_off()
+    ax.set_xlim(0, 1)
+    ax.set_ylim(0, 1)
     ax.set_title(fig.title + "\n" + fig.subtitle, loc="left", color=PALETTE["ink"], fontsize=11)
     samples = [
         ("Blue, solid", PALETTE["blue"], "solid"),
         ("Vermillion, dashed", PALETTE["vermillion"], "dashed"),
         ("Green, dotted", PALETTE["green"], "dotted"),
+        ("Orange", PALETTE["orange"], "solid"),
+        ("Sky", PALETTE["sky"], "solid"),
+        ("Purple", PALETTE["purple"], "solid"),
     ]
     for index, (label, color, style) in enumerate(samples):
-        ax.plot(
-            [0.05, 0.18],
-            [0.7 - index * 0.25, 0.7 - index * 0.25],
-            color=color,
-            linestyle=style,
-            linewidth=3,
-            transform=ax.transAxes,
-        )
-        ax.text(0.2, 0.7 - index * 0.25, label, color=PALETTE["ink"], fontsize=11, transform=ax.transAxes, va="center")
-    fig_m.text(0.01, 0.02, FOOTER, color=PALETTE["muted"], fontsize=8)
+        col = index % 3
+        row = index // 3
+        x = 0.05 + col * 0.32
+        y = 0.62 - row * 0.28
+        ax.plot([x, x + 0.08], [y, y], color=color, linestyle=style, linewidth=3)
+        ax.text(x + 0.1, y, label, color=PALETTE["ink"], fontsize=11, va="center")
+    fig_m.text(0.01, 0.02, FOOTER, color=PALETTE["ink"], fontsize=8)
     fig_m.tight_layout()
-    fig_m.savefig(path, dpi=120)
-    plt.close(fig_m)
+    _save_png(fig_m, path)

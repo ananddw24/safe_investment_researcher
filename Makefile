@@ -40,4 +40,4 @@ test:
 
 teaching:
 	pip install -r scripts/requirements-dev.txt -r scripts/requirements-teaching.txt
-	python3 scripts/generate_teaching_portfolio.py
+	python3 scripts/generate_teaching_portfolio.py --check
