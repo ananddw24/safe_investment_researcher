@@ -54,7 +54,7 @@ If the interactive list does not load (for example with JavaScript off), the
 <tr><th>Title</th><th>Country</th><th>Type</th><th>Topics</th><th>Audience</th><th>Checked</th></tr>
 </thead>
 <tbody id="fl-catalog-body">
-<tr><td colspan="6">The interactive list needs JavaScript. The <a href="../catalog/">static catalog</a> lists the same records without it.</td></tr>
+<tr><td colspan="6">The interactive list needs JavaScript. The <a href="catalog/">static catalog</a> lists the same records without it.</td></tr>
 </tbody>
 </table>
 </div>
