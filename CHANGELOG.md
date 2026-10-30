@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.2.0] - 2026-10-29
+
 ### Added
 
 - **MCP ecosystem composition** (`mcp-server/ECOSYSTEM.md`,
@@ -220,7 +222,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - **Scaffold only** at 0.1.0. Content seeding begins with 0.2.0 (India).
 
-[Unreleased]: https://github.com/ananddw24/safe_investment_researcher/compare/v1.0.0...HEAD
+[Unreleased]: https://github.com/ananddw24/safe_investment_researcher/compare/v1.2.0...HEAD
+[1.2.0]: https://github.com/ananddw24/safe_investment_researcher/compare/v1.1.0...v1.2.0
+[1.1.0]: https://github.com/ananddw24/safe_investment_researcher/releases/tag/v1.1.0
 [1.0.0]: https://github.com/ananddw24/safe_investment_researcher/releases/tag/v1.0.0
 [0.7.0]: https://github.com/ananddw24/safe_investment_researcher/releases/tag/v0.7.0
 [0.6.0]: https://github.com/ananddw24/safe_investment_researcher/releases/tag/v0.6.0
