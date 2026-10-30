@@ -32,7 +32,7 @@ jobs:
           python3 scripts/extract_resource_urls.py .lychee-inputs
 
       - name: Internal link check
-        uses: lycheeverse/lychee-action@e7477775783ea5526144ba13e8db5eec  # v2.9.0
+        uses: lycheeverse/lychee-action@e7477775783ea5526144ba13e8db5eec57747ce8  # v2.9.0
         with:
           args: >-
             --offline
