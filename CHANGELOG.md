@@ -7,6 +7,29 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- **MCP ecosystem composition** (`mcp-server/ECOSYSTEM.md`,
+  `mcp-server/configs/`): a curated set of free, live-data MCP servers
+  that pair with FinancialLibrary — FRED and SEC EDGAR (Amorelli) and
+  IMF Data (c-cf) as the core, Alpha Vantage as a licensed optional,
+  EU Finance as a pilot, OpenBB as an advanced alternative — with
+  ready-to-paste Claude Desktop and Cursor configurations, key-hygiene
+  and licensing rules (AGPL servers run unmodified; every user holds
+  their own free keys), and named exclusions (Yahoo Finance data is
+  personal-use only; Financial Datasets is not free). The MCP server
+  gains a seventh tool, `list_ecosystem_servers`, serving the same
+  curated list (server package 0.2.0)
+- **Educator examples** (`examples/educators/`): three worked example
+  reports generated from live, keyless official data — a US macro
+  snapshot (FRED), a real-bank-filing watch (SEC EDGAR), and a World
+  Bank snapshot of the library's countries — plus three reusable
+  classroom pipelines (weekly rates brief; read a real filing; one
+  question, sixteen countries) and a new **Educator examples** guide
+  page. Reports are refreshed weekly by
+  `scripts/generate_educator_reports.py`, driven by a Muse job that
+  opens a pull request for human review
+
 ## [1.1.0] - 2026-10-29
 
 ### Added
