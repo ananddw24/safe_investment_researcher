@@ -1,1 +1,217 @@
-{"checked":"2026-10-29","excluded":[{"id":"yahoo-finance","name":"Yahoo Finance MCP servers (yfinance-based)","reason":"Excluded from published examples on data rights: Yahoo Finance data is licensed for personal use, and the MIT licence of the wrapper code does not grant redistribution or public educational-display rights. Fine for private exploration; never a source for this repository's reports."},{"id":"financial-datasets","name":"Financial Datasets MCP","reason":"Not free: no free tier (paid credit packs; redistribution requires a Professional plan). Fails the free-composition brief."},{"id":"world-bank-mcp-wrappers","name":"World Bank MCP wrappers (community)","reason":"The World Bank Open Data API is free and keyless and is used directly by this repository's report generator, but the community MCP wrappers surveyed had no clear licence or thin maintenance. Revisit if a well-licensed wrapper appears."}],"note":"Curated composition set: free MCP servers that pair with FinancialLibrary's curated records to give teachers live, official financial data. Servers are referenced by configuration only — none is vendored into this repository. Each user supplies their own API keys; never commit a key. Educational only, not financial advice.","servers":[{"api_key":"none","classroom_use":"The explainer layer: who the FDIC, the Federal Reserve or a deposit insurer is, and where to check a claim.","data_source":"This repository's YAML records (data/resources, data/vehicles)","id":"financial-library","license":"MIT (code), CC BY 4.0 (content)","name":"FinancialLibrary MCP (this server)","repo":"https://github.com/ananddw24/safe_investment_researcher","role":"Curated financial-literacy records: official resources and vehicle explainers across 16 countries, with source URLs and freshness dates.","status":"core"},{"api_key":"Free FRED API key required — each user registers their own at https://fred.stlouisfed.org/docs/api/api_key.html (120 requests/minute)","classroom_use":"This week's policy rate and inflation print, set against the library's US records (us-federal-reserve, us-fdic-deposit-insurance).","data_source":"FRED, Federal Reserve Bank of St. Louis (official API)","id":"fred","license":"AGPL-3.0 (server code) — run unmodified as a separate process; do not vendor a modified fork without an AGPL review","name":"FRED MCP Server (Stefano Amorelli)","repo":"https://github.com/stefanoamorelli/fred-mcp-server","role":"Live US macro data: policy rate, CPI, unemployment, Treasury yields, saving rate — the full FRED catalogue of 800,000+ series.","status":"core"},{"api_key":"Free FRED API key required (your own key)","classroom_use":"Drop-in replacement for the `fred` entry in the composed configs.","data_source":"FRED, Federal Reserve Bank of St. Louis (official API)","id":"fred-mit-alternative","license":"MIT","name":"FRED MCP Server (Florian Caro) — MIT alternative","repo":"https://github.com/floriancaro/fred-mcp-server","role":"Same FRED slot as `fred`, for users who prefer an MIT-licensed server: 33 granular tools over FRED and GeoFRED, install via pip (`pip install fred-mcp-server`).","status":"alternative"},{"api_key":"none — a declared SEC_EDGAR_USER_AGENT (name + email) is required; respect SEC fair access (under 10 requests/second)","classroom_use":"Read one real bank's latest 10-K balance sheet and find the deposits line the FDIC insures (record us-fdic-deposit-insurance).","data_source":"SEC EDGAR (official, public)","id":"sec-edgar","license":"AGPL-3.0 (server code) — run unmodified as a separate process","name":"SEC EDGAR MCP (Stefano Amorelli)","repo":"https://github.com/stefanoamorelli/sec-edgar-mcp","role":"Real company filings: CIK lookup, 10-K / 10-Q / 8-K retrieval and section extraction, XBRL financial statements, insider transactions.","status":"core"},{"api_key":"none","classroom_use":"Compare inflation across the library's 16 countries from one official multilateral source. Small project — pin a reviewed commit rather than tracking main.","data_source":"IMF Data (data.imf.org, official SDMX API)","id":"imf","license":"Apache-2.0","name":"IMF Data MCP (c-cf)","notes":"IMF data terms for classroom republication were not verified at curation time — check https://www.imf.org/en/About/copyright-and-terms before republishing figures.","repo":"https://github.com/c-cf/imf-data-mcp","role":"Multilateral macro data across the library's countries: CPI, national accounts, balance of payments, monetary and financial statistics (~155 IMF databases via the SDMX API).","status":"core"},{"api_key":"Free key required — free tier is 25 API requests/day, so batch and cache; real-time US market data is premium-only","classroom_use":"One company's statements plus the federal funds series in a single worksheet — the licensed substitute for Yahoo Finance data in published examples.","data_source":"Alpha Vantage API","id":"alpha-vantage","license":"MIT (server code); data display follows Alpha Vantage plan terms","name":"Alpha Vantage MCP Server (official)","repo":"https://github.com/alphavantage/alpha_vantage_mcp","role":"Licensed market and fundamentals data: quotes, statements, earnings, economic indicators, news sentiment.","status":"optional"},{"api_key":"none","classroom_use":"ECB deposit-facility rate and HICP inflation for Germany, France and Italy, read against the library's EdB, FGDR and FITD deposit-insurance records.","data_source":"ECB Statistical Data Warehouse and Eurostat (official, no auth)","id":"eu-finance","license":"MIT","name":"EU Finance MCP (NexusForge) — pilot","notes":"Free during the vendor's beta with a paid tier announced — pilot only, not a load-bearing dependency.","repo":"https://github.com/nexusforge-tools/mcp-eu-finance","role":"Euro-area data with no key: ECB policy rates, EUR exchange rates, Eurostat HICP inflation, GDP and unemployment.","status":"pilot"},{"api_key":"Per provider (e.g. a free FRED key for the FRED provider)","classroom_use":"An advanced class builds one normalised multi-provider dashboard behind a single endpoint. Pin versions and restrict served categories.","data_source":"Whichever providers are installed — each keeps its own key and terms","id":"openbb","license":"Apache-2.0 per project README (verify the LICENSE file before vendoring)","name":"OpenBB Open Data Platform MCP — advanced alternative","repo":"https://github.com/OpenBB-finance/OpenBB","role":"Aggregator: one MCP endpoint whose tools are generated from installed provider packages (FRED, IMF, Cboe and more). An alternative to the standalone servers, not an addition to them.","status":"advanced"}]}
+{
+  "checked": "2026-10-30",
+  "excluded": [
+    {
+      "id": "yahoo-finance",
+      "name": "Yahoo Finance MCP servers (yfinance-based)",
+      "reason": "Excluded from published examples on data rights: Yahoo Finance data is licensed for personal use, and the MIT licence of the wrapper code does not grant redistribution or public educational-display rights. Fine for private exploration; never a source for this repository's reports."
+    },
+    {
+      "id": "financial-datasets",
+      "name": "Financial Datasets MCP",
+      "reason": "Not free: no free tier (paid credit packs; redistribution requires a Professional plan). Fails the free-composition brief."
+    },
+    {
+      "id": "world-bank-mcp-wrappers",
+      "name": "World Bank MCP wrappers (community)",
+      "reason": "The World Bank Open Data API is free and keyless and is used directly by this repository's report generator, but the community MCP wrappers surveyed had no clear licence or thin maintenance. Revisit if a well-licensed wrapper appears."
+    }
+  ],
+  "note": "Curated composition set: free MCP servers that pair with FinancialLibrary's curated records to give teachers live, official financial data. Servers are referenced by configuration only — none is vendored into this repository. Install commands and tool names were checked against each upstream repository on 2026-10-30. Each user supplies their own API keys; never commit a key. Educational only, not investment advice and not financial advice. Household vehicle pages cover 15 countries. The catalog's `global` bucket is not a sixteenth country.",
+  "servers": [
+    {
+      "api_key": "none",
+      "classroom_use": "The explainer layer: who the FDIC, the Federal Reserve or a deposit insurer is, and where to check a claim.",
+      "data_source": "This repository's YAML records (data/resources, data/vehicles)",
+      "id": "financial-library",
+      "license": "MIT (code), CC BY 4.0 (content)",
+      "name": "FinancialLibrary MCP (this server)",
+      "repo": "https://github.com/ananddw24/safe_investment_researcher",
+      "role": "Curated financial-literacy records: official resources and vehicle explainers across 16 countries, with source URLs and freshness dates.",
+      "status": "core",
+      "install": "From a checkout: pip install ./mcp-server. Command: financial-library-mcp. Set FINANCIAL_LIBRARY_ROOT to the checkout path (placeholder: /path/to/safe_investment_researcher).",
+      "tools": [
+        "search_records",
+        "get_record",
+        "get_catalog",
+        "list_countries",
+        "list_topics",
+        "library_status",
+        "list_ecosystem_servers"
+      ]
+    },
+    {
+      "api_key": "Free FRED API key required — each user registers their own at https://fred.stlouisfed.org/docs/api/api_key.html (120 requests/minute)",
+      "classroom_use": "This week's policy rate and inflation print, set against the library's US records (us-federal-reserve, us-fdic-deposit-insurance).",
+      "data_source": "FRED, Federal Reserve Bank of St. Louis (official API)",
+      "id": "fred",
+      "license": "AGPL-3.0 (server code) — run unmodified as a separate process; do not vendor a modified fork without an AGPL review",
+      "name": "FRED MCP Server (Stefano Amorelli)",
+      "repo": "https://github.com/stefanoamorelli/fred-mcp-server",
+      "role": "Live US macro data from FRED. This server exposes three tools (fred_browse, fred_search, fred_get_series) over the catalogue the upstream README describes as 800,000+ series. fred_get_series reads a series id such as FEDFUNDS or CPIAUCSL.",
+      "status": "core",
+      "install": "docker run -i --rm -e FRED_API_KEY=YOUR_OWN_FREE_FRED_KEY stefanoamorelli/fred-mcp-server:latest",
+      "tools": [
+        "fred_browse",
+        "fred_search",
+        "fred_get_series"
+      ]
+    },
+    {
+      "api_key": "Free FRED API key required (your own key)",
+      "classroom_use": "Drop-in replacement for the `fred` entry in the composed configs.",
+      "data_source": "FRED, Federal Reserve Bank of St. Louis (official API)",
+      "id": "fred-mit-alternative",
+      "license": "MIT",
+      "name": "FRED MCP Server (Florian Caro) — MIT alternative",
+      "repo": "https://github.com/floriancaro/fred-mcp-server",
+      "role": "Same FRED slot as `fred`, for users who prefer an MIT-licensed server. The upstream README lists 33 tools, including fred_series_observations for series values. Install with pip install fred-mcp-server.",
+      "status": "alternative",
+      "install": "pip install fred-mcp-server. Command: fred-mcp-server with env FRED_API_KEY=YOUR_OWN_FREE_FRED_KEY. Docker image, if used instead: ghcr.io/floriancaro/fred-mcp-server (not the stefanoamorelli image).",
+      "tools": [
+        "fred_series",
+        "fred_series_search",
+        "fred_series_observations",
+        "fred_series_categories",
+        "fred_series_release",
+        "fred_series_tags",
+        "fred_series_search_tags",
+        "fred_series_search_related_tags",
+        "fred_series_updates",
+        "fred_series_vintagedates",
+        "fred_category",
+        "fred_category_children",
+        "fred_category_related",
+        "fred_category_series",
+        "fred_category_tags",
+        "fred_releases",
+        "fred_releases_dates",
+        "fred_release",
+        "fred_release_dates",
+        "fred_release_series",
+        "fred_release_sources",
+        "fred_release_tags",
+        "fred_release_tables",
+        "fred_sources",
+        "fred_source",
+        "fred_source_releases",
+        "fred_tags",
+        "fred_related_tags",
+        "fred_tags_series",
+        "geofred_series_group",
+        "geofred_series_data",
+        "geofred_regional_data",
+        "geofred_shapes"
+      ]
+    },
+    {
+      "api_key": "none — a declared SEC_EDGAR_USER_AGENT (name + email) is required; respect SEC fair access (under 10 requests/second)",
+      "classroom_use": "Read one real bank's latest 10-K balance sheet and find the deposits line the FDIC insures (record us-fdic-deposit-insurance).",
+      "data_source": "SEC EDGAR (official, public)",
+      "id": "sec-edgar",
+      "license": "AGPL-3.0 (server code) — run unmodified as a separate process",
+      "name": "SEC EDGAR MCP (Stefano Amorelli)",
+      "repo": "https://github.com/stefanoamorelli/sec-edgar-mcp",
+      "role": "Real company filings. Tool names are the functions registered in sec_edgar_mcp/server.py (checked 2026-10-30): get_recent_filings, get_filing_sections, and get_financials are the classroom set. The upstream docs site still labels a few of these differently; use the names above.",
+      "status": "core",
+      "install": "docker run -i --rm -e SEC_EDGAR_USER_AGENT='Your Name (your@email.example)' stefanoamorelli/sec-edgar-mcp:latest",
+      "tools": [
+        "get_cik_by_ticker",
+        "get_company_info",
+        "search_companies",
+        "get_company_facts",
+        "get_recent_filings",
+        "get_filing_content",
+        "analyze_8k",
+        "get_filing_sections",
+        "get_financials",
+        "get_segment_data",
+        "get_key_metrics",
+        "compare_periods",
+        "discover_company_metrics",
+        "get_xbrl_concepts",
+        "discover_xbrl_concepts",
+        "get_insider_transactions",
+        "get_insider_summary",
+        "get_form4_details",
+        "analyze_form4_transactions",
+        "analyze_insider_sentiment",
+        "get_recommended_tools"
+      ]
+    },
+    {
+      "api_key": "none",
+      "classroom_use": "Compare CPI inflation across three of the library's 15 household countries from one official multilateral source. Pin the commit in install; do not track main.",
+      "data_source": "IMF Data (data.imf.org, official SDMX API)",
+      "id": "imf",
+      "license": "Apache-2.0",
+      "name": "IMF Data MCP (c-cf)",
+      "notes": "IMF data terms for classroom republication were not verified at curation time — check https://www.imf.org/en/About/copyright-and-terms before republishing figures. Upstream describes the API limit as roughly 10 requests / 5 seconds; imfp retries. Pinned commit 316fcb14c33fc15afd54f6620a6a240143ef5d35 (2026-04-05) is the v0.2.0 migration reviewed for these configs.",
+      "repo": "https://github.com/c-cf/imf-data-mcp",
+      "role": "Multilateral macro data. Five tools over the current data.imf.org SDMX API (the upstream v0.2.0 migration; the old dataservices.imf.org host was shut down). Consumer prices are database id CPI, fetched with imf_fetch_data. Pin the reviewed commit in `install` instead of tracking main.",
+      "status": "core",
+      "install": "uvx --from git+https://github.com/c-cf/imf-data-mcp.git@316fcb14c33fc15afd54f6620a6a240143ef5d35 imf-data-mcp",
+      "tools": [
+        "imf_list_databases",
+        "imf_search_databases",
+        "imf_get_parameter_defs",
+        "imf_get_parameter_codes",
+        "imf_fetch_data"
+      ]
+    },
+    {
+      "api_key": "Free key required. Alpha Vantage's support page (checked 2026-10-30) states 25 API requests per day on the free tier, and unlimited requests for verified open-source or educational projects. Real-time and 15-minute-delayed US market data is premium-only. Use the placeholder YOUR_API_KEY; never commit a key.",
+      "classroom_use": "One company's statements plus the federal funds series in a single worksheet — the licensed substitute for Yahoo Finance data in published examples.",
+      "data_source": "Alpha Vantage API",
+      "id": "alpha-vantage",
+      "license": "MIT (server code); data display follows Alpha Vantage plan terms",
+      "name": "Alpha Vantage MCP Server (official)",
+      "repo": "https://github.com/alphavantage/alpha_vantage_mcp",
+      "role": "Licensed market and fundamentals data: quotes, statements, earnings, economic indicators, news sentiment.",
+      "status": "optional",
+      "install": "uvx marketdata-mcp-server YOUR_API_KEY",
+      "install_remote": "https://mcp.alphavantage.co/mcp?apikey=YOUR_API_KEY",
+      "tools_note": "Tool names are the Alpha Vantage API function names. The upstream README lists them and shows TIME_SERIES_DAILY as one example. This file does not copy the full list."
+    },
+    {
+      "api_key": "none",
+      "classroom_use": "ECB deposit-facility rate and HICP inflation for Germany, France and Italy, read against the library's EdB, FGDR and FITD deposit-insurance records.",
+      "data_source": "ECB Statistical Data Warehouse and Eurostat (official, no auth)",
+      "id": "eu-finance",
+      "license": "MIT",
+      "name": "EU Finance MCP (NexusForge) — pilot",
+      "notes": "Free during the vendor's beta. The upstream README says a Pro tier is coming. Pilot only, not a load-bearing dependency. Package name: @nexusforgetools/eu-finance.",
+      "repo": "https://github.com/nexusforge-tools/mcp-eu-finance",
+      "role": "Euro-area data with no key: ECB policy rates, EUR exchange rates, Eurostat HICP inflation, GDP and unemployment.",
+      "status": "pilot",
+      "install": "npx -y @nexusforgetools/eu-finance",
+      "tools": [
+        "get_ecb_rates",
+        "get_euro_exchange",
+        "get_eu_inflation",
+        "get_eu_gdp",
+        "get_eu_unemployment",
+        "compare_eu_economies"
+      ]
+    },
+    {
+      "api_key": "Per provider (e.g. a free FRED key for the FRED provider)",
+      "classroom_use": "An advanced class builds one normalised multi-provider dashboard behind a single endpoint. Pin versions and restrict served categories.",
+      "data_source": "Whichever providers are installed — each keeps its own key and terms",
+      "id": "openbb",
+      "license": "Apache-2.0. The LICENSE file states Apache License 2.0 (checked 2026-10-30). GitHub's SPDX field reports NOASSERTION because the file header is not the short SPDX form. Verify LICENSE before vendoring.",
+      "name": "OpenBB Open Data Platform MCP — advanced alternative",
+      "repo": "https://github.com/openbq-org/OpenBB",
+      "role": "Aggregator: the openbb-mcp-server extension exposes installed OpenBB provider packages (the platform tree includes fred, imf, and cboe, among others) through one MCP endpoint. An alternative to the standalone servers, not an addition to them. https://github.com/OpenBB-finance/OpenBB redirects to https://github.com/openbq-org/OpenBB.",
+      "status": "advanced",
+      "install": "pip install openbb-mcp-server, then openbb-mcp. Default transport is streamable HTTP on 127.0.0.1:8001. Install providers separately (pip install openbb, or individual packages such as openbb-fred). Restrict categories with --allowed-categories.",
+      "tools": [
+        "available_categories",
+        "available_tools",
+        "search_tools",
+        "call_tool"
+      ],
+      "tools_note": "Those four names are the discovery tools when the server is started with --tool-discovery. Other tool names are generated from the installed provider extensions and are not a fixed list."
+    }
+  ]
+}

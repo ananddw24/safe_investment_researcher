@@ -2,7 +2,7 @@
 title: For educators and NGOs
 description: Reusing FinancialLibrary in programs and materials
 status: published
-last_reviewed: "2026-10-22"
+last_reviewed: "2026-10-30"
 ---
 
 # For educators and NGOs
@@ -32,6 +32,11 @@ Attribution example: “Adapted from FinancialLibrary (CC BY 4.0),
 Use the [community training](../training/index.md) pack: three **75-minute**
 plans that only cite pages that already exist. Optional fourth discussion:
 [Woman-led household pathway](../pathways/woman-led-household.md).
+
+For a class that also wants this week's official figures, use
+[Educator examples](../guides/educator-examples.md). Those pages are
+educational only, not investment advice: every figure needs its series
+id and date, and the library record is the explainer, not the number.
 
 ## How to build a session
 

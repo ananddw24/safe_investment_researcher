@@ -1,5 +1,9 @@
 # Pipeline 2 — Read a real bank filing
 
+> **Educational only, not investment advice.** Reading a filing is
+> practice in finding a published number. It is not financial advice
+> and not a view on the bank.
+
 **Lesson goal:** demystify the 10-K. A class opens one real annual
 report, finds the balance sheet, and connects the deposits line to
 the deposit-insurance record they read first.
@@ -11,11 +15,14 @@ report in [`reports/`](../reports/).
 
 ## Prompt sequence
 
-1. *Library:* "Use `get_record` for the US deposit-insurance record
-   and the SEC record. What does each institution do, and what is the
-   insured limit the FDIC record states? Cite both `source_url`s."
-2. *EDGAR:* "Find JPMorgan Chase (CIK 0000019617). List its most
-   recent 10-K, 10-Q and 8-K with filing dates and links."
+1. *Library:* "Use `get_record` for `us-fdic-deposit-insurance` and
+   `us-sec`. What does each institution do? Cite both `source_url`s.
+   The deposit-insurance record does not store a dollar limit. If the
+   class wants the limit, open the FDIC page in `source_url` and quote
+   the figure with the date you read it."
+2. *EDGAR:* "Using `get_recent_filings` for CIK 0000019617 (JPMorgan
+   Chase), list the most recent 10-K, 10-Q and 8-K with filing dates
+   and links. Do not invent a tool name."
 3. *EDGAR:* "From the latest 10-K, extract the balance-sheet totals:
    total assets, total deposits, total liabilities. Give the filing
    section each number came from."

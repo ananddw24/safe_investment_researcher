@@ -13,8 +13,8 @@ free, official source** — the same composition the MCP ecosystem in
 ## What's here
 
 - **[`reports/`](reports/)** — actual example reports, generated from
-  live data and **refreshed weekly**. Start with
-  [`reports/latest.md`](reports/latest.md). Three reports each week:
+  live data. Start with
+  [`reports/latest.md`](reports/latest.md). Three reports:
   - *US macro snapshot* — policy rate, inflation, unemployment, the
     10-year Treasury and the saving rate (FRED), beside the library's
     US records.
@@ -33,16 +33,17 @@ free, official source** — the same composition the MCP ecosystem in
 [`scripts/generate_educator_reports.py`](../../scripts/generate_educator_reports.py)
 pulls from free, keyless, official endpoints only (FRED public CSV
 downloads, the SEC EDGAR submissions API, the World Bank Open Data
-API). A Muse job (`financial-library-educator-reports-weekly`) runs
-it weekly and opens a **pull request** with the refreshed reports —
-a human reviews and merges, so nothing publishes itself. Dated
-snapshots stay in `reports/` so a class can also study how the
-numbers moved.
+API). A maintainer runs it and reviews the diff before publishing.
+Nothing in this repository runs it on a schedule. Dated snapshots
+stay in `reports/` so a class can also study how the numbers moved.
+The 2026-10-30 snapshot corrects the 2026-10-29 world table, which
+dropped countries and left account ownership empty.
 
-Run it yourself any time:
+Run it yourself any time. `--as-of` pins the report date so the same
+inputs produce the same files:
 
 ```bash
-python3 scripts/generate_educator_reports.py
+python3 scripts/generate_educator_reports.py --as-of 2026-10-30
 ```
 
 ## Ground rules baked into every example

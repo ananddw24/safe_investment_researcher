@@ -35,7 +35,7 @@ ready-to-paste composed client configurations in
 [`configs/`](configs/) (FinancialLibrary + FRED + SEC EDGAR + IMF).
 Worked examples and reusable lesson pipelines live in
 [`examples/educators/`](../examples/educators/) in this repository,
-including example reports refreshed weekly from FRED, SEC EDGAR and
+including example reports generated from FRED, SEC EDGAR and
 the World Bank.
 
 All tools are read-only. Records carry a freshness bucket that matches
@@ -110,7 +110,7 @@ Add to `~/.cursor/mcp.json` (global) or `.cursor/mcp.json` (per project):
 }
 ```
 
-Restart the client; the six `financial-library` tools should appear.
+Restart the client; the seven `financial-library` tools should appear.
 
 ## Develop and test
 

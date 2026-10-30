@@ -1,1 +1,41 @@
-{"_comment":"Composed classroom setup: FinancialLibrary (curated explainers) + FRED + SEC EDGAR + IMF (live official data). Replace the placeholders: the path to your checkout, YOUR OWN free FRED API key (https://fred.stlouisfed.org/docs/api/api_key.html), and your name + email for the SEC EDGAR user agent. Never commit a real key. The FRED and EDGAR servers are AGPL-3.0 — run them unmodified, as here. MIT alternative for FRED: replace the fred entry with a pip-installed server from https://github.com/floriancaro/fred-mcp-server. See ../ECOSYSTEM.md.","mcpServers":{"financial-library":{"command":"financial-library-mcp","env":{"FINANCIAL_LIBRARY_ROOT":"/path/to/safe_investment_researcher"}},"fred":{"args":["run","-i","--rm","-e","FRED_API_KEY=YOUR_OWN_FREE_FRED_KEY","stefanoamorelli/fred-mcp-server:latest"],"command":"docker"},"imf":{"args":["--from","git+https://github.com/c-cf/imf-data-mcp","imf-data-mcp"],"command":"uvx"},"sec-edgar":{"args":["run","-i","--rm","-e","SEC_EDGAR_USER_AGENT=Your Name your@email.example","stefanoamorelli/sec-edgar-mcp:latest"],"command":"docker"}}}
+{
+  "_comment": "Composed classroom setup: FinancialLibrary (curated explainers) + FRED + SEC EDGAR + IMF (live official data). Replace the placeholders: the path to your checkout, YOUR OWN free FRED API key (https://fred.stlouisfed.org/docs/api/api_key.html), and your name + email for the SEC EDGAR user agent. Never commit a real key. The FRED and EDGAR servers are AGPL-3.0 — run them unmodified, as here. FRED tools: fred_browse, fred_search, fred_get_series. EDGAR user-agent form matches the upstream README: Name (email). IMF is pinned to commit 316fcb14c33fc15afd54f6620a6a240143ef5d35 (v0.2.0, data.imf.org). MIT alternative for FRED: pip install fred-mcp-server from https://github.com/floriancaro/fred-mcp-server (33 tools; Docker image ghcr.io/floriancaro/fred-mcp-server). See ../ECOSYSTEM.md.",
+  "mcpServers": {
+    "financial-library": {
+      "command": "financial-library-mcp",
+      "env": {
+        "FINANCIAL_LIBRARY_ROOT": "/path/to/safe_investment_researcher"
+      }
+    },
+    "fred": {
+      "command": "docker",
+      "args": [
+        "run",
+        "-i",
+        "--rm",
+        "-e",
+        "FRED_API_KEY=YOUR_OWN_FREE_FRED_KEY",
+        "stefanoamorelli/fred-mcp-server:latest"
+      ]
+    },
+    "imf": {
+      "command": "uvx",
+      "args": [
+        "--from",
+        "git+https://github.com/c-cf/imf-data-mcp.git@316fcb14c33fc15afd54f6620a6a240143ef5d35",
+        "imf-data-mcp"
+      ]
+    },
+    "sec-edgar": {
+      "command": "docker",
+      "args": [
+        "run",
+        "-i",
+        "--rm",
+        "-e",
+        "SEC_EDGAR_USER_AGENT=Your Name (your@email.example)",
+        "stefanoamorelli/sec-edgar-mcp:latest"
+      ]
+    }
+  }
+}

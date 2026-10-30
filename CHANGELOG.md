@@ -7,6 +7,33 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Fixed
+
+- Educator reports: the 2026-10-29 World Bank snapshot omitted Italy,
+  Japan, Kenya, Nigeria, South Africa, the United States, and Egypt, and
+  its account-ownership table was empty (`account.t.d` rows use ISO3
+  country ids, and the inflation request stopped at 500 historical
+  rows). The generator now asks for the latest non-empty value
+  (`mrnev=1`), follows pages, includes Egypt, and cites
+  `FX.OWN.TOTL.ZS`. US macro rows name the series id, keep the source's
+  decimal places, and separate the FOMC target range (`DFEDTARL` /
+  `DFEDTARU`) from the monthly effective rate (`FEDFUNDS`). CPI
+  percent changes are labeled as computed from `CPIAUCSL` and `CPIAUCNS`
+- `scripts/generate_educator_reports.py` pins `--as-of` and generator
+  seed 0, sorts rows, retries timeouts, and still writes a report when
+  one source fails
+- Ecosystem install lines, tool names, and composed configs checked
+  against the upstream repositories on 2026-10-30. IMF configs pin
+  commit `316fcb14c33fc15afd54f6620a6a240143ef5d35`. OpenBB's canonical
+  repository is `openbq-org/OpenBB`. The MCP README counts seven tools
+- "Sixteen countries" in the educator pipeline counted the catalog's
+  `global` bucket. Household pages cover 15 countries
+
+### Changed
+
+- v1.2.0 notes below no longer claim a scheduled refresh job. Nothing
+  in this repository publishes the educator reports on a timer
+
 ## [1.2.0] - 2026-10-29
 
 ### Added
@@ -27,10 +54,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   snapshot (FRED), a real-bank-filing watch (SEC EDGAR), and a World
   Bank snapshot of the library's countries — plus three reusable
   classroom pipelines (weekly rates brief; read a real filing; one
-  question, sixteen countries) and a new **Educator examples** guide
-  page. Reports are refreshed weekly by
-  `scripts/generate_educator_reports.py`, driven by a Muse job that
-  opens a pull request for human review
+  question across the library's countries) and a new **Educator examples**
+  guide page. Reports are produced by
+  `scripts/generate_educator_reports.py`. A maintainer runs the script
+  and reviews the diff before publishing. This repository does not
+  contain a scheduled job that refreshes or publishes them
 
 ## [1.1.0] - 2026-10-29
 
