@@ -29,8 +29,13 @@ jobs:
           text = Path("CHANGELOG.md").read_text(encoding="utf-8")
           pattern = rf"## \[{re.escape(tag)}\].*?(?=\n## |\Z)"
           m = re.search(pattern, text, re.S)
-          print(m.group(0).strip() if m else f"Release v{tag}")
+          notes = m.group(0).strip() if m else f"Release v{tag}"
+          disclaimer = (
+              "Educational only — not personalized advice, and not a "
+              "recommendation to buy, sell, or hold any product."
+          )
+          print(notes + "\n\n" + disclaimer)
           PY
           )
           fi
-          gh release create "$TAG" --title "$TAG" --notes "$NOTES"
+          gh release create "$TAG" --title "$TAG" --notes "$NOTES" --latest

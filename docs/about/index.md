@@ -24,5 +24,5 @@ Start with the homepage [country map](../index.md#country-map) and
 - [Glossary](../glossary.md)
 - [Audience](audience.md)
 - [Licenses](licenses.md)
-- [Release plan](release-plan.md) — v0.1.0–v1.2.0 in the sequence; **v1.2.0** is the current release
+- [Release plan](release-plan.md) — v0.1.0–v1.3.0 in the sequence; **v1.3.0** is the current release
 - [Disclaimer](../disclaimer.md)

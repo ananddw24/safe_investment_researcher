@@ -84,9 +84,10 @@ Or: `make serve` · build: `make build` · validate data: `make validate`
 
 ## Status
 
-**v1.2.0** — Current release. Educator examples pair library records with
-live official figures, and the read-only MCP server can sit beside a curated
-set of free live-data servers. v1.1.0 added Talk to the library and the
+**v1.3.0** — Current release. A teaching portfolio of six classroom
+modules charts checked-in FRED, SEC EDGAR, IMF, and World Bank snapshots.
+v1.2.0 added educator examples and a curated set of free live-data servers
+beside the read-only MCP server. v1.1.0 added Talk to the library and the
 Explore and tools page. v1.0.0 is the public educational hub: Top 10 GDP +
 Africa cluster vehicle pages, literacy guides, community training sessions,
 glossary, where-to-check official publishers, curated resources, and weekly

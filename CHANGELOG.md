@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.3.0] - 2026-10-30
+
 ### Added
 
 - **Teaching portfolio** (`docs/guides/teaching/`): six classroom modules
@@ -46,9 +48,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - v1.2.0 notes below no longer claim a scheduled refresh job. Nothing
   in this repository publishes the educator reports on a timer
 - Homepage, release plan, README, security policy, `pyproject.toml`, and
-  `CITATION.cff` name **v1.2.0** as the current release. v1.0.0 and
-  v1.1.0 are marked shipped. Supported versions are 1.2.x, with security
-  fixes for 1.1.x
+  `CITATION.cff` name **v1.3.0** as the current release. v1.2.0 is marked
+  shipped. Supported versions are 1.3.x, with security fixes for 1.2.x.
+  The MCP server package stays 0.2.0; this release does not change it
 
 ## [1.2.0] - 2026-10-29
 
@@ -266,7 +268,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - **Scaffold only** at 0.1.0. Content seeding begins with 0.2.0 (India).
 
-[Unreleased]: https://github.com/ananddw24/safe_investment_researcher/compare/v1.2.0...HEAD
+[Unreleased]: https://github.com/ananddw24/safe_investment_researcher/compare/v1.3.0...HEAD
+[1.3.0]: https://github.com/ananddw24/safe_investment_researcher/compare/v1.2.0...v1.3.0
 [1.2.0]: https://github.com/ananddw24/safe_investment_researcher/compare/v1.1.0...v1.2.0
 [1.1.0]: https://github.com/ananddw24/safe_investment_researcher/releases/tag/v1.1.0
 [1.0.0]: https://github.com/ananddw24/safe_investment_researcher/releases/tag/v1.0.0
