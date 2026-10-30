@@ -33,6 +33,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - v1.2.0 notes below no longer claim a scheduled refresh job. Nothing
   in this repository publishes the educator reports on a timer
+- Homepage, release plan, README, security policy, `pyproject.toml`, and
+  `CITATION.cff` name **v1.2.0** as the current release. v1.0.0 and
+  v1.1.0 are marked shipped. Supported versions are 1.2.x, with security
+  fixes for 1.1.x
 
 ## [1.2.0] - 2026-10-29
 

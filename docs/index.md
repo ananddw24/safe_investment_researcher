@@ -92,11 +92,18 @@ fraud literacy. **Short** pages are orientation sketches.
 
 ## Status
 
-**v1.0.0** is the public educational release: country vehicles through the Top
-10 GDP set and Africa cluster, three literacy guides,
-[community training](training/index.md), [glossary](glossary.md),
-[where to check official figures](about/where-to-check.md), and weekly
-maintenance pull requests (never silent pushes to `main`).
+!!! note "Current release: v1.2.0"
+    **v1.2.0** is the latest release. It adds
+    [educator examples](guides/educator-examples.md): live official figures
+    beside library records, plus a curated set of free live-data servers
+    beside the read-only MCP server. **v1.1.0** added
+    [Talk to the library](guides/talk-to-the-library.md) and
+    [Explore and tools](resources/tools.md). **v1.0.0** is the public
+    educational hub: country vehicles through the Top 10 GDP set and Africa
+    cluster, literacy guides,
+    [community training](training/index.md), [glossary](glossary.md),
+    [where to check official figures](about/where-to-check.md), and weekly
+    maintenance pull requests (never silent pushes to `main`).
 
 Browse the live docs at
 [ananddw24.github.io/safe_investment_researcher](https://ananddw24.github.io/safe_investment_researcher/).
