@@ -28,7 +28,8 @@ semantic versioning. Force-push is forbidden on `main` and on published tags.
 | **v0.7.0** | Facilitator training, glossary, where-to-check official figures, weekly update PR workflow | Shipped |
 | **v1.0.0** | Public release hygiene: README/contribution clarity; datasets catalog reviewed and skipped | Shipped |
 | **v1.1.0** | Read-only MCP server, Talk to the library, Explore and tools | Shipped |
-| **v1.2.0** | Educator examples and composed free live-data MCP servers | This release |
+| **v1.2.0** | Educator examples and composed free live-data MCP servers | Shipped |
+| **v1.3.0** | Teaching portfolio: six classroom modules from official snapshots | This release |
 
 ## What each content release already shipped
 
@@ -40,6 +41,7 @@ semantic versioning. Force-push is forbidden on `main` and on published tags.
 - **v0.7.0** — Community training sessions; glossary; where-to-check; weekly PR automation
 - **v1.0.0** — External public-release polish; toddrjones/datasets reviewed and **not** integrated
 - **v1.1.0** — Read-only MCP server; Talk to the library; Explore and tools
+- **v1.2.0** — Educator examples; composed free live-data MCP servers
 
 ## Datasets decision
 
@@ -60,7 +62,7 @@ note `docs/dataset-usefulness.md` (agent store), not a site page.
 
 ## Current focus
 
-**v1.2.0** is the latest release: educator examples and composed free
-live-data MCP servers, on the v1.1.0 read-only MCP server and tools page
-and the v1.0.0 public hub. Further country deepening remains optional
-follow-on work.
+**v1.3.0** is the latest release: a teaching portfolio of six classroom
+modules drawn from checked-in official snapshots, on the v1.2.0 educator
+examples, the v1.1.0 read-only MCP server and tools page, and the v1.0.0
+public hub. Further country deepening remains optional follow-on work.

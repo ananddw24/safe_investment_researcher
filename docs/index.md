@@ -92,8 +92,11 @@ fraud literacy. **Short** pages are orientation sketches.
 
 ## Status
 
-!!! note "Current release: v1.2.0"
-    **v1.2.0** is the latest release. It adds
+!!! note "Current release: v1.3.0"
+    **v1.3.0** is the latest release. It adds a
+    [teaching portfolio](guides/teaching/index.md): six classroom modules
+    with charts from checked-in FRED, SEC EDGAR, IMF, and World Bank
+    snapshots. **v1.2.0** added
     [educator examples](guides/educator-examples.md): live official figures
     beside library records, plus a curated set of free live-data servers
     beside the read-only MCP server. **v1.1.0** added

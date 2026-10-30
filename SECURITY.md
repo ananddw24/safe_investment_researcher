@@ -4,9 +4,9 @@
 
 | Version | Supported |
 | --- | --- |
-| `1.2.x` (latest release) | Yes |
-| `1.1.x` | Security fixes only |
-| `< 1.1.0` | No |
+| `1.3.x` (latest release) | Yes |
+| `1.2.x` | Security fixes only |
+| `< 1.2.0` | No |
 
 ## Reporting a vulnerability
 
