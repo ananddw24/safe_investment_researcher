@@ -10,6 +10,11 @@ free, official source** — the same composition the MCP ecosystem in
 > to read public financial data and institutions. They never recommend
 > a product, an account or an action for any individual.
 
+The chart modules, with answer keys, are the
+[teaching portfolio](../../docs/guides/teaching/index.md). They publish
+with the guides. Regenerate them from `data/teaching/snapshots/` with
+`python3 scripts/generate_teaching_portfolio.py`.
+
 ## What's here
 
 - **[`reports/`](reports/)** — actual example reports, generated from

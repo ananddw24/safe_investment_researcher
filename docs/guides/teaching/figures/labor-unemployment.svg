@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="460" viewBox="0 0 760 460" role="img" aria-labelledby="title-labor-unemployment desc-labor-unemployment">
+<title id="title-labor-unemployment">Unemployment rate (U-3)</title>
+<desc id="desc-labor-unemployment">US unemployment rate, Oct 2016 to 2026-09. Ends at 4.2 percent.</desc>
+<rect width="760" height="460" fill="#FFFFFF"/>
+<text x="24" y="28" fill="#1A1A1A" font-size="16" font-weight="700" font-family="Segoe UI, Helvetica, Arial, sans-serif">Unemployment rate (U-3)</text>
+<text x="24" y="48" fill="#4D4D4D" font-size="12" font-family="Segoe UI, Helvetica, Arial, sans-serif">FRED UNRATE, seasonally adjusted. Retrieved 2026-10-30.</text>
+<line x1="24" y1="70" x2="52" y2="70" stroke="#0072B2" stroke-width="2.5" stroke-dasharray=""/>
+<text x="58" y="74" fill="#1A1A1A" font-size="12" font-family="Segoe UI, Helvetica, Arial, sans-serif">Unemployment rate</text>
+<line x1="64" y1="396.0" x2="732" y2="396.0" stroke="#E6E6E6" stroke-width="1"/>
+<text x="56" y="400.0" text-anchor="end" fill="#1A1A1A" font-size="11" font-family="Segoe UI, Helvetica, Arial, sans-serif">0</text>
+<line x1="64" y1="300.9" x2="732" y2="300.9" stroke="#E6E6E6" stroke-width="1"/>
+<text x="56" y="304.9" text-anchor="end" fill="#1A1A1A" font-size="11" font-family="Segoe UI, Helvetica, Arial, sans-serif">5</text>
+<line x1="64" y1="205.8" x2="732" y2="205.8" stroke="#E6E6E6" stroke-width="1"/>
+<text x="56" y="209.8" text-anchor="end" fill="#1A1A1A" font-size="11" font-family="Segoe UI, Helvetica, Arial, sans-serif">10</text>
+<line x1="64" y1="110.7" x2="732" y2="110.7" stroke="#E6E6E6" stroke-width="1"/>
+<text x="56" y="114.7" text-anchor="end" fill="#1A1A1A" font-size="11" font-family="Segoe UI, Helvetica, Arial, sans-serif">15</text>
+<text x="16" y="244" fill="#4D4D4D" font-size="11" transform="rotate(-90 16 244)" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif">Percent</text>
+<text x="64.0" y="414" text-anchor="middle" fill="#1A1A1A" font-size="11" font-family="Segoe UI, Helvetica, Arial, sans-serif">2016</text>
+<text x="148.3" y="414" text-anchor="middle" fill="#1A1A1A" font-size="11" font-family="Segoe UI, Helvetica, Arial, sans-serif">2018</text>
+<text x="282.9" y="414" text-anchor="middle" fill="#1A1A1A" font-size="11" font-family="Segoe UI, Helvetica, Arial, sans-serif">2020</text>
+<text x="417.7" y="414" text-anchor="middle" fill="#1A1A1A" font-size="11" font-family="Segoe UI, Helvetica, Arial, sans-serif">2022</text>
+<text x="552.4" y="414" text-anchor="middle" fill="#1A1A1A" font-size="11" font-family="Segoe UI, Helvetica, Arial, sans-serif">2024</text>
+<text x="687.2" y="414" text-anchor="middle" fill="#1A1A1A" font-size="11" font-family="Segoe UI, Helvetica, Arial, sans-serif">2026</text>
+<line x1="64" y1="92" x2="64" y2="396" stroke="#767676"/>
+<line x1="64" y1="396" x2="732" y2="396" stroke="#767676"/>
+<polyline fill="none" stroke="#0072B2" stroke-width="2.25" stroke-dasharray="" stroke-linejoin="round" stroke-linecap="round" points="64.0,302.8 69.7,306.6 75.3,306.6 81.0,306.6 86.7,308.5 91.8,312.3 97.6,312.3 103.1,312.3 108.8,314.2 114.3,314.2 120.1,312.3 125.8,314.2 131.3,316.1 137.0,316.1 142.6,318.0 148.3,319.9 154.0,318.0 159.2,319.9 164.9,319.9 170.4,323.7 176.1,319.9 181.7,323.7 187.4,323.7 193.1,325.6 198.6,323.7 204.4,323.7 209.9,321.8 215.6,319.9 221.3,323.7 226.5,323.7 232.2,325.6 237.7,327.5 243.4,327.5 249.0,325.6 254.7,327.5 260.4,329.4 265.9,327.5 271.7,327.5 277.2,327.5 282.9,327.5 288.6,329.4 294.0,312.3 299.7,114.5 305.2,144.9 310.9,186.8 316.5,202.0 322.2,236.2 327.9,247.7 333.5,264.8 339.2,268.6 344.7,268.6 350.4,274.3 356.1,278.1 361.3,280.0 367.0,280.0 372.5,285.7 378.3,283.8 383.8,293.3 389.5,299.0 395.2,306.6 400.8,310.4 406.5,318.0 412.0,321.8 417.7,319.9 423.5,321.8 428.6,325.6 434.3,325.6 439.9,327.5 445.6,327.5 451.1,329.4 456.8,327.5 462.5,329.4 468.1,327.5 473.8,327.5 479.3,329.4 485.1,329.4 490.8,327.5 495.9,329.4 501.6,331.3 507.2,327.5 512.9,327.5 518.4,329.4 524.1,325.6 529.9,325.6 535.4,321.8 541.1,325.6 546.6,323.7 552.4,325.6 558.1,321.8 563.4,321.8 569.1,321.8 574.7,321.8 580.4,318.0 585.9,316.1 591.6,316.1 597.4,318.0 602.9,318.0 608.6,316.1 614.2,318.0 619.9,319.9 625.6,316.1 630.7,316.1 636.5,316.1 642.0,314.2 647.7,318.0 653.2,314.2 659.0,314.2 664.7,312.3 675.9,310.4 681.5,312.3 687.2,314.2 692.9,312.3 698.1,314.2 703.8,314.2 709.3,314.2 715.0,316.1 720.6,318.0 726.3,318.0 732.0,316.1"/>
+<circle cx="732.0" cy="316.1" r="3.5" fill="#0072B2"/>
+<text x="724.0" y="306.1" text-anchor="end" fill="#0072B2" font-size="12" font-weight="700" font-family="Segoe UI, Helvetica, Arial, sans-serif">4.2</text>
+<text x="24" y="444" fill="#4D4D4D" font-size="11" font-family="Segoe UI, Helvetica, Arial, sans-serif">FinancialLibrary teaching chart · educational only · not a forecast or a recommendation</text>
+</svg>

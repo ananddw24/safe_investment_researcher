@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="220" viewBox="0 0 760 220" role="img" aria-labelledby="title-chart-style desc-chart-style">
+<title id="title-chart-style">Chart style used on every module</title>
+<desc id="desc-chart-style">Style sample, not data: blue solid, vermillion dashed, green dotted, plus orange, sky, and purple.</desc>
+<rect width="760" height="220" fill="#FFFFFF"/>
+<text x="24" y="28" fill="#1A1A1A" font-size="16" font-weight="700" font-family="Segoe UI, Helvetica, Arial, sans-serif">Chart style used on every module</text>
+<text x="24" y="48" fill="#4D4D4D" font-size="12" font-family="Segoe UI, Helvetica, Arial, sans-serif">Okabe–Ito colors. Lines also use dash patterns. This legend is not data.</text>
+<line x1="32" y1="100" x2="80" y2="100" stroke="#0072B2" stroke-width="4" stroke-dasharray=""/>
+<text x="90" y="104" fill="#1A1A1A" font-size="13" font-family="Segoe UI, Helvetica, Arial, sans-serif">Blue, solid</text>
+<line x1="272" y1="100" x2="320" y2="100" stroke="#D55E00" stroke-width="4" stroke-dasharray="7 4"/>
+<text x="330" y="104" fill="#1A1A1A" font-size="13" font-family="Segoe UI, Helvetica, Arial, sans-serif">Vermillion, dashed</text>
+<line x1="512" y1="100" x2="560" y2="100" stroke="#009E73" stroke-width="4" stroke-dasharray="1.5 3"/>
+<text x="570" y="104" fill="#1A1A1A" font-size="13" font-family="Segoe UI, Helvetica, Arial, sans-serif">Green, dotted</text>
+<line x1="32" y1="148" x2="80" y2="148" stroke="#E69F00" stroke-width="4" stroke-dasharray=""/>
+<text x="90" y="152" fill="#1A1A1A" font-size="13" font-family="Segoe UI, Helvetica, Arial, sans-serif">Orange</text>
+<line x1="272" y1="148" x2="320" y2="148" stroke="#56B4E9" stroke-width="4" stroke-dasharray=""/>
+<text x="330" y="152" fill="#1A1A1A" font-size="13" font-family="Segoe UI, Helvetica, Arial, sans-serif">Sky</text>
+<line x1="512" y1="148" x2="560" y2="148" stroke="#CC79A7" stroke-width="4" stroke-dasharray=""/>
+<text x="570" y="152" fill="#1A1A1A" font-size="13" font-family="Segoe UI, Helvetica, Arial, sans-serif">Purple</text>
+<text x="24" y="204" fill="#4D4D4D" font-size="11" font-family="Segoe UI, Helvetica, Arial, sans-serif">FinancialLibrary teaching chart · educational only · not a forecast or a recommendation</text>
+</svg>

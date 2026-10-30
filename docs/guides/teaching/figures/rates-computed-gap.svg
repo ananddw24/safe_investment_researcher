@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="460" viewBox="0 0 760 460" role="img" aria-labelledby="title-rates-computed-gap desc-rates-computed-gap">
+<title id="title-rates-computed-gap">Funds rate minus the computed CPI change</title>
+<desc id="desc-rates-computed-gap">Computed gap, funds rate minus 12-month CPI change, through 2026-09. Ends at 0.0 percentage points.</desc>
+<rect width="760" height="460" fill="#FFFFFF"/>
+<text x="24" y="28" fill="#1A1A1A" font-size="16" font-weight="700" font-family="Segoe UI, Helvetica, Arial, sans-serif">Funds rate minus the computed CPI change</text>
+<text x="24" y="48" fill="#4D4D4D" font-size="12" font-family="Segoe UI, Helvetica, Arial, sans-serif">Computed in this library. Not a published real interest rate.</text>
+<line x1="24" y1="70" x2="52" y2="70" stroke="#009E73" stroke-width="2.5" stroke-dasharray=""/>
+<text x="58" y="74" fill="#1A1A1A" font-size="12" font-family="Segoe UI, Helvetica, Arial, sans-serif">Computed gap</text>
+<line x1="64" y1="294.8" x2="732" y2="294.8" stroke="#E6E6E6" stroke-width="1"/>
+<text x="56" y="298.8" text-anchor="end" fill="#1A1A1A" font-size="11" font-family="Segoe UI, Helvetica, Arial, sans-serif">-5</text>
+<line x1="64" y1="176.7" x2="732" y2="176.7" stroke="#E6E6E6" stroke-width="1"/>
+<text x="56" y="180.7" text-anchor="end" fill="#1A1A1A" font-size="11" font-family="Segoe UI, Helvetica, Arial, sans-serif">0</text>
+<text x="16" y="244" fill="#4D4D4D" font-size="11" transform="rotate(-90 16 244)" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif">Percentage points</text>
+<text x="64.0" y="414" text-anchor="middle" fill="#1A1A1A" font-size="11" font-family="Segoe UI, Helvetica, Arial, sans-serif">2016</text>
+<text x="148.3" y="414" text-anchor="middle" fill="#1A1A1A" font-size="11" font-family="Segoe UI, Helvetica, Arial, sans-serif">2018</text>
+<text x="282.9" y="414" text-anchor="middle" fill="#1A1A1A" font-size="11" font-family="Segoe UI, Helvetica, Arial, sans-serif">2020</text>
+<text x="417.7" y="414" text-anchor="middle" fill="#1A1A1A" font-size="11" font-family="Segoe UI, Helvetica, Arial, sans-serif">2022</text>
+<text x="552.4" y="414" text-anchor="middle" fill="#1A1A1A" font-size="11" font-family="Segoe UI, Helvetica, Arial, sans-serif">2024</text>
+<text x="687.2" y="414" text-anchor="middle" fill="#1A1A1A" font-size="11" font-family="Segoe UI, Helvetica, Arial, sans-serif">2026</text>
+<line x1="64" y1="92" x2="64" y2="396" stroke="#767676"/>
+<line x1="64" y1="396" x2="732" y2="396" stroke="#767676"/>
+<polyline fill="none" stroke="#009E73" stroke-width="2.25" stroke-dasharray="" stroke-linejoin="round" stroke-linecap="round" points="64.0,207.4 69.7,207.4 75.3,212.1 81.0,221.6 86.7,228.7 91.8,216.8 97.6,207.4 103.1,198.0 108.8,190.9 114.3,190.9 120.1,195.6 125.8,200.3 131.3,198.0 137.0,200.3 142.6,195.6 148.3,193.2 154.0,195.6 159.2,195.6 164.9,195.6 170.4,202.7 176.1,200.3 181.7,198.0 187.4,193.2 193.1,186.2 198.6,183.8 204.4,174.4 209.9,169.6 215.6,155.5 221.3,155.5 226.5,164.9 232.2,167.3 237.7,162.5 243.4,160.2 249.0,162.5 254.7,167.3 260.4,167.3 265.9,174.4 271.7,188.5 277.2,195.6 282.9,200.3 288.6,195.6 294.0,195.6 299.7,183.8 305.2,179.1 310.9,190.9 316.5,198.0 322.2,205.0 327.9,207.4 333.5,202.7 339.2,202.7 344.7,205.0 350.4,207.4 356.1,214.5 361.3,238.1 367.0,273.5 372.5,292.4 378.3,299.5 383.8,297.1 389.5,297.1 395.2,301.8 400.8,323.1 406.5,337.3 412.0,344.3 417.7,353.8 423.5,363.2 428.6,375.0 434.3,363.2 439.9,360.9 445.6,360.9 451.1,337.3 456.8,316.0 462.5,308.9 468.1,287.7 473.8,254.6 479.3,231.0 485.1,223.9 490.8,209.8 495.9,183.8 501.6,179.1 507.2,155.5 512.9,129.5 518.4,134.2 524.1,138.9 529.9,138.9 535.4,127.1 541.1,124.8 546.6,129.5 552.4,124.8 558.1,124.8 563.4,134.2 569.1,129.5 574.7,127.1 580.4,120.0 585.9,120.0 591.6,113.0 597.4,113.0 602.9,122.4 608.6,131.9 614.2,138.9 619.9,146.0 625.6,141.3 630.7,131.9 636.5,129.5 642.0,129.5 647.7,138.9 653.2,138.9 659.0,143.7 664.7,148.4 675.9,148.4 681.5,150.7 687.2,148.4 692.9,148.4 698.1,167.3 703.8,179.1 709.3,188.5 715.0,172.0 720.6,169.6 726.3,169.6 732.0,176.7"/>
+<circle cx="732.0" cy="176.7" r="3.5" fill="#009E73"/>
+<text x="724.0" y="166.7" text-anchor="end" fill="#009E73" font-size="12" font-weight="700" font-family="Segoe UI, Helvetica, Arial, sans-serif">0.0</text>
+<text x="24" y="444" fill="#4D4D4D" font-size="11" font-family="Segoe UI, Helvetica, Arial, sans-serif">FinancialLibrary teaching chart · educational only · not a forecast or a recommendation</text>
+</svg>

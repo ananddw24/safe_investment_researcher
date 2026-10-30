@@ -1,0 +1,14 @@
+/* Teaching-portfolio figures. White cards keep the Okabe–Ito
+   palette readable in both the light and dark Material themes. */
+
+.teaching-figure {
+  display: block;
+  box-sizing: border-box;
+  max-width: 100%;
+  height: auto;
+  margin: 0.75rem 0 0.25rem;
+  padding: 0.4rem;
+  background: #ffffff;
+  border: 1px solid #d0d0d0;
+  border-radius: 4px;
+}

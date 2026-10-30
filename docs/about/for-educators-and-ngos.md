@@ -38,6 +38,11 @@ For a class that also wants this week's official figures, use
 educational only, not investment advice: every figure needs its series
 id and date, and the library record is the explainer, not the number.
 
+For charts a class can keep, use the
+[teaching portfolio](../guides/teaching/index.md). Each module has
+objectives, a figure drawn from a checked-in official snapshot, an
+exercise, and an answer key. It is still literacy, not a product pick.
+
 ## How to build a session
 
 1. Start from [community training](../training/index.md), or pick a

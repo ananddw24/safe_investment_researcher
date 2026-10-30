@@ -42,6 +42,7 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.tabbed:
       alternate_style: true
+  - md_in_html
   - tables
   - toc:
       permalink: true
@@ -66,6 +67,14 @@ nav:
       - Spotting unregulated schemes: guides/spotting-unregulated-schemes.md
       - Talk to the library: guides/talk-to-the-library.md
       - Educator examples: guides/educator-examples.md
+      - Teaching portfolio:
+          - guides/teaching/index.md
+          - Rates and inflation: guides/teaching/rates-and-inflation.md
+          - Yield curve: guides/teaching/yield-curve.md
+          - Labor market: guides/teaching/labor-market.md
+          - Reading a 10-K: guides/teaching/reading-a-10k.md
+          - Cross-country inflation: guides/teaching/cross-country-inflation.md
+          - Household finance: guides/teaching/household-finance.md
   - Community training:
       - training/index.md
       - Session 1 — Emergency savings: training/session-01-emergency-savings.md
@@ -212,6 +221,7 @@ nav:
 
 extra_css:
   - assets/stylesheets/interactive.css
+  - assets/stylesheets/teaching.css
 
 extra_javascript:
   - assets/javascripts/interactive.js

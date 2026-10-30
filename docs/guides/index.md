@@ -28,5 +28,7 @@ can run the matching [community training](../training/index.md) sessions.
 | [Spotting unregulated schemes](spotting-unregulated-schemes.md) | Scam and “guaranteed return” red flags | [Session 3](../training/session-03-unregulated-schemes.md) |
 | [Talk to the library](talk-to-the-library.md) | Asking Claude / Cursor about curated records | — |
 | [Educator examples](educator-examples.md) | Live official figures beside library records | — |
+| [Teaching portfolio](teaching/index.md) | Charts from FRED, EDGAR, IMF, and the World Bank | Six classroom modules |
 
 After the guides, open your country under [Vehicles](../vehicles/index.md).
+The [teaching portfolio](teaching/index.md) is the charted set for a class.
