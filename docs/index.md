@@ -44,6 +44,7 @@ See [Audience](about/audience.md) and
 | Looking up official figures | [Where to check official figures](about/where-to-check.md) |
 | Looking up official links | [Resource catalog](resources/catalog.md) |
 | Asking Claude or Cursor about the library | [Talk to the library](guides/talk-to-the-library.md) |
+| Teaching with live official figures | [Educator examples](guides/educator-examples.md) |
 | Stuck on a word | [Glossary](glossary.md) |
 
 ## Country map

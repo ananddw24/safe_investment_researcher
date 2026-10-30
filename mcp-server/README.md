@@ -110,7 +110,7 @@ Add to `~/.cursor/mcp.json` (global) or `.cursor/mcp.json` (per project):
 }
 ```
 
-Restart the client; the six `financial-library` tools should appear.
+Restart the client; the seven `financial-library` tools should appear.
 
 ## Develop and test
 

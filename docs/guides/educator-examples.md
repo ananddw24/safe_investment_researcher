@@ -4,15 +4,16 @@ description: Worked examples and reusable pipelines pairing FinancialLibrary rec
 audience: [educators, general]
 topics: [resources, literacy]
 status: published
-last_reviewed: "2026-10-29"
+last_reviewed: "2026-10-30"
 ---
 
 # Educator examples: live data with the library
 
 !!! warning "Educational only"
-    This page is for financial literacy. It is **not** personalized advice,
-    an offer to sell, or a recommendation to buy, sell, or hold any product.
-    Rules differ by country; verify with official sources in your jurisdiction.
+    This page is for financial literacy. It is **not** investment advice,
+    not personalized financial advice, an offer to sell, or a recommendation
+    to buy, sell, or hold any product. Rules differ by country; verify with
+    official sources in your jurisdiction.
 
 The library explains the institutions. A class also needs *this
 week's numbers*. This page is the bridge: worked examples that pair a
@@ -38,9 +39,10 @@ the live source — with its date — for the figure.**
 ## Example reports, refreshed weekly
 
 Three example reports are generated from live, keyless official
-endpoints (FRED, SEC EDGAR, the World Bank) and refreshed weekly by
-an automated job that opens a pull request for human review — nothing
-publishes itself:
+endpoints (FRED, SEC EDGAR, the World Bank) by
+`scripts/generate_educator_reports.py`. A maintainer runs the script
+and reviews the result before it is published. Nothing in this
+repository runs that refresh on a schedule:
 
 - **US macro snapshot** — the policy rate, inflation, unemployment,
   the 10-year Treasury and the saving rate, beside the library's US
@@ -64,9 +66,10 @@ prompt sequence, output shape, guardrails:
    against the library's US records (~30 min).
 2. **Read a real bank filing** — open a 10-K, find the deposits line,
    connect it to deposit insurance (~45 min).
-3. **One question, sixteen countries** — inflation and deposit
-   insurance compared across the library's countries, with "not
-   covered" treated as a correct answer (~40 min).
+3. **One question, fifteen countries** — inflation and deposit
+   insurance compared across the library's household countries, with
+   "not covered" treated as a correct answer (~40 min). The catalog's
+   `global` bucket is not an extra country.
 
 ## What is deliberately not used
 

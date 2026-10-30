@@ -1,8 +1,18 @@
 # Educator example report — reading real bank filings (2026-10-29)
 
-> **Educational only, not financial advice.** Figures are retrieved from the public sources cited on the retrieval date shown; re-check any figure at its source before relying on it.
+> Re-checked against the SEC EDGAR submissions API on 2026-10-30. The
+> filing dates and primary-document links below matched. The
+> [2026-10-30 filing watch](2026-10-30-filing-watch.md) lists the same
+> documents in form order 10-K, 10-Q, 8-K.
 
-The most recent filings of three large US banks, straight from SEC EDGAR (retrieved 2026-10-29). Each row links to the filing index on EDGAR, where the full document is free to read. Pair with the library's records `us-sec`, `us-fdic-deposit-insurance` and `us-occ` on who regulates whom.
+> **Educational only, not investment advice.** Figures are retrieved from the
+> public sources cited on the retrieval date shown; re-check any figure at its
+> source before relying on it. Not financial advice.
+
+The most recent filings of three large US banks, straight from SEC EDGAR
+(retrieved 2026-10-29). Each row links to the filing index on EDGAR, where the
+full document is free to read. Pair with the library's records `us-sec`,
+`us-fdic-deposit-insurance` and `us-occ` on who regulates whom.
 
 ## JPMorgan Chase
 

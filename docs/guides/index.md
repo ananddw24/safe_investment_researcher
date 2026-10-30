@@ -2,7 +2,7 @@
 title: Guides
 description: Plain-language financial literacy guides
 status: published
-last_reviewed: "2026-10-24"
+last_reviewed: "2026-10-30"
 ---
 
 # Guides
@@ -12,7 +12,7 @@ last_reviewed: "2026-10-24"
     an offer to sell, or a recommendation to buy, sell, or hold any product.
     Rules differ by country; verify with official sources in your jurisdiction.
 
-These three literacy guides ship with every country set. Read them before (or
+Literacy guides ship with every country set. Read the first three before (or
 alongside) country vehicle pages. Stuck on a word? Open the
 [Glossary](../glossary.md).
 
@@ -27,5 +27,6 @@ can run the matching [community training](../training/index.md) sessions.
 | [Inflation and capital preservation](inflation-capital-preservation.md) | Purchasing power literacy | [Session 2](../training/session-02-inflation.md) |
 | [Spotting unregulated schemes](spotting-unregulated-schemes.md) | Scam and “guaranteed return” red flags | [Session 3](../training/session-03-unregulated-schemes.md) |
 | [Talk to the library](talk-to-the-library.md) | Asking Claude / Cursor about curated records | — |
+| [Educator examples](educator-examples.md) | Live official figures beside library records | — |
 
 After the guides, open your country under [Vehicles](../vehicles/index.md).
