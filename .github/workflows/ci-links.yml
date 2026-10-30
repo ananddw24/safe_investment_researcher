@@ -42,6 +42,24 @@ jobs:
       - name: Build MkDocs
         run: mkdocs build --strict
 
+      - name: Map the site URL onto the build
+        run: |
+          python3 - << 'PY'
+          from pathlib import Path
+          site_url = ""
+          for line in Path("mkdocs.yml").read_text(encoding="utf-8").splitlines():
+              if line.startswith("site_url:"):
+                  site_url = line.split(":", 1)[1].strip().strip("\"'")
+          prefix = site_url.split("://", 1)[-1].split("/", 1)[-1].strip("/")
+          root = Path("/tmp/lychee-root")
+          root.mkdir(parents=True, exist_ok=True)
+          link = root / prefix
+          if link.is_symlink() or link.exists():
+              link.unlink()
+          link.symlink_to(Path("site").resolve())
+          print(f"root-relative /{prefix}/ -> {link}")
+          PY
+
       - name: Extract resource URLs
         run: |
           mkdir -p .lychee-inputs
@@ -52,6 +70,7 @@ jobs:
         with:
           args: >-
             --offline
+            --root-dir /tmp/lychee-root
             --config .lychee.toml
             site/
 
