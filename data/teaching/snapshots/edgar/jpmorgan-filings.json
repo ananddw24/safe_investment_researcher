@@ -1,0 +1,40 @@
+{
+  "retrieved_on": "2026-10-30",
+  "source_url": "https://data.sec.gov/submissions/CIK0000019617.json",
+  "full_payload_sha256": "562a38bb62613875ca90a8c65ba8193b8c830b92b4a7ee65d3a784c56069b018",
+  "full_payload_bytes": 4700704,
+  "entityName": "JPMORGAN CHASE & CO",
+  "cik": "0000019617",
+  "sic": "6021",
+  "sicDescription": "National Commercial Banks",
+  "filter": "Latest 10-K, 10-Q, and 8-K with filingDate on or before the retrieval date. Each filing object copies the parallel filings.recent fields for that row.",
+  "filings": [
+    {
+      "form": "10-K",
+      "filingDate": "2026-02-13",
+      "accessionNumber": "0001628280-26-008131",
+      "primaryDocument": "jpm-20251231.htm",
+      "primaryDocDescription": "10-K",
+      "reportDate": "2025-12-31",
+      "acceptanceDateTime": "2026-02-13T21:20:00.000Z"
+    },
+    {
+      "form": "10-Q",
+      "filingDate": "2026-08-06",
+      "accessionNumber": "0001628280-26-054343",
+      "primaryDocument": "jpm-20260630.htm",
+      "primaryDocDescription": "10-Q",
+      "reportDate": "2026-06-30",
+      "acceptanceDateTime": "2026-08-06T20:19:03.000Z"
+    },
+    {
+      "form": "8-K",
+      "filingDate": "2026-10-20",
+      "accessionNumber": "0001193125-26-426704",
+      "primaryDocument": "d351999d8k.htm",
+      "primaryDocDescription": "8-K",
+      "reportDate": "2026-10-20",
+      "acceptanceDateTime": "2026-10-20T20:15:28.000Z"
+    }
+  ]
+}

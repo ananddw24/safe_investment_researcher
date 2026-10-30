@@ -1,0 +1,61 @@
+name: ci-teaching
+
+on:
+  push:
+    paths:
+      - "docs/guides/teaching/**"
+      - "docs/assets/stylesheets/teaching.css"
+      - "data/teaching/**"
+      - "examples/educators/notebooks/**"
+      - "scripts/generate_teaching_portfolio.py"
+      - "scripts/teaching_charts.py"
+      - "scripts/requirements-dev.txt"
+      - "scripts/requirements-teaching.txt"
+      - "tests/test_teaching_portfolio.py"
+      - "mkdocs.yml"
+      - "Makefile"
+      - ".github/workflows/ci-teaching.yml"
+  pull_request:
+    paths:
+      - "docs/guides/teaching/**"
+      - "docs/assets/stylesheets/teaching.css"
+      - "data/teaching/**"
+      - "examples/educators/notebooks/**"
+      - "scripts/generate_teaching_portfolio.py"
+      - "scripts/teaching_charts.py"
+      - "scripts/requirements-dev.txt"
+      - "scripts/requirements-teaching.txt"
+      - "tests/test_teaching_portfolio.py"
+      - "mkdocs.yml"
+      - "Makefile"
+      - ".github/workflows/ci-teaching.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+
+      - name: Setup Python
+        uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0  # v7.1.0
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: scripts/requirements-dev.txt
+
+      - name: Install test deps
+        run: |
+          pip install -r scripts/requirements-dev.txt
+          pip install -r scripts/requirements-teaching.txt
+
+      - name: Ruff
+        run: ruff check scripts/generate_teaching_portfolio.py scripts/teaching_charts.py tests/test_teaching_portfolio.py
+
+      - name: Portfolio tests and generator check
+        run: |
+          python -m pytest tests/test_teaching_portfolio.py -q
+          python scripts/generate_teaching_portfolio.py --check

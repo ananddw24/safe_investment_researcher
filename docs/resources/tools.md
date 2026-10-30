@@ -48,17 +48,19 @@ If the interactive list does not load (for example with JavaScript off), the
 
 <p class="fl-count" id="fl-catalog-count">Loading the catalog data…</p>
 
-<div id="fl-catalog">
-<table>
-<thead>
-<tr><th>Title</th><th>Country</th><th>Type</th><th>Topics</th><th>Audience</th><th>Checked</th></tr>
-</thead>
-<tbody id="fl-catalog-body">
-<tr><td colspan="6">The interactive list needs JavaScript. The <a href="../catalog/">static catalog</a> lists the same records without it.</td></tr>
-</tbody>
-</table>
 </div>
 
+<div id="fl-catalog" markdown="span">
+<table markdown="span">
+<thead markdown="0">
+<tr><th>Title</th><th>Country</th><th>Type</th><th>Topics</th><th>Audience</th><th>Checked</th></tr>
+</thead>
+<tbody id="fl-catalog-body" markdown="span">
+<tr markdown="span">
+<td colspan="6" markdown="1">The interactive list needs JavaScript. The [static catalog](catalog.md) lists the same records without it.</td>
+</tr>
+</tbody>
+</table>
 </div>
 
 ## Emergency fund target calculator

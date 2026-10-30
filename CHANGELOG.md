@@ -7,6 +7,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- **Teaching portfolio** (`docs/guides/teaching/`): six classroom modules
+  with charts, exercises, and answer keys drawn from checked-in FRED,
+  SEC EDGAR, IMF, and World Bank snapshots (retrieved 2026-10-30).
+  Covers rates and inflation, the Treasury yield curve, the labor
+  market, reading one 10-K, cross-country inflation, and Findex account
+  ownership. `scripts/generate_teaching_portfolio.py` rebuilds the pages
+  offline; `--check` diffs the SVG, PNG, and Markdown. IMF years after
+  the last complete calendar year are labeled as WEO projections from
+  the snapshot metadata
+
 ### Fixed
 
 - Educator reports: the 2026-10-29 World Bank snapshot omitted Italy,

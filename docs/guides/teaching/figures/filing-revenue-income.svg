@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="504" viewBox="0 0 760 504" role="img" aria-labelledby="title-filing-revenue-income desc-filing-revenue-income">
+<title id="title-filing-revenue-income">Revenues and net income for the fiscal year</title>
+<desc id="desc-filing-revenue-income">Revenues and net income, fiscal years 2016 to 2025. 2025: revenues $182.45 billion, net income $57.05 billion.</desc>
+<rect width="760" height="504" fill="#FFFFFF"/>
+<text x="24" y="28" fill="#1A1A1A" font-size="16" font-weight="700" font-family="Segoe UI, Helvetica, Arial, sans-serif">Revenues and net income for the fiscal year</text>
+<text x="24" y="48" fill="#333333" font-size="12" font-family="Segoe UI, Helvetica, Arial, sans-serif">EDGAR 10-K facts for a full fiscal year. Not a view on the company.</text>
+<defs><pattern id="hatch-filing-revenue-income" patternUnits="userSpaceOnUse" width="6" height="6"><path d="M0,6 l6,-6" stroke="#D55E00" stroke-width="1.2"/></pattern></defs>
+<rect x="24" y="66" width="22" height="10" fill="#56B4E9" stroke="#56B4E9"/>
+<text x="50" y="75" fill="#1A1A1A" font-size="12" font-family="Segoe UI, Helvetica, Arial, sans-serif">Revenues</text>
+<rect x="180" y="66" width="22" height="10" fill="url(#hatch-filing-revenue-income)" stroke="#D55E00" stroke-width="1"/>
+<text x="206" y="75" fill="#1A1A1A" font-size="12" font-family="Segoe UI, Helvetica, Arial, sans-serif">Net income (hatched)</text>
+<text x="12" y="118.0" fill="#1A1A1A" font-size="12" font-family="Segoe UI, Helvetica, Arial, sans-serif">2016</text>
+<rect x="150" y="100.0" width="242.5" height="12" fill="#56B4E9" stroke="#56B4E9" stroke-width="1"/>
+<text x="396.5" y="110.0" fill="#1A1A1A" font-size="10" font-family="Segoe UI, Helvetica, Arial, sans-serif">95.67</text>
+<rect x="150" y="114.0" width="62.7" height="12" fill="url(#hatch-filing-revenue-income)" stroke="#D55E00" stroke-width="1"/>
+<text x="216.7" y="124.0" fill="#1A1A1A" font-size="10" font-family="Segoe UI, Helvetica, Arial, sans-serif">24.73</text>
+<text x="12" y="154.0" fill="#1A1A1A" font-size="12" font-family="Segoe UI, Helvetica, Arial, sans-serif">2017</text>
+<rect x="150" y="136.0" width="252.5" height="12" fill="#56B4E9" stroke="#56B4E9" stroke-width="1"/>
+<text x="406.5" y="146.0" fill="#1A1A1A" font-size="10" font-family="Segoe UI, Helvetica, Arial, sans-serif">99.62</text>
+<rect x="150" y="150.0" width="62.0" height="12" fill="url(#hatch-filing-revenue-income)" stroke="#D55E00" stroke-width="1"/>
+<text x="216.0" y="160.0" fill="#1A1A1A" font-size="10" font-family="Segoe UI, Helvetica, Arial, sans-serif">24.44</text>
+<text x="12" y="190.0" fill="#1A1A1A" font-size="12" font-family="Segoe UI, Helvetica, Arial, sans-serif">2018</text>
+<rect x="150" y="172.0" width="276.4" height="12" fill="#56B4E9" stroke="#56B4E9" stroke-width="1"/>
+<text x="430.4" y="182.0" fill="#1A1A1A" font-size="10" font-family="Segoe UI, Helvetica, Arial, sans-serif">109.03</text>
+<rect x="150" y="186.0" width="82.3" height="12" fill="url(#hatch-filing-revenue-income)" stroke="#D55E00" stroke-width="1"/>
+<text x="236.3" y="196.0" fill="#1A1A1A" font-size="10" font-family="Segoe UI, Helvetica, Arial, sans-serif">32.47</text>
+<text x="12" y="226.0" fill="#1A1A1A" font-size="12" font-family="Segoe UI, Helvetica, Arial, sans-serif">2019</text>
+<rect x="150" y="208.0" width="293.1" height="12" fill="#56B4E9" stroke="#56B4E9" stroke-width="1"/>
+<text x="447.1" y="218.0" fill="#1A1A1A" font-size="10" font-family="Segoe UI, Helvetica, Arial, sans-serif">115.63</text>
+<rect x="150" y="222.0" width="92.3" height="12" fill="url(#hatch-filing-revenue-income)" stroke="#D55E00" stroke-width="1"/>
+<text x="246.3" y="232.0" fill="#1A1A1A" font-size="10" font-family="Segoe UI, Helvetica, Arial, sans-serif">36.43</text>
+<text x="12" y="262.0" fill="#1A1A1A" font-size="12" font-family="Segoe UI, Helvetica, Arial, sans-serif">2020</text>
+<rect x="150" y="244.0" width="303.0" height="12" fill="#56B4E9" stroke="#56B4E9" stroke-width="1"/>
+<text x="457.0" y="254.0" fill="#1A1A1A" font-size="10" font-family="Segoe UI, Helvetica, Arial, sans-serif">119.54</text>
+<rect x="150" y="258.0" width="73.8" height="12" fill="url(#hatch-filing-revenue-income)" stroke="#D55E00" stroke-width="1"/>
+<text x="227.8" y="268.0" fill="#1A1A1A" font-size="10" font-family="Segoe UI, Helvetica, Arial, sans-serif">29.13</text>
+<text x="12" y="298.0" fill="#1A1A1A" font-size="12" font-family="Segoe UI, Helvetica, Arial, sans-serif">2021</text>
+<rect x="150" y="280.0" width="308.4" height="12" fill="#56B4E9" stroke="#56B4E9" stroke-width="1"/>
+<text x="462.4" y="290.0" fill="#1A1A1A" font-size="10" font-family="Segoe UI, Helvetica, Arial, sans-serif">121.65</text>
+<rect x="150" y="294.0" width="122.5" height="12" fill="url(#hatch-filing-revenue-income)" stroke="#D55E00" stroke-width="1"/>
+<text x="276.5" y="304.0" fill="#1A1A1A" font-size="10" font-family="Segoe UI, Helvetica, Arial, sans-serif">48.33</text>
+<text x="12" y="334.0" fill="#1A1A1A" font-size="12" font-family="Segoe UI, Helvetica, Arial, sans-serif">2022</text>
+<rect x="150" y="316.0" width="326.2" height="12" fill="#56B4E9" stroke="#56B4E9" stroke-width="1"/>
+<text x="480.2" y="326.0" fill="#1A1A1A" font-size="10" font-family="Segoe UI, Helvetica, Arial, sans-serif">128.70</text>
+<rect x="150" y="330.0" width="95.5" height="12" fill="url(#hatch-filing-revenue-income)" stroke="#D55E00" stroke-width="1"/>
+<text x="249.5" y="340.0" fill="#1A1A1A" font-size="10" font-family="Segoe UI, Helvetica, Arial, sans-serif">37.68</text>
+<text x="12" y="370.0" fill="#1A1A1A" font-size="12" font-family="Segoe UI, Helvetica, Arial, sans-serif">2023</text>
+<rect x="150" y="352.0" width="400.8" height="12" fill="#56B4E9" stroke="#56B4E9" stroke-width="1"/>
+<text x="554.8" y="362.0" fill="#1A1A1A" font-size="10" font-family="Segoe UI, Helvetica, Arial, sans-serif">158.10</text>
+<rect x="150" y="366.0" width="125.6" height="12" fill="url(#hatch-filing-revenue-income)" stroke="#D55E00" stroke-width="1"/>
+<text x="279.6" y="376.0" fill="#1A1A1A" font-size="10" font-family="Segoe UI, Helvetica, Arial, sans-serif">49.55</text>
+<text x="12" y="406.0" fill="#1A1A1A" font-size="12" font-family="Segoe UI, Helvetica, Arial, sans-serif">2024</text>
+<rect x="150" y="388.0" width="450.1" height="12" fill="#56B4E9" stroke="#56B4E9" stroke-width="1"/>
+<text x="604.1" y="398.0" fill="#1A1A1A" font-size="10" font-family="Segoe UI, Helvetica, Arial, sans-serif">177.56</text>
+<rect x="150" y="402.0" width="148.2" height="12" fill="url(#hatch-filing-revenue-income)" stroke="#D55E00" stroke-width="1"/>
+<text x="302.2" y="412.0" fill="#1A1A1A" font-size="10" font-family="Segoe UI, Helvetica, Arial, sans-serif">58.47</text>
+<text x="12" y="442.0" fill="#1A1A1A" font-size="12" font-family="Segoe UI, Helvetica, Arial, sans-serif">2025</text>
+<rect x="150" y="424.0" width="462.5" height="12" fill="#56B4E9" stroke="#56B4E9" stroke-width="1"/>
+<text x="616.5" y="434.0" fill="#1A1A1A" font-size="10" font-family="Segoe UI, Helvetica, Arial, sans-serif">182.45</text>
+<rect x="150" y="438.0" width="144.6" height="12" fill="url(#hatch-filing-revenue-income)" stroke="#D55E00" stroke-width="1"/>
+<text x="298.6" y="448.0" fill="#1A1A1A" font-size="10" font-family="Segoe UI, Helvetica, Arial, sans-serif">57.05</text>
+<text x="409" y="476" text-anchor="middle" fill="#1A1A1A" font-size="12" font-family="Segoe UI, Helvetica, Arial, sans-serif">Billions of US dollars</text>
+<text x="24" y="488" fill="#333333" font-size="11" font-family="Segoe UI, Helvetica, Arial, sans-serif">FinancialLibrary teaching chart · educational only · not a forecast or a recommendation</text>
+</svg>

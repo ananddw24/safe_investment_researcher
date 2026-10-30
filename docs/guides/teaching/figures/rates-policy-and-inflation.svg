@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="460" viewBox="0 0 760 460" role="img" aria-labelledby="title-rates-policy-and-inflation desc-rates-policy-and-inflation">
+<title id="title-rates-policy-and-inflation">Effective funds rate and 12-month CPI change</title>
+<desc id="desc-rates-policy-and-inflation">Funds rate and computed 12-month CPI change, Oct 2016 to 2026-09. Ends at 3.75% and 3.7%.</desc>
+<rect width="760" height="460" fill="#FFFFFF"/>
+<text x="24" y="28" fill="#1A1A1A" font-size="16" font-weight="700" font-family="Segoe UI, Helvetica, Arial, sans-serif">Effective funds rate and 12-month CPI change</text>
+<text x="24" y="48" fill="#333333" font-size="12" font-family="Segoe UI, Helvetica, Arial, sans-serif">FRED FEDFUNDS and CPIAUCSL, retrieved 2026-10-30. CPI change is computed.</text>
+<line x1="24" y1="70" x2="52" y2="70" stroke="#0072B2" stroke-width="2.5" stroke-dasharray=""/>
+<text x="58" y="74" fill="#1A1A1A" font-size="12" font-family="Segoe UI, Helvetica, Arial, sans-serif">Effective funds rate</text>
+<line x1="198" y1="70" x2="226" y2="70" stroke="#D55E00" stroke-width="2.5" stroke-dasharray="7 4"/>
+<text x="232" y="74" fill="#1A1A1A" font-size="12" font-family="Segoe UI, Helvetica, Arial, sans-serif">CPI, 12-month change</text>
+<line x1="64" y1="396.0" x2="732" y2="396.0" stroke="#E6E6E6" stroke-width="1"/>
+<text x="56" y="400.0" text-anchor="end" fill="#1A1A1A" font-size="11" font-family="Segoe UI, Helvetica, Arial, sans-serif">0</text>
+<line x1="64" y1="333.4" x2="732" y2="333.4" stroke="#E6E6E6" stroke-width="1"/>
+<text x="56" y="337.4" text-anchor="end" fill="#1A1A1A" font-size="11" font-family="Segoe UI, Helvetica, Arial, sans-serif">2</text>
+<line x1="64" y1="270.9" x2="732" y2="270.9" stroke="#E6E6E6" stroke-width="1"/>
+<text x="56" y="274.9" text-anchor="end" fill="#1A1A1A" font-size="11" font-family="Segoe UI, Helvetica, Arial, sans-serif">4</text>
+<line x1="64" y1="208.3" x2="732" y2="208.3" stroke="#E6E6E6" stroke-width="1"/>
+<text x="56" y="212.3" text-anchor="end" fill="#1A1A1A" font-size="11" font-family="Segoe UI, Helvetica, Arial, sans-serif">6</text>
+<line x1="64" y1="145.8" x2="732" y2="145.8" stroke="#E6E6E6" stroke-width="1"/>
+<text x="56" y="149.8" text-anchor="end" fill="#1A1A1A" font-size="11" font-family="Segoe UI, Helvetica, Arial, sans-serif">8</text>
+<text x="16" y="244" fill="#333333" font-size="11" transform="rotate(-90 16 244)" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif">Percent</text>
+<text x="64.0" y="414" text-anchor="middle" fill="#1A1A1A" font-size="11" font-family="Segoe UI, Helvetica, Arial, sans-serif">2016</text>
+<text x="148.3" y="414" text-anchor="middle" fill="#1A1A1A" font-size="11" font-family="Segoe UI, Helvetica, Arial, sans-serif">2018</text>
+<text x="282.9" y="414" text-anchor="middle" fill="#1A1A1A" font-size="11" font-family="Segoe UI, Helvetica, Arial, sans-serif">2020</text>
+<text x="417.7" y="414" text-anchor="middle" fill="#1A1A1A" font-size="11" font-family="Segoe UI, Helvetica, Arial, sans-serif">2022</text>
+<text x="552.4" y="414" text-anchor="middle" fill="#1A1A1A" font-size="11" font-family="Segoe UI, Helvetica, Arial, sans-serif">2024</text>
+<text x="687.2" y="414" text-anchor="middle" fill="#1A1A1A" font-size="11" font-family="Segoe UI, Helvetica, Arial, sans-serif">2026</text>
+<line x1="64" y1="92" x2="64" y2="396" stroke="#1A1A1A"/>
+<line x1="64" y1="396" x2="732" y2="396" stroke="#1A1A1A"/>
+<polyline fill="none" stroke="#0072B2" stroke-width="2.25" stroke-dasharray="" stroke-linejoin="round" stroke-linecap="round" points="64.0,383.5 69.7,383.2 75.3,379.1 81.0,375.7 86.7,375.4 91.8,371.3 97.6,367.9 103.1,367.5 108.8,363.5 114.3,360.0 120.1,359.7 125.8,360.0 131.3,360.0 137.0,359.7 142.6,355.3 148.3,351.9 154.0,351.6 159.2,348.8 164.9,343.1 170.4,342.8 176.1,339.1 181.7,336.3 187.4,336.3 193.1,335.0 198.6,327.5 204.4,327.2 209.9,325.0 215.6,320.9 221.3,320.9 226.5,320.6 232.2,320.3 237.7,321.3 243.4,321.6 249.0,320.9 254.7,329.4 260.4,332.2 265.9,338.8 271.7,347.5 277.2,347.5 282.9,347.5 288.6,346.6 294.0,375.7 299.7,394.4 305.2,394.4 310.9,393.5 316.5,393.2 322.2,392.9 327.9,393.2 333.5,393.2 339.2,393.2 344.7,393.2 350.4,393.2 356.1,393.5 361.3,393.8 367.0,393.8 372.5,394.1 378.3,393.5 383.8,392.9 389.5,393.2 395.2,393.5 400.8,393.5 406.5,393.5 412.0,393.5 417.7,393.5 423.5,393.5 428.6,389.7 434.3,385.7 439.9,371.9 445.6,358.2 451.1,343.5 456.8,323.1 462.5,315.9 468.1,299.7 473.8,277.8 479.3,267.8 485.1,260.6 490.8,253.1 495.9,250.6 501.6,244.9 507.2,237.7 512.9,237.1 518.4,235.9 524.1,229.3 529.9,229.3 535.4,229.3 541.1,229.3 546.6,229.3 552.4,229.3 558.1,229.3 563.4,229.3 569.1,229.3 574.7,229.3 580.4,229.3 585.9,229.3 591.6,229.3 597.4,235.6 602.9,244.9 608.6,250.9 614.2,255.9 619.9,260.6 625.6,260.6 630.7,260.6 636.5,260.6 642.0,260.6 647.7,260.6 653.2,260.6 659.0,260.6 664.7,264.0 670.2,268.1 675.9,274.7 681.5,279.7 687.2,282.2 692.9,282.2 698.1,282.2 703.8,282.2 709.3,282.5 715.0,282.5 720.6,282.5 726.3,282.5 732.0,278.7"/>
+<circle cx="732.0" cy="278.7" r="3.5" fill="#0072B2"/>
+<text x="724.0" y="262.7" text-anchor="end" fill="#0072B2" font-size="12" font-weight="700" stroke="#FFFFFF" stroke-width="3" paint-order="stroke fill" font-family="Segoe UI, Helvetica, Arial, sans-serif">3.75</text>
+<polyline fill="none" stroke="#D55E00" stroke-width="2.25" stroke-dasharray="7 4" stroke-linejoin="round" stroke-linecap="round" points="64.0,342.8 69.7,342.8 75.3,330.3 81.0,317.8 86.7,308.4 91.8,320.9 97.6,327.2 103.1,336.6 108.8,346.0 114.3,342.8 120.1,336.6 125.8,327.2 131.3,333.4 137.0,327.2 142.6,330.3 148.3,327.2 154.0,324.1 159.2,324.1 164.9,317.8 170.4,308.4 176.1,308.4 181.7,305.3 187.4,314.7 193.1,324.1 198.6,317.8 204.4,330.3 209.9,333.4 215.6,349.1 221.3,349.1 226.5,336.6 232.2,333.4 237.7,339.7 243.4,342.8 249.0,339.7 254.7,342.8 260.4,342.8 265.9,342.8 271.7,330.3 277.2,324.1 282.9,314.7 288.6,324.1 294.0,349.1 299.7,386.6 305.2,389.7 310.9,374.1 316.5,364.7 322.2,355.3 327.9,352.2 333.5,358.5 339.2,358.5 344.7,355.3 350.4,352.2 356.1,342.8 361.3,311.6 367.0,267.8 372.5,242.7 378.3,230.2 383.8,233.4 389.5,233.4 395.2,227.1 400.8,202.1 406.5,180.2 412.0,170.8 417.7,158.3 423.5,148.9 428.6,127.0 434.3,139.5 439.9,130.2 445.6,114.5 451.1,130.2 456.8,139.5 462.5,139.5 468.1,152.0 473.8,173.9 479.3,195.8 485.1,199.0 490.8,208.3 495.9,242.7 501.6,239.6 507.2,267.8 512.9,299.0 518.4,292.8 524.1,280.3 529.9,280.3 535.4,292.8 541.1,299.0 546.6,292.8 552.4,299.0 558.1,295.9 563.4,286.5 569.1,289.7 574.7,295.9 580.4,302.2 585.9,305.3 591.6,314.7 597.4,320.9 602.9,314.7 608.6,311.6 614.2,305.3 619.9,302.2 625.6,308.4 630.7,320.9 636.5,324.1 642.0,320.9 647.7,311.6 653.2,311.6 659.0,305.3 664.7,302.2"/>
+<polyline fill="none" stroke="#D55E00" stroke-width="2.25" stroke-dasharray="7 4" stroke-linejoin="round" stroke-linecap="round" points="675.9,311.6 681.5,311.6 687.2,320.9 692.9,320.9 698.1,292.8 703.8,277.2 709.3,264.6 715.0,286.5 720.6,292.8 726.3,289.7 732.0,280.3"/>
+<circle cx="732.0" cy="280.3" r="3.5" fill="#D55E00"/>
+<text x="724.0" y="298.3" text-anchor="end" fill="#D55E00" font-size="12" font-weight="700" stroke="#FFFFFF" stroke-width="3" paint-order="stroke fill" font-family="Segoe UI, Helvetica, Arial, sans-serif">3.7</text>
+<text x="24" y="444" fill="#333333" font-size="11" font-family="Segoe UI, Helvetica, Arial, sans-serif">FinancialLibrary teaching chart · educational only · not a forecast or a recommendation</text>
+</svg>

@@ -5,12 +5,16 @@ on:
     paths:
       - "docs/**"
       - "data/resources/**"
+      - "mkdocs.yml"
+      - "requirements.txt"
       - ".lychee.toml"
       - ".github/workflows/ci-links.yml"
   pull_request:
     paths:
       - "docs/**"
       - "data/resources/**"
+      - "mkdocs.yml"
+      - "requirements.txt"
       - ".lychee.toml"
       - ".github/workflows/ci-links.yml"
   schedule:
@@ -26,12 +30,51 @@ jobs:
       - name: Checkout
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
 
+      - name: Setup Python
+        uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0  # v7.1.0
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install docs deps
+        run: pip install -r requirements.txt
+
+      - name: Build MkDocs
+        run: mkdocs build --strict
+
+      - name: Map the site URL onto the build
+        run: |
+          python3 - << 'PY'
+          from pathlib import Path
+          site_url = ""
+          for line in Path("mkdocs.yml").read_text(encoding="utf-8").splitlines():
+              if line.startswith("site_url:"):
+                  site_url = line.split(":", 1)[1].strip().strip("\"'")
+          prefix = site_url.split("://", 1)[-1].split("/", 1)[-1].strip("/")
+          root = Path("/tmp/lychee-root")
+          root.mkdir(parents=True, exist_ok=True)
+          link = root / prefix
+          if link.is_symlink() or link.exists():
+              link.unlink()
+          link.symlink_to(Path("site").resolve())
+          print(f"root-relative /{prefix}/ -> {link}")
+          PY
+
       - name: Extract resource URLs
         run: |
           mkdir -p .lychee-inputs
           python3 scripts/extract_resource_urls.py .lychee-inputs
 
-      # Soft-fail at v0.1: flip to hard-fail after first country seed (v0.2.0) when allowlist is stable
+      - name: Internal link check
+        uses: lycheeverse/lychee-action@e7477775783ea5526144ba13e8db5eec57747ce8  # v2.9.0
+        with:
+          args: >-
+            --offline
+            --root-dir /tmp/lychee-root
+            --config .lychee.toml
+            site/
+
+      # External links stay warn-only; publishers rate-limit and flake.
       - name: Link check (soft-fail until v0.2.0)
         continue-on-error: true
         uses: lycheeverse/lychee-action@e7477775783ea5526144ba13e8db5eec57747ce8  # v2.9.0

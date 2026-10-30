@@ -1,0 +1,453 @@
+{
+  "retrieved_on": "2026-10-30",
+  "as_of": "2026-10-30",
+  "window_start": "2016-10-01",
+  "last_complete_calendar_year": 2025,
+  "comparison_year": 2024,
+  "survey_year": "2024",
+  "rounding": "ROUND_HALF_UP",
+  "modules": {
+    "rates-and-inflation": {
+      "fedfunds_latest": {
+        "date": "2026-09-01",
+        "raw": "3.75"
+      },
+      "cpi_yoy_latest": {
+        "date": "2026-09-01",
+        "raw": "336.298",
+        "prior_date": "2025-09-01",
+        "prior_raw": "324.245",
+        "yoy_percent": "3.7"
+      },
+      "computed_gap_latest": {
+        "date": "2026-09-01",
+        "fedfunds": "3.75",
+        "cpi_yoy_percent": "3.7",
+        "gap_percentage_points": "0.05",
+        "unrounded_gap_percentage_points": "0.03"
+      }
+    },
+    "yield-curve": {
+      "curve_date": "2026-10-29",
+      "yields": [
+        {
+          "series_id": "DGS3MO",
+          "label": "3-month",
+          "raw": "4.18"
+        },
+        {
+          "series_id": "DGS2",
+          "label": "2-year",
+          "raw": "4.61"
+        },
+        {
+          "series_id": "DGS5",
+          "label": "5-year",
+          "raw": "4.78"
+        },
+        {
+          "series_id": "DGS10",
+          "label": "10-year",
+          "raw": "4.98"
+        },
+        {
+          "series_id": "DGS30",
+          "label": "30-year",
+          "raw": "5.32"
+        }
+      ],
+      "spread_latest": {
+        "date": "2026-10-29",
+        "percentage_points": "0.37"
+      },
+      "negative_spread_days": 544,
+      "spread_days": 2518
+    },
+    "labor-market": {
+      "unrate_latest": {
+        "date": "2026-09-01",
+        "raw": "4.2"
+      },
+      "participation_latest": {
+        "date": "2026-09-01",
+        "raw": "61.8"
+      },
+      "payems_latest": {
+        "date": "2026-09-01",
+        "raw": "159044"
+      },
+      "payems_prior": {
+        "date": "2025-09-01",
+        "raw": "158548"
+      },
+      "payems_change_thousands": "496",
+      "payems_yoy_percent": "0.3"
+    },
+    "reading-a-10k": {
+      "entity": "JPMORGAN CHASE & CO",
+      "cik": "0000019617",
+      "fiscal_year_end": "2025-12-31",
+      "filed": "2026-02-13",
+      "accession": "0001628280-26-008131",
+      "assets": 4424900000000,
+      "deposits": 2559320000000,
+      "revenues": 182447000000,
+      "net_income": 57048000000,
+      "deposits_over_assets_percent": "57.8",
+      "assets_text": "$4.42 trillion",
+      "deposits_text": "$2.56 trillion",
+      "revenues_text": "$182.45 billion",
+      "net_income_text": "$57.05 billion",
+      "displayed_ratio_percent": "57.9",
+      "assets_billions_text": "$4,424.90B",
+      "deposits_billions_text": "$2,559.32B",
+      "billion_ratio_percent": "57.8",
+      "ten_k_url": "https://www.sec.gov/Archives/edgar/data/19617/000162828026008131/jpm-20251231.htm"
+    },
+    "cross-country-inflation": {
+      "world_bank_year": "2025",
+      "world_bank_missing": [
+        "United States"
+      ],
+      "world_bank_rows": [
+        {
+          "iso3": "BRA",
+          "name": "Brazil",
+          "year": "2025",
+          "value": "5.01675279604836"
+        },
+        {
+          "iso3": "CAN",
+          "name": "Canada",
+          "year": "2025",
+          "value": "2.07232411149103"
+        },
+        {
+          "iso3": "CHN",
+          "name": "China",
+          "year": "2025",
+          "value": "0.0595646916565402"
+        },
+        {
+          "iso3": "EGY",
+          "name": "Egypt",
+          "year": "2025",
+          "value": "14.0735136645933"
+        },
+        {
+          "iso3": "FRA",
+          "name": "France",
+          "year": "2025",
+          "value": "0.943824761520197"
+        },
+        {
+          "iso3": "DEU",
+          "name": "Germany",
+          "year": "2025",
+          "value": "2.17178770949721"
+        },
+        {
+          "iso3": "GHA",
+          "name": "Ghana",
+          "year": "2025",
+          "value": "14.2046755548989"
+        },
+        {
+          "iso3": "IND",
+          "name": "India",
+          "year": "2025",
+          "value": "2.39884954182294"
+        },
+        {
+          "iso3": "ITA",
+          "name": "Italy",
+          "year": "2025",
+          "value": "1.5316735709312"
+        },
+        {
+          "iso3": "JPN",
+          "name": "Japan",
+          "year": "2025",
+          "value": "3.17253034260247"
+        },
+        {
+          "iso3": "KEN",
+          "name": "Kenya",
+          "year": "2025",
+          "value": "4.0693076061457"
+        },
+        {
+          "iso3": "NGA",
+          "name": "Nigeria",
+          "year": "2025",
+          "value": "23.0101235833333"
+        },
+        {
+          "iso3": "ZAF",
+          "name": "South Africa",
+          "year": "2025",
+          "value": "3.20550474112603"
+        },
+        {
+          "iso3": "GBR",
+          "name": "United Kingdom",
+          "year": "2025",
+          "value": "3.88306881625999"
+        }
+      ],
+      "comparison_rows": [
+        {
+          "iso3": "BRA",
+          "name": "Brazil",
+          "year": "2024",
+          "world_bank": "4.36746407652336",
+          "imf": "4.4"
+        },
+        {
+          "iso3": "CAN",
+          "name": "Canada",
+          "year": "2024",
+          "world_bank": "2.38158383281173",
+          "imf": "2.4"
+        },
+        {
+          "iso3": "CHN",
+          "name": "China",
+          "year": "2024",
+          "world_bank": "0.218128938439177",
+          "imf": "0.2"
+        },
+        {
+          "iso3": "EGY",
+          "name": "Egypt",
+          "year": "2024",
+          "world_bank": "28.2705899322082",
+          "imf": "33.3"
+        },
+        {
+          "iso3": "FRA",
+          "name": "France",
+          "year": "2024",
+          "world_bank": "1.99742599742599",
+          "imf": "2.3"
+        },
+        {
+          "iso3": "DEU",
+          "name": "Germany",
+          "year": "2024",
+          "world_bank": "2.2564981433876",
+          "imf": "2.5"
+        },
+        {
+          "iso3": "GHA",
+          "name": "Ghana",
+          "year": "2024",
+          "world_bank": "22.8483281157842",
+          "imf": "22.9"
+        },
+        {
+          "iso3": "IND",
+          "name": "India",
+          "year": "2024",
+          "world_bank": "4.9530355097366",
+          "imf": "4.6"
+        },
+        {
+          "iso3": "ITA",
+          "name": "Italy",
+          "year": "2024",
+          "world_bank": "0.982375111637719",
+          "imf": "1.1"
+        },
+        {
+          "iso3": "JPN",
+          "name": "Japan",
+          "year": "2024",
+          "world_bank": "2.7385368163524",
+          "imf": "2.7"
+        },
+        {
+          "iso3": "KEN",
+          "name": "Kenya",
+          "year": "2024",
+          "world_bank": "4.48978854243447",
+          "imf": "4.5"
+        },
+        {
+          "iso3": "NGA",
+          "name": "Nigeria",
+          "year": "2024",
+          "world_bank": "33.2416590552748",
+          "imf": "33.2"
+        },
+        {
+          "iso3": "ZAF",
+          "name": "South Africa",
+          "year": "2024",
+          "world_bank": "4.36115246518962",
+          "imf": "4.4"
+        },
+        {
+          "iso3": "GBR",
+          "name": "United Kingdom",
+          "year": "2024",
+          "world_bank": "3.2715729463592",
+          "imf": "2.5"
+        },
+        {
+          "iso3": "USA",
+          "name": "United States",
+          "year": "2024",
+          "world_bank": "2.94952520485207",
+          "imf": "3"
+        }
+      ],
+      "usa_latest_world_bank": {
+        "year": "2024",
+        "value": "2.94952520485207"
+      },
+      "imf_source": "World Economic Outlook (October 2026)",
+      "imf_label": "Inflation rate, average consumer prices",
+      "imf_unit": "Annual percent change"
+    },
+    "household-finance": {
+      "rows": [
+        {
+          "iso3": "BRA",
+          "name": "Brazil",
+          "year": "2024",
+          "ownership": "86.3811782311541",
+          "female": "82.2763902255203",
+          "male": "90.853585329865",
+          "gap_female_minus_male": "-8.5771951043447"
+        },
+        {
+          "iso3": "CAN",
+          "name": "Canada",
+          "year": "2024",
+          "ownership": "98.4047126063262",
+          "female": "98.7513672334689",
+          "male": "98.0567378578269",
+          "gap_female_minus_male": "0.6946293756420"
+        },
+        {
+          "iso3": "CHN",
+          "name": "China",
+          "year": "2024",
+          "ownership": "89.3830319754266",
+          "female": "89.2021200745424",
+          "male": "89.5550580073499",
+          "gap_female_minus_male": "-0.3529379328075"
+        },
+        {
+          "iso3": "EGY",
+          "name": "Egypt",
+          "year": "2024",
+          "ownership": "43.1134368034247",
+          "female": "40.2142182329493",
+          "male": "45.9509692862618",
+          "gap_female_minus_male": "-5.7367510533125"
+        },
+        {
+          "iso3": "FRA",
+          "name": "France",
+          "year": "2024",
+          "ownership": "99.1902372350206",
+          "female": "99.848494933374",
+          "male": "98.4892614438192",
+          "gap_female_minus_male": "1.3592334895548"
+        },
+        {
+          "iso3": "DEU",
+          "name": "Germany",
+          "year": "2024",
+          "ownership": "98.2983235670699",
+          "female": "98.873065264332",
+          "male": "97.6782654275893",
+          "gap_female_minus_male": "1.1947998367427"
+        },
+        {
+          "iso3": "GHA",
+          "name": "Ghana",
+          "year": "2024",
+          "ownership": "81.2430252454858",
+          "female": "78.3104466801133",
+          "male": "84.4194236475985",
+          "gap_female_minus_male": "-6.1089769674852"
+        },
+        {
+          "iso3": "IND",
+          "name": "India",
+          "year": "2024",
+          "ownership": "89.0248224502547",
+          "female": "89.2482328079147",
+          "male": "88.8052472379392",
+          "gap_female_minus_male": "0.4429855699755"
+        },
+        {
+          "iso3": "ITA",
+          "name": "Italy",
+          "year": "2024",
+          "ownership": "86.0191093278992",
+          "female": "79.7946783289735",
+          "male": "92.6338802740803",
+          "gap_female_minus_male": "-12.8392019451068"
+        },
+        {
+          "iso3": "JPN",
+          "name": "Japan",
+          "year": "2024",
+          "ownership": "98.5235592091779",
+          "female": "98.723135316154",
+          "male": "98.3131609217015",
+          "gap_female_minus_male": "0.4099743944525"
+        },
+        {
+          "iso3": "KEN",
+          "name": "Kenya",
+          "year": "2024",
+          "ownership": "90.1199173733613",
+          "female": "86.5155344015748",
+          "male": "93.8895090496553",
+          "gap_female_minus_male": "-7.3739746480805"
+        },
+        {
+          "iso3": "NGA",
+          "name": "Nigeria",
+          "year": "2024",
+          "ownership": "63.2613514491542",
+          "female": "52.2155914465012",
+          "male": "74.302879584059",
+          "gap_female_minus_male": "-22.0872881375578"
+        },
+        {
+          "iso3": "ZAF",
+          "name": "South Africa",
+          "year": "2024",
+          "ownership": "81.1259662052011",
+          "female": "80.9924154358395",
+          "male": "81.2787434862317",
+          "gap_female_minus_male": "-0.2863280503922"
+        },
+        {
+          "iso3": "GBR",
+          "name": "United Kingdom",
+          "year": "2024",
+          "ownership": "99.2843092777584",
+          "female": "99.2689870562959",
+          "male": "99.3005630735761",
+          "gap_female_minus_male": "-0.0315760172802"
+        },
+        {
+          "iso3": "USA",
+          "name": "United States",
+          "year": "2024",
+          "ownership": "97.0230983290589",
+          "female": "97.1092143262693",
+          "male": "96.9368554605958",
+          "gap_female_minus_male": "0.1723588656735"
+        }
+      ]
+    }
+  }
+}

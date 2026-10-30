@@ -36,6 +36,12 @@ The server itself can recite the list: ask for `list_ecosystem_servers`.
 The rule in every example: **cite the record for the explanation, and
 the live source — with its date — for the figure.**
 
+The same sources also feed the charted
+[teaching portfolio](teaching/index.md): rates and inflation, the yield
+curve, the labor market, a 10-K, cross-country inflation, and household
+account ownership. Those pages are generated from checked-in snapshots,
+not from a live call during the site build.
+
 ## Example reports
 
 Three example reports are generated from live, keyless official
