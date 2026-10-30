@@ -84,10 +84,14 @@ Or: `make serve` · build: `make build` · validate data: `make validate`
 
 ## Status
 
-**v1.0.0** — Public educational hub: Top 10 GDP + Africa cluster vehicle pages,
-three literacy guides, community training sessions, glossary, where-to-check
-official publishers, curated resources, and weekly maintenance PRs. An external
-datasets catalog ([toddrjones/datasets](https://github.com/toddrjones/datasets))
+**v1.2.0** — Current release. Educator examples pair library records with
+live official figures, and the read-only MCP server can sit beside a curated
+set of free live-data servers. v1.1.0 added Talk to the library and the
+Explore and tools page. v1.0.0 is the public educational hub: Top 10 GDP +
+Africa cluster vehicle pages, literacy guides, community training sessions,
+glossary, where-to-check official publishers, curated resources, and weekly
+maintenance PRs. An external datasets catalog
+([toddrjones/datasets](https://github.com/toddrjones/datasets))
 was reviewed and **not** integrated. Live docs:
 [ananddw24.github.io/safe_investment_researcher](https://ananddw24.github.io/safe_investment_researcher/).
 

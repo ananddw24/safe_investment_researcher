@@ -2,7 +2,7 @@
 title: Release plan
 description: Semver roadmap for FinancialLibrary content milestones
 status: published
-last_reviewed: "2026-10-27"
+last_reviewed: "2026-10-30"
 ---
 
 # Release plan
@@ -26,7 +26,9 @@ semantic versioning. Force-push is forbidden on `main` and on published tags.
 | **v0.5.0** | Africa cluster: Nigeria, South Africa, Ghana, Egypt (Kenya linked) | Shipped |
 | **v0.6.0** | Docs hub: coverage map, Start here paths; consolidates PR #11 reader pages + deep Top 10 prose | Shipped |
 | **v0.7.0** | Facilitator training, glossary, where-to-check official figures, weekly update PR workflow | Shipped |
-| **v1.0.0** | Public release hygiene: README/contribution clarity; datasets catalog reviewed and skipped | This release (mark Shipped only after tag `v1.0.0`) |
+| **v1.0.0** | Public release hygiene: README/contribution clarity; datasets catalog reviewed and skipped | Shipped |
+| **v1.1.0** | Read-only MCP server, Talk to the library, Explore and tools | Shipped |
+| **v1.2.0** | Educator examples and composed free live-data MCP servers | This release |
 
 ## What each content release already shipped
 
@@ -37,6 +39,7 @@ semantic versioning. Force-push is forbidden on `main` and on published tags.
 - **v0.6.0** — Docs hub + PR #11 onboarding, catalog, and deep Top 10 prose
 - **v0.7.0** — Community training sessions; glossary; where-to-check; weekly PR automation
 - **v1.0.0** — External public-release polish; toddrjones/datasets reviewed and **not** integrated
+- **v1.1.0** — Read-only MCP server; Talk to the library; Explore and tools
 
 ## Datasets decision
 
@@ -57,6 +60,7 @@ note `docs/dataset-usefulness.md` (agent store), not a site page.
 
 ## Current focus
 
-**v1.0.0** is the public educational release of coverage through v0.7.0 with
-clear outsider contribution paths and an accurate live-site README. Further
-country deepening remains optional follow-on work, not a blocker for this tag.
+**v1.2.0** is the latest release: educator examples and composed free
+live-data MCP servers, on the v1.1.0 read-only MCP server and tools page
+and the v1.0.0 public hub. Further country deepening remains optional
+follow-on work.
