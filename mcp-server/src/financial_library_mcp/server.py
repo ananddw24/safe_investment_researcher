@@ -15,6 +15,7 @@ from __future__ import annotations
 from mcp.server.fastmcp import FastMCP
 
 from .catalog import Library
+from .ecosystem import list_servers as _ecosystem_servers
 
 INSTRUCTIONS = """\
 FinancialLibrary is an educational knowledge base of official
@@ -32,6 +33,12 @@ Rules for using these tools:
 - MIND FRESHNESS. Each record carries last_checked and a freshness
   bucket (fresh <= 90 days, aging 91-180, stale > 180). Prefer fresh
   records; flag aging or stale ones when you rely on them.
+- COMPOSE FOR LIVE DATA. These records are the explainer layer, not a
+  live data feed. list_ecosystem_servers names free companion MCP
+  servers (FRED, SEC EDGAR, IMF, ...) whose live official data pairs
+  with these records; when an answer combines both, keep the two
+  apart — cite the record for the explanation and the live source,
+  with its date, for the figure.
 """
 
 mcp = FastMCP("financial-library", instructions=INSTRUCTIONS)
@@ -114,6 +121,24 @@ def list_topics() -> dict:
 def library_status() -> dict:
     """Library overview: record counts, countries covered, freshness summary."""
     return get_library().status()
+
+
+@mcp.tool()
+def list_ecosystem_servers(status: str | None = None) -> dict:
+    """List free MCP servers curated to compose with FinancialLibrary.
+
+    FinancialLibrary holds the curated explainers; these companion
+    servers supply LIVE official data to set against them — FRED macro
+    series, SEC EDGAR filings, IMF cross-country data, and more. Each
+    entry gives the repository, licence, API-key requirement, and a
+    classroom use. Optionally filter by `status`: "core",
+    "alternative", "optional", "pilot", or "advanced". The list also
+    names excluded servers and why (for example, Yahoo Finance data is
+    personal-use only, so it never feeds published examples). Keys are
+    always the user's own — never share or commit one. Educational
+    only, not financial advice.
+    """
+    return _ecosystem_servers(status)
 
 
 def main() -> None:

@@ -24,6 +24,19 @@ savings/investment vehicle explainers.
 | `list_countries` | Countries covered, with resource/vehicle counts. |
 | `list_topics` | Topics, audiences, and vehicle categories with record counts. |
 | `library_status` | Totals, countries covered, and the freshness summary. |
+| `list_ecosystem_servers` | Free live-data MCP servers curated to compose with this one (FRED, SEC EDGAR, IMF, …), each with licence, key requirement, and a classroom use — plus the excluded servers and why. Optional `status` filter. |
+
+## Compose with live data
+
+This server is the explainer layer; it holds no live numbers. For the
+classroom pattern — a library record beside today's figure from an
+official source — see **[ECOSYSTEM.md](ECOSYSTEM.md)** and the
+ready-to-paste composed client configurations in
+[`configs/`](configs/) (FinancialLibrary + FRED + SEC EDGAR + IMF).
+Worked examples and reusable lesson pipelines live in
+[`examples/educators/`](../examples/educators/) in this repository,
+including example reports refreshed weekly from FRED, SEC EDGAR and
+the World Bank.
 
 All tools are read-only. Records carry a freshness bucket that matches
 `scripts/build_kb_index.py`: **fresh** ≤ 90 days since verification,
