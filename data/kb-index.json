@@ -1,7 +1,7 @@
 {
   "kb": "FinancialLibrary",
   "kb_version": 1,
-  "generated_at": "2026-10-22T02:39:03+00:00",
+  "generated_at": "2026-11-02T17:28:57+00:00",
   "generator": "scripts/build_kb_index.py",
   "notes": "Educational only, not financial advice. Freshness buckets: fresh <= 90 days since verification, aging 91-180, stale > 180, unknown = no verification date. Source of truth is the YAML records; this index is a derived view.",
   "counts": {
@@ -67,7 +67,7 @@
       ],
       "source_type": "central-bank",
       "last_checked": "2026-10-17",
-      "age_days": 5,
+      "age_days": 16,
       "freshness": "fresh",
       "file": "data/resources/br-bcb.yaml"
     },
@@ -86,7 +86,7 @@
       ],
       "source_type": "securities-regulator",
       "last_checked": "2026-10-17",
-      "age_days": 5,
+      "age_days": 16,
       "freshness": "fresh",
       "file": "data/resources/br-cvm.yaml"
     },
@@ -105,7 +105,7 @@
       ],
       "source_type": "government-portal",
       "last_checked": "2026-10-17",
-      "age_days": 5,
+      "age_days": 16,
       "freshness": "fresh",
       "file": "data/resources/br-fgc.yaml"
     },
@@ -124,7 +124,7 @@
       ],
       "source_type": "treasury",
       "last_checked": "2026-10-17",
-      "age_days": 5,
+      "age_days": 16,
       "freshness": "fresh",
       "file": "data/resources/br-tesouro-direto.yaml"
     },
@@ -143,7 +143,7 @@
       ],
       "source_type": "central-bank",
       "last_checked": "2026-10-17",
-      "age_days": 5,
+      "age_days": 16,
       "freshness": "fresh",
       "file": "data/resources/ca-boc.yaml"
     },
@@ -162,7 +162,7 @@
       ],
       "source_type": "government-portal",
       "last_checked": "2026-10-17",
-      "age_days": 5,
+      "age_days": 16,
       "freshness": "fresh",
       "file": "data/resources/ca-cdic.yaml"
     },
@@ -184,7 +184,7 @@
       ],
       "source_type": "government-portal",
       "last_checked": "2026-10-17",
-      "age_days": 5,
+      "age_days": 16,
       "freshness": "fresh",
       "file": "data/resources/ca-fcac.yaml"
     },
@@ -203,7 +203,7 @@
       ],
       "source_type": "government-portal",
       "last_checked": "2026-10-17",
-      "age_days": 5,
+      "age_days": 16,
       "freshness": "fresh",
       "file": "data/resources/ca-osfi.yaml"
     },
@@ -222,7 +222,7 @@
       ],
       "source_type": "ministry",
       "last_checked": "2026-10-17",
-      "age_days": 5,
+      "age_days": 16,
       "freshness": "fresh",
       "file": "data/resources/cn-mof.yaml"
     },
@@ -241,7 +241,7 @@
       ],
       "source_type": "government-portal",
       "last_checked": "2026-10-17",
-      "age_days": 5,
+      "age_days": 16,
       "freshness": "fresh",
       "file": "data/resources/cn-nfra.yaml"
     },
@@ -262,7 +262,7 @@
       ],
       "source_type": "central-bank",
       "last_checked": "2026-10-17",
-      "age_days": 5,
+      "age_days": 16,
       "freshness": "fresh",
       "file": "data/resources/cn-pboc.yaml"
     },
@@ -282,7 +282,7 @@
       ],
       "source_type": "securities-regulator",
       "last_checked": "2026-10-17",
-      "age_days": 5,
+      "age_days": 16,
       "freshness": "fresh",
       "file": "data/resources/de-bafin.yaml"
     },
@@ -301,7 +301,7 @@
       ],
       "source_type": "central-bank",
       "last_checked": "2026-10-17",
-      "age_days": 5,
+      "age_days": 16,
       "freshness": "fresh",
       "file": "data/resources/de-bundesbank.yaml"
     },
@@ -320,7 +320,7 @@
       ],
       "source_type": "treasury",
       "last_checked": "2026-10-17",
-      "age_days": 5,
+      "age_days": 16,
       "freshness": "fresh",
       "file": "data/resources/de-finanzagentur.yaml"
     },
@@ -341,7 +341,7 @@
       ],
       "source_type": "central-bank",
       "last_checked": "2026-10-17",
-      "age_days": 5,
+      "age_days": 16,
       "freshness": "fresh",
       "file": "data/resources/eg-cbe.yaml"
     },
@@ -364,7 +364,7 @@
       ],
       "source_type": "securities-regulator",
       "last_checked": "2026-10-17",
-      "age_days": 5,
+      "age_days": 16,
       "freshness": "fresh",
       "file": "data/resources/eg-fra.yaml"
     },
@@ -384,7 +384,7 @@
       ],
       "source_type": "ministry",
       "last_checked": "2026-10-17",
-      "age_days": 5,
+      "age_days": 16,
       "freshness": "fresh",
       "file": "data/resources/eg-mof.yaml"
     },
@@ -403,7 +403,7 @@
       ],
       "source_type": "securities-regulator",
       "last_checked": "2026-10-17",
-      "age_days": 5,
+      "age_days": 16,
       "freshness": "fresh",
       "file": "data/resources/fr-amf.yaml"
     },
@@ -423,7 +423,7 @@
       ],
       "source_type": "central-bank",
       "last_checked": "2026-10-17",
-      "age_days": 5,
+      "age_days": 16,
       "freshness": "fresh",
       "file": "data/resources/fr-banque-france.yaml"
     },
@@ -443,7 +443,7 @@
       ],
       "source_type": "government-portal",
       "last_checked": "2026-10-17",
-      "age_days": 5,
+      "age_days": 16,
       "freshness": "fresh",
       "file": "data/resources/fr-service-public.yaml"
     },
@@ -464,7 +464,7 @@
       ],
       "source_type": "securities-regulator",
       "last_checked": "2026-10-17",
-      "age_days": 5,
+      "age_days": 16,
       "freshness": "fresh",
       "file": "data/resources/gb-fca.yaml"
     },
@@ -483,7 +483,7 @@
       ],
       "source_type": "government-portal",
       "last_checked": "2026-10-17",
-      "age_days": 5,
+      "age_days": 16,
       "freshness": "fresh",
       "file": "data/resources/gb-fscs.yaml"
     },
@@ -501,7 +501,7 @@
       ],
       "source_type": "government-portal",
       "last_checked": "2026-10-17",
-      "age_days": 5,
+      "age_days": 16,
       "freshness": "fresh",
       "file": "data/resources/gb-nsandi.yaml"
     },
@@ -519,7 +519,7 @@
       ],
       "source_type": "government-portal",
       "last_checked": "2026-10-17",
-      "age_days": 5,
+      "age_days": 16,
       "freshness": "fresh",
       "file": "data/resources/gb-tpr.yaml"
     },
@@ -542,7 +542,7 @@
       ],
       "source_type": "central-bank",
       "last_checked": "2026-10-17",
-      "age_days": 5,
+      "age_days": 16,
       "freshness": "fresh",
       "file": "data/resources/gh-bog.yaml"
     },
@@ -562,7 +562,7 @@
       ],
       "source_type": "ministry",
       "last_checked": "2026-10-17",
-      "age_days": 5,
+      "age_days": 16,
       "freshness": "fresh",
       "file": "data/resources/gh-mofep.yaml"
     },
@@ -581,7 +581,7 @@
       ],
       "source_type": "securities-regulator",
       "last_checked": "2026-10-17",
-      "age_days": 5,
+      "age_days": 16,
       "freshness": "fresh",
       "file": "data/resources/gh-sec.yaml"
     },
@@ -599,7 +599,7 @@
       ],
       "source_type": "government-portal",
       "last_checked": "2026-10-17",
-      "age_days": 5,
+      "age_days": 16,
       "freshness": "fresh",
       "file": "data/resources/gh-ssnit.yaml"
     },
@@ -620,7 +620,7 @@
       ],
       "source_type": "multilateral",
       "last_checked": "2026-10-17",
-      "age_days": 5,
+      "age_days": 16,
       "freshness": "fresh",
       "file": "data/resources/gl-cgap.yaml"
     },
@@ -641,7 +641,7 @@
       ],
       "source_type": "multilateral",
       "last_checked": "2026-10-17",
-      "age_days": 5,
+      "age_days": 16,
       "freshness": "fresh",
       "file": "data/resources/gl-worldbank-findex.yaml"
     },
@@ -659,7 +659,7 @@
       ],
       "source_type": "other-public",
       "last_checked": "2026-10-17",
-      "age_days": 5,
+      "age_days": 16,
       "freshness": "fresh",
       "file": "data/resources/in-amfi.yaml"
     },
@@ -679,7 +679,7 @@
       ],
       "source_type": "ministry",
       "last_checked": "2026-10-17",
-      "age_days": 5,
+      "age_days": 16,
       "freshness": "fresh",
       "file": "data/resources/in-dfs.yaml"
     },
@@ -699,7 +699,7 @@
       ],
       "source_type": "central-bank",
       "last_checked": "2026-10-17",
-      "age_days": 5,
+      "age_days": 16,
       "freshness": "fresh",
       "file": "data/resources/in-dicgc.yaml"
     },
@@ -717,7 +717,7 @@
       ],
       "source_type": "government-portal",
       "last_checked": "2026-10-17",
-      "age_days": 5,
+      "age_days": 16,
       "freshness": "fresh",
       "file": "data/resources/in-incometax.yaml"
     },
@@ -738,7 +738,7 @@
       ],
       "source_type": "government-portal",
       "last_checked": "2026-10-17",
-      "age_days": 5,
+      "age_days": 16,
       "freshness": "fresh",
       "file": "data/resources/in-india-post.yaml"
     },
@@ -756,7 +756,7 @@
       ],
       "source_type": "ministry",
       "last_checked": "2026-10-17",
-      "age_days": 5,
+      "age_days": 16,
       "freshness": "fresh",
       "file": "data/resources/in-mospi.yaml"
     },
@@ -776,7 +776,7 @@
       ],
       "source_type": "government-portal",
       "last_checked": "2026-10-17",
-      "age_days": 5,
+      "age_days": 16,
       "freshness": "fresh",
       "file": "data/resources/in-myscheme.yaml"
     },
@@ -796,7 +796,7 @@
       ],
       "source_type": "ngo",
       "last_checked": "2026-10-17",
-      "age_days": 5,
+      "age_days": 16,
       "freshness": "fresh",
       "file": "data/resources/in-ncfe.yaml"
     },
@@ -816,7 +816,7 @@
       ],
       "source_type": "other-public",
       "last_checked": "2026-10-17",
-      "age_days": 5,
+      "age_days": 16,
       "freshness": "fresh",
       "file": "data/resources/in-npci-upi.yaml"
     },
@@ -834,7 +834,7 @@
       ],
       "source_type": "government-portal",
       "last_checked": "2026-10-17",
-      "age_days": 5,
+      "age_days": 16,
       "freshness": "fresh",
       "file": "data/resources/in-nps-trust.yaml"
     },
@@ -853,7 +853,7 @@
       ],
       "source_type": "government-portal",
       "last_checked": "2026-10-17",
-      "age_days": 5,
+      "age_days": 16,
       "freshness": "fresh",
       "file": "data/resources/in-pfrda.yaml"
     },
@@ -873,7 +873,7 @@
       ],
       "source_type": "central-bank",
       "last_checked": "2026-10-17",
-      "age_days": 5,
+      "age_days": 16,
       "freshness": "fresh",
       "file": "data/resources/in-rbi-financial-literacy.yaml"
     },
@@ -892,7 +892,7 @@
       ],
       "source_type": "securities-regulator",
       "last_checked": "2026-10-17",
-      "age_days": 5,
+      "age_days": 16,
       "freshness": "fresh",
       "file": "data/resources/in-sebi-home.yaml"
     },
@@ -912,7 +912,7 @@
       ],
       "source_type": "securities-regulator",
       "last_checked": "2026-10-17",
-      "age_days": 5,
+      "age_days": 16,
       "freshness": "fresh",
       "file": "data/resources/in-sebi-investor-portal.yaml"
     },
@@ -931,7 +931,7 @@
       ],
       "source_type": "central-bank",
       "last_checked": "2026-10-17",
-      "age_days": 5,
+      "age_days": 16,
       "freshness": "fresh",
       "file": "data/resources/it-bancaditalia.yaml"
     },
@@ -950,7 +950,7 @@
       ],
       "source_type": "securities-regulator",
       "last_checked": "2026-10-17",
-      "age_days": 5,
+      "age_days": 16,
       "freshness": "fresh",
       "file": "data/resources/it-consob.yaml"
     },
@@ -969,7 +969,7 @@
       ],
       "source_type": "government-portal",
       "last_checked": "2026-10-17",
-      "age_days": 5,
+      "age_days": 16,
       "freshness": "fresh",
       "file": "data/resources/it-fitd.yaml"
     },
@@ -988,7 +988,7 @@
       ],
       "source_type": "central-bank",
       "last_checked": "2026-10-17",
-      "age_days": 5,
+      "age_days": 16,
       "freshness": "fresh",
       "file": "data/resources/jp-boj.yaml"
     },
@@ -1008,7 +1008,7 @@
       ],
       "source_type": "securities-regulator",
       "last_checked": "2026-10-17",
-      "age_days": 5,
+      "age_days": 16,
       "freshness": "fresh",
       "file": "data/resources/jp-fsa.yaml"
     },
@@ -1027,7 +1027,7 @@
       ],
       "source_type": "ministry",
       "last_checked": "2026-10-17",
-      "age_days": 5,
+      "age_days": 16,
       "freshness": "fresh",
       "file": "data/resources/jp-mof.yaml"
     },
@@ -1046,7 +1046,7 @@
       ],
       "source_type": "government-portal",
       "last_checked": "2026-10-17",
-      "age_days": 5,
+      "age_days": 16,
       "freshness": "fresh",
       "file": "data/resources/ke-ca.yaml"
     },
@@ -1067,7 +1067,7 @@
       ],
       "source_type": "central-bank",
       "last_checked": "2026-10-17",
-      "age_days": 5,
+      "age_days": 16,
       "freshness": "fresh",
       "file": "data/resources/ke-cbk-financial-education.yaml"
     },
@@ -1087,7 +1087,7 @@
       ],
       "source_type": "central-bank",
       "last_checked": "2026-10-17",
-      "age_days": 5,
+      "age_days": 16,
       "freshness": "fresh",
       "file": "data/resources/ke-cbk-payments.yaml"
     },
@@ -1108,7 +1108,7 @@
       ],
       "source_type": "central-bank",
       "last_checked": "2026-10-17",
-      "age_days": 5,
+      "age_days": 16,
       "freshness": "fresh",
       "file": "data/resources/ke-central-bank.yaml"
     },
@@ -1127,7 +1127,7 @@
       ],
       "source_type": "other-public",
       "last_checked": "2026-10-17",
-      "age_days": 5,
+      "age_days": 16,
       "freshness": "fresh",
       "file": "data/resources/ke-kba.yaml"
     },
@@ -1145,7 +1145,7 @@
       ],
       "source_type": "government-portal",
       "last_checked": "2026-10-17",
-      "age_days": 5,
+      "age_days": 16,
       "freshness": "fresh",
       "file": "data/resources/ke-nssf.yaml"
     },
@@ -1165,7 +1165,7 @@
       ],
       "source_type": "government-portal",
       "last_checked": "2026-10-17",
-      "age_days": 5,
+      "age_days": 16,
       "freshness": "fresh",
       "file": "data/resources/ke-sasra.yaml"
     },
@@ -1184,7 +1184,7 @@
       ],
       "source_type": "treasury",
       "last_checked": "2026-10-17",
-      "age_days": 5,
+      "age_days": 16,
       "freshness": "fresh",
       "file": "data/resources/ke-treasury.yaml"
     },
@@ -1205,7 +1205,7 @@
       ],
       "source_type": "central-bank",
       "last_checked": "2026-10-17",
-      "age_days": 5,
+      "age_days": 16,
       "freshness": "fresh",
       "file": "data/resources/ng-cbn.yaml"
     },
@@ -1225,7 +1225,7 @@
       ],
       "source_type": "treasury",
       "last_checked": "2026-10-17",
-      "age_days": 5,
+      "age_days": 16,
       "freshness": "fresh",
       "file": "data/resources/ng-dmo.yaml"
     },
@@ -1244,7 +1244,7 @@
       ],
       "source_type": "government-portal",
       "last_checked": "2026-10-17",
-      "age_days": 5,
+      "age_days": 16,
       "freshness": "fresh",
       "file": "data/resources/ng-pencom.yaml"
     },
@@ -1263,7 +1263,7 @@
       ],
       "source_type": "securities-regulator",
       "last_checked": "2026-10-17",
-      "age_days": 5,
+      "age_days": 16,
       "freshness": "fresh",
       "file": "data/resources/ng-sec.yaml"
     },
@@ -1284,7 +1284,7 @@
       ],
       "source_type": "government-portal",
       "last_checked": "2026-10-17",
-      "age_days": 5,
+      "age_days": 16,
       "freshness": "fresh",
       "file": "data/resources/us-cfpb.yaml"
     },
@@ -1306,7 +1306,7 @@
       ],
       "source_type": "government-portal",
       "last_checked": "2026-10-17",
-      "age_days": 5,
+      "age_days": 16,
       "freshness": "fresh",
       "file": "data/resources/us-cfpb-tools.yaml"
     },
@@ -1325,7 +1325,7 @@
       ],
       "source_type": "ministry",
       "last_checked": "2026-10-17",
-      "age_days": 5,
+      "age_days": 16,
       "freshness": "fresh",
       "file": "data/resources/us-dol.yaml"
     },
@@ -1345,7 +1345,7 @@
       ],
       "source_type": "government-portal",
       "last_checked": "2026-10-17",
-      "age_days": 5,
+      "age_days": 16,
       "freshness": "fresh",
       "file": "data/resources/us-fdic-consumers.yaml"
     },
@@ -1364,7 +1364,7 @@
       ],
       "source_type": "government-portal",
       "last_checked": "2026-10-17",
-      "age_days": 5,
+      "age_days": 16,
       "freshness": "fresh",
       "file": "data/resources/us-fdic-deposit-insurance.yaml"
     },
@@ -1383,7 +1383,7 @@
       ],
       "source_type": "central-bank",
       "last_checked": "2026-10-17",
-      "age_days": 5,
+      "age_days": 16,
       "freshness": "fresh",
       "file": "data/resources/us-federal-reserve-consumers.yaml"
     },
@@ -1403,7 +1403,7 @@
       ],
       "source_type": "securities-regulator",
       "last_checked": "2026-10-17",
-      "age_days": 5,
+      "age_days": 16,
       "freshness": "fresh",
       "file": "data/resources/us-investor-gov-intro.yaml"
     },
@@ -1421,7 +1421,7 @@
       ],
       "source_type": "government-portal",
       "last_checked": "2026-10-17",
-      "age_days": 5,
+      "age_days": 16,
       "freshness": "fresh",
       "file": "data/resources/us-irs-education-credits.yaml"
     },
@@ -1440,7 +1440,7 @@
       ],
       "source_type": "government-portal",
       "last_checked": "2026-10-17",
-      "age_days": 5,
+      "age_days": 16,
       "freshness": "fresh",
       "file": "data/resources/us-irs-retirement.yaml"
     },
@@ -1458,7 +1458,7 @@
       ],
       "source_type": "government-portal",
       "last_checked": "2026-10-17",
-      "age_days": 5,
+      "age_days": 16,
       "freshness": "fresh",
       "file": "data/resources/us-irs-topic-313.yaml"
     },
@@ -1478,7 +1478,7 @@
       ],
       "source_type": "government-portal",
       "last_checked": "2026-10-17",
-      "age_days": 5,
+      "age_days": 16,
       "freshness": "fresh",
       "file": "data/resources/us-ncua-consumers.yaml"
     },
@@ -1497,7 +1497,7 @@
       ],
       "source_type": "securities-regulator",
       "last_checked": "2026-10-17",
-      "age_days": 5,
+      "age_days": 16,
       "freshness": "fresh",
       "file": "data/resources/us-sec-investor.yaml"
     },
@@ -1515,7 +1515,7 @@
       ],
       "source_type": "treasury",
       "last_checked": "2026-10-17",
-      "age_days": 5,
+      "age_days": 16,
       "freshness": "fresh",
       "file": "data/resources/us-treasurydirect-savings-bonds.yaml"
     },
@@ -1534,7 +1534,7 @@
       ],
       "source_type": "treasury",
       "last_checked": "2026-10-17",
-      "age_days": 5,
+      "age_days": 16,
       "freshness": "fresh",
       "file": "data/resources/us-treasurydirect-marketable.yaml"
     },
@@ -1553,7 +1553,7 @@
       ],
       "source_type": "treasury",
       "last_checked": "2026-10-17",
-      "age_days": 5,
+      "age_days": 16,
       "freshness": "fresh",
       "file": "data/resources/us-treasurydirect.yaml"
     },
@@ -1575,7 +1575,7 @@
       ],
       "source_type": "securities-regulator",
       "last_checked": "2026-10-17",
-      "age_days": 5,
+      "age_days": 16,
       "freshness": "fresh",
       "file": "data/resources/za-fsca.yaml"
     },
@@ -1596,7 +1596,7 @@
       ],
       "source_type": "central-bank",
       "last_checked": "2026-10-17",
-      "age_days": 5,
+      "age_days": 16,
       "freshness": "fresh",
       "file": "data/resources/za-sarb.yaml"
     },
@@ -1616,7 +1616,7 @@
       ],
       "source_type": "government-portal",
       "last_checked": "2026-10-17",
-      "age_days": 5,
+      "age_days": 16,
       "freshness": "fresh",
       "file": "data/resources/za-sars.yaml"
     },
@@ -1635,7 +1635,7 @@
       ],
       "source_type": "treasury",
       "last_checked": "2026-10-17",
-      "age_days": 5,
+      "age_days": 16,
       "freshness": "fresh",
       "file": "data/resources/za-treasury.yaml"
     }
@@ -1654,7 +1654,7 @@
         "central-bank"
       ],
       "last_reviewed": "2026-10-17",
-      "age_days": 5,
+      "age_days": 16,
       "freshness": "fresh",
       "file": "data/vehicles/in-bank-savings.yaml"
     },
@@ -1671,7 +1671,7 @@
         "central-bank"
       ],
       "last_reviewed": "2026-10-17",
-      "age_days": 5,
+      "age_days": 16,
       "freshness": "fresh",
       "file": "data/vehicles/in-fd.yaml"
     },
@@ -1689,7 +1689,7 @@
         "government-portal"
       ],
       "last_reviewed": "2026-10-17",
-      "age_days": 5,
+      "age_days": 16,
       "freshness": "fresh",
       "file": "data/vehicles/in-nps.yaml"
     },
@@ -1707,7 +1707,7 @@
         "government-portal"
       ],
       "last_reviewed": "2026-10-17",
-      "age_days": 5,
+      "age_days": 16,
       "freshness": "fresh",
       "file": "data/vehicles/in-ppf.yaml"
     },
@@ -1724,7 +1724,7 @@
         "central-bank"
       ],
       "last_reviewed": "2026-10-17",
-      "age_days": 5,
+      "age_days": 16,
       "freshness": "fresh",
       "file": "data/vehicles/in-rd.yaml"
     },
@@ -1742,7 +1742,7 @@
         "government-portal"
       ],
       "last_reviewed": "2026-10-17",
-      "age_days": 5,
+      "age_days": 16,
       "freshness": "fresh",
       "file": "data/vehicles/in-ssy.yaml"
     },
@@ -1759,7 +1759,7 @@
         "central-bank"
       ],
       "last_reviewed": "2026-10-17",
-      "age_days": 5,
+      "age_days": 16,
       "freshness": "fresh",
       "file": "data/vehicles/ke-mobile-money.yaml"
     },
@@ -1776,7 +1776,7 @@
         "government-portal"
       ],
       "last_reviewed": "2026-10-17",
-      "age_days": 5,
+      "age_days": 16,
       "freshness": "fresh",
       "file": "data/vehicles/ke-saccos.yaml"
     },
@@ -1794,7 +1794,7 @@
         "government-portal"
       ],
       "last_reviewed": "2026-10-17",
-      "age_days": 5,
+      "age_days": 16,
       "freshness": "fresh",
       "file": "data/vehicles/us-401k-ira.yaml"
     },
@@ -1812,7 +1812,7 @@
         "government-portal"
       ],
       "last_reviewed": "2026-10-17",
-      "age_days": 5,
+      "age_days": 16,
       "freshness": "fresh",
       "file": "data/vehicles/us-fdic-savings.yaml"
     }
