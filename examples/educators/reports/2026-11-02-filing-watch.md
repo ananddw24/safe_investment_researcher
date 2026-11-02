@@ -16,7 +16,10 @@ These are the latest 10-K, 10-Q, and 8-K on or before 2026-11-02 for three large
 
 - Rows are always in form order: **10-K** (annual, audited), **10-Q** (quarterly), **8-K** (material event).
 - Each link goes to the filing’s primary document on EDGAR.
-- Pair with library records `us-sec`, `us-fdic-deposit-insurance`, and `us-occ`. Those records identify the institution and its regulators/insurer; they do **not** store a deposit-insurance dollar limit. Students should look up the current limit on the official FDIC page and note the date they checked.
+- Pair with library records `us-sec`, `us-fdic-deposit-insurance`, and `us-occ`.
+  Those records identify the institution and its regulators/insurer; they do **not**
+  store a deposit-insurance dollar limit. Students should look up the current limit
+  on the official FDIC page and note the date they checked.
 
 ## The filings
 
@@ -48,8 +51,12 @@ All requested series in this report were retrieved.
 
 ## Classroom prompts
 
-1. **Open a 10-K.** Choose one bank’s annual report and locate the consolidated balance sheet. Identify the line that represents customer deposits. Note the period end date of the report.
-2. **Check the insurer.** Use the library’s FDIC record to find the official page. Look up the current deposit-insurance limit, then write both the limit and the date you read it. Observe that the library record itself does not store the dollar limit.
+1. **Open a 10-K.** Choose one bank’s annual report and locate the consolidated balance
+   sheet. Identify the line that represents customer deposits. Note the period end
+   date of the report.
+2. **Check the insurer.** Use the library’s FDIC record to find the official page. Look up
+   the current deposit-insurance limit, then write both the limit and the date you
+   read it. Observe that the library record itself does not store the dollar limit.
 3. **Compare freshness.** Which bank has the newest 10-Q? What reporting period does it cover? Why might a class care about the difference between a filing date and a period-end date?
 
 ## Teacher notes

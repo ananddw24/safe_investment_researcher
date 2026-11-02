@@ -42,7 +42,10 @@ All requested series in this report were retrieved.
 ## Classroom prompts
 
 1. **Identify the roles.** Which number did the FOMC set? Which number is a market average? Why might they differ even when the target range has not changed?
-2. **Compare with a real advertisement.** Find one savings or money-market rate advertised this week. Place it next to the target range. List two possible reasons for any gap (for example: timing of the advertisement, product features, or how the rate is calculated). Do not treat any gap as a recommendation.
+2. **Compare with a real advertisement.** Find one savings or money-market rate
+   advertised this week. Place it next to the target range. List two possible reasons
+   for any gap (for example: timing of the advertisement, product features, or how
+   the rate is calculated). Do not treat any gap as a recommendation.
 3. **Notice the lags.** Which series are still showing September data? What does that tell you about how “current” a macro snapshot can be?
 
 ## Teacher notes
