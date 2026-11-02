@@ -5,11 +5,18 @@
 > product. Re-check each figure at the official series linked in the table. The
 > observation date is the series date. The report date is the pinned `--as-of` date.
 
-Annual indicators from the World Bank Open Data API for the 15 countries with household
-vehicle pages (retrieved for report date 2026-11-02). `global` in the catalog is a
-resource bucket, not a sixteenth country. The year column is the Bank's observation year
-and can lag the report date. A country with no value is listed as 'not in source
-response' so a gap is visible. `FX.OWN.TOTL.ZS` is the Bank's account-ownership series.
+## What changed since the 2026-10-30 report
+
+No value revisions. All inflation and account-ownership figures are identical to the prior report. This is a new dated snapshot only.
+
+## How to read this snapshot
+
+Annual indicators from the World Bank Open Data API for the 15 countries that have household vehicle pages in the library (retrieved for report date 2026-11-02).
+
+- `global` in the catalog is a resource bucket, not a sixteenth country.
+- The **Year** column is the Bank’s observation year and can lag the report date. Notice that the United States inflation figure is still for 2024 while most other countries show 2025.
+- A country with no value would be listed as “not in source response” so a gap is visible. All requested series were retrieved this time.
+- `FX.OWN.TOTL.ZS` is the Bank’s account-ownership series (financial institution or mobile-money-service provider, % of population ages 15+).
 
 ## Inflation, consumer prices (annual %)
 
@@ -29,7 +36,7 @@ response' so a gap is visible. `FX.OWN.TOTL.ZS` is the Bank's account-ownership 
 | Nigeria | 23.0 | 2025 | FP.CPI.TOTL.ZG | [World Bank](https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG) |
 | South Africa | 3.2 | 2025 | FP.CPI.TOTL.ZG | [World Bank](https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG) |
 | United Kingdom | 3.9 | 2025 | FP.CPI.TOTL.ZG | [World Bank](https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG) |
-| United States | 2.9 | 2024 | FP.CPI.TOTL.ZG | [World Bank](https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG) |
+| United States | 2.9 | **2024** | FP.CPI.TOTL.ZG | [World Bank](https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG) |
 
 ## Account ownership at a financial institution or with a mobile-money-service provider (% of population ages 15+)
 
@@ -53,8 +60,23 @@ response' so a gap is visible. `FX.OWN.TOTL.ZS` is the Bank's account-ownership 
 
 All requested series in this report were retrieved.
 
-**Classroom prompt:** pick two countries and compare account ownership with the
-library's deposit-insurance record for each. Where the library has no insurer record,
-write 'not covered' instead of filling the cell from memory.
+## Classroom prompts
+
+1. **Spot the lag.** Which country’s inflation year is different from the others?
+   What does that tell you about how international data sets update?
+2. **Compare two countries.** Pick two countries. Compare their account-ownership
+   rates with the library’s deposit-insurance record for each. Where the library has
+   no insurer record, write “not covered” instead of filling the cell from memory.
+3. **Range check.** What is the highest and lowest inflation rate in the table? What
+   is the highest and lowest account-ownership rate? Do not interpret the differences
+   as advice; simply practice reading the spread.
+
+## Teacher notes
+
+- The US inflation year lag is a useful teaching moment about data vintage. Students often assume every number is equally current.
+- Account ownership is from 2024 across the board; inflation is mostly 2025. Point out that different series update on different schedules.
+- The classroom prompt that pairs account ownership with the library’s
+  deposit-insurance records reinforces that the library identifies institutions and
+  links to sources, but does not store every numeric detail (such as insurance limits).
 
 Pinned report date: 2026-11-02. Generator seed: 0.
