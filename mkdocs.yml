@@ -30,7 +30,13 @@ theme:
     - navigation.sections
     - navigation.expand
     - navigation.top
+    - navigation.tabs
+    - navigation.path
+    - toc.integrate
+    - content.action.edit
+    - content.action.view
     - search.suggest
+    - search.highlight
     - content.code.copy
 
 plugins:
@@ -43,6 +49,9 @@ markdown_extensions:
   - pymdownx.tabbed:
       alternate_style: true
   - md_in_html
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - tables
   - toc:
       permalink: true
@@ -222,6 +231,7 @@ nav:
 extra_css:
   - assets/stylesheets/interactive.css
   - assets/stylesheets/teaching.css
+  - assets/stylesheets/extra.css
 
 extra_javascript:
   - assets/javascripts/interactive.js
