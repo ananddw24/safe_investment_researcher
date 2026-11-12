@@ -1,0 +1,44 @@
+/* FinancialLibrary — general reading-experience styles.
+ *
+ * Feature-specific styles live in interactive.css and teaching.css.
+ * This file is deliberately light: homepage card affordances, a slightly
+ * looser reading rhythm, small-screen table treatment, and visible
+ * keyboard focus. Palette comes from the Material theme (teal/amber);
+ * no frameworks, no webfonts.
+ */
+
+/* Reading rhythm: a touch more air than the theme default. */
+.md-typeset {
+  line-height: 1.65;
+}
+
+/* Homepage router cards: signal that each card is a doorway. */
+.md-typeset .grid.cards > ul > li {
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.md-typeset .grid.cards > ul > li:hover {
+  border-color: var(--md-accent-fg-color);
+  box-shadow: 0 0.2rem 0.6rem rgba(0, 0, 0, 0.08);
+}
+
+/* Keyboard users get a visible focus ring in content and navigation. */
+.md-typeset a:focus-visible,
+.md-nav a:focus-visible,
+.md-tabs a:focus-visible {
+  outline: 0.12rem solid var(--md-accent-fg-color);
+  outline-offset: 0.15rem;
+}
+
+/* Small screens: tighten tables so more columns fit before scrolling.
+ * The catalog's "Checked" column is the trust signal; keep it reachable. */
+@media screen and (max-width: 44.9375em) {
+  .md-typeset table:not([class]) {
+    font-size: 0.68rem;
+  }
+
+  .md-typeset table:not([class]) th,
+  .md-typeset table:not([class]) td {
+    padding: 0.5em 0.6em;
+  }
+}

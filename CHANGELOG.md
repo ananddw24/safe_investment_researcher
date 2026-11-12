@@ -7,6 +7,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- **Site navigation and homepage (Wave 1 UX foundation):** top-level
+  sections are now tabs, with breadcrumbs and an integrated table of
+  contents; every page gains view / edit-on-GitHub actions and
+  search-term highlighting. The homepage's three stacked routers
+  (Start-here list, "If you are…" table, section table) collapse into
+  one audience card router; the country map drops its maintainer-facing
+  "First shipped" version column; the Status changelog recital becomes
+  a short "What's here" with a link to the release history. Adds a
+  general stylesheet (`docs/assets/stylesheets/extra.css`) for card
+  hover, small-screen tables, and focus visibility.
+
 ## [1.3.0] - 2026-10-30
 
 ### Added
