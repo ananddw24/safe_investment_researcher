@@ -263,8 +263,368 @@
     compute();
   }
 
+  /* ---------------- Impact calendar calculator ----------------
+   * Pure arithmetic on the visitor's own inputs, laid onto a real
+   * calendar: a regular amount (per day / week / month) from a start
+   * date over a horizon in years. Contributions are counted by whole
+   * calendar months from the start month — a daily amount is
+   * multiplied by the days in each month, a weekly amount by 52/12
+   * per month. Optional growth is an assumption for illustration,
+   * applied monthly at 1/12 of the annual rate to the balance carried
+   * into the month, before that month's contributions are added.
+   * Nothing is stored or sent anywhere. The pure computation is
+   * exposed as window.flImpactCalendarCompute so its arithmetic can
+   * be exercised by tests without a DOM. */
+
+  var IC_MILESTONES = [500, 1000, 5000, 10000, 50000, 100000];
+
+  function icDaysInMonth(year, monthIndex) {
+    return new Date(year, monthIndex + 1, 0).getDate();
+  }
+
+  function icMonthLabel(year, monthIndex) {
+    return new Date(year, monthIndex, 1).toLocaleDateString(undefined, {
+      month: "long",
+      year: "numeric",
+    });
+  }
+
+  function impactCalendarCompute(cfg) {
+    var months = cfg.years * 12;
+    var monthlyRate = cfg.growthPct / 100 / 12;
+    var balance = cfg.startBalance;
+    var contributed = 0;
+    var grown = 0;
+    var rows = [];
+    var milestones = [];
+    var nextMs = 0;
+    while (
+      nextMs < IC_MILESTONES.length &&
+      IC_MILESTONES[nextMs] <= cfg.startBalance
+    ) {
+      nextMs++;
+    }
+    for (var i = 0; i < months; i++) {
+      var d = new Date(cfg.startYear, cfg.startMonth + i, 1);
+      var y = d.getFullYear();
+      var m = d.getMonth();
+      var c;
+      if (cfg.frequency === "day") {
+        c = cfg.amount * icDaysInMonth(y, m);
+      } else if (cfg.frequency === "week") {
+        c = (cfg.amount * 52) / 12;
+      } else {
+        c = cfg.amount;
+      }
+      var g = balance * monthlyRate;
+      balance += g + c;
+      contributed += c;
+      grown += g;
+      rows.push({
+        year: y,
+        month: m,
+        contributedMonth: c,
+        contributedTotal: contributed,
+        growthTotal: grown,
+        total: balance,
+      });
+      while (nextMs < IC_MILESTONES.length && balance >= IC_MILESTONES[nextMs]) {
+        milestones.push({
+          amount: IC_MILESTONES[nextMs],
+          year: y,
+          month: m,
+          total: balance,
+        });
+        nextMs++;
+      }
+    }
+    return {
+      rows: rows,
+      milestones: milestones,
+      contributed: contributed,
+      growth: grown,
+      total: balance,
+    };
+  }
+
+  window.flImpactCalendarCompute = impactCalendarCompute;
+
+  function initImpactCalendar() {
+    var form = document.getElementById("fl-ic-form");
+    if (!form) return;
+    var amount = document.getElementById("fl-ic-amount");
+    var frequency = document.getElementById("fl-ic-frequency");
+    var start = document.getElementById("fl-ic-start");
+    var years = document.getElementById("fl-ic-years");
+    var yearsNum = document.getElementById("fl-ic-years-num");
+    var yearsLabel = document.getElementById("fl-ic-years-label");
+    var startBalance = document.getElementById("fl-ic-start-balance");
+    var growth = document.getElementById("fl-ic-growth");
+    var growthLabel = document.getElementById("fl-ic-growth-label");
+    var summary = document.getElementById("fl-ic-summary");
+    var milestoneBox = document.getElementById("fl-ic-milestones");
+    var yearsBox = document.getElementById("fl-ic-years-table");
+    var monthsBox = document.getElementById("fl-ic-months-table");
+    if (!amount || !frequency || !summary) return;
+
+    function fmt(n) {
+      return new Intl.NumberFormat(undefined, {
+        maximumFractionDigits: 0,
+      }).format(n);
+    }
+
+    function money(n) {
+      return "$" + fmt(n);
+    }
+
+    function pad2(n) {
+      return (n < 10 ? "0" : "") + n;
+    }
+
+    if (start && !start.value) {
+      var t = new Date();
+      start.value =
+        t.getFullYear() + "-" + pad2(t.getMonth() + 1) + "-" + pad2(t.getDate());
+    }
+
+    function cell(text) {
+      var td = document.createElement("td");
+      td.textContent = text;
+      return td;
+    }
+
+    function buildTable(box, headers, rowList) {
+      box.innerHTML = "";
+      var table = document.createElement("table");
+      table.className = "fl-ic-table";
+      var thead = document.createElement("thead");
+      var htr = document.createElement("tr");
+      headers.forEach(function (h) {
+        var th = document.createElement("th");
+        th.textContent = h;
+        htr.appendChild(th);
+      });
+      thead.appendChild(htr);
+      table.appendChild(thead);
+      var tbody = document.createElement("tbody");
+      rowList.forEach(function (cells) {
+        var tr = document.createElement("tr");
+        cells.forEach(function (c) {
+          tr.appendChild(cell(c));
+        });
+        tbody.appendChild(tr);
+      });
+      table.appendChild(tbody);
+      box.appendChild(table);
+    }
+
+    function compute() {
+      var yrs = parseInt(years.value, 10);
+      if (isNaN(yrs)) yrs = 10;
+      yrs = Math.min(40, Math.max(1, yrs));
+      yearsLabel.textContent = yrs + (yrs === 1 ? " year" : " years");
+      var g = parseFloat(growth.value);
+      if (isNaN(g)) g = 0;
+      growthLabel.textContent = g + "%";
+
+      var a = parseFloat(amount.value);
+      var sb = parseFloat(startBalance.value);
+      if (isNaN(sb) || sb < 0) sb = 0;
+      if (!amount.value || isNaN(a) || a < 0) {
+        summary.textContent =
+          "Enter an amount to see what it adds up to over calendar time.";
+        milestoneBox.innerHTML = "";
+        yearsBox.innerHTML = "";
+        monthsBox.innerHTML = "";
+        return;
+      }
+
+      var startYear;
+      var startMonth;
+      var parts = (start.value || "").split("-");
+      if (parts.length === 3) {
+        startYear = parseInt(parts[0], 10);
+        startMonth = parseInt(parts[1], 10) - 1;
+      }
+      if (!(startYear >= 1970 && startMonth >= 0 && startMonth <= 11)) {
+        var now = new Date();
+        startYear = now.getFullYear();
+        startMonth = now.getMonth();
+      }
+
+      var res = impactCalendarCompute({
+        amount: a,
+        frequency: frequency.value,
+        startYear: startYear,
+        startMonth: startMonth,
+        years: yrs,
+        startBalance: sb,
+        growthPct: g,
+      });
+      var last = res.rows[res.rows.length - 1];
+      var freqWord =
+        frequency.value === "day"
+          ? "per day"
+          : frequency.value === "week"
+            ? "per week"
+            : "per month";
+
+      summary.innerHTML = "";
+      var p1 = document.createElement("p");
+      p1.textContent =
+        "From " +
+        icMonthLabel(startYear, startMonth) +
+        " to " +
+        icMonthLabel(last.year, last.month) +
+        " (" +
+        yrs +
+        (yrs === 1 ? " year" : " years") +
+        "), contributions of " +
+        money(a) +
+        " " +
+        freqWord +
+        " add up to " +
+        money(res.contributed) +
+        ".";
+      summary.appendChild(p1);
+      var p2 = document.createElement("p");
+      var parts2 = [];
+      if (sb > 0) parts2.push(money(sb) + " starting balance");
+      parts2.push(money(res.contributed) + " contributed");
+      if (g > 0) {
+        parts2.push(
+          money(res.growth) +
+            " of illustrative growth at " +
+            g +
+            "% a year — an assumption for illustration, not a prediction " +
+            "or a promised return"
+        );
+      }
+      p2.textContent =
+        "Total at " +
+        icMonthLabel(last.year, last.month) +
+        ": " +
+        money(res.total) +
+        " (" +
+        parts2.join(" + ") +
+        ").";
+      summary.appendChild(p2);
+      var p3 = document.createElement("p");
+      p3.textContent =
+        "Shown with a $ sign; the arithmetic is the same in any currency. " +
+        "Illustration only, not advice.";
+      summary.appendChild(p3);
+
+      milestoneBox.innerHTML = "";
+      if (res.milestones.length) {
+        var mh = document.createElement("p");
+        mh.innerHTML =
+          "<strong>Milestones</strong> — the first month the running " +
+          "total reaches each mark:";
+        milestoneBox.appendChild(mh);
+        var ul = document.createElement("ul");
+        res.milestones.forEach(function (ms) {
+          var li = document.createElement("li");
+          li.textContent =
+            money(ms.amount) +
+            " — " +
+            icMonthLabel(ms.year, ms.month) +
+            " (total that month: " +
+            money(ms.total) +
+            ")";
+          ul.appendChild(li);
+        });
+        milestoneBox.appendChild(ul);
+      } else {
+        var mn = document.createElement("p");
+        mn.className = "fl-ic-note";
+        mn.textContent =
+          "No milestone mark ($500 and up) is reached within this " +
+          "horizon at these settings.";
+        milestoneBox.appendChild(mn);
+      }
+
+      var showGrowth = g > 0;
+      var yearRows = [];
+      var cur = null;
+      res.rows.forEach(function (r) {
+        if (!cur || cur.year !== r.year) {
+          cur = { year: r.year, months: [], contributed: 0, last: r };
+          yearRows.push(cur);
+        }
+        cur.months.push(r.month);
+        cur.contributed += r.contributedMonth;
+        cur.last = r;
+      });
+      buildTable(
+        yearsBox,
+        showGrowth
+          ? ["Period", "Contributed", "Contributed so far", "Growth so far (assumption)", "Total"]
+          : ["Period", "Contributed", "Contributed so far", "Total"],
+        yearRows.map(function (yr) {
+          var label = String(yr.year);
+          if (yr.months.length < 12) {
+            var first = new Date(yr.year, yr.months[0], 1).toLocaleDateString(
+              undefined,
+              { month: "short" }
+            );
+            var lastM = new Date(
+              yr.year,
+              yr.months[yr.months.length - 1],
+              1
+            ).toLocaleDateString(undefined, { month: "short" });
+            label += " (" + first + "–" + lastM + ")";
+          }
+          var cells = [
+            label,
+            money(yr.contributed),
+            money(yr.last.contributedTotal),
+          ];
+          if (showGrowth) cells.push(money(yr.last.growthTotal));
+          cells.push(money(yr.last.total));
+          return cells;
+        })
+      );
+
+      buildTable(
+        monthsBox,
+        showGrowth
+          ? ["Month", "Contributed", "Contributed so far", "Growth so far (assumption)", "Total"]
+          : ["Month", "Contributed", "Contributed so far", "Total"],
+        res.rows.map(function (r) {
+          var cells = [
+            icMonthLabel(r.year, r.month),
+            money(r.contributedMonth),
+            money(r.contributedTotal),
+          ];
+          if (showGrowth) cells.push(money(r.growthTotal));
+          cells.push(money(r.total));
+          return cells;
+        })
+      );
+    }
+
+    years.addEventListener("input", function () {
+      yearsNum.value = years.value;
+      compute();
+    });
+    yearsNum.addEventListener("input", function () {
+      var v = parseInt(yearsNum.value, 10);
+      if (!isNaN(v)) years.value = Math.min(40, Math.max(1, v));
+      compute();
+    });
+    form.addEventListener("input", compute);
+    form.addEventListener("change", compute);
+    form.addEventListener("submit", function (ev) {
+      ev.preventDefault();
+      compute();
+    });
+    compute();
+  }
+
   function init() {
     initEmergencyFund();
+    initImpactCalendar();
     loadData()
       .then(function (data) {
         initCatalog(data);

@@ -4,7 +4,7 @@ description: Why a cash buffer comes before long lock-in products
 audience: [low-income, women, general]
 topics: [emergency-fund, savings, banking]
 status: published
-last_reviewed: "2026-10-24"
+last_reviewed: "2026-11-11"
 ---
 
 # Emergency savings
@@ -60,6 +60,8 @@ Examples already curated in this library:
 
 ## Related
 
+- [Impact calendar calculator](../resources/tools.md#impact-calendar-calculator) —
+  what a small regular amount adds up to across calendar time
 - [Bank savings (India)](../vehicles/in/bank-savings.md)
 - [Inflation and capital preservation](inflation-capital-preservation.md)
 - [Woman-led household pathway](../pathways/woman-led-household.md)

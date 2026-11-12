@@ -74,3 +74,63 @@
 .fl-tools input[type="range"] {
   accent-color: var(--md-primary-fg-color);
 }
+
+/* Impact calendar calculator (tools page) */
+
+.fl-tools input[type="date"] {
+  padding: 0.4rem 0.5rem;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 0.25rem;
+  background: var(--md-default-bg-color);
+  color: var(--md-default-fg-color);
+  font-size: 0.8rem;
+}
+
+.fl-tools .fl-ic-details {
+  margin-top: 0.75rem;
+}
+
+.fl-tools .fl-ic-details summary {
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 0.8rem;
+  padding: 0.25rem 0;
+}
+
+.fl-tools #fl-ic-years-table,
+.fl-tools #fl-ic-months-table {
+  overflow-x: auto;
+}
+
+.fl-tools .fl-ic-table {
+  border-collapse: collapse;
+  margin: 0.5rem 0;
+  font-size: 0.78rem;
+}
+
+.fl-tools .fl-ic-table th,
+.fl-tools .fl-ic-table td {
+  border: 1px solid var(--md-default-fg-color--lightest);
+  padding: 0.3rem 0.55rem;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.fl-tools .fl-ic-table th:first-child,
+.fl-tools .fl-ic-table td:first-child {
+  text-align: left;
+}
+
+.fl-tools #fl-ic-milestones {
+  font-size: 0.8rem;
+  margin-top: 0.75rem;
+}
+
+.fl-tools #fl-ic-milestones ul {
+  margin: 0.25rem 0 0.5rem 1.1rem;
+}
+
+.fl-tools .fl-ic-note {
+  font-size: 0.75rem;
+  color: var(--md-default-fg-color--light);
+}
