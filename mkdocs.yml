@@ -216,6 +216,7 @@ nav:
       - resources/index.md
       - Catalog: resources/catalog.md
       - Explore & tools: resources/tools.md
+      - Impact case studies: resources/impact-case-studies.md
   - Knowledge base: knowledge-base.md
   - Contributing: contributing.md
 
