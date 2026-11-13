@@ -2,7 +2,7 @@
 title: Explore and tools
 description: Interactive catalog explorer, emergency-fund and impact calendar calculators, and deposit-insurance source lookup
 status: published
-last_reviewed: "2026-11-11"
+last_reviewed: "2026-11-12"
 ---
 
 # Explore and tools
@@ -101,9 +101,20 @@ optional growth rate is an **assumption for illustration — not a
 prediction or a promised return**; real savings and investments do not
 grow in a smooth line.
 
+Start with a preset below, or type your own amount — the plain-English
+summary, the charts, and the tables all update as you go.
+
 <div class="fl-tools" markdown="0">
 
 <form id="fl-ic-form">
+<div class="fl-ic-presets" role="group" aria-labelledby="fl-ic-presets-label">
+<p class="fl-ic-presets-label" id="fl-ic-presets-label">Start with a common rhythm:</p>
+<button type="button" class="fl-ic-chip" data-ic-amount="5" data-ic-frequency="day">$5 a day</button>
+<button type="button" class="fl-ic-chip" data-ic-amount="10" data-ic-frequency="day">$10 a day</button>
+<button type="button" class="fl-ic-chip" data-ic-amount="25" data-ic-frequency="week">$25 a week</button>
+<button type="button" class="fl-ic-chip" data-ic-amount="100" data-ic-frequency="month">$100 a month</button>
+<button type="button" class="fl-ic-chip" data-ic-amount="200" data-ic-frequency="month">$200 a month</button>
+</div>
 <div class="fl-controls">
 <div class="fl-field">
 <label for="fl-ic-amount">Amount (your currency)</label>
@@ -139,6 +150,20 @@ grow in a smooth line.
 </div>
 </div>
 </form>
+
+<p class="fl-ic-oneline" id="fl-ic-oneline" aria-live="polite"></p>
+
+<div class="fl-ic-viz">
+<p class="fl-ic-viz-title" id="fl-ic-chart-title">How it builds up, month by month</p>
+<div id="fl-ic-chart"></div>
+<p class="fl-ic-legend" id="fl-ic-chart-legend"></p>
+<p class="fl-ic-viz-note">The same figures appear in the “Year by year” and “Month by month” tables further down.</p>
+</div>
+
+<div class="fl-ic-viz">
+<p class="fl-ic-viz-title" id="fl-ic-bars-title">Year by year — what goes in, and the running total</p>
+<div id="fl-ic-yearbars"></div>
+</div>
 
 <div class="fl-result" id="fl-ic-summary">This calculator needs JavaScript. It runs entirely in your browser; nothing is stored or sent anywhere.</div>
 

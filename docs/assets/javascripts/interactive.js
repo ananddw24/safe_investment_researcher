@@ -365,6 +365,11 @@
     var milestoneBox = document.getElementById("fl-ic-milestones");
     var yearsBox = document.getElementById("fl-ic-years-table");
     var monthsBox = document.getElementById("fl-ic-months-table");
+    var oneline = document.getElementById("fl-ic-oneline");
+    var chartBox = document.getElementById("fl-ic-chart");
+    var chartLegend = document.getElementById("fl-ic-chart-legend");
+    var barsBox = document.getElementById("fl-ic-yearbars");
+    var chips = form.querySelectorAll(".fl-ic-chip");
     if (!amount || !frequency || !summary) return;
 
     function fmt(n) {
@@ -379,6 +384,52 @@
 
     function pad2(n) {
       return (n < 10 ? "0" : "") + n;
+    }
+
+    var SVGNS = "http://www.w3.org/2000/svg";
+
+    function svgEl(tag, attrs) {
+      var el = document.createElementNS(SVGNS, tag);
+      for (var k in attrs) el.setAttribute(k, attrs[k]);
+      return el;
+    }
+
+    /* Axis ceiling snapped to 1 / 2 / 2.5 / 5 / 10 × a power of ten. */
+    function niceCeil(v) {
+      if (!(v > 0)) return 1;
+      var p = Math.pow(10, Math.floor(Math.log10(v)));
+      var n = v / p;
+      var steps = [1, 2, 2.5, 5, 10];
+      for (var i = 0; i < steps.length; i++) {
+        if (n <= steps[i]) return steps[i] * p;
+      }
+      return 10 * p;
+    }
+
+    /* Compact money for axis ticks and milestone labels: $500, $1k, $36.5k. */
+    function shortMoney(n) {
+      if (n >= 1000) {
+        var v = n / 1000;
+        var s =
+          v >= 100 || v === Math.round(v)
+            ? String(Math.round(v))
+            : v.toFixed(1);
+        return "$" + s + "k";
+      }
+      return "$" + Math.round(n);
+    }
+
+    /* What one rhythm means in the other units — pure contribution
+     * arithmetic (days counted as 365 a year, the calculator's own
+     * whole-month totals may differ by a few dollars either way). */
+    function rhythmEquivs(a, freq) {
+      if (freq === "day") {
+        return { perWeek: a * 7, perMonth: (a * 365) / 12, perYear: a * 365 };
+      }
+      if (freq === "week") {
+        return { perWeek: a, perMonth: (a * 52) / 12, perYear: a * 52 };
+      }
+      return { perWeek: (a * 12) / 52, perMonth: a, perYear: a * 12 };
     }
 
     if (start && !start.value) {
@@ -418,6 +469,244 @@
       box.appendChild(table);
     }
 
+    /* One plain-English sentence that makes the rhythm felt:
+     * "$10 a day is $70 a week, about $304 a month. Over the first
+     * 12 months that's $3,650 — and over 10 years, $36,530 put in."
+     * Contributions only — never the growth figure. */
+    function buildOneline(res, a, freq, yrs) {
+      if (!oneline) return;
+      var eq = rhythmEquivs(a, freq);
+      var unit = freq === "day" ? "a day" : freq === "week" ? "a week" : "a month";
+      var firstYear = 0;
+      res.rows.slice(0, 12).forEach(function (r) {
+        firstYear += r.contributedMonth;
+      });
+      /* Equivalences in the units the visitor did not pick, so the
+       * sentence never repeats itself ("$25 a week is $25 a week"). */
+      var parts = [];
+      if (freq === "day") parts.push(money(eq.perWeek) + " a week");
+      if (freq === "month") parts.push("about " + money(eq.perWeek) + " a week");
+      if (freq !== "month") parts.push("about " + money(eq.perMonth) + " a month");
+      parts.push(money(eq.perYear) + " a year");
+      var s = money(a) + " " + unit + " is " + parts.join(", ") + ". ";
+      if (yrs === 1) {
+        s += "Over these 12 months that's " + money(res.contributed) + " put in.";
+      } else {
+        s +=
+          "Over the first 12 months that's " + money(firstYear) +
+          " — and over " + yrs + " years, " + money(res.contributed) + " put in.";
+      }
+      oneline.textContent = s;
+    }
+
+    /* Cumulative chart (inline SVG, no libraries): the filled area is
+     * what the visitor has put in; when a starting balance or an
+     * assumed growth rate makes the running total differ, the total
+     * is drawn as a second line and the milestone markers sit on it,
+     * because the marks are reached by the total. The tables below
+     * carry the same figures as text. */
+    function buildChart(res, startYear, startMonth, startBalance, growthPct) {
+      if (!chartBox) return;
+      chartBox.innerHTML = "";
+      if (chartLegend) chartLegend.textContent = "";
+      var hasTotal = startBalance > 0 || growthPct > 0;
+      /* Wide right margin: the end labels live there, beside their
+       * lines' endpoints, where no line can strike through them. */
+      var W = 720, H = 300, mL = 56, mR = 96, mT = 30, mB = 32;
+      var iw = W - mL - mR, ih = H - mT - mB;
+      var n = res.rows.length;
+      var yMax = niceCeil(Math.max(res.total, res.contributed));
+      function X(i) {
+        return mL + (i / n) * iw;
+      }
+      function Y(v) {
+        return mT + ih - (v / yMax) * ih;
+      }
+
+      var svg = svgEl("svg", {
+        viewBox: "0 0 " + W + " " + H,
+        role: "img",
+        "aria-labelledby": "fl-ic-chart-title",
+      });
+      var desc = svgEl("desc", {});
+      var descText =
+        "The running total climbs " +
+        (startBalance > 0
+          ? "from a starting balance of " + money(startBalance)
+          : "from $0") +
+        " over " + n + " months, reaching " + money(res.total) + " in " +
+        icMonthLabel(res.rows[n - 1].year, res.rows[n - 1].month) + ".";
+      if (res.milestones.length) {
+        descText += " Milestones reached: " + res.milestones.map(function (ms) {
+          return money(ms.amount) + " in " + icMonthLabel(ms.year, ms.month);
+        }).join("; ") + ".";
+      }
+      desc.textContent = descText;
+      svg.appendChild(desc);
+
+      /* Horizontal gridlines + y-axis labels. */
+      [0, 0.25, 0.5, 0.75, 1].forEach(function (f) {
+        var v = yMax * f;
+        var y = Y(v);
+        var line = svgEl("line", { x1: mL, x2: W - mR, y1: y, y2: y });
+        line.style.stroke = "var(--md-default-fg-color--lightest)";
+        line.style.strokeWidth = f === 0 ? "1.5" : "1";
+        svg.appendChild(line);
+        var t = svgEl("text", { x: mL - 8, y: y + 4, "text-anchor": "end" });
+        t.style.fill = "var(--md-default-fg-color--light)";
+        t.style.fontSize = "12px";
+        t.textContent = shortMoney(v);
+        svg.appendChild(t);
+      });
+
+      /* X-axis: a tick where each January starts, thinned if crowded. */
+      var ticks = [];
+      for (var i = 0; i <= n; i++) {
+        if ((startMonth + i) % 12 === 0) {
+          ticks.push({ i: i, year: startYear + Math.floor((startMonth + i) / 12) });
+        }
+      }
+      var step = Math.max(1, Math.ceil(ticks.length / 9));
+      ticks.forEach(function (tk, k) {
+        if (k % step !== 0 && k !== ticks.length - 1) return;
+        var t = svgEl("text", { x: X(tk.i), y: H - 10, "text-anchor": "middle" });
+        t.style.fill = "var(--md-default-fg-color--light)";
+        t.style.fontSize = "12px";
+        t.textContent = String(tk.year);
+        svg.appendChild(t);
+      });
+
+      function pathFor(key, origin) {
+        var d = "M " + X(0).toFixed(1) + " " + Y(origin).toFixed(1);
+        for (var j = 0; j < n; j++) {
+          d += " L " + X(j + 1).toFixed(1) + " " + Y(res.rows[j][key]).toFixed(1);
+        }
+        return d;
+      }
+
+      /* Filled area: cumulative contributions. */
+      var area = svgEl("path", {
+        d: pathFor("contributedTotal", 0) +
+          " L " + X(n).toFixed(1) + " " + Y(0).toFixed(1) +
+          " L " + X(0).toFixed(1) + " " + Y(0).toFixed(1) + " Z",
+      });
+      area.style.fill = "var(--md-primary-fg-color)";
+      area.style.fillOpacity = "0.16";
+      area.style.stroke = "var(--md-primary-fg-color)";
+      area.style.strokeWidth = "2";
+      svg.appendChild(area);
+
+      /* Running total line, only when it differs from contributions. */
+      if (hasTotal) {
+        var line2 = svgEl("path", { d: pathFor("total", startBalance), fill: "none" });
+        line2.style.stroke = "var(--md-accent-fg-color)";
+        line2.style.strokeWidth = "2";
+        line2.style.strokeDasharray = "6 4";
+        svg.appendChild(line2);
+      }
+
+      /* Milestone markers, on the series that reaches the marks. */
+      var labelX = -Infinity;
+      res.milestones.forEach(function (ms, k) {
+        var idx = (ms.year - startYear) * 12 + (ms.month - startMonth);
+        var cx = X(idx + 1);
+        var cy = Y(ms.total);
+        var g2 = svgEl("g", {});
+        var title = svgEl("title", {});
+        title.textContent =
+          money(ms.amount) + " reached in " + icMonthLabel(ms.year, ms.month) +
+          " (total that month: " + money(ms.total) + ")";
+        g2.appendChild(title);
+        var dot = svgEl("circle", { cx: cx, cy: cy, r: 5 });
+        dot.style.fill = "var(--md-accent-fg-color)";
+        dot.style.stroke = "var(--md-default-bg-color)";
+        dot.style.strokeWidth = "2";
+        g2.appendChild(dot);
+        var stagger = cx - labelX < 52 && k > 0;
+        var lt = svgEl("text", {
+          x: Math.min(Math.max(cx, mL + 20), W - mR - 20),
+          y: Math.max(cy - (stagger ? 24 : 12), 14),
+          "text-anchor": "middle",
+        });
+        lt.style.fill = "var(--md-default-fg-color)";
+        lt.style.fontSize = "12px";
+        lt.style.fontWeight = "700";
+        lt.textContent = shortMoney(ms.amount);
+        g2.appendChild(lt);
+        labelX = cx;
+        svg.appendChild(g2);
+      });
+
+      /* End labels in the right margin, vertically centred on their
+       * lines' endpoints; nudged apart when the two values are close. */
+      var yC = Y(res.contributed) + 4;
+      var endC = svgEl("text", { x: X(n) + 8, y: yC });
+      endC.style.fill = "var(--md-primary-fg-color)";
+      endC.style.fontSize = "12px";
+      endC.style.fontWeight = "700";
+      endC.textContent = shortMoney(res.contributed) + " put in";
+      svg.appendChild(endC);
+      if (hasTotal) {
+        var yT = Y(res.total) + 4;
+        if (yC - yT < 16) {
+          var nudge = (16 - (yC - yT)) / 2;
+          yT -= nudge;
+          endC.setAttribute("y", yC + nudge);
+        }
+        var endT = svgEl("text", { x: X(n) + 8, y: yT });
+        endT.style.fill = "var(--md-accent-fg-color)";
+        endT.style.fontSize = "12px";
+        endT.style.fontWeight = "700";
+        endT.textContent = shortMoney(res.total) + " total";
+        svg.appendChild(endT);
+        if (chartLegend) {
+          chartLegend.textContent =
+            "The filled area is what you put in. The dashed line is the running total: " +
+            "your starting balance and contributions, plus growth at the rate you set — " +
+            "an assumption for illustration, not a prediction or a promised return. " +
+            "Milestone dots sit on the dashed line, because the marks are reached by the total.";
+        }
+      }
+      chartBox.appendChild(svg);
+    }
+
+    /* Year-by-year bars: one bar per calendar year, its length the
+     * year's own contributions against the biggest year, with the
+     * running total as text — partial first/last years naturally
+     * draw shorter bars. Real text, so it reads as-is. */
+    function buildYearBars(yearRows) {
+      if (!barsBox) return;
+      barsBox.innerHTML = "";
+      var maxC = 0;
+      yearRows.forEach(function (yr) {
+        if (yr.contributed > maxC) maxC = yr.contributed;
+      });
+      yearRows.forEach(function (yr) {
+        var row = document.createElement("div");
+        row.className = "fl-ic-yrow";
+        var head = document.createElement("div");
+        head.className = "fl-ic-yrow-head";
+        var lab = document.createElement("span");
+        lab.className = "fl-ic-yrow-label";
+        lab.textContent = yr.label;
+        var val = document.createElement("span");
+        val.className = "fl-ic-yrow-value";
+        val.textContent =
+          money(yr.contributed) + " put in · " + money(yr.last.contributedTotal) + " so far";
+        head.appendChild(lab);
+        head.appendChild(val);
+        row.appendChild(head);
+        var track = document.createElement("span");
+        track.className = "fl-ic-ybar-track";
+        var bar = document.createElement("span");
+        bar.className = "fl-ic-ybar";
+        bar.style.width = (maxC > 0 ? (yr.contributed / maxC) * 100 : 0) + "%";
+        track.appendChild(bar);
+        row.appendChild(track);
+        barsBox.appendChild(row);
+      });
+    }
+
     function compute() {
       var yrs = parseInt(years.value, 10);
       if (isNaN(yrs)) yrs = 10;
@@ -436,8 +725,20 @@
         milestoneBox.innerHTML = "";
         yearsBox.innerHTML = "";
         monthsBox.innerHTML = "";
+        if (oneline) oneline.textContent = "";
+        if (chartBox) chartBox.innerHTML = "";
+        if (chartLegend) chartLegend.textContent = "";
+        if (barsBox) barsBox.innerHTML = "";
         return;
       }
+
+      Array.prototype.forEach.call(chips, function (chip) {
+        var active =
+          parseFloat(chip.getAttribute("data-ic-amount")) === a &&
+          chip.getAttribute("data-ic-frequency") === frequency.value;
+        chip.classList.toggle("is-active", active);
+        chip.setAttribute("aria-pressed", active ? "true" : "false");
+      });
 
       var startYear;
       var startMonth;
@@ -462,6 +763,8 @@
         growthPct: g,
       });
       var last = res.rows[res.rows.length - 1];
+      buildOneline(res, a, frequency.value, yrs);
+      buildChart(res, startYear, startMonth, sb, g);
       var freqWord =
         frequency.value === "day"
           ? "per day"
@@ -556,27 +859,30 @@
         cur.contributed += r.contributedMonth;
         cur.last = r;
       });
+      yearRows.forEach(function (yr) {
+        yr.label = String(yr.year);
+        if (yr.months.length < 12) {
+          var first = new Date(yr.year, yr.months[0], 1).toLocaleDateString(
+            undefined,
+            { month: "short" }
+          );
+          var lastM = new Date(
+            yr.year,
+            yr.months[yr.months.length - 1],
+            1
+          ).toLocaleDateString(undefined, { month: "short" });
+          yr.label += " (" + first + "–" + lastM + ")";
+        }
+      });
+      buildYearBars(yearRows);
       buildTable(
         yearsBox,
         showGrowth
           ? ["Period", "Contributed", "Contributed so far", "Growth so far (assumption)", "Total"]
           : ["Period", "Contributed", "Contributed so far", "Total"],
         yearRows.map(function (yr) {
-          var label = String(yr.year);
-          if (yr.months.length < 12) {
-            var first = new Date(yr.year, yr.months[0], 1).toLocaleDateString(
-              undefined,
-              { month: "short" }
-            );
-            var lastM = new Date(
-              yr.year,
-              yr.months[yr.months.length - 1],
-              1
-            ).toLocaleDateString(undefined, { month: "short" });
-            label += " (" + first + "–" + lastM + ")";
-          }
           var cells = [
-            label,
+            yr.label,
             money(yr.contributed),
             money(yr.last.contributedTotal),
           ];
@@ -604,6 +910,13 @@
       );
     }
 
+    Array.prototype.forEach.call(chips, function (chip) {
+      chip.addEventListener("click", function () {
+        amount.value = chip.getAttribute("data-ic-amount");
+        frequency.value = chip.getAttribute("data-ic-frequency");
+        compute();
+      });
+    });
     years.addEventListener("input", function () {
       yearsNum.value = years.value;
       compute();
