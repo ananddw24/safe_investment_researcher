@@ -1,8 +1,8 @@
 ---
 title: Explore and tools
-description: Interactive catalog explorer, emergency-fund calculator, and deposit-insurance source lookup
+description: Interactive catalog explorer, emergency-fund and impact calendar calculators, and deposit-insurance source lookup
 status: published
-last_reviewed: "2026-10-27"
+last_reviewed: "2026-11-12"
 ---
 
 # Explore and tools
@@ -16,7 +16,7 @@ Small interactive tools built on the same curated records as the
 [resource catalog](catalog.md). Nothing on this page invents figures:
 the explorer and the lookup read a data file generated from the records
 (`scripts/generate_interactive_data.py`, from `data/kb-index.json`), and the
-calculator only does arithmetic on numbers you type in.
+calculators only do arithmetic on numbers you type in.
 
 ## Explore the catalog
 
@@ -87,6 +87,109 @@ illustration, not advice, and it stores nothing.
 </form>
 
 </div>
+
+## Impact calendar calculator
+
+What does a small, regular amount add up to across real calendar time?
+This calculator lays contributions onto an actual calendar, month by
+month from a start date you choose, and shows the running totals plus
+the month in which the total reaches each round-number milestone. Like
+the emergency fund calculator above, it only does arithmetic on numbers
+you type in — no figures come from the records, nothing is stored or
+sent anywhere, and the result is an illustration, not advice. The
+optional growth rate is an **assumption for illustration — not a
+prediction or a promised return**; real savings and investments do not
+grow in a smooth line.
+
+Start with a preset below, or type your own amount — the plain-English
+summary, the charts, and the tables all update as you go.
+
+<div class="fl-tools" markdown="0">
+
+<form id="fl-ic-form">
+<div class="fl-ic-presets" role="group" aria-labelledby="fl-ic-presets-label">
+<p class="fl-ic-presets-label" id="fl-ic-presets-label">Start with a common rhythm:</p>
+<button type="button" class="fl-ic-chip" data-ic-amount="5" data-ic-frequency="day">$5 a day</button>
+<button type="button" class="fl-ic-chip" data-ic-amount="10" data-ic-frequency="day">$10 a day</button>
+<button type="button" class="fl-ic-chip" data-ic-amount="25" data-ic-frequency="week">$25 a week</button>
+<button type="button" class="fl-ic-chip" data-ic-amount="100" data-ic-frequency="month">$100 a month</button>
+<button type="button" class="fl-ic-chip" data-ic-amount="200" data-ic-frequency="month">$200 a month</button>
+</div>
+<div class="fl-controls">
+<div class="fl-field">
+<label for="fl-ic-amount">Amount (your currency)</label>
+<input id="fl-ic-amount" type="number" min="0" step="any" inputmode="decimal" value="10">
+</div>
+<div class="fl-field">
+<label for="fl-ic-frequency">How often</label>
+<select id="fl-ic-frequency">
+<option value="day" selected>per day</option>
+<option value="week">per week</option>
+<option value="month">per month</option>
+</select>
+</div>
+<div class="fl-field">
+<label for="fl-ic-start">Start date</label>
+<input id="fl-ic-start" type="date">
+</div>
+<div class="fl-field">
+<label for="fl-ic-years">Time horizon: <span id="fl-ic-years-label">10 years</span></label>
+<input id="fl-ic-years" type="range" min="1" max="40" step="1" value="10">
+</div>
+<div class="fl-field">
+<label for="fl-ic-years-num">Horizon (years)</label>
+<input id="fl-ic-years-num" type="number" min="1" max="40" step="1" value="10">
+</div>
+<div class="fl-field">
+<label for="fl-ic-start-balance">Starting balance (optional)</label>
+<input id="fl-ic-start-balance" type="number" min="0" step="any" inputmode="decimal" value="0">
+</div>
+<div class="fl-field">
+<label for="fl-ic-growth">Growth assumption per year: <span id="fl-ic-growth-label">0%</span> — an assumption for illustration, not a prediction or a promised return</label>
+<input id="fl-ic-growth" type="range" min="0" max="10" step="0.5" value="0">
+</div>
+</div>
+</form>
+
+<p class="fl-ic-oneline" id="fl-ic-oneline" aria-live="polite"></p>
+
+<div class="fl-ic-viz">
+<p class="fl-ic-viz-title" id="fl-ic-chart-title">How it builds up, month by month</p>
+<div id="fl-ic-chart"></div>
+<p class="fl-ic-legend" id="fl-ic-chart-legend"></p>
+<p class="fl-ic-viz-note">The same figures appear in the “Year by year” and “Month by month” tables further down.</p>
+</div>
+
+<div class="fl-ic-viz">
+<p class="fl-ic-viz-title" id="fl-ic-bars-title">Year by year — what goes in, and the running total</p>
+<div id="fl-ic-yearbars"></div>
+</div>
+
+<div class="fl-result" id="fl-ic-summary">This calculator needs JavaScript. It runs entirely in your browser; nothing is stored or sent anywhere.</div>
+
+<div id="fl-ic-milestones"></div>
+
+<details class="fl-ic-details">
+<summary>Year by year</summary>
+<div id="fl-ic-years-table"></div>
+</details>
+
+<details class="fl-ic-details">
+<summary>Month by month</summary>
+<div id="fl-ic-months-table"></div>
+</details>
+
+</div>
+
+How the arithmetic works: contributions are counted by whole calendar
+months from the start month — a daily amount is multiplied by the
+number of days in each month, and a weekly amount by 52 ÷ 12 each
+month. Growth, when set above zero, is applied each month at one
+twelfth of the annual rate to the balance carried into that month,
+before the month's contributions are added. Milestones are the first
+month whose end-of-month total reaches each mark; marks a starting
+balance has already passed are not listed. Amounts are shown with a $
+sign; the arithmetic is the same in any currency.
 
 ## Deposit insurance — official sources
 
