@@ -373,8 +373,9 @@
     if (!amount || !frequency || !summary) return;
 
     function fmt(n) {
-      return new Intl.NumberFormat(undefined, {
-        maximumFractionDigits: 0,
+      return new Intl.NumberFormat("en-US", {
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2,
       }).format(n);
     }
 
@@ -406,17 +407,26 @@
       return 10 * p;
     }
 
-    /* Compact money for axis ticks and milestone labels: $500, $1k, $36.5k. */
+    /* Axis and milestone labels. Below $10,000, and whenever a
+     * thousands abbreviation would not be exact, use the same cents
+     * as the tables. Abbreviate only an exact tenth of a thousand
+     * ($10k, $12.5k), so a label never disagrees with the sentence
+     * next to the chart. */
     function shortMoney(n) {
-      if (n >= 1000) {
-        var v = n / 1000;
-        var s =
-          v >= 100 || v === Math.round(v)
-            ? String(Math.round(v))
-            : v.toFixed(1);
-        return "$" + s + "k";
+      var abs = Math.abs(n);
+      if (abs >= 10000) {
+        var thousands = n / 1000;
+        var tenths = Math.round(thousands * 10) / 10;
+        if (Math.abs(thousands - tenths) <= 1e-6) {
+          var whole = tenths === Math.round(tenths);
+          var s =
+            Math.abs(tenths) >= 100 || whole
+              ? String(Math.round(tenths))
+              : tenths.toFixed(1);
+          return "$" + s + "k";
+        }
       }
-      return "$" + Math.round(n);
+      return money(n);
     }
 
     /* What one rhythm means in the other units — pure contribution
@@ -512,7 +522,7 @@
       var hasTotal = startBalance > 0 || growthPct > 0;
       /* Wide right margin: the end labels live there, beside their
        * lines' endpoints, where no line can strike through them. */
-      var W = 720, H = 300, mL = 56, mR = 96, mT = 30, mB = 32;
+      var W = 800, H = 300, mL = 92, mR = 156, mT = 30, mB = 32;
       var iw = W - mL - mR, ih = H - mT - mB;
       var n = res.rows.length;
       var yMax = niceCeil(Math.max(res.total, res.contributed));
@@ -692,7 +702,7 @@
         var val = document.createElement("span");
         val.className = "fl-ic-yrow-value";
         val.textContent =
-          money(yr.contributed) + " put in · " + money(yr.last.contributedTotal) + " so far";
+          money(yr.contributed) + " put in · " + money(yr.last.total) + " running total";
         head.appendChild(lab);
         head.appendChild(val);
         row.appendChild(head);

@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- **Impact calendar calculator** on [Explore and tools](docs/resources/tools.md):
+  a small regular amount laid onto real calendar months, with preset
+  rhythms, a plain-English summary, a cumulative chart, year bars, and
+  year and month tables. Amounts are shown to the cent. Optional growth
+  is labeled an assumption for illustration, not a prediction or a
+  promised return. The year bars' running total includes a starting
+  balance and that illustrative growth.
+
 ### Changed
 
 - **Site navigation and homepage (Wave 1 UX foundation):** top-level

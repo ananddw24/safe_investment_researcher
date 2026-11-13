@@ -24,8 +24,8 @@ generated from the YAML records. Each row shows the verification date
 
 **[Explore and tools](tools.md)** — the same records, interactively:
 filter the catalog by country, topic, and audience; try an emergency-fund
-target calculator; and look up which countries have an official
-deposit-insurance source in the library.
+target calculator or the impact calendar calculator; and look up which
+countries have an official deposit-insurance source in the library.
 
 ## Source data (for contributors)
 

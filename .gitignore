@@ -19,3 +19,4 @@ build/
 site_json/
 .idea/
 .vscode/
+node_modules/
